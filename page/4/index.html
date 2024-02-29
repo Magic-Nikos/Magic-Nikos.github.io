@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> FAIT-MaiN</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="FAIT-MaiN" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover5.jpg" alt="image frame" />
+    </div>
+
+    <img src="/images/logo.png" alt="" class="cover-inner cover-logo logo">
+
+
+    <div class="cover-inner text-center text-white">
+
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['UN BLOG ENTIÈREMENT GÉNÉRÉ PAR IA...', 'A BLOG GENERATED ENTIRELY BY AI...', '完全由人工智能生成的博客...'],
+        startDelay: 0,
+        typeSpeed: 100,
+        loop: true,
+        backSpeed: 50,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+
+<div id="main">
+  <section class="outer">
+  
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-Feature-extraction-from-signals"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/29/Feature-extraction-from-signals/"
+    >Feature extraction from signals</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/29/Feature-extraction-from-signals/" class="article-date">
+  <time datetime="2024-02-29T17:37:59.000Z" itemprop="datePublished">2024-02-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Traitement-du-signal/">Traitement du signal</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Feature-Extraction-from-Signals"><a href="#Feature-Extraction-from-Signals" class="headerlink" title="Feature Extraction from Signals"></a>Feature Extraction from Signals</h1><p>Les signaux sont omniprésents dans de nombreux domaines tels que le traitement du signal, l’apprentissage automatique et la communication. Un aspect crucial dans le traitement des signaux consiste à extraire des caractéristiques pertinentes pour la compréhension et l’analyse des données. Dans cet article, nous allons explorer le concept de l’extraction de caractéristiques à partir de signaux et comment elle peut être réalisée en Python.</p>
+<h2 id="Qu’est-ce-que-l’extraction-de-caracteristiques"><a href="#Qu’est-ce-que-l’extraction-de-caracteristiques" class="headerlink" title="Qu’est-ce que l’extraction de caractéristiques?"></a>Qu’est-ce que l’extraction de caractéristiques?</h2><p>L’extraction de caractéristiques est le processus de transformation des signaux bruts en une représentation plus concise, informative et significative. Ces caractéristiques extraites sont essentielles pour la modélisation et l’analyse ultérieures des données.</p>
+<h2 id="Methodes-courantes-d’extraction-de-caracteristiques"><a href="#Methodes-courantes-d’extraction-de-caracteristiques" class="headerlink" title="Méthodes courantes d’extraction de caractéristiques"></a>Méthodes courantes d’extraction de caractéristiques</h2><h3 id="1-Extraction-de-caracteristiques-temporelles"><a href="#1-Extraction-de-caracteristiques-temporelles" class="headerlink" title="1. Extraction de caractéristiques temporelles"></a>1. Extraction de caractéristiques temporelles</h3><p>Les caractéristiques temporelles sont calculées directement à partir des valeurs brutes du signal. Par exemple, la moyenne, l’écart-type, et l’autocorrélation sont des caractéristiques temporelles couramment utilisées.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">signal = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])</span><br><span class="line">mean = np.mean(signal)</span><br><span class="line">std_dev = np.std(signal)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Extraction-de-caracteristiques-frequentielles"><a href="#2-Extraction-de-caracteristiques-frequentielles" class="headerlink" title="2. Extraction de caractéristiques fréquentielles"></a>2. Extraction de caractéristiques fréquentielles</h3><p>Les caractéristiques fréquentielles sont extraites en utilisant des techniques de transformation de Fourier telles que la transformée de Fourier discrète (DFT) ou la transformée de Fourier rapide (FFT). Ces caractéristiques mettent en évidence les composantes fréquentielles du signal.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.fft <span class="keyword">import</span> fft</span><br><span class="line"></span><br><span class="line">freq_signal = fft(signal)</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-Extraction-de-caracteristiques-basees-sur-la-forme"><a href="#3-Extraction-de-caracteristiques-basees-sur-la-forme" class="headerlink" title="3. Extraction de caractéristiques basées sur la forme"></a>3. Extraction de caractéristiques basées sur la forme</h3><p>Les caractéristiques basées sur la forme impliquent l’analyse de la forme du signal, par exemple en calculant des pics, des points d’inflexion ou des pentes.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.signal <span class="keyword">import</span> find_peaks</span><br><span class="line"></span><br><span class="line">peaks, _ = find_peaks(signal)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Importance-de-l’extraction-de-caracteristiques"><a href="#Importance-de-l’extraction-de-caracteristiques" class="headerlink" title="Importance de l’extraction de caractéristiques"></a>Importance de l’extraction de caractéristiques</h2><p>L’extraction de caractéristiques permet de réduire la dimensionnalité des données, d’éliminer le bruit, de mettre en évidence des patterns significatifs et de faciliter l’apprentissage automatique sur les signaux.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>L’extraction de caractéristiques à partir de signaux est une étape cruciale dans le traitement des signaux, qui permet de transformer des données brutes en informations exploitables. En utilisant des techniques appropriées telles que temporelles, fréquentielles ou basées sur la forme, il est possible d’extraire des caractéristiques pertinentes pour une analyse efficace des signaux.</p>
+<p>N’hésitez pas à explorer davantage ces concepts et à appliquer ces techniques d’extraction de caractéristiques dans vos projets de traitement de signaux en Python.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-data/" rel="tag">python, data</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Analyse-de-la-variabilite-des-signaux"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/29/Analyse-de-la-variabilite-des-signaux/"
+    >Analyse de la variabilité des signaux</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/29/Analyse-de-la-variabilite-des-signaux/" class="article-date">
+  <time datetime="2024-02-29T17:37:44.000Z" itemprop="datePublished">2024-02-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Traitement-du-signal/">Traitement du signal</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Analyse-de-la-variabilite-des-signaux-Comprendre-et-interpreter-les-donnees"><a href="#Analyse-de-la-variabilite-des-signaux-Comprendre-et-interpreter-les-donnees" class="headerlink" title="Analyse de la variabilité des signaux : Comprendre et interpréter les données"></a>Analyse de la variabilité des signaux : Comprendre et interpréter les données</h1><p>La variabilité des signaux est une composante essentielle de l’analyse de données. Il s’agit de mesurer et d’interpréter la dispersion ou la fluctuation des valeurs dans un ensemble de données. Dans cet article, nous allons explorer les concepts clés de l’analyse de la variabilité des signaux en utilisant Python pour illustrer chaque étape.</p>
+<h2 id="Introduction-a-l’analyse-de-variabilite-des-signaux"><a href="#Introduction-a-l’analyse-de-variabilite-des-signaux" class="headerlink" title="Introduction à l’analyse de variabilité des signaux"></a>Introduction à l’analyse de variabilité des signaux</h2><p>Lorsque nous manipulons des signaux, il est crucial de comprendre la variabilité des données. Cela nous permet de déceler des tendances, des modèles et des anomalies. Pour commencer, importons quelques bibliothèques Python essentielles :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+
+<h2 id="Mesurer-la-variabilite-avec-l’ecart-type"><a href="#Mesurer-la-variabilite-avec-l’ecart-type" class="headerlink" title="Mesurer la variabilité avec l’écart-type"></a>Mesurer la variabilité avec l’écart-type</h2><p>L’un des indicateurs les plus courants de la variabilité d’un signal est l’écart-type. Voici comment calculer l’écart-type d’un ensemble de données en utilisant Python :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data = np.array([<span class="number">10</span>, <span class="number">15</span>, <span class="number">20</span>, <span class="number">25</span>, <span class="number">30</span>])</span><br><span class="line">std_dev = np.std(data)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;L&#x27;écart-type des données est : <span class="subst">&#123;std_dev&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Dans cet exemple, nous avons calculé l’écart-type des données <code>[10, 15, 20, 25, 30]</code>. L’écart-type mesure à quel point les données sont dispersées autour de la moyenne.</p>
+<h2 id="Analyser-la-variabilite-avec-la-plage-interquartile"><a href="#Analyser-la-variabilite-avec-la-plage-interquartile" class="headerlink" title="Analyser la variabilité avec la plage interquartile"></a>Analyser la variabilité avec la plage interquartile</h2><p>Une autre mesure de variabilité couramment utilisée est la plage interquartile (IQR). Voici comment calculer l’IQR en Python :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data = np.array([<span class="number">10</span>, <span class="number">15</span>, <span class="number">20</span>, <span class="number">25</span>, <span class="number">30</span>])</span><br><span class="line">q3, q1 = np.percentile(data, [<span class="number">75</span> ,<span class="number">25</span>])</span><br><span class="line">iqr = q3 - q1</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;La plage interquartile des données est : <span class="subst">&#123;iqr&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>L’IQR représente la plage de valeurs pour lesquelles se situent les 50 % centraux de l’ensemble de données.</p>
+<h2 id="Visualiser-la-variabilite-avec-un-graphique"><a href="#Visualiser-la-variabilite-avec-un-graphique" class="headerlink" title="Visualiser la variabilité avec un graphique"></a>Visualiser la variabilité avec un graphique</h2><p>Une façon efficace de comprendre la variabilité des signaux est de les visualiser. Utilisons un graphique boxplot pour représenter graphiquement la variabilité des données :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data = np.random.normal(<span class="number">0</span>, <span class="number">1</span>, <span class="number">100</span>)</span><br><span class="line">plt.boxplot(data)</span><br><span class="line">plt.title(<span class="string">&quot;Graphique boxplot de la distribution des données&quot;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>Le graphique boxplot nous montre la dispersion des données, y compris les valeurs aberrantes et la symétrie.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, l’analyse de la variabilité des signaux est un élément clé de l’analyse de données. En utilisant des outils comme l’écart-type, la plage interquartile et des visualisations graphiques, nous pouvons mieux comprendre la structure et les caractéristiques des signaux. En combinant théorie et pratique, nous sommes en mesure d’extraire des informations précieuses des données brutes.</p>
+<p>N’oubliez pas d’explorer différents jeux de données et de continuer à affiner vos compétences en analyse de la variabilité des signaux avec Python !</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-data/" rel="tag">python, data</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Interpolation-et-reconstruction-de-signaux"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/29/Interpolation-et-reconstruction-de-signaux/"
+    >Interpolation et reconstruction de signaux</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/29/Interpolation-et-reconstruction-de-signaux/" class="article-date">
+  <time datetime="2024-02-29T17:37:28.000Z" itemprop="datePublished">2024-02-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Traitement-du-signal/">Traitement du signal</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Interpolation-et-reconstruction-de-signaux"><a href="#Interpolation-et-reconstruction-de-signaux" class="headerlink" title="Interpolation et reconstruction de signaux"></a>Interpolation et reconstruction de signaux</h1><p>Dans le domaine du traitement du signal, l’interpolation et la reconstruction de signaux sont des concepts fondamentaux. L’interpolation consiste à estimer des valeurs entre des points de données existants, tandis que la reconstruction vise à reconstruire un signal continu à partir d’échantillons discrets. Comprendre ces processus est essentiel pour diverses applications telles que la conversion de fréquence, la compression de données ou encore la synthèse d’images.</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>L’interpolation et la reconstruction de signaux sont souvent utilisées dans le traitement du signal pour analyser et manipuler des données temporelles ou spatiales. Ces techniques sont cruciales pour reconstruire des signaux continus à partir d’échantillons discrets, ce qui permet de les modifier, de les analyser ou de les transmettre de manière efficace.</p>
+<h2 id="Types-d’interpolation"><a href="#Types-d’interpolation" class="headerlink" title="Types d’interpolation"></a>Types d’interpolation</h2><p>Il existe différents types d’interpolation, tels que l’interpolation linéaire, l’interpolation polynomiale et l’interpolation par morceaux. Explorons l’interpolation linéaire à travers un exemple en Python :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># Données initiales</span></span><br><span class="line">x = np.array([<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line">y = np.array([<span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Interpolation linéaire</span></span><br><span class="line">x_interp = <span class="number">2.5</span></span><br><span class="line">y_interp = np.interp(x_interp, x, y)</span><br><span class="line"><span class="built_in">print</span>(y_interp)</span><br></pre></td></tr></table></figure>
+
+<p>Dans cet exemple, nous utilisons la fonction <code>interp</code> de NumPy pour réaliser une interpolation linéaire à partir des données fournies.</p>
+<h2 id="Reconstruction-de-signaux"><a href="#Reconstruction-de-signaux" class="headerlink" title="Reconstruction de signaux"></a>Reconstruction de signaux</h2><p>La reconstruction de signaux consiste à reconstituer un signal continu à partir d’échantillons discrets. Une méthode courante pour reconstruire un signal est l’interpolation par splines cubiques. Voici un exemple d’implémentation en Python :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.interpolate <span class="keyword">import</span> CubicSpline</span><br><span class="line"></span><br><span class="line"><span class="comment"># Données initiales</span></span><br><span class="line">x = np.array([<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line">y = np.array([<span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Interpolation par splines cubiques</span></span><br><span class="line">cs = CubicSpline(x, y)</span><br><span class="line">x_reconstructed = np.linspace(<span class="number">0</span>, <span class="number">4</span>, <span class="number">100</span>)</span><br><span class="line">y_reconstructed = cs(x_reconstructed)</span><br></pre></td></tr></table></figure>
+
+<p>Dans cet exemple, nous utilisons la méthode des splines cubiques pour reconstruire le signal continu à partir des points de données.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>L’interpolation et la reconstruction de signaux sont des outils puissants dans le traitement du signal. Comprendre ces concepts et savoir les mettre en œuvre en Python est essentiel pour de nombreuses applications pratiques. En explorant ces techniques, vous serez en mesure d’analyser intelligemment des signaux et de manipuler efficacement des données temporelles ou spatiales.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-data/" rel="tag">python, data</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Detecter-et-corriger-les-artefacts"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/29/Detecter-et-corriger-les-artefacts/"
+    >Détecter et corriger les artefacts</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/29/Detecter-et-corriger-les-artefacts/" class="article-date">
+  <time datetime="2024-02-29T17:37:17.000Z" itemprop="datePublished">2024-02-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Traitement-du-signal/">Traitement du signal</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Detecter-et-corriger-les-artefacts"><a href="#Detecter-et-corriger-les-artefacts" class="headerlink" title="Détecter et corriger les artefacts"></a>Détecter et corriger les artefacts</h1><p>Les artefacts sont des anomalies ou des défauts indésirables qui peuvent apparaître dans les données, les images, ou tout autre type de signal numérique. Dans cet article, nous allons explorer les différentes techniques pour détecter et corriger les artefacts, en nous concentrant principalement sur les données numériques.</p>
+<h2 id="Qu’est-ce-qu’un-artefact"><a href="#Qu’est-ce-qu’un-artefact" class="headerlink" title="Qu’est-ce qu’un artefact ?"></a>Qu’est-ce qu’un artefact ?</h2><p>Un artefact peut être causé par diverses raisons, telles que des erreurs de mesure, des interférences extérieures, ou des problèmes techniques lors de la collecte ou du traitement des données. Il est essentiel de détecter et corriger ces artefacts pour garantir la validité et la fiabilité des données.</p>
+<h2 id="Detecter-les-artefacts"><a href="#Detecter-les-artefacts" class="headerlink" title="Détecter les artefacts"></a>Détecter les artefacts</h2><p>Pour détecter les artefacts dans un jeu de données, on peut utiliser des méthodes de visualisation, de statistiques descriptives ou encore des techniques de détection d’anomalies.</p>
+<p>Voici un exemple de code Python pour détecter les valeurs aberrantes dans un jeu de données :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">data = pd.read_csv(<span class="string">&#x27;data.csv&#x27;</span>)</span><br><span class="line">mean = data[<span class="string">&#x27;value&#x27;</span>].mean()</span><br><span class="line">std_dev = data[<span class="string">&#x27;value&#x27;</span>].std()</span><br><span class="line">threshold = <span class="number">2</span></span><br><span class="line"></span><br><span class="line">outliers = data[data[<span class="string">&#x27;value&#x27;</span>] &gt; mean + threshold * std_dev]</span><br><span class="line"><span class="built_in">print</span>(outliers)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Corriger-les-artefacts"><a href="#Corriger-les-artefacts" class="headerlink" title="Corriger les artefacts"></a>Corriger les artefacts</h2><p>Une fois les artefacts détectés, il est crucial de les corriger correctement. Selon le type d’artefact, les techniques de correction varient. Par exemple, pour corriger des valeurs manquantes, on peut les remplacer par la moyenne des valeurs existantes.</p>
+<p>Voici un exemple de code Python pour remplacer les valeurs manquantes par la moyenne d’un jeu de données :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">data = pd.read_csv(<span class="string">&#x27;data.csv&#x27;</span>)</span><br><span class="line">mean = data[<span class="string">&#x27;value&#x27;</span>].mean()</span><br><span class="line"></span><br><span class="line">data[<span class="string">&#x27;value&#x27;</span>].fillna(mean, inplace=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(data)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, détecter et corriger les artefacts dans les données est une étape cruciale pour garantir la qualité des analyses et des résultats. En utilisant les bonnes techniques, comme la visualisation, les statistiques, ou les méthodes d’analyse de données, il est possible d’identifier et de résoudre efficacement les artefacts. En gardant à l’esprit l’importance de la précision des données, il est essentiel de mettre en place des procédures de détection et de correction des artefacts dans toute analyse de données.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-data/" rel="tag">python, data</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Analyse-frequentielle-et-transformees"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/29/Analyse-frequentielle-et-transformees/"
+    >Analyse fréquentielle et transformées</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/29/Analyse-frequentielle-et-transformees/" class="article-date">
+  <time datetime="2024-02-29T17:36:58.000Z" itemprop="datePublished">2024-02-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Traitement-du-signal/">Traitement du signal</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Analyse-frequentielle-et-transformees-Comprendre-les-bases"><a href="#Analyse-frequentielle-et-transformees-Comprendre-les-bases" class="headerlink" title="Analyse fréquentielle et transformées : Comprendre les bases"></a>Analyse fréquentielle et transformées : Comprendre les bases</h1><p>L’analyse fréquentielle et les transformées sont des concepts essentiels en traitement du signal et en traitement d’images. Comprendre ces notions permet non seulement de mieux appréhender les signaux mais aussi d’ouvrir la voie à de nombreuses applications en matière de traitement de données. Dans cet article, nous allons explorer les bases de l’analyse fréquentielle et des transformées, en utilisant des exemples de code Python pour illustrer chaque concept.</p>
+<h2 id="1-Analyse-frequentielle"><a href="#1-Analyse-frequentielle" class="headerlink" title="1. Analyse fréquentielle"></a>1. Analyse fréquentielle</h2><p>L’analyse fréquentielle consiste à décomposer un signal en ses composantes fréquentielles, permettant ainsi de mettre en évidence les différentes fréquences présentes dans le signal. Une des représentations les plus courantes pour cette analyse est la transformée de Fourier.</p>
+<h3 id="Transformee-de-Fourier"><a href="#Transformee-de-Fourier" class="headerlink" title="Transformée de Fourier"></a>Transformée de Fourier</h3><p>La transformée de Fourier d’un signal temporel permet de le décomposer en une somme de sinus et de cosinus, révélant ainsi les différentes fréquences qui le composent. Voici un exemple de code Python illustrant la transformation d’un signal temporel en son spectre de fréquences :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Génération d&#x27;un signal sinusoïdal</span></span><br><span class="line">fs = <span class="number">1000</span>  <span class="comment"># Fréquence d&#x27;échantillonnage</span></span><br><span class="line">t = np.linspace(<span class="number">0</span>, <span class="number">1</span>, fs, endpoint=<span class="literal">False</span>)  <span class="comment"># Temps</span></span><br><span class="line">signal = np.sin(<span class="number">2</span>*np.pi*<span class="number">50</span>*t) + <span class="number">0.5</span>*np.sin(<span class="number">2</span>*np.pi*<span class="number">120</span>*t)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Calcul de la transformée de Fourier</span></span><br><span class="line">fft_signal = np.fft.fft(signal)</span><br><span class="line">freqs = np.fft.fftfreq(<span class="built_in">len</span>(signal), <span class="number">1</span>/fs)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Affichage du spectre de fréquences</span></span><br><span class="line">plt.figure()</span><br><span class="line">plt.stem(freqs, np.<span class="built_in">abs</span>(fft_signal))</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Fréquence (Hz)&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Amplitude&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-Transformees-temporelles"><a href="#2-Transformees-temporelles" class="headerlink" title="2. Transformées temporelles"></a>2. Transformées temporelles</h2><p>Les transformées temporelles sont des outils mathématiques utilisés pour passer d’un espace de représentation à un autre, souvent pour mettre en évidence des caractéristiques spécifiques des signaux. Une des transformées temporelles les plus connues est la transformée en ondelettes.</p>
+<h3 id="Transformee-en-ondelettes"><a href="#Transformee-en-ondelettes" class="headerlink" title="Transformée en ondelettes"></a>Transformée en ondelettes</h3><p>La transformée en ondelettes permet de décomposer un signal en différents niveaux de résolution, mettant ainsi en évidence les variations locales du signal. Voici un exemple d’implémentation en Python :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pywt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Génération d&#x27;un signal</span></span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">1000</span>)</span><br><span class="line">signal = np.sin(<span class="number">2</span>*np.pi*<span class="number">20</span>*x) + <span class="number">0.5</span>*np.sin(<span class="number">2</span>*np.pi*<span class="number">100</span>*x)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Calcul de la transformée en ondelettes</span></span><br><span class="line">coeffs = pywt.wavedec(signal, <span class="string">&#x27;db4&#x27;</span>, level=<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Affichage des coefficients d&#x27;ondelettes</span></span><br><span class="line">plt.figure()</span><br><span class="line"><span class="keyword">for</span> i, coeff <span class="keyword">in</span> <span class="built_in">enumerate</span>(coeffs):</span><br><span class="line">    plt.subplot(<span class="built_in">len</span>(coeffs), <span class="number">1</span>, i+<span class="number">1</span>)</span><br><span class="line">    plt.plot(coeff)</span><br><span class="line">    plt.title(<span class="string">f&#x27;Niveau <span class="subst">&#123;i&#125;</span>&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, l’analyse fréquentielle et les transformées sont des outils fondamentaux pour l’analyse des signaux et des images. En maîtrisant ces concepts et en les appliquant à des problèmes concrets, il est possible d’extraire des informations précieuses des données. Les exemples de code Python présentés dans cet article illustrent la mise en pratique de ces concepts, ouvrant ainsi la voie à de nombreuses possibilités d’application en traitement du signal.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-data/" rel="tag">python, data</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Filtrage-des-signaux"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/29/Filtrage-des-signaux/"
+    >Filtrage des signaux</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/29/Filtrage-des-signaux/" class="article-date">
+  <time datetime="2024-02-29T17:36:41.000Z" itemprop="datePublished">2024-02-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Traitement-du-signal/">Traitement du signal</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Filtrage-des-signaux-Introduction-et-Concepts-Fondamentaux"><a href="#Filtrage-des-signaux-Introduction-et-Concepts-Fondamentaux" class="headerlink" title="Filtrage des signaux : Introduction et Concepts Fondamentaux"></a>Filtrage des signaux : Introduction et Concepts Fondamentaux</h1><p>Le filtrage des signaux est un concept crucial en traitement du signal. Il permet de manipuler et d’analyser les signaux en extrayant des informations utiles ou en réduisant le bruit. Dans cet article, nous allons explorer les bases du filtrage des signaux, en utilisant Python pour illustrer les concepts. </p>
+<h2 id="Qu’est-ce-que-le-filtrage-des-signaux"><a href="#Qu’est-ce-que-le-filtrage-des-signaux" class="headerlink" title="Qu’est-ce que le filtrage des signaux ?"></a>Qu’est-ce que le filtrage des signaux ?</h2><p>Le filtrage des signaux consiste à modifier les caractéristiques d’un signal en agissant sur ses composantes fréquentielles. Il est souvent utilisé pour supprimer le bruit, extraire des composantes importantes ou encore pour analyser des signaux complexes.</p>
+<h2 id="Les-types-de-filtres"><a href="#Les-types-de-filtres" class="headerlink" title="Les types de filtres"></a>Les types de filtres</h2><p>Il existe deux types de filtres principaux : les filtres passe-bas et les filtres passe-haut. Un filtre passe-bas laisse passer les basses fréquences tandis qu’un filtre passe-haut laisse passer les hautes fréquences.</p>
+<h3 id="Exemple-Filtre-passe-bas-en-Python"><a href="#Exemple-Filtre-passe-bas-en-Python" class="headerlink" title="Exemple : Filtre passe-bas en Python"></a>Exemple : Filtre passe-bas en Python</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> signal</span><br><span class="line"></span><br><span class="line"><span class="comment"># Création d&#x27;un signal sinusoïdal</span></span><br><span class="line">fs = <span class="number">1000</span>  <span class="comment"># Fréquence d&#x27;échantillonnage</span></span><br><span class="line">t = np.linspace(<span class="number">0</span>, <span class="number">1</span>, fs, endpoint=<span class="literal">False</span>)</span><br><span class="line">x = np.sin(<span class="number">2</span>*np.pi*<span class="number">5</span>*t) + <span class="number">0.5</span>*np.sin(<span class="number">2</span>*np.pi*<span class="number">250</span>*t)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Filtrage passe-bas</span></span><br><span class="line">b, a = signal.butter(<span class="number">4</span>, <span class="number">0.01</span>, <span class="string">&#x27;low&#x27;</span>)</span><br><span class="line">filt_signal = signal.lfilter(b, a, x)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Affichage des signaux</span></span><br><span class="line">plt.figure()</span><br><span class="line">plt.plot(t, x, label=<span class="string">&#x27;Signal original&#x27;</span>)</span><br><span class="line">plt.plot(t, filt_signal, label=<span class="string">&#x27;Signal filtré&#x27;</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Reponse-en-frequence"><a href="#Reponse-en-frequence" class="headerlink" title="Réponse en fréquence"></a>Réponse en fréquence</h2><p>La réponse en fréquence d’un filtre indique comment ce filtre atténue ou amplifie les différentes fréquences du signal d’entrée.</p>
+<h3 id="Exemple-Reponse-en-frequence-d’un-filtre-passe-haut"><a href="#Exemple-Reponse-en-frequence-d’un-filtre-passe-haut" class="headerlink" title="Exemple : Réponse en fréquence d’un filtre passe-haut"></a>Exemple : Réponse en fréquence d’un filtre passe-haut</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> signal</span><br><span class="line"></span><br><span class="line">b, a = signal.butter(<span class="number">4</span>, <span class="number">0.1</span>, <span class="string">&#x27;high&#x27;</span>)</span><br><span class="line">w, h = signal.freqz(b, a)</span><br><span class="line"></span><br><span class="line">plt.figure()</span><br><span class="line">plt.plot(w, <span class="number">20</span> * np.log10(<span class="built_in">abs</span>(h)))</span><br><span class="line">plt.title(<span class="string">&#x27;Réponse en fréquence du filtre passe-haut&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Fréquence [rad/sample]&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Gain [dB]&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Le filtrage des signaux est une étape essentielle en traitement du signal pour préparer les données et extraire des informations pertinentes. En utilisant Python et des outils comme SciPy, il est possible d’implémenter facilement des filtres et d’analyser leur comportement en fréquence. Expérimentez avec différents types de filtres pour mieux comprendre leur impact sur les signaux.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-data/" rel="tag">python, data</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Detection-de-seuil-et-binarisation"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/29/Detection-de-seuil-et-binarisation/"
+    >Détection de seuil et binarisation</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/29/Detection-de-seuil-et-binarisation/" class="article-date">
+  <time datetime="2024-02-29T17:36:29.000Z" itemprop="datePublished">2024-02-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Traitement-du-signal/">Traitement du signal</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Detection-de-seuil-et-binarisation"><a href="#Detection-de-seuil-et-binarisation" class="headerlink" title="Détection de seuil et binarisation"></a>Détection de seuil et binarisation</h1><p>La détection de seuil et binarisation sont des techniques fondamentales en traitement d’images, permettant de convertir une image en niveaux de gris en une image binaire en fonction d’un seuil prédéfini. Dans cet article, nous allons explorer ces concepts en profondeur et illustrer chaque étape à l’aide de code Python.</p>
+<h2 id="Introduction-a-la-detection-de-seuil"><a href="#Introduction-a-la-detection-de-seuil" class="headerlink" title="Introduction à la détection de seuil"></a>Introduction à la détection de seuil</h2><p>La détection de seuil consiste à définir un seuil qui sépare les pixels en deux catégories : ceux en dessous du seuil deviennent noirs, et ceux au-dessus du seuil deviennent blancs. Cela permet de simplifier une image en la convertissant en noir et blanc. </p>
+<h2 id="Algorithme-de-binarisation-simple"><a href="#Algorithme-de-binarisation-simple" class="headerlink" title="Algorithme de binarisation simple"></a>Algorithme de binarisation simple</h2><p>Voici un exemple de code Python pour mettre en œuvre un algorithme de binarisation simple en utilisant un seuil fixe :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="comment"># Charger une image en niveaux de gris</span></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Définir un seuil</span></span><br><span class="line">seuil = <span class="number">127</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Binariser l&#x27;image</span></span><br><span class="line">ret, image_binaire = cv2.threshold(image, seuil, <span class="number">255</span>, cv2.THRESH_BINARY)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Afficher l&#x27;image binarisée</span></span><br><span class="line">cv2.imshow(<span class="string">&#x27;Binarisation&#x27;</span>, image_binaire)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Methode-d’Otsu-pour-la-detection-automatique-du-seuil"><a href="#Methode-d’Otsu-pour-la-detection-automatique-du-seuil" class="headerlink" title="Méthode d’Otsu pour la détection automatique du seuil"></a>Méthode d’Otsu pour la détection automatique du seuil</h2><p>L’algorithme d’Otsu est couramment utilisé pour déterminer automatiquement un seuil optimal en se basant sur l’histogramme de l’image. Voici comment l’implémenter en Python :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="comment"># Charger une image en niveaux de gris</span></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Utiliser l&#x27;algorithme d&#x27;Otsu pour trouver le seuil optimal</span></span><br><span class="line">ret, image_binaire = cv2.threshold(image, <span class="number">0</span>, <span class="number">255</span>, cv2.THRESH_BINARY+cv2.THRESH_OTSU)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Afficher l&#x27;image binarisée</span></span><br><span class="line">cv2.imshow(<span class="string">&#x27;Binarisation Otsu&#x27;</span>, image_binaire)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La détection de seuil et la binarisation sont des techniques essentielles en traitement d’images pour simplifier et segmenter des images en niveaux de gris. En utilisant des algorithmes simples ou avancés comme celui d’Otsu, il est possible de convertir efficacement des images en noir et blanc en fonction de seuils prédéfinis ou automatiquement calculés. Expérimentez avec ces concepts en utilisant le code Python fourni pour mieux comprendre ces concepts fondamentaux du traitement d’images.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-data/" rel="tag">python, data</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Lissage-des-signaux"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/29/Lissage-des-signaux/"
+    >Lissage des signaux</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/29/Lissage-des-signaux/" class="article-date">
+  <time datetime="2024-02-29T17:36:16.000Z" itemprop="datePublished">2024-02-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Traitement-du-signal/">Traitement du signal</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Le-lissage-des-signaux-Introduction-au-traitement-de-donnees-temporelles"><a href="#Le-lissage-des-signaux-Introduction-au-traitement-de-donnees-temporelles" class="headerlink" title="Le lissage des signaux : Introduction au traitement de données temporelles"></a>Le lissage des signaux : Introduction au traitement de données temporelles</h1><p>Dans le domaine du traitement de données temporelles, le lissage des signaux est une technique essentielle permettant de réduire le bruit et de mettre en évidence les tendances sous-jacentes. Dans cet article, nous allons explorer les concepts fondamentaux du lissage des signaux, en utilisant des exemples concrets et du code Python pour illustrer chaque étape.</p>
+<h2 id="Qu’est-ce-que-le-lissage-des-signaux"><a href="#Qu’est-ce-que-le-lissage-des-signaux" class="headerlink" title="Qu’est-ce que le lissage des signaux ?"></a>Qu’est-ce que le lissage des signaux ?</h2><p>Le lissage des signaux est une méthode qui consiste à réduire les variations aléatoires d’un signal en calculant une moyenne sur une fenêtre donnée. Cela permet de mettre en évidence les variations lentes ou les tendances du signal, en atténuant le bruit présent dans les données.</p>
+<h2 id="Lissage-par-la-moyenne-mobile"><a href="#Lissage-par-la-moyenne-mobile" class="headerlink" title="Lissage par la moyenne mobile"></a>Lissage par la moyenne mobile</h2><p>Une des techniques les plus simples de lissage des signaux est le lissage par la moyenne mobile. Cette méthode consiste à calculer la moyenne des valeurs voisines sur une fenêtre de taille fixe.</p>
+<p>Voici un exemple de code Python illustrant le lissage par la moyenne mobile :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">moving_average</span>(<span class="params">signal, window_size</span>):</span><br><span class="line">    smoothed_signal = np.convolve(signal, np.ones(window_size)/window_size, mode=<span class="string">&#x27;valid&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> smoothed_signal</span><br><span class="line"></span><br><span class="line"><span class="comment"># Générer un signal aléatoire</span></span><br><span class="line">signal = np.random.rand(<span class="number">100</span>)</span><br><span class="line">window_size = <span class="number">5</span></span><br><span class="line"></span><br><span class="line">smoothed_signal = moving_average(signal, window_size)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Lissage-exponentiel"><a href="#Lissage-exponentiel" class="headerlink" title="Lissage exponentiel"></a>Lissage exponentiel</h2><p>Le lissage exponentiel est une autre technique populaire pour le lissage des signaux, qui attribue des poids décroissants aux observations passées. Cela permet de donner plus d’importance aux données récentes tout en lissant le signal.</p>
+<p>Voici un exemple de code Python pour implémenter le lissage exponentiel :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">exponential_smoothing</span>(<span class="params">signal, alpha</span>):</span><br><span class="line">    smoothed_signal = [signal[<span class="number">0</span>]]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(signal)):</span><br><span class="line">        smoothed_signal.append(alpha * signal[i] + (<span class="number">1</span> - alpha) * smoothed_signal[i-<span class="number">1</span>])</span><br><span class="line">    <span class="keyword">return</span> smoothed_signal</span><br><span class="line"></span><br><span class="line"><span class="comment"># Générer un signal aléatoire</span></span><br><span class="line">signal = np.random.rand(<span class="number">100</span>)</span><br><span class="line">alpha = <span class="number">0.2</span></span><br><span class="line"></span><br><span class="line">smoothed_signal = exponential_smoothing(signal, alpha)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Le lissage des signaux est une technique puissante pour réduire le bruit et mettre en évidence les tendances dans les données temporelles. En utilisant des méthodes telles que le lissage par la moyenne mobile ou le lissage exponentiel, il est possible d’améliorer la lisibilité des signaux et de faciliter leur interprétation.</p>
+<p>En explorant ces concepts et en expérimentant avec du code Python, vous pourrez acquérir une compréhension approfondie du lissage des signaux et l’appliquer à vos propres analyses de données temporelles.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-data/" rel="tag">python, data</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Techniques-avancees-avec-les-DataFramesIntroduction-au-traitement-du-signal-avec-Python"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/29/Techniques-avancees-avec-les-DataFramesIntroduction-au-traitement-du-signal-avec-Python/"
+    >Techniques avancées avec les DataFramesIntroduction au traitement du signal avec Python</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/29/Techniques-avancees-avec-les-DataFramesIntroduction-au-traitement-du-signal-avec-Python/" class="article-date">
+  <time datetime="2024-02-29T17:36:04.000Z" itemprop="datePublished">2024-02-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Pandas-et-les-DataFrames/">Pandas et les DataFrames</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Techniques-avancees-avec-les-DataFrames-Introduction-au-traitement-du-signal-avec-Python"><a href="#Techniques-avancees-avec-les-DataFrames-Introduction-au-traitement-du-signal-avec-Python" class="headerlink" title="Techniques avancées avec les DataFrames : Introduction au traitement du signal avec Python"></a>Techniques avancées avec les DataFrames : Introduction au traitement du signal avec Python</h1><p>Bienvenue dans cet article éducatif où nous allons explorer les techniques avancées de manipulation de données avec les DataFrames en Python, en nous concentrant sur l’application du traitement du signal.</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Les DataFrames sont des structures de données puissantes offertes par des bibliothèques telles que Pandas en Python. Elles permettent de stocker et de manipuler des données de manière tabulaire, facilitant ainsi le traitement de vastes ensembles de données.</p>
+<p>Dans ce guide, nous découvrirons comment utiliser les DataFrames pour effectuer des opérations avancées sur des signaux numériques.</p>
+<h2 id="Chargement-des-donnees"><a href="#Chargement-des-donnees" class="headerlink" title="Chargement des données"></a>Chargement des données</h2><p>Avant de commencer, assurons-nous d’avoir les bibliothèques nécessaires installées :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+
+<p>Assumons que nous avons un fichier CSV contenant des données de signal. Chargeons ces données dans un DataFrame :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_csv(<span class="string">&#x27;signal_data.csv&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(df.head())</span><br></pre></td></tr></table></figure>
+
+<h2 id="Filtrage-du-signal"><a href="#Filtrage-du-signal" class="headerlink" title="Filtrage du signal"></a>Filtrage du signal</h2><p>Pour filtrer un signal à l’aide d’un DataFrame, nous pouvons utiliser les capacités de filtrage intégrées de Pandas. Par exemple, filtrons les données pour ne conserver que les valeurs supérieures à un seuil donné :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">threshold = <span class="number">0.5</span></span><br><span class="line">filtered_signal = df[df[<span class="string">&#x27;valeur&#x27;</span>] &gt; threshold]</span><br><span class="line"><span class="built_in">print</span>(filtered_signal.head())</span><br></pre></td></tr></table></figure>
+
+<h2 id="Transformation-du-signal"><a href="#Transformation-du-signal" class="headerlink" title="Transformation du signal"></a>Transformation du signal</h2><p>Il est souvent nécessaire de transformer un signal pour effectuer des analyses plus avancées. Appliquons une transformation en utilisant Numpy sur notre DataFrame :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">&#x27;signal_transforme&#x27;</span>] = np.log(df[<span class="string">&#x27;valeur&#x27;</span>])</span><br><span class="line"><span class="built_in">print</span>(df.head())</span><br></pre></td></tr></table></figure>
+
+<h2 id="Analyse-statistique"><a href="#Analyse-statistique" class="headerlink" title="Analyse statistique"></a>Analyse statistique</h2><p>Les DataFrames facilitent également la réalisation d’analyses statistiques sur les signaux. Calculons la moyenne et l’écart type du signal :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mean_value = df[<span class="string">&#x27;valeur&#x27;</span>].mean()</span><br><span class="line">std_dev = df[<span class="string">&#x27;valeur&#x27;</span>].std()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Mean: <span class="subst">&#123;mean_value&#125;</span>, Std Deviation: <span class="subst">&#123;std_dev&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Dans cet article, nous avons exploré quelques-unes des techniques avancées de manipulation de DataFrames pour le traitement du signal en Python. Les DataFrames offrent une manière efficace et flexible de travailler avec des données tabulaires, ce qui les rend très utiles dans le domaine du traitement du signal.</p>
+<p>N’hésitez pas à explorer davantage et à expérimenter avec les DataFrames pour approfondir vos connaissances et compétences en traitement du signal avec Python. Profitez de l’analyse de signaux! 🚀</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-data/" rel="tag">python, data</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Visualisation-de-donnees-a-partir-de-DataFrames"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/29/Visualisation-de-donnees-a-partir-de-DataFrames/"
+    >Visualisation de données à partir de DataFrames</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/29/Visualisation-de-donnees-a-partir-de-DataFrames/" class="article-date">
+  <time datetime="2024-02-29T17:35:47.000Z" itemprop="datePublished">2024-02-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Pandas-et-les-DataFrames/">Pandas et les DataFrames</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Visualisation-de-donnees-a-partir-de-DataFrames"><a href="#Visualisation-de-donnees-a-partir-de-DataFrames" class="headerlink" title="Visualisation de données à partir de DataFrames"></a>Visualisation de données à partir de DataFrames</h1><p>La visualisation de données est un outil essentiel pour explorer, analyser et communiquer des informations à partir de DataFrames en Python. Dans cet article, nous allons découvrir comment visualiser efficacement des données à partir de DataFrames en utilisant des bibliothèques populaires telles que Matplotlib et Seaborn.</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>La visualisation de données à partir de DataFrames permet de représenter graphiquement des informations et des tendances, facilitant ainsi la compréhension des données. En Python, les bibliothèques Matplotlib et Seaborn offrent de puissants outils pour créer une grande variété de graphiques.</p>
+<h2 id="Installation-des-bibliotheques"><a href="#Installation-des-bibliotheques" class="headerlink" title="Installation des bibliothèques"></a>Installation des bibliothèques</h2><p>Avant de commencer, assurez-vous d’avoir installé les bibliothèques Matplotlib et Seaborn. Vous pouvez les installer en utilisant pip :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install matplotlib seaborn</span><br></pre></td></tr></table></figure>
+
+<h2 id="Chargement-des-donnees-et-creation-du-DataFrame"><a href="#Chargement-des-donnees-et-creation-du-DataFrame" class="headerlink" title="Chargement des données et création du DataFrame"></a>Chargement des données et création du DataFrame</h2><p>Tout d’abord, importons les bibliothèques nécessaires et chargeons nos données dans un DataFrame :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># Chargement des données dans un DataFrame</span></span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;data.csv&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Trace-d’un-graphique-lineaire"><a href="#Trace-d’un-graphique-lineaire" class="headerlink" title="Tracé d’un graphique linéaire"></a>Tracé d’un graphique linéaire</h2><p>Créons un graphique linéaire pour visualiser l’évolution d’une variable numérique au fil du temps :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">plt.plot(df[<span class="string">&#x27;temps&#x27;</span>], df[<span class="string">&#x27;variable&#x27;</span>], marker=<span class="string">&#x27;o&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Temps&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Variable&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Évolution de la variable au fil du temps&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Trace-d’un-histogramme"><a href="#Trace-d’un-histogramme" class="headerlink" title="Tracé d’un histogramme"></a>Tracé d’un histogramme</h2><p>Visualisons la distribution d’une variable numérique sous forme d’histogramme :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">plt.hist(df[<span class="string">&#x27;variable&#x27;</span>], bins=<span class="number">20</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Valeurs&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Fréquence&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Histogramme de la variable&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Utilisation-de-Seaborn-pour-une-visualisation-plus-avancee"><a href="#Utilisation-de-Seaborn-pour-une-visualisation-plus-avancee" class="headerlink" title="Utilisation de Seaborn pour une visualisation plus avancée"></a>Utilisation de Seaborn pour une visualisation plus avancée</h2><p>Seaborn offre des fonctionnalités avancées pour la visualisation statistique. Par exemple, créons un nuage de points avec une régression linéaire :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"></span><br><span class="line">sns.lmplot(x=<span class="string">&#x27;variable1&#x27;</span>, y=<span class="string">&#x27;variable2&#x27;</span>, data=df)</span><br><span class="line">plt.title(<span class="string">&#x27;Nuage de points avec régression linéaire&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La visualisation de données à partir de DataFrames en Python est essentielle pour explorer et communiquer des informations de manière efficace. En utilisant Matplotlib et Seaborn, vous pouvez créer une grande variété de graphiques pour analyser vos données. Expérimentez avec différents types de graphiques et personnalisez-les en fonction de vos besoins pour une analyse de données plus approfondie.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-data/" rel="tag">python, data</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/3/">Page précédente</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/5/">Page suivante</a>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2015-2024
+        <i class="ri-heart-fill heart_icon"></i> John Doe
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/logo.png" alt="FAIT-MaiN"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">Home</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">Archives</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">Catégories</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">Tags</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">Voyage</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">A propos</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+
+  </div>
+</body>
+
+</html>
