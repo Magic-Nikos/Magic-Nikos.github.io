@@ -111,6 +111,74 @@
     
     
     <article
+  id="post-Graphiques-3D-Surfaces-scatter-plots-et-lignes"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Graphiques-3D-Surfaces-scatter-plots-et-lignes/"
+    >Graphiques 3D : Surfaces, scatter plots et lignes</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Graphiques-3D-Surfaces-scatter-plots-et-lignes/" class="article-date">
+  <time datetime="2024-03-01T07:31:21.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Article-pedagogique-Graphiques-3D-avec-Plotly"><a href="#Article-pedagogique-Graphiques-3D-avec-Plotly" class="headerlink" title="Article pédagogique : Graphiques 3D avec Plotly"></a>Article pédagogique : Graphiques 3D avec Plotly</h1><p>Bienvenue dans cet article où nous allons explorer l’utilisation de Plotly pour créer des graphiques 3D, notamment des surfaces, des scatter plots et des lignes. Plotly est une bibliothèque Python puissante et flexible qui permet de visualiser facilement des données en 2D et en 3D. Dans ce tutoriel, nous allons découvrir comment créer ces différents types de graphiques pour représenter des données en trois dimensions.</p>
+<h2 id="1-Graphique-3D-avec-des-Surfaces"><a href="#1-Graphique-3D-avec-des-Surfaces" class="headerlink" title="1. Graphique 3D avec des Surfaces"></a>1. Graphique 3D avec des Surfaces</h2><p>Les graphiques 3D de type surfaces sont parfaitement adaptés pour visualiser des fonctions mathématiques ou des ensembles de données qui évoluent dans un espace tridimensionnel.</p>
+<p>Voici un exemple de code Python utilisant Plotly pour créer un graphique 3D avec une surface :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">x = np.linspace(-<span class="number">5</span>, <span class="number">5</span>, <span class="number">100</span>)</span><br><span class="line">y = np.linspace(-<span class="number">5</span>, <span class="number">5</span>, <span class="number">100</span>)</span><br><span class="line">X, Y = np.meshgrid(x, y)</span><br><span class="line">Z = np.sin(np.sqrt(X**<span class="number">2</span> + Y**<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=[go.Surface(z=Z, x=X, y=Y)])</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-Graphique-3D-avec-des-Scatter-Plots"><a href="#2-Graphique-3D-avec-des-Scatter-Plots" class="headerlink" title="2. Graphique 3D avec des Scatter Plots"></a>2. Graphique 3D avec des Scatter Plots</h2><p>Les scatter plots en 3D permettent de représenter des ensembles de points dans un espace tridimensionnel. Ce type de graphique est idéal pour visualiser la répartition des données selon trois variables.</p>
+<p>Voici un exemple de code Python pour créer un scatter plot 3D avec Plotly :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">N = <span class="number">100</span></span><br><span class="line">x = np.random.rand(N)</span><br><span class="line">y = np.random.rand(N)</span><br><span class="line">z = np.random.rand(N)</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=[go.Scatter3d(x=x, y=y, z=z, mode=<span class="string">&#x27;markers&#x27;</span>)])</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-Graphique-3D-avec-des-Lignes"><a href="#3-Graphique-3D-avec-des-Lignes" class="headerlink" title="3. Graphique 3D avec des Lignes"></a>3. Graphique 3D avec des Lignes</h2><p>Les graphiques 3D de type lignes sont utiles pour représenter des trajectoires, des courbes ou des connexions entre des points dans un espace tridimensionnel.</p>
+<p>Voici un exemple de code Python pour créer un graphique 3D avec des lignes en utilisant Plotly :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">t = np.linspace(<span class="number">0</span>, <span class="number">10</span>, <span class="number">100</span>)</span><br><span class="line">x = np.sin(t)</span><br><span class="line">y = np.cos(t)</span><br><span class="line">z = t</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=[go.Scatter3d(x=x, y=y, z=z, mode=<span class="string">&#x27;lines&#x27;</span>)])</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Les graphiques 3D avec Plotly offrent une manière visuellement attractive de représenter des données complexes dans un espace tridimensionnel. Que ce soit pour visualiser des fonctions mathématiques, des ensembles de points ou des trajectoires, l’utilisation de Plotly permet de créer facilement des graphiques interactifs et personnalisables.</p>
+<p>En explorant davantage les fonctionnalités avancées de Plotly et en combinant différents types de graphiques 3D, il est possible de créer des visualisations informatives et esthétiques pour divers domaines tels que la recherche scientifique, la finance ou la modélisation de données.</p>
+<p>N’hésitez pas à expérimenter et à découvrir de nouvelles applications des graphiques 3D avec Plotly pour enrichir vos analyses et vos présentations de données. Happy coding!</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
   id="post-Cartographies-et-donnees-geographiques-avec-Plotly"
   class="article article-type-post"
   itemscope
@@ -719,71 +787,6 @@
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, les principes de base de la visualisation avec Plotly sont essentiels pour créer des graphiques efficaces et informatifs. En comprenant comment créer et personnaliser différents types de graphiques, vous serez en mesure de communiquer visuellement les résultats de vos analyses de données de manière claire et percutante.</p>
 <p>Les compétences acquises en matière de visualisation avec Plotly peuvent être appliquées à divers domaines tels que l’analyse des ventes, la visualisation des données météorologiques, ou encore la présentation de rapports professionnels. En continuant à explorer les fonctionnalités avancées de Plotly, vous pourrez créer des visualisations interactives et dynamiques qui captiveront votre audience.</p>
 <p>N’oubliez pas que la pratique est la clé pour maîtriser l’art de la visualisation des données. Alors, lancez-vous, explorez Plotly et laissez libre cours à votre créativité pour créer des visualisations époustouflantes !</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Installation-et-premiers-pas"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Installation-et-premiers-pas/"
-    >Installation et premiers pas</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Installation-et-premiers-pas/" class="article-date">
-  <time datetime="2024-03-01T07:28:47.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Plotly-Installation-et-premiers-pas"><a href="#Plotly-Installation-et-premiers-pas" class="headerlink" title="Plotly : Installation et premiers pas"></a>Plotly : Installation et premiers pas</h1><p>Bienvenue dans ce guide pour démarrer avec Plotly ! Plotly est une bibliothèque graphique puissante en Python qui permet de créer des visualisations interactives. Dans cet article, nous allons parcourir les étapes d’installation de Plotly et explorer quelques bases pour commencer à créer des graphiques. </p>
-<h2 id="Installation-de-Plotly"><a href="#Installation-de-Plotly" class="headerlink" title="Installation de Plotly"></a>Installation de Plotly</h2><p>Avant de commencer à utiliser Plotly, il est essentiel de l’installer. Pour cela, nous allons utiliser <code>pip</code>, le gestionnaire de paquets Python :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
-
-<p>Assurez-vous d’avoir une connexion Internet active, cela permettra à <code>pip</code> de télécharger et d’installer la bibliothèque Plotly sur votre machine.</p>
-<h2 id="Premiers-pas-avec-Plotly"><a href="#Premiers-pas-avec-Plotly" class="headerlink" title="Premiers pas avec Plotly"></a>Premiers pas avec Plotly</h2><p>Maintenant que Plotly est installé, voyons comment créer notre premier graphique. Nous allons commencer par un graphique linéaire simple. Voici un exemple de code Python pour générer un tel graphique :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="comment"># Données</span></span><br><span class="line">x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">y = [<span class="number">10</span>, <span class="number">15</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">18</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Création du graphique</span></span><br><span class="line">fig = go.Figure()</span><br><span class="line">fig.add_trace(go.Scatter(x=x, y=y, mode=<span class="string">&#x27;lines&#x27;</span>, name=<span class="string">&#x27;Ligne&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Affichage du graphique</span></span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<p>En exécutant ce code, vous devriez voir apparaître un graphique linéaire simple avec une ligne reliant les points.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Ce guide d’installation et de premiers pas avec Plotly vous a permis de mettre en place la bibliothèque sur votre machine et de créer votre premier graphique interactif. Avec Plotly, les possibilités de visualisation de données sont infinies, que ce soit pour explorer des données complexes, créer des tableaux de bord interactifs ou générer des visualisations personnalisées. </p>
-<p>N’hésitez pas à explorer davantage Plotly en consultant la documentation officielle et en expérimentant avec différents types de graphiques. Amusez-vous à découvrir tout le potentiel de cette bibliothèque graphique ! </p>
-<hr>
-<p>Avec ces informations, vous devriez maintenant être prêt à démarrer avec l’installation et les premiers pas avec Plotly. N’hésitez pas à continuer à explorer et à pratiquer pour maîtriser pleinement cette bibliothèque de visualisation de données. Happy plotting !</p>
  
       <!-- reward -->
       

@@ -111,6 +111,73 @@
     
     
     <article
+  id="post-Traitement-d-images"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Traitement-d-images/"
+    >Traitement d&#39;images</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Traitement-d-images/" class="article-date">
+  <time datetime="2024-03-01T14:24:06.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/OpenCV/">OpenCV</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Article-educatif-OpenCV-Traitement-d’images"><a href="#Article-educatif-OpenCV-Traitement-d’images" class="headerlink" title="Article éducatif : OpenCV - Traitement d’images"></a>Article éducatif : OpenCV - Traitement d’images</h1><p>Bienvenue dans ce guide dédié aux débutants en OpenCV ! Aujourd’hui, nous allons plonger dans le fascinant monde du traitement d’images en utilisant OpenCV. Que vous soyez un étudiant curieux ou un développeur en herbe, ce tutoriel vous fournira les bases nécessaires pour comprendre et maîtriser le traitement d’images.</p>
+<h2 id="Introduction-au-traitement-d’images"><a href="#Introduction-au-traitement-d’images" class="headerlink" title="Introduction au traitement d’images"></a>Introduction au traitement d’images</h2><p>Le traitement d’images est un domaine de l’informatique qui consiste à effectuer des opérations sur des images numériques afin de les améliorer, les analyser ou en extraire des informations. Avec OpenCV, une puissante bibliothèque open-source dédiée à la vision par ordinateur, vous pouvez réaliser toutes sortes de transformations sur des images.</p>
+<h2 id="Les-concepts-de-base"><a href="#Les-concepts-de-base" class="headerlink" title="Les concepts de base"></a>Les concepts de base</h2><h3 id="Chargement-d’une-image"><a href="#Chargement-d’une-image" class="headerlink" title="Chargement d’une image"></a>Chargement d’une image</h3><p>Pour commencer, chargeons une image à partir d’un fichier et affichons-la à l’écran :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;Image&#x27;</span>, image)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<h3 id="Conversion-en-niveaux-de-gris"><a href="#Conversion-en-niveaux-de-gris" class="headerlink" title="Conversion en niveaux de gris"></a>Conversion en niveaux de gris</h3><p>Il est souvent utile de convertir une image en niveaux de gris pour simplifier le traitement. Voici comment le faire avec OpenCV :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;Gray Image&#x27;</span>, gray_image)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<h3 id="Application-de-filtres"><a href="#Application-de-filtres" class="headerlink" title="Application de filtres"></a>Application de filtres</h3><p>Les filtres permettent d’effectuer des transformations sur une image, comme le lissage ou la détection de contours. Voici un exemple de l’application d’un filtre de flou :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">blurred_image = cv2.GaussianBlur(image, (<span class="number">5</span>, <span class="number">5</span>), <span class="number">0</span>)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;Blurred Image&#x27;</span>, blurred_image)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, le traitement d’images avec OpenCV offre un potentiel immense dans de nombreux domaines tels que la reconnaissance faciale, la détection d’objets, la réalité augmentée, etc. En comprenant les bases du traitement d’images, vous pourrez explorer ces applications passionnantes et développer des projets innovants.</p>
+<p>N’oubliez pas de pratiquer régulièrement et d’explorer davantage les fonctionnalités d’OpenCV pour approfondir vos connaissances en traitement d’images. Bonne découverte !</p>
+<hr>
+<p>Pour plus d’informations sur OpenCV, consultez la <a target="_blank" rel="noopener" href="https://docs.opencv.org/">documentation officielle</a>.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
   id="post-Lecture-et-ecriture-d-images"
   class="article article-type-post"
   itemscope
@@ -686,65 +753,6 @@
 
 <h2 id="Importance-historique-et-culturelle"><a href="#Importance-historique-et-culturelle" class="headerlink" title="Importance historique et culturelle"></a>Importance historique et culturelle</h2><p>Les formes poétiques populaires de la dynastie Tang ont contribué de manière significative à l’épanouissement de la littérature chinoise. Elles ont inspiré de nombreux écrivains et poètes à travers les âges, et continuent d’influencer la poésie contemporaine. </p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En explorant les formes poétiques populaires de la dynastie Tang, on peut plonger dans un univers de beauté, de sensibilité et d’inspiration. Ces styles poétiques sophistiqués nous offrent un aperçu fascinant de la riche tradition littéraire chinoise. En étudiant et en appréciant les poèmes de la dynastie Tang, on peut non seulement découvrir un trésor culturel, mais aussi s’inspirer pour créer de nouvelles œuvres poétiques. Que ces formes poétiques anciennes continuent à résonner dans nos cœurs et à nourrir notre imagination!</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/litterature/" rel="tag">littérature</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Les-themes-principaux-des-poemes-Tang"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Les-themes-principaux-des-poemes-Tang/"
-    >Les thèmes principaux des poèmes Tang</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Les-themes-principaux-des-poemes-Tang/" class="article-date">
-  <time datetime="2024-03-01T11:37:03.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Poemes-de-la-dynastie-Tang/">Poemes-de-la-dynastie-Tang</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Les-themes-principaux-des-poemes-Tang"><a href="#Les-themes-principaux-des-poemes-Tang" class="headerlink" title="Les thèmes principaux des poèmes Tang"></a>Les thèmes principaux des poèmes Tang</h1><p>La période de la dynastie Tang en Chine est renommée pour sa riche tradition poétique. Les poètes de cette époque ont exploré une multitude de thèmes riches et variés, offrant un aperçu profond de la culture et des sentiments de l’époque. Dans cet article, nous allons découvrir les thèmes principaux des poèmes de la dynastie Tang.</p>
-<h2 id="Introduction-aux-poemes-Tang"><a href="#Introduction-aux-poemes-Tang" class="headerlink" title="Introduction aux poèmes Tang"></a>Introduction aux poèmes Tang</h2><p>Avant d’explorer les thèmes spécifiques des poèmes Tang, il est important de comprendre l’importance de la poésie dans la culture chinoise de l’époque. Les poètes Tang étaient des artisans de mots, capables de capturer des émotions complexes et des images vivantes en quelques vers. Leurs poèmes traitaient une variété de sujets, offrant une véritable vitrine des préoccupations et des expressions de leur temps.</p>
-<h2 id="Themes-principaux-des-poemes-Tang"><a href="#Themes-principaux-des-poemes-Tang" class="headerlink" title="Thèmes principaux des poèmes Tang"></a>Thèmes principaux des poèmes Tang</h2><h3 id="1-La-nature"><a href="#1-La-nature" class="headerlink" title="1. La nature"></a>1. La nature</h3><p>Les poètes Tang étaient profondément inspirés par la nature qui les entourait, et cette inspiration se reflète dans de nombreux poèmes de l’époque. Les paysages magnifiques, les saisons changeantes, les fleurs et les oiseaux ont souvent été les thèmes principaux des poèmes Tang. Par exemple, le poème “Li Bai - Regardant la pleine lune” célèbre la beauté naturelle et la sérénité de la nuit.</p>
-<h3 id="2-L’amour"><a href="#2-L’amour" class="headerlink" title="2. L’amour"></a>2. L’amour</h3><p>L’amour est un thème intemporel et universel, et les poètes Tang ne faisaient pas exception. Leurs poèmes d’amour expriment une gamme complexe d’émotions - de la passion ardente à la mélancolie douce. Le poème “Du Fu - Séparation” est un exemple poignant de la tristesse et de la nostalgie ressenties lors d’une séparation amoureuse.</p>
-<h3 id="3-La-vie-quotidienne"><a href="#3-La-vie-quotidienne" class="headerlink" title="3. La vie quotidienne"></a>3. La vie quotidienne</h3><p>Les poètes Tang avaient un don pour capturer la beauté et la poésie de la vie quotidienne. Leurs poèmes peuvent décrire des scènes simples comme boire du vin avec des amis, observer les fleurs dans un jardin, ou contempler la lune dans le ciel nocturne. Ces poèmes offrent un aperçu précieux de la vie des gens ordinaires à l’époque Tang.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Les thèmes principaux des poèmes de la dynastie Tang offrent une fenêtre fascinante sur la culture et les émotions de cette période de l’histoire chinoise. En explorant la nature, l’amour et la vie quotidienne à travers les yeux des poètes Tang, on peut mieux comprendre les valeurs et les expériences qui ont façonné cette époque. En tant qu’amateurs de poésie, nous pouvons nous inspirer de ces thèmes intemporels pour enrichir notre propre créativité et notre appréciation de l’art poétique.</p>
-<p>Pour en savoir plus sur les thèmes des poèmes Tang, consultez <a href="lien_vers_une_ressource_suppl%C3%A9mentaire">cette ressource</a>.</p>
  
       <!-- reward -->
       

@@ -111,6 +111,52 @@
     
     
     <article
+  id="post-Introduction-a-tkinter"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Introduction-a-tkinter/"
+    >Introduction à tkinter</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Introduction-a-tkinter/" class="article-date">
+  <time datetime="2024-03-01T16:38:20.000Z" itemprop="datePublished">2024-03-01</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+   
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
   id="post-Projets-pratiques"
   class="article article-type-post"
   itemscope
@@ -697,66 +743,6 @@
 <p>Pour en savoir plus sur la calibration de caméra avec OpenCV, consultez la documentation officielle d’OpenCV : <a target="_blank" rel="noopener" href="https://docs.opencv.org/master/d9/d0c/group__calib3d.html">Calibration de caméra avec OpenCV</a>.</p>
 <hr>
 <p>Merci d’avoir lu cet article sur la calibration de caméra avec OpenCV. N’hésitez pas à explorer davantage ce sujet passionnant et à expérimenter par vous-même pour approfondir vos connaissances en vision par ordinateur.</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Suivi-d-objets"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Suivi-d-objets/"
-    >Suivi d&#39;objets</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Suivi-d-objets/" class="article-date">
-  <time datetime="2024-03-01T14:26:56.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/OpenCV/">OpenCV</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Suivi-d’objets-avec-OpenCV"><a href="#Suivi-d’objets-avec-OpenCV" class="headerlink" title="Suivi d’objets avec OpenCV"></a>Suivi d’objets avec OpenCV</h1><p>Bienvenue dans cet article qui va vous initier au suivi d’objets avec OpenCV! Le suivi d’objets est une technique essentielle en vision par ordinateur permettant de suivre un objet spécifique dans une séquence d’images.</p>
-<h2 id="Qu’est-ce-que-le-suivi-d’objets"><a href="#Qu’est-ce-que-le-suivi-d’objets" class="headerlink" title="Qu’est-ce que le suivi d’objets?"></a>Qu’est-ce que le suivi d’objets?</h2><p>Le suivi d’objets consiste à localiser et suivre la trajectoire d’un objet spécifique à travers une séquence d’images. Cela peut être utile dans de nombreuses applications telles que la surveillance vidéo, la réalité augmentée, la robotique, et bien d’autres.</p>
-<h3 id="Comment-fonctionne-le-suivi-d’objets"><a href="#Comment-fonctionne-le-suivi-d’objets" class="headerlink" title="Comment fonctionne le suivi d’objets?"></a>Comment fonctionne le suivi d’objets?</h3><p>Le suivi d’objets peut être réalisé en utilisant des techniques de détection d’objets et de suivi de mouvement. OpenCV offre des fonctionnalités puissantes pour implémenter ces techniques. Une approche courante consiste à utiliser des algorithmes comme le suivi optique ou les trackers disponibles dans OpenCV.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Exemple de suivi d&#x27;objets avec le tracker BOOSTING</span></span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">tracker = cv2.TrackerBoosting_create()</span><br><span class="line">video = cv2.VideoCapture(<span class="string">&#x27;video.mp4&#x27;</span>)</span><br><span class="line">ok, frame = video.read()</span><br><span class="line">bbox = cv2.selectROI(frame, <span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line">tracker.init(frame, bbox)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    ok, frame = video.read()</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> ok:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    </span><br><span class="line">    ok, bbox = tracker.update(frame)</span><br><span class="line">    <span class="keyword">if</span> ok:</span><br><span class="line">        p1 = (<span class="built_in">int</span>(bbox[<span class="number">0</span>]), <span class="built_in">int</span>(bbox[<span class="number">1</span>]))</span><br><span class="line">        p2 = (<span class="built_in">int</span>(bbox[<span class="number">0</span>] + bbox[<span class="number">2</span>]), <span class="built_in">int</span>(bbox[<span class="number">1</span>] + bbox[<span class="number">3</span>]))</span><br><span class="line">        cv2.rectangle(frame, p1, p2, (<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">    </span><br><span class="line">    cv2.imshow(<span class="string">&#x27;Tracking&#x27;</span>, frame)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == <span class="built_in">ord</span>(<span class="string">&#x27;q&#x27;</span>):</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
-
-<h2 id="Applications-du-suivi-d’objets"><a href="#Applications-du-suivi-d’objets" class="headerlink" title="Applications du suivi d’objets"></a>Applications du suivi d’objets</h2><p>Le suivi d’objets trouve de nombreuses applications pratiques comme la surveillance de personnes, le suivi de véhicules, la réalité augmentée dans les jeux, la navigation des robots autonomes, et bien plus encore.</p>
-<p>En conclusion, le suivi d’objets est une compétence clé en vision par ordinateur. En combinant les fonctionnalités d’OpenCV et les concepts de base du suivi d’objets, vous pourrez créer des applications innovantes et passionnantes!</p>
-<p>N’hésitez pas à explorer davantage les fonctionnalités d’OpenCV pour enrichir vos connaissances en vision par ordinateur. Amusez-vous à explorer le monde du suivi d’objets!</p>
  
       <!-- reward -->
       

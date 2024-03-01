@@ -111,6 +111,74 @@
     
     
     <article
+  id="post-Interpolation-et-approximation-de-donnees"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Interpolation-et-approximation-de-donnees/"
+    >Interpolation et approximation de données</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Interpolation-et-approximation-de-donnees/" class="article-date">
+  <time datetime="2024-03-01T08:04:42.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Interpolation-et-approximation-de-donnees-avec-Scipy"><a href="#Interpolation-et-approximation-de-donnees-avec-Scipy" class="headerlink" title="Interpolation et approximation de données avec Scipy"></a>Interpolation et approximation de données avec Scipy</h1><p>Dans le domaine de l’analyse de données et du traitement du signal, l’interpolation et l’approximation de données sont des techniques essentielles pour remplir les lacunes entre des points de données connus, ou pour estimer des valeurs continues à partir de données discrètes. Scipy offre un ensemble d’outils puissants pour effectuer ces opérations de manière efficace.</p>
+<h2 id="Introduction-a-l’interpolation-et-a-l’approximation-de-donnees"><a href="#Introduction-a-l’interpolation-et-a-l’approximation-de-donnees" class="headerlink" title="Introduction à l’interpolation et à l’approximation de données"></a>Introduction à l’interpolation et à l’approximation de données</h2><p>L’interpolation consiste à estimer des valeurs entre des points de données connus, en supposant que les données suivent une certaine tendance. L’approximation, quant à elle, vise à trouver une fonction simple qui représente au mieux les données brutes.</p>
+<p>Commençons par un exemple simple d’interpolation linéaire en utilisant Scipy. Supposons que nous ayons les points de données suivants :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy.interpolate <span class="keyword">import</span> interp1d</span><br><span class="line"></span><br><span class="line">x = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])</span><br><span class="line">y = np.array([<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>])</span><br><span class="line"></span><br><span class="line">f = interp1d(x, y, kind=<span class="string">&#x27;linear&#x27;</span>)</span><br><span class="line">x_new = np.array([<span class="number">1.5</span>, <span class="number">2.5</span>, <span class="number">3.5</span>, <span class="number">4.5</span>])</span><br><span class="line">y_new = f(x_new)</span><br><span class="line"><span class="built_in">print</span>(y_new)</span><br></pre></td></tr></table></figure>
+
+<p>Dans cet exemple, nous créons une fonction d’interpolation linéaire ‘f’ basée sur les points de données ‘x’ et ‘y’, puis nous utilisons cette fonction pour estimer les valeurs de ‘y_new’ aux points intermédiaires de ‘x_new’.</p>
+<h2 id="Interpolation-polynomiale"><a href="#Interpolation-polynomiale" class="headerlink" title="Interpolation polynomiale"></a>Interpolation polynomiale</h2><p>Scipy fournit également des fonctions pour effectuer une interpolation polynomiale. Par exemple, pour réaliser une interpolation polynomiale d’ordre 2 sur nos données :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f_poly = interp1d(x, y, kind=<span class="string">&#x27;quadratic&#x27;</span>)</span><br><span class="line">y_poly_new = f_poly(x_new)</span><br><span class="line"><span class="built_in">print</span>(y_poly_new)</span><br></pre></td></tr></table></figure>
+
+<p>L’interpolation polynomiale crée une courbe plus ajustée aux données, pouvant mieux capturer la variation entre les points.</p>
+<h2 id="Approximation-de-donnees-avec-Scipy"><a href="#Approximation-de-donnees-avec-Scipy" class="headerlink" title="Approximation de données avec Scipy"></a>Approximation de données avec Scipy</h2><p>En plus de l’interpolation, Scipy propose des méthodes d’approximation comme la régression linéaire pour modéliser des données brutes par une fonction simple. Par exemple, pour approximer nos données avec une régression linéaire :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> curve_fit</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">linear_func</span>(<span class="params">x, a, b</span>):</span><br><span class="line">    <span class="keyword">return</span> a * x + b</span><br><span class="line"></span><br><span class="line">params, _ = curve_fit(linear_func, x, y)</span><br><span class="line">a, b = params</span><br><span class="line"><span class="built_in">print</span>(a, b)</span><br></pre></td></tr></table></figure>
+
+<p>Cette approche nous permet d’estimer les coefficients ‘a’ et ‘b’ de la fonction linéaire ‘a*x + b’ qui représente au mieux nos données.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, l’interpolation et l’approximation de données avec Scipy sont des outils puissants pour analyser et modéliser des ensembles de données. Que ce soit pour prédire des valeurs manquantes, lisser des données bruitées ou modéliser des tendances, ces techniques sont largement utilisées dans divers domaines tels que l’ingénierie, les sciences naturelles, l’économie, etc.</p>
+<p>En explorant davantage les fonctionnalités avancées de Scipy et en combinant ces techniques avec d’autres outils d’analyse de données, il est possible de réaliser des analyses approfondies et de tirer des insights précieux à partir de données réelles.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
   id="post-Algebre-lineaire-avec-SciPy"
   class="article article-type-post"
   itemscope
@@ -706,76 +774,6 @@
 <p>N’hésitez pas à consulter la <a target="_blank" rel="noopener" href="https://www.scipy.org/">documentation officielle de SciPy</a> pour en savoir plus sur ses fonctionnalités avancées.</p>
 <hr>
 <p>Avec SciPy installé et configuré, vous pourrez aborder des domaines variés tels que l’analyse de données, la modélisation mathématique, ou encore la simulation numérique avec une facilité et une efficacité accrues. Bonne exploration !</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Introduction-a-SciPy-et-au-calcul-scientifique"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Introduction-a-SciPy-et-au-calcul-scientifique/"
-    >Introduction à SciPy et au calcul scientifique</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Introduction-a-SciPy-et-au-calcul-scientifique/" class="article-date">
-  <time datetime="2024-03-01T08:02:08.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Introduction-a-SciPy-et-au-calcul-scientifique"><a href="#Introduction-a-SciPy-et-au-calcul-scientifique" class="headerlink" title="Introduction à SciPy et au calcul scientifique"></a>Introduction à SciPy et au calcul scientifique</h1><p>Dans le domaine du calcul scientifique en Python, SciPy est une bibliothèque incontournable qui offre de nombreuses fonctionnalités pour résoudre des problèmes mathématiques et scientifiques. Que vous soyez étudiant, chercheur ou simplement curieux, maîtriser SciPy peut grandement vous aider dans vos projets. Dans cet article, nous allons explorer les bases de SciPy et du calcul scientifique en Python.</p>
-<h2 id="Qu’est-ce-que-SciPy"><a href="#Qu’est-ce-que-SciPy" class="headerlink" title="Qu’est-ce que SciPy ?"></a>Qu’est-ce que SciPy ?</h2><p>SciPy est une bibliothèque open-source qui s’appuie sur NumPy pour fournir un ensemble étendu de fonctionnalités pour le calcul scientifique. Elle offre des outils pour l’optimisation, l’algèbre linéaire, l’intégration, l’interpolation, la transformation de Fourier, le traitement du signal, et bien plus encore. Avec SciPy, vous pouvez résoudre une grande variété de problèmes mathématiques et scientifiques de manière efficace.</p>
-<h2 id="Installation-de-SciPy"><a href="#Installation-de-SciPy" class="headerlink" title="Installation de SciPy"></a>Installation de SciPy</h2><p>Avant de commencer à utiliser SciPy, assurez-vous de l’avoir installé. Si vous utilisez Anaconda, SciPy est généralement inclus. Sinon, vous pouvez l’installer à l’aide de pip :</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install scipy</span><br></pre></td></tr></table></figure>
-
-<h2 id="Utilisation-de-SciPy"><a href="#Utilisation-de-SciPy" class="headerlink" title="Utilisation de SciPy"></a>Utilisation de SciPy</h2><h3 id="Exemple-1-Calcul-d’integrales"><a href="#Exemple-1-Calcul-d’integrales" class="headerlink" title="Exemple 1 : Calcul d’intégrales"></a>Exemple 1 : Calcul d’intégrales</h3><p>Calculons l’intégrale de la fonction cos(x) sur l’intervalle [0, pi]. Voici comment faire cela en utilisant SciPy :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.integrate <span class="keyword">import</span> quad</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">result, error = quad(np.cos, <span class="number">0</span>, np.pi)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Résultat de l&#x27;intégrale :&quot;</span>, result)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Erreur estimée :&quot;</span>, error)</span><br></pre></td></tr></table></figure>
-
-<p>Dans cet exemple, nous importons la fonction <code>quad</code> pour l’intégration quadratique et <code>numpy</code> pour accéder à la fonction <code>cos</code>. Ensuite, nous calculons l’intégrale de cos(x) sur l’intervalle [0, pi] et affichons les résultats.</p>
-<h3 id="Exemple-2-Resolution-de-systemes-d’equations-lineaires"><a href="#Exemple-2-Resolution-de-systemes-d’equations-lineaires" class="headerlink" title="Exemple 2 : Résolution de systèmes d’équations linéaires"></a>Exemple 2 : Résolution de systèmes d’équations linéaires</h3><p>Supposons que nous devons résoudre le système d’équations linéaires suivant :</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2x + y = 5</span><br><span class="line">x - y = 1</span><br></pre></td></tr></table></figure>
-
-<p>Voici comment le résoudre avec SciPy :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.linalg <span class="keyword">import</span> solve</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">A = np.array([[<span class="number">2</span>, <span class="number">1</span>], [<span class="number">1</span>, -<span class="number">1</span>]])</span><br><span class="line">b = np.array([<span class="number">5</span>, <span class="number">1</span>])</span><br><span class="line">x = solve(A, b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Solution du système :&quot;</span>, x)</span><br></pre></td></tr></table></figure>
-
-<p>Dans cet exemple, nous utilisons la fonction <code>solve</code> de SciPy pour résoudre le système d’équations linéaires représenté par la matrice <code>A</code> et le vecteur <code>b</code>.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, SciPy est une bibliothèque puissante pour le calcul scientifique en Python. En maîtrisant SciPy, vous serez en mesure de résoudre un large éventail de problèmes mathématiques et scientifiques efficacement. Que vous travailliez sur des simulations, de l’analyse de données ou de l’apprentissage automatique, SciPy peut vous être d’une aide précieuse. N’hésitez pas à explorer davantage ses fonctionnalités et à l’incorporer dans vos projets pour tirer pleinement parti de ses capacités.</p>
-<p>Avec SciPy, plongez-vous dans le monde fascinant du calcul scientifique en Python ! 🐍🔬</p>
  
       <!-- reward -->
       

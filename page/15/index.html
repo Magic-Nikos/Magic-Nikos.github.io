@@ -111,6 +111,73 @@
     
     
     <article
+  id="post-Travailler-avec-du-texte-et-des-annotations"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Travailler-avec-du-texte-et-des-annotations/"
+    >Travailler avec du texte et des annotations</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Travailler-avec-du-texte-et-des-annotations/" class="article-date">
+  <time datetime="2024-03-01T06:35:29.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Matplotlib/">Matplotlib</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Travailler-avec-du-texte-et-des-annotations-avec-Matplotlib"><a href="#Travailler-avec-du-texte-et-des-annotations-avec-Matplotlib" class="headerlink" title="Travailler avec du texte et des annotations avec Matplotlib"></a>Travailler avec du texte et des annotations avec Matplotlib</h1><p>Bienvenue dans cet article où nous allons découvrir comment travailler avec du texte et des annotations dans Matplotlib, une bibliothèque Python utilisée pour créer des visualisations de données. Les textes et les annotations sont des éléments essentiels pour ajouter des informations supplémentaires à nos graphiques.</p>
+<h2 id="Ajouter-du-texte-dans-un-graphique"><a href="#Ajouter-du-texte-dans-un-graphique" class="headerlink" title="Ajouter du texte dans un graphique"></a>Ajouter du texte dans un graphique</h2><p>Pour ajouter du texte dans un graphique avec Matplotlib, nous utilisons la fonction <code>plt.text()</code> en spécifiant les coordonnées du texte et le contenu à afficher. Voici un exemple :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">plt.plot([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line">plt.text(<span class="number">2</span>, <span class="number">2</span>, <span class="string">&#x27;Exemple de texte&#x27;</span>, fontsize=<span class="number">12</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>Dans cet exemple, nous plaçons le texte “Exemple de texte” au point (2, 2) sur le graphique.</p>
+<h2 id="Ajouter-des-annotations"><a href="#Ajouter-des-annotations" class="headerlink" title="Ajouter des annotations"></a>Ajouter des annotations</h2><p>Les annotations permettent de mettre en évidence des points spécifiques sur le graphique. Pour ajouter une annotation, nous utilisons la fonction <code>plt.annotate()</code> en précisant les coordonnées du point à annoter et le texte de l’annotation. Voici un exemple :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([<span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>])</span><br><span class="line">plt.annotate(<span class="string">&#x27;Point important&#x27;</span>, xy=(<span class="number">2</span>, <span class="number">2</span>), xytext=(<span class="number">3</span>, <span class="number">3</span>),</span><br><span class="line">             arrowprops=<span class="built_in">dict</span>(facecolor=<span class="string">&#x27;black&#x27;</span>, shrink=<span class="number">0.05</span>))</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>Dans cet exemple, nous plaçons une annotation “Point important” à la position (2, 2) et relions cette annotation à un autre point à la position (3, 3) avec une flèche.</p>
+<h2 id="Mettre-en-forme-le-texte"><a href="#Mettre-en-forme-le-texte" class="headerlink" title="Mettre en forme le texte"></a>Mettre en forme le texte</h2><p>Matplotlib offre de nombreuses options pour personnaliser le texte, telles que la taille de la police, la couleur, le style, etc. Voici un exemple qui illustre certaines de ces options :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line">plt.text(<span class="number">2</span>, <span class="number">2</span>, <span class="string">&#x27;Texte formaté&#x27;</span>, fontsize=<span class="number">14</span>, color=<span class="string">&#x27;red&#x27;</span>, style=<span class="string">&#x27;italic&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Travailler avec du texte et des annotations dans Matplotlib est un aspect crucial de la création de visualisations de données informatives et attrayantes. En utilisant les fonctions <code>plt.text()</code> et <code>plt.annotate()</code>, ainsi que les options de formatage disponibles, vous pouvez ajouter des informations essentielles à vos graphiques.</p>
+<p>Que ce soit pour souligner des points importants, expliquer des tendances ou ajouter des explications, maîtriser l’art de travailler avec du texte et des annotations vous permettra de créer des graphiques plus percutants et compréhensibles.</p>
+<p>N’hésitez pas à explorer davantage ces fonctionnalités et à les intégrer dans vos propres projets de visualisation de données !</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-matplotlib/" rel="tag">python, matplotlib</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
   id="post-Types-de-graphiques-en-Matplotlib-Histogrammes-scatter-plots-et-plus"
   class="article article-type-post"
   itemscope
@@ -704,76 +771,6 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Mauvaise pratique</span></span><br><span class="line"><span class="keyword">if</span> a &gt; <span class="number">0</span>:</span><br><span class="line">    b = <span class="number">10</span> / a</span><br><span class="line"></span><br><span class="line"><span class="comment"># Bonne pratique</span></span><br><span class="line"><span class="keyword">if</span> a &gt; <span class="number">0</span>:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        b = <span class="number">10</span> / a</span><br><span class="line">    <span class="keyword">except</span> ZeroDivisionError <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Division par zéro impossible&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En appliquant ces bonnes pratiques de développement en Python, vous serez en mesure d’écrire un code plus clair, compréhensible et maintenable. Ces habitudes de programmation vous aideront non seulement à bien structurer votre code, mais aussi à collaborer plus efficacement avec d’autres développeurs et à résoudre plus facilement les problèmes. N’oubliez pas qu’il est essentiel de pratiquer régulièrement pour intégrer ces bonnes pratiques dans votre style de programmation.</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Deploiement-d-applications-Python"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/02/29/Deploiement-d-applications-Python/"
-    >Déploiement d&#39;applications Python</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/02/29/Deploiement-d-applications-Python/" class="article-date">
-  <time datetime="2024-02-29T17:59:42.000Z" itemprop="datePublished">2024-02-29</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Deploiement-d’applications-Python"><a href="#Deploiement-d’applications-Python" class="headerlink" title="Déploiement d’applications Python"></a>Déploiement d’applications Python</h1><p>Le déploiement d’applications Python est une étape cruciale dans le cycle de vie de tout projet de développement logiciel. Que vous développiez une simple application web, une application de bureau ou un service d’API, savoir comment déployer votre application correctement est essentiel pour garantir son bon fonctionnement. Dans cet article, nous allons explorer les bases du déploiement d’applications Python, les bonnes pratiques à suivre et les outils disponibles pour faciliter ce processus.</p>
-<h2 id="1-Environnement-virtuel"><a href="#1-Environnement-virtuel" class="headerlink" title="1. Environnement virtuel"></a>1. Environnement virtuel</h2><p>Avant de déployer une application Python, il est recommandé de créer un environnement virtuel pour isoler les dépendances de votre projet. Voici comment vous pouvez le faire en utilisant <code>venv</code> :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m venv mon_environnement</span><br><span class="line">source mon_environnement/<span class="built_in">bin</span>/activate</span><br></pre></td></tr></table></figure>
-
-<p>Cela garantira que les dépendances de votre application restent séparées des autres projets Python sur votre système.</p>
-<h2 id="2-Gestion-des-dependances"><a href="#2-Gestion-des-dependances" class="headerlink" title="2. Gestion des dépendances"></a>2. Gestion des dépendances</h2><p>Il est essentiel de spécifier toutes les dépendances de votre application dans un fichier <code>requirements.txt</code>. Vous pouvez le créer en listant toutes les dépendances utilisées par votre application, par exemple :</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flask</span><br><span class="line">requests</span><br></pre></td></tr></table></figure>
-
-<p>Pour installer ces dépendances, utilisez la commande suivante :</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-Configuration-de-l’environnement"><a href="#3-Configuration-de-l’environnement" class="headerlink" title="3. Configuration de l’environnement"></a>3. Configuration de l’environnement</h2><p>Lors du déploiement d’une application, il est important de configurer correctement l’environnement, en définissant les variables d’environnement appropriées, par exemple les clés secrètes, les URLs des bases de données, etc. Vous pouvez définir ces variables dans un fichier <code>.env</code> et les charger dans votre application en utilisant la bibliothèque <code>python-dotenv</code>.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> dotenv <span class="keyword">import</span> load_dotenv</span><br><span class="line"></span><br><span class="line">load_dotenv()</span><br><span class="line"></span><br><span class="line">SECRET_KEY = os.getenv(<span class="string">&quot;SECRET_KEY&quot;</span>)</span><br><span class="line">DATABASE_URL = os.getenv(<span class="string">&quot;DATABASE_URL&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-Deploiement-sur-un-serveur"><a href="#4-Deploiement-sur-un-serveur" class="headerlink" title="4. Déploiement sur un serveur"></a>4. Déploiement sur un serveur</h2><p>Une fois que votre application est prête, vous pouvez la déployer sur un serveur en utilisant des outils tels que <code>Docker</code>, <code>Heroku</code>, <code>AWS</code>, etc. Par exemple, pour déployer une application Flask avec Docker, vous pouvez créer un fichier <code>Dockerfile</code> :</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> . /app</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /app</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> pip install -r requirements.txt</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;python&quot;</span>, <span class="string">&quot;app.py&quot;</span>]</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Le déploiement d’applications Python est une étape critique pour rendre votre application accessible aux utilisateurs finaux. En suivant les bonnes pratiques et en utilisant les outils appropriés, vous pouvez simplifier ce processus et garantir la stabilité de votre application en production. Que ce soit pour déployer une API RESTful, une application web ou tout autre type d’application, une bonne connaissance du déploiement d’applications Python est un atout précieux pour tout développeur.</p>
  
       <!-- reward -->
       

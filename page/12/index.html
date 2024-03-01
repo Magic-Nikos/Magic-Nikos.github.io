@@ -111,6 +111,76 @@
     
     
     <article
+  id="post-Introduction-a-Dash-et-aux-applications-web-de-donnees"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Introduction-a-Dash-et-aux-applications-web-de-donnees/"
+    >Introduction à Dash et aux applications web de données</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Introduction-a-Dash-et-aux-applications-web-de-donnees/" class="article-date">
+  <time datetime="2024-03-01T07:39:35.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Dash/">Dash</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Introduction-a-Dash-et-aux-applications-web-de-donnees"><a href="#Introduction-a-Dash-et-aux-applications-web-de-donnees" class="headerlink" title="Introduction à Dash et aux applications web de données"></a>Introduction à Dash et aux applications web de données</h1><p>Dans cet article, nous allons nous plonger dans le monde de Dash, un framework web interactif utilisant Python. Nous allons découvrir comment créer des applications web de données dynamiques et interactives en utilisant Dash. Si vous êtes un débutant cherchant à explorer le potentiel de la visualisation de données sur le web, alors vous êtes au bon endroit !</p>
+<h2 id="Qu’est-ce-que-Dash"><a href="#Qu’est-ce-que-Dash" class="headerlink" title="Qu’est-ce que Dash ?"></a>Qu’est-ce que Dash ?</h2><p>Dash est un framework open source permettant la création d’applications web interactives à l’aide de Python. Il permet de concevoir des tableaux de bord, des graphiques interactifs et des interfaces utilisateur sans avoir à se plonger dans des langages web tels que HTML, CSS ou JavaScript. Avec Dash, vous pouvez combiner la puissance de la programmation Python avec la flexibilité du web pour créer des visualisations de données impressionnantes.</p>
+<h2 id="Installation-de-Dash"><a href="#Installation-de-Dash" class="headerlink" title="Installation de Dash"></a>Installation de Dash</h2><p>Avant de commencer, assurez-vous d’avoir Dash et les autres bibliothèques nécessaires installées. Vous pouvez le faire en exécutant la commande suivante dans votre terminal :</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install dash</span><br></pre></td></tr></table></figure>
+
+<h2 id="Premiere-application-Dash"><a href="#Premiere-application-Dash" class="headerlink" title="Première application Dash"></a>Première application Dash</h2><p>Créons une application web simple en Dash pour afficher un graphique à barres.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">from</span> dash <span class="keyword">import</span> dcc, html</span><br><span class="line"></span><br><span class="line">app = dash.Dash(__name__)</span><br><span class="line"></span><br><span class="line">app.layout = html.Div(children=[</span><br><span class="line">    html.H1(<span class="string">&#x27;Bienvenue sur mon premier tableau de bord Dash !&#x27;</span>),</span><br><span class="line">    dcc.Graph(</span><br><span class="line">        <span class="built_in">id</span>=<span class="string">&#x27;example-graph&#x27;</span>,</span><br><span class="line">        figure=&#123;</span><br><span class="line">            <span class="string">&#x27;data&#x27;</span>: [</span><br><span class="line">                &#123;<span class="string">&#x27;x&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">&#x27;y&#x27;</span>: [<span class="number">4</span>, <span class="number">1</span>, <span class="number">2</span>], <span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;bar&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;Premier graphique&#x27;</span>&#125;,</span><br><span class="line">            ],</span><br><span class="line">            <span class="string">&#x27;layout&#x27;</span>: &#123;</span><br><span class="line">                <span class="string">&#x27;title&#x27;</span>: <span class="string">&#x27;Graphique à barres simple&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    )</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Explication-du-code"><a href="#Explication-du-code" class="headerlink" title="Explication du code"></a>Explication du code</h2><ul>
+<li>Nous avons importé les bibliothèques nécessaires et initialisé notre application Dash.</li>
+<li>En définissant <code>app.layout</code>, nous avons créé la structure de notre application web avec un titre et un graphique à barres.</li>
+<li>Le graphique à barres est défini à l’aide de la méthode <code>dcc.Graph</code> avec des données et une mise en page spécifiques.</li>
+<li>En exécutant l’application via <code>app.run_server()</code>, notre tableau de bord Dash est lancé localement.</li>
+</ul>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, Dash offre une manière simple et efficace de créer des applications web interactives de données en utilisant Python. En combinant la puissance de la programmation Python avec la souplesse du web, vous pouvez concevoir des visualisations de données dynamiques et intuitives. Explorez les possibilités infinies de Dash pour créer des applications web de données personnalisées qui captiveront votre audience !</p>
+<p>Pour aller plus loin avec Dash et les applications web de données, n’hésitez pas à consulter la documentation officielle de Dash et à expérimenter par vous-même. Bon codage !</p>
+<hr>
+<p>Cet article vous a-t-il été utile ? Laissez votre avis dans les commentaires et partagez vos réalisations avec Dash !</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Dash/" rel="tag">python, Dash</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
   id="post-Projets-pratiques-et-etudes-de-cas"
   class="article article-type-post"
   itemscope
@@ -714,74 +784,6 @@
 <p>N’hésitez pas à explorer davantage les fonctionnalités d’animation et de transition de Plotly pour créer des visualisations personnalisées et impactantes. Amusez-vous bien à animer vos graphiques ! 📊✨</p>
 <hr>
 <p>Vous pouvez trouver plus d’informations sur Plotly dans la <a target="_blank" rel="noopener" href="https://plotly.com/python/">documentation officielle</a>.</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Graphiques-3D-Surfaces-scatter-plots-et-lignes"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Graphiques-3D-Surfaces-scatter-plots-et-lignes/"
-    >Graphiques 3D : Surfaces, scatter plots et lignes</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Graphiques-3D-Surfaces-scatter-plots-et-lignes/" class="article-date">
-  <time datetime="2024-03-01T07:31:21.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Article-pedagogique-Graphiques-3D-avec-Plotly"><a href="#Article-pedagogique-Graphiques-3D-avec-Plotly" class="headerlink" title="Article pédagogique : Graphiques 3D avec Plotly"></a>Article pédagogique : Graphiques 3D avec Plotly</h1><p>Bienvenue dans cet article où nous allons explorer l’utilisation de Plotly pour créer des graphiques 3D, notamment des surfaces, des scatter plots et des lignes. Plotly est une bibliothèque Python puissante et flexible qui permet de visualiser facilement des données en 2D et en 3D. Dans ce tutoriel, nous allons découvrir comment créer ces différents types de graphiques pour représenter des données en trois dimensions.</p>
-<h2 id="1-Graphique-3D-avec-des-Surfaces"><a href="#1-Graphique-3D-avec-des-Surfaces" class="headerlink" title="1. Graphique 3D avec des Surfaces"></a>1. Graphique 3D avec des Surfaces</h2><p>Les graphiques 3D de type surfaces sont parfaitement adaptés pour visualiser des fonctions mathématiques ou des ensembles de données qui évoluent dans un espace tridimensionnel.</p>
-<p>Voici un exemple de code Python utilisant Plotly pour créer un graphique 3D avec une surface :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">x = np.linspace(-<span class="number">5</span>, <span class="number">5</span>, <span class="number">100</span>)</span><br><span class="line">y = np.linspace(-<span class="number">5</span>, <span class="number">5</span>, <span class="number">100</span>)</span><br><span class="line">X, Y = np.meshgrid(x, y)</span><br><span class="line">Z = np.sin(np.sqrt(X**<span class="number">2</span> + Y**<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=[go.Surface(z=Z, x=X, y=Y)])</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-Graphique-3D-avec-des-Scatter-Plots"><a href="#2-Graphique-3D-avec-des-Scatter-Plots" class="headerlink" title="2. Graphique 3D avec des Scatter Plots"></a>2. Graphique 3D avec des Scatter Plots</h2><p>Les scatter plots en 3D permettent de représenter des ensembles de points dans un espace tridimensionnel. Ce type de graphique est idéal pour visualiser la répartition des données selon trois variables.</p>
-<p>Voici un exemple de code Python pour créer un scatter plot 3D avec Plotly :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">N = <span class="number">100</span></span><br><span class="line">x = np.random.rand(N)</span><br><span class="line">y = np.random.rand(N)</span><br><span class="line">z = np.random.rand(N)</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=[go.Scatter3d(x=x, y=y, z=z, mode=<span class="string">&#x27;markers&#x27;</span>)])</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-Graphique-3D-avec-des-Lignes"><a href="#3-Graphique-3D-avec-des-Lignes" class="headerlink" title="3. Graphique 3D avec des Lignes"></a>3. Graphique 3D avec des Lignes</h2><p>Les graphiques 3D de type lignes sont utiles pour représenter des trajectoires, des courbes ou des connexions entre des points dans un espace tridimensionnel.</p>
-<p>Voici un exemple de code Python pour créer un graphique 3D avec des lignes en utilisant Plotly :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">t = np.linspace(<span class="number">0</span>, <span class="number">10</span>, <span class="number">100</span>)</span><br><span class="line">x = np.sin(t)</span><br><span class="line">y = np.cos(t)</span><br><span class="line">z = t</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=[go.Scatter3d(x=x, y=y, z=z, mode=<span class="string">&#x27;lines&#x27;</span>)])</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Les graphiques 3D avec Plotly offrent une manière visuellement attractive de représenter des données complexes dans un espace tridimensionnel. Que ce soit pour visualiser des fonctions mathématiques, des ensembles de points ou des trajectoires, l’utilisation de Plotly permet de créer facilement des graphiques interactifs et personnalisables.</p>
-<p>En explorant davantage les fonctionnalités avancées de Plotly et en combinant différents types de graphiques 3D, il est possible de créer des visualisations informatives et esthétiques pour divers domaines tels que la recherche scientifique, la finance ou la modélisation de données.</p>
-<p>N’hésitez pas à expérimenter et à découvrir de nouvelles applications des graphiques 3D avec Plotly pour enrichir vos analyses et vos présentations de données. Happy coding!</p>
  
       <!-- reward -->
       

@@ -111,6 +111,71 @@
     
     
     <article
+  id="post-Installation-et-premiers-pas"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Installation-et-premiers-pas/"
+    >Installation et premiers pas</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Installation-et-premiers-pas/" class="article-date">
+  <time datetime="2024-03-01T07:28:47.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Plotly-Installation-et-premiers-pas"><a href="#Plotly-Installation-et-premiers-pas" class="headerlink" title="Plotly : Installation et premiers pas"></a>Plotly : Installation et premiers pas</h1><p>Bienvenue dans ce guide pour démarrer avec Plotly ! Plotly est une bibliothèque graphique puissante en Python qui permet de créer des visualisations interactives. Dans cet article, nous allons parcourir les étapes d’installation de Plotly et explorer quelques bases pour commencer à créer des graphiques. </p>
+<h2 id="Installation-de-Plotly"><a href="#Installation-de-Plotly" class="headerlink" title="Installation de Plotly"></a>Installation de Plotly</h2><p>Avant de commencer à utiliser Plotly, il est essentiel de l’installer. Pour cela, nous allons utiliser <code>pip</code>, le gestionnaire de paquets Python :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
+
+<p>Assurez-vous d’avoir une connexion Internet active, cela permettra à <code>pip</code> de télécharger et d’installer la bibliothèque Plotly sur votre machine.</p>
+<h2 id="Premiers-pas-avec-Plotly"><a href="#Premiers-pas-avec-Plotly" class="headerlink" title="Premiers pas avec Plotly"></a>Premiers pas avec Plotly</h2><p>Maintenant que Plotly est installé, voyons comment créer notre premier graphique. Nous allons commencer par un graphique linéaire simple. Voici un exemple de code Python pour générer un tel graphique :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="comment"># Données</span></span><br><span class="line">x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">y = [<span class="number">10</span>, <span class="number">15</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">18</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Création du graphique</span></span><br><span class="line">fig = go.Figure()</span><br><span class="line">fig.add_trace(go.Scatter(x=x, y=y, mode=<span class="string">&#x27;lines&#x27;</span>, name=<span class="string">&#x27;Ligne&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Affichage du graphique</span></span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+
+<p>En exécutant ce code, vous devriez voir apparaître un graphique linéaire simple avec une ligne reliant les points.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Ce guide d’installation et de premiers pas avec Plotly vous a permis de mettre en place la bibliothèque sur votre machine et de créer votre premier graphique interactif. Avec Plotly, les possibilités de visualisation de données sont infinies, que ce soit pour explorer des données complexes, créer des tableaux de bord interactifs ou générer des visualisations personnalisées. </p>
+<p>N’hésitez pas à explorer davantage Plotly en consultant la documentation officielle et en expérimentant avec différents types de graphiques. Amusez-vous à découvrir tout le potentiel de cette bibliothèque graphique ! </p>
+<hr>
+<p>Avec ces informations, vous devriez maintenant être prêt à démarrer avec l’installation et les premiers pas avec Plotly. N’hésitez pas à continuer à explorer et à pratiquer pour maîtriser pleinement cette bibliothèque de visualisation de données. Happy plotting !</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
   id="post-Projets-pratiques-avec-Matplotlib"
   class="article article-type-post"
   itemscope
@@ -707,73 +772,6 @@
 <p>N’oubliez pas d’explorer davantage les possibilités offertes par Matplotlib pour enrichir vos visualisations temporelles et améliorer votre compréhension des tendances et des événements temporels dans vos données.</p>
 <hr>
 <p>J’espère que cet article vous a aidé à comprendre comment manipuler les dates et les heures dans les graphiques avec Matplotlib. N’hésitez pas à pratiquer ces concepts et à explorer d’autres fonctionnalités pour devenir un expert en visualisation de données temporelles avec Matplotlib.</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-matplotlib/" rel="tag">python, matplotlib</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Travailler-avec-du-texte-et-des-annotations"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Travailler-avec-du-texte-et-des-annotations/"
-    >Travailler avec du texte et des annotations</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Travailler-avec-du-texte-et-des-annotations/" class="article-date">
-  <time datetime="2024-03-01T06:35:29.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Matplotlib/">Matplotlib</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Travailler-avec-du-texte-et-des-annotations-avec-Matplotlib"><a href="#Travailler-avec-du-texte-et-des-annotations-avec-Matplotlib" class="headerlink" title="Travailler avec du texte et des annotations avec Matplotlib"></a>Travailler avec du texte et des annotations avec Matplotlib</h1><p>Bienvenue dans cet article où nous allons découvrir comment travailler avec du texte et des annotations dans Matplotlib, une bibliothèque Python utilisée pour créer des visualisations de données. Les textes et les annotations sont des éléments essentiels pour ajouter des informations supplémentaires à nos graphiques.</p>
-<h2 id="Ajouter-du-texte-dans-un-graphique"><a href="#Ajouter-du-texte-dans-un-graphique" class="headerlink" title="Ajouter du texte dans un graphique"></a>Ajouter du texte dans un graphique</h2><p>Pour ajouter du texte dans un graphique avec Matplotlib, nous utilisons la fonction <code>plt.text()</code> en spécifiant les coordonnées du texte et le contenu à afficher. Voici un exemple :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">plt.plot([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line">plt.text(<span class="number">2</span>, <span class="number">2</span>, <span class="string">&#x27;Exemple de texte&#x27;</span>, fontsize=<span class="number">12</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p>Dans cet exemple, nous plaçons le texte “Exemple de texte” au point (2, 2) sur le graphique.</p>
-<h2 id="Ajouter-des-annotations"><a href="#Ajouter-des-annotations" class="headerlink" title="Ajouter des annotations"></a>Ajouter des annotations</h2><p>Les annotations permettent de mettre en évidence des points spécifiques sur le graphique. Pour ajouter une annotation, nous utilisons la fonction <code>plt.annotate()</code> en précisant les coordonnées du point à annoter et le texte de l’annotation. Voici un exemple :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([<span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>])</span><br><span class="line">plt.annotate(<span class="string">&#x27;Point important&#x27;</span>, xy=(<span class="number">2</span>, <span class="number">2</span>), xytext=(<span class="number">3</span>, <span class="number">3</span>),</span><br><span class="line">             arrowprops=<span class="built_in">dict</span>(facecolor=<span class="string">&#x27;black&#x27;</span>, shrink=<span class="number">0.05</span>))</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p>Dans cet exemple, nous plaçons une annotation “Point important” à la position (2, 2) et relions cette annotation à un autre point à la position (3, 3) avec une flèche.</p>
-<h2 id="Mettre-en-forme-le-texte"><a href="#Mettre-en-forme-le-texte" class="headerlink" title="Mettre en forme le texte"></a>Mettre en forme le texte</h2><p>Matplotlib offre de nombreuses options pour personnaliser le texte, telles que la taille de la police, la couleur, le style, etc. Voici un exemple qui illustre certaines de ces options :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line">plt.text(<span class="number">2</span>, <span class="number">2</span>, <span class="string">&#x27;Texte formaté&#x27;</span>, fontsize=<span class="number">14</span>, color=<span class="string">&#x27;red&#x27;</span>, style=<span class="string">&#x27;italic&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Travailler avec du texte et des annotations dans Matplotlib est un aspect crucial de la création de visualisations de données informatives et attrayantes. En utilisant les fonctions <code>plt.text()</code> et <code>plt.annotate()</code>, ainsi que les options de formatage disponibles, vous pouvez ajouter des informations essentielles à vos graphiques.</p>
-<p>Que ce soit pour souligner des points importants, expliquer des tendances ou ajouter des explications, maîtriser l’art de travailler avec du texte et des annotations vous permettra de créer des graphiques plus percutants et compréhensibles.</p>
-<p>N’hésitez pas à explorer davantage ces fonctionnalités et à les intégrer dans vos propres projets de visualisation de données !</p>
  
       <!-- reward -->
       

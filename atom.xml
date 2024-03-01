@@ -6,7 +6,7 @@
   <link href="https://magic-nikos.github.io/atom.xml" rel="self"/>
   
   <link href="https://magic-nikos.github.io/"/>
-  <updated>2024-03-01T14:29:54.800Z</updated>
+  <updated>2024-03-01T16:38:20.280Z</updated>
   <id>https://magic-nikos.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Introduction à tkinter</title>
+    <link href="https://magic-nikos.github.io/2024/03/01/Introduction-a-tkinter/"/>
+    <id>https://magic-nikos.github.io/2024/03/01/Introduction-a-tkinter/</id>
+    <published>2024-03-01T16:38:20.000Z</published>
+    <updated>2024-03-01T16:38:20.280Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Projets pratiques</title>
@@ -497,32 +510,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;Article-educatif-Les-Operations-arithmetiques-et-logiques-en-OpenCV&quot;&gt;&lt;a href=&quot;#Article-educatif-Les-Operations-arithmetiques-et-logi</summary>
-      
-    
-    
-    
-    <category term="OpenCV" scheme="https://magic-nikos.github.io/categories/OpenCV/"/>
-    
-    
-    <category term="python" scheme="https://magic-nikos.github.io/tags/python/"/>
-    
-    <category term="opencv" scheme="https://magic-nikos.github.io/tags/opencv/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Traitement d&#39;images</title>
-    <link href="https://magic-nikos.github.io/2024/03/01/Traitement-d-images/"/>
-    <id>https://magic-nikos.github.io/2024/03/01/Traitement-d-images/</id>
-    <published>2024-03-01T14:24:06.000Z</published>
-    <updated>2024-03-01T14:24:19.320Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Article-educatif-OpenCV-Traitement-d’images"><a href="#Article-educatif-OpenCV-Traitement-d’images" class="headerlink" title="Article éducatif : OpenCV - Traitement d’images"></a>Article éducatif : OpenCV - Traitement d’images</h1><p>Bienvenue dans ce guide dédié aux débutants en OpenCV ! Aujourd’hui, nous allons plonger dans le fascinant monde du traitement d’images en utilisant OpenCV. Que vous soyez un étudiant curieux ou un développeur en herbe, ce tutoriel vous fournira les bases nécessaires pour comprendre et maîtriser le traitement d’images.</p><h2 id="Introduction-au-traitement-d’images"><a href="#Introduction-au-traitement-d’images" class="headerlink" title="Introduction au traitement d’images"></a>Introduction au traitement d’images</h2><p>Le traitement d’images est un domaine de l’informatique qui consiste à effectuer des opérations sur des images numériques afin de les améliorer, les analyser ou en extraire des informations. Avec OpenCV, une puissante bibliothèque open-source dédiée à la vision par ordinateur, vous pouvez réaliser toutes sortes de transformations sur des images.</p><h2 id="Les-concepts-de-base"><a href="#Les-concepts-de-base" class="headerlink" title="Les concepts de base"></a>Les concepts de base</h2><h3 id="Chargement-d’une-image"><a href="#Chargement-d’une-image" class="headerlink" title="Chargement d’une image"></a>Chargement d’une image</h3><p>Pour commencer, chargeons une image à partir d’un fichier et affichons-la à l’écran :</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;Image&#x27;</span>, image)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure><h3 id="Conversion-en-niveaux-de-gris"><a href="#Conversion-en-niveaux-de-gris" class="headerlink" title="Conversion en niveaux de gris"></a>Conversion en niveaux de gris</h3><p>Il est souvent utile de convertir une image en niveaux de gris pour simplifier le traitement. Voici comment le faire avec OpenCV :</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;Gray Image&#x27;</span>, gray_image)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure><h3 id="Application-de-filtres"><a href="#Application-de-filtres" class="headerlink" title="Application de filtres"></a>Application de filtres</h3><p>Les filtres permettent d’effectuer des transformations sur une image, comme le lissage ou la détection de contours. Voici un exemple de l’application d’un filtre de flou :</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">blurred_image = cv2.GaussianBlur(image, (<span class="number">5</span>, <span class="number">5</span>), <span class="number">0</span>)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;Blurred Image&#x27;</span>, blurred_image)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, le traitement d’images avec OpenCV offre un potentiel immense dans de nombreux domaines tels que la reconnaissance faciale, la détection d’objets, la réalité augmentée, etc. En comprenant les bases du traitement d’images, vous pourrez explorer ces applications passionnantes et développer des projets innovants.</p><p>N’oubliez pas de pratiquer régulièrement et d’explorer davantage les fonctionnalités d’OpenCV pour approfondir vos connaissances en traitement d’images. Bonne découverte !</p><hr><p>Pour plus d’informations sur OpenCV, consultez la <a href="https://docs.opencv.org/">documentation officielle</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Article-educatif-OpenCV-Traitement-d’images&quot;&gt;&lt;a href=&quot;#Article-educatif-OpenCV-Traitement-d’images&quot; class=&quot;headerlink&quot; title=&quot;Articl</summary>
       
     
     

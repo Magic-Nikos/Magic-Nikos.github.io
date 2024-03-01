@@ -111,6 +111,73 @@
     
     
     <article
+  id="post-Graphiques-interactifs-avec-Dash-et-Plotly"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Graphiques-interactifs-avec-Dash-et-Plotly/"
+    >Graphiques interactifs avec Dash et Plotly</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Graphiques-interactifs-avec-Dash-et-Plotly/" class="article-date">
+  <time datetime="2024-03-01T07:42:02.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Dash/">Dash</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Graphiques-interactifs-avec-Dash-et-Plotly"><a href="#Graphiques-interactifs-avec-Dash-et-Plotly" class="headerlink" title="Graphiques interactifs avec Dash et Plotly"></a>Graphiques interactifs avec Dash et Plotly</h1><p>Dans cet article, nous allons explorer comment créer des graphiques interactifs en utilisant Dash et Plotly, deux excellentes bibliothèques Python pour la visualisation de données. Que vous soyez un débutant ou un initié cherchant à approfondir vos compétences, ce guide vous aidera à maîtriser la création de graphiques interactifs fascinants.</p>
+<h2 id="Introduction-a-Dash-et-Plotly"><a href="#Introduction-a-Dash-et-Plotly" class="headerlink" title="Introduction à Dash et Plotly"></a>Introduction à Dash et Plotly</h2><p>Dash est un framework web interactif open-source permettant de construire des tableaux de bord web avec Python. Il est basé sur Flask, Plotly.js et React.js, offrant une approche simplifiée pour la création d’interfaces web interactives. Quant à Plotly, c’est une bibliothèque graphique Python utilisée pour créer des graphiques statiques, mais également des graphiques interactifs.</p>
+<h2 id="Installation-des-dependances"><a href="#Installation-des-dependances" class="headerlink" title="Installation des dépendances"></a>Installation des dépendances</h2><p>Tout d’abord, assurez-vous d’installer Dash et Plotly en exécutant les commandes suivantes :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install dash</span><br><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
+
+<h2 id="Creation-d’un-graphique-interactif-simple"><a href="#Creation-d’un-graphique-interactif-simple" class="headerlink" title="Création d’un graphique interactif simple"></a>Création d’un graphique interactif simple</h2><p>Pour commencer, créons un graphique interactif de base avec Dash et Plotly. Voici un exemple de code Python pour générer un graphique à barres :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">import</span> dash_core_components <span class="keyword">as</span> dcc</span><br><span class="line"><span class="keyword">import</span> dash_html_components <span class="keyword">as</span> html</span><br><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"></span><br><span class="line">app = dash.Dash()</span><br><span class="line"></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">&#x27;x&#x27;</span>: [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>],</span><br><span class="line">    <span class="string">&#x27;y&#x27;</span>: [<span class="number">10</span>, <span class="number">20</span>, <span class="number">15</span>, <span class="number">25</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fig = px.bar(data, x=<span class="string">&#x27;x&#x27;</span>, y=<span class="string">&#x27;y&#x27;</span>)</span><br><span class="line"></span><br><span class="line">app.layout = html.Div([</span><br><span class="line">    dcc.Graph(figure=fig)</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p>En exécutant ce code, vous verrez un graphique à barres interactif s’afficher dans votre navigateur.</p>
+<h2 id="Personnalisation-avancee-des-graphiques"><a href="#Personnalisation-avancee-des-graphiques" class="headerlink" title="Personnalisation avancée des graphiques"></a>Personnalisation avancée des graphiques</h2><p>Avec Dash et Plotly, il est possible de personnaliser vos graphiques de manière avancée. Vous pouvez ajouter des titres, des légendes, des annotations, et bien plus encore. Voici un exemple illustrant l’ajout d’un titre à notre graphique précédent :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fig.update_layout(</span><br><span class="line">    title=<span class="string">&#x27;Exemple de graphique interactif avec Dash et Plotly&#x27;</span>,</span><br><span class="line">    xaxis_title=<span class="string">&#x27;Catégories&#x27;</span>,</span><br><span class="line">    yaxis_title=<span class="string">&#x27;Valeurs&#x27;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>N’hésitez pas à explorer les nombreuses options de personnalisation offertes par Plotly pour créer des graphiques uniques et attrayants.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, la combinaison de Dash et Plotly offre d’innombrables possibilités pour la création de graphiques interactifs et la conception de tableaux de bord dynamiques. Que ce soit pour l’analyse de données, la visualisation d’informations complexes ou la communication visuelle, ces outils vous permettront de donner vie à vos données de manière captivante.</p>
+<p>Commencez dès aujourd’hui à explorer le monde des graphiques interactifs avec Dash et Plotly, et laissez libre cours à votre créativité pour faire ressortir le meilleur de vos données.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Dash/" rel="tag">python, Dash</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
   id="post-Interactions-entre-les-composants"
   class="article article-type-post"
   itemscope
@@ -712,76 +779,6 @@
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Vous avez maintenant configuré votre environnement de développement Dash, créé votre premier projet Dash et lancé une application web interactive. Avec Dash, les possibilités de création d’applications web sont infinies. Explorez davantage les fonctionnalités de Dash et créez des applications web captivantes pour visualiser et interagir avec vos données.</p>
 <p>N’oubliez pas de consulter la <a target="_blank" rel="noopener" href="https://dash.plotly.com/">documentation officielle de Dash</a> pour en savoir plus sur les fonctionnalités avancées et les bonnes pratiques de développement.</p>
 <p>Commencez dès aujourd’hui à construire des applications web dynamiques et engageantes avec Dash !</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Dash/" rel="tag">python, Dash</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Introduction-a-Dash-et-aux-applications-web-de-donnees"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Introduction-a-Dash-et-aux-applications-web-de-donnees/"
-    >Introduction à Dash et aux applications web de données</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Introduction-a-Dash-et-aux-applications-web-de-donnees/" class="article-date">
-  <time datetime="2024-03-01T07:39:35.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Dash/">Dash</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Introduction-a-Dash-et-aux-applications-web-de-donnees"><a href="#Introduction-a-Dash-et-aux-applications-web-de-donnees" class="headerlink" title="Introduction à Dash et aux applications web de données"></a>Introduction à Dash et aux applications web de données</h1><p>Dans cet article, nous allons nous plonger dans le monde de Dash, un framework web interactif utilisant Python. Nous allons découvrir comment créer des applications web de données dynamiques et interactives en utilisant Dash. Si vous êtes un débutant cherchant à explorer le potentiel de la visualisation de données sur le web, alors vous êtes au bon endroit !</p>
-<h2 id="Qu’est-ce-que-Dash"><a href="#Qu’est-ce-que-Dash" class="headerlink" title="Qu’est-ce que Dash ?"></a>Qu’est-ce que Dash ?</h2><p>Dash est un framework open source permettant la création d’applications web interactives à l’aide de Python. Il permet de concevoir des tableaux de bord, des graphiques interactifs et des interfaces utilisateur sans avoir à se plonger dans des langages web tels que HTML, CSS ou JavaScript. Avec Dash, vous pouvez combiner la puissance de la programmation Python avec la flexibilité du web pour créer des visualisations de données impressionnantes.</p>
-<h2 id="Installation-de-Dash"><a href="#Installation-de-Dash" class="headerlink" title="Installation de Dash"></a>Installation de Dash</h2><p>Avant de commencer, assurez-vous d’avoir Dash et les autres bibliothèques nécessaires installées. Vous pouvez le faire en exécutant la commande suivante dans votre terminal :</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install dash</span><br></pre></td></tr></table></figure>
-
-<h2 id="Premiere-application-Dash"><a href="#Premiere-application-Dash" class="headerlink" title="Première application Dash"></a>Première application Dash</h2><p>Créons une application web simple en Dash pour afficher un graphique à barres.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">from</span> dash <span class="keyword">import</span> dcc, html</span><br><span class="line"></span><br><span class="line">app = dash.Dash(__name__)</span><br><span class="line"></span><br><span class="line">app.layout = html.Div(children=[</span><br><span class="line">    html.H1(<span class="string">&#x27;Bienvenue sur mon premier tableau de bord Dash !&#x27;</span>),</span><br><span class="line">    dcc.Graph(</span><br><span class="line">        <span class="built_in">id</span>=<span class="string">&#x27;example-graph&#x27;</span>,</span><br><span class="line">        figure=&#123;</span><br><span class="line">            <span class="string">&#x27;data&#x27;</span>: [</span><br><span class="line">                &#123;<span class="string">&#x27;x&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">&#x27;y&#x27;</span>: [<span class="number">4</span>, <span class="number">1</span>, <span class="number">2</span>], <span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;bar&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;Premier graphique&#x27;</span>&#125;,</span><br><span class="line">            ],</span><br><span class="line">            <span class="string">&#x27;layout&#x27;</span>: &#123;</span><br><span class="line">                <span class="string">&#x27;title&#x27;</span>: <span class="string">&#x27;Graphique à barres simple&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    )</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Explication-du-code"><a href="#Explication-du-code" class="headerlink" title="Explication du code"></a>Explication du code</h2><ul>
-<li>Nous avons importé les bibliothèques nécessaires et initialisé notre application Dash.</li>
-<li>En définissant <code>app.layout</code>, nous avons créé la structure de notre application web avec un titre et un graphique à barres.</li>
-<li>Le graphique à barres est défini à l’aide de la méthode <code>dcc.Graph</code> avec des données et une mise en page spécifiques.</li>
-<li>En exécutant l’application via <code>app.run_server()</code>, notre tableau de bord Dash est lancé localement.</li>
-</ul>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, Dash offre une manière simple et efficace de créer des applications web interactives de données en utilisant Python. En combinant la puissance de la programmation Python avec la souplesse du web, vous pouvez concevoir des visualisations de données dynamiques et intuitives. Explorez les possibilités infinies de Dash pour créer des applications web de données personnalisées qui captiveront votre audience !</p>
-<p>Pour aller plus loin avec Dash et les applications web de données, n’hésitez pas à consulter la documentation officielle de Dash et à expérimenter par vous-même. Bon codage !</p>
-<hr>
-<p>Cet article vous a-t-il été utile ? Laissez votre avis dans les commentaires et partagez vos réalisations avec Dash !</p>
  
       <!-- reward -->
       
