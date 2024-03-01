@@ -111,7 +111,7 @@
     
     
     <article
-  id="post-Interpolation-et-approximation-de-donnees"
+  id="post-Controle-de-la-luminosite-avec-un-potentiometre"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -122,8 +122,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Interpolation-et-approximation-de-donnees/"
-    >Interpolation et approximation de données</a> 
+  <a class="article-title" href="/2024/03/01/Controle-de-la-luminosite-avec-un-potentiometre/"
+    >Contrôle de la luminosité avec un potentiomètre</a> 
 </h2>
  
 
@@ -131,649 +131,44 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Interpolation-et-approximation-de-donnees/" class="article-date">
-  <time datetime="2024-03-01T08:04:42.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Controle-de-la-luminosite-avec-un-potentiometre/" class="article-date">
+  <time datetime="2024-03-01T18:45:19.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
+    <a class="article-category-link" href="/categories/Arduino/">Arduino</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Interpolation-et-approximation-de-donnees-avec-Scipy"><a href="#Interpolation-et-approximation-de-donnees-avec-Scipy" class="headerlink" title="Interpolation et approximation de données avec Scipy"></a>Interpolation et approximation de données avec Scipy</h1><p>Dans le domaine de l’analyse de données et du traitement du signal, l’interpolation et l’approximation de données sont des techniques essentielles pour remplir les lacunes entre des points de données connus, ou pour estimer des valeurs continues à partir de données discrètes. Scipy offre un ensemble d’outils puissants pour effectuer ces opérations de manière efficace.</p>
-<h2 id="Introduction-a-l’interpolation-et-a-l’approximation-de-donnees"><a href="#Introduction-a-l’interpolation-et-a-l’approximation-de-donnees" class="headerlink" title="Introduction à l’interpolation et à l’approximation de données"></a>Introduction à l’interpolation et à l’approximation de données</h2><p>L’interpolation consiste à estimer des valeurs entre des points de données connus, en supposant que les données suivent une certaine tendance. L’approximation, quant à elle, vise à trouver une fonction simple qui représente au mieux les données brutes.</p>
-<p>Commençons par un exemple simple d’interpolation linéaire en utilisant Scipy. Supposons que nous ayons les points de données suivants :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy.interpolate <span class="keyword">import</span> interp1d</span><br><span class="line"></span><br><span class="line">x = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])</span><br><span class="line">y = np.array([<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>])</span><br><span class="line"></span><br><span class="line">f = interp1d(x, y, kind=<span class="string">&#x27;linear&#x27;</span>)</span><br><span class="line">x_new = np.array([<span class="number">1.5</span>, <span class="number">2.5</span>, <span class="number">3.5</span>, <span class="number">4.5</span>])</span><br><span class="line">y_new = f(x_new)</span><br><span class="line"><span class="built_in">print</span>(y_new)</span><br></pre></td></tr></table></figure>
-
-<p>Dans cet exemple, nous créons une fonction d’interpolation linéaire ‘f’ basée sur les points de données ‘x’ et ‘y’, puis nous utilisons cette fonction pour estimer les valeurs de ‘y_new’ aux points intermédiaires de ‘x_new’.</p>
-<h2 id="Interpolation-polynomiale"><a href="#Interpolation-polynomiale" class="headerlink" title="Interpolation polynomiale"></a>Interpolation polynomiale</h2><p>Scipy fournit également des fonctions pour effectuer une interpolation polynomiale. Par exemple, pour réaliser une interpolation polynomiale d’ordre 2 sur nos données :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f_poly = interp1d(x, y, kind=<span class="string">&#x27;quadratic&#x27;</span>)</span><br><span class="line">y_poly_new = f_poly(x_new)</span><br><span class="line"><span class="built_in">print</span>(y_poly_new)</span><br></pre></td></tr></table></figure>
-
-<p>L’interpolation polynomiale crée une courbe plus ajustée aux données, pouvant mieux capturer la variation entre les points.</p>
-<h2 id="Approximation-de-donnees-avec-Scipy"><a href="#Approximation-de-donnees-avec-Scipy" class="headerlink" title="Approximation de données avec Scipy"></a>Approximation de données avec Scipy</h2><p>En plus de l’interpolation, Scipy propose des méthodes d’approximation comme la régression linéaire pour modéliser des données brutes par une fonction simple. Par exemple, pour approximer nos données avec une régression linéaire :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> curve_fit</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">linear_func</span>(<span class="params">x, a, b</span>):</span><br><span class="line">    <span class="keyword">return</span> a * x + b</span><br><span class="line"></span><br><span class="line">params, _ = curve_fit(linear_func, x, y)</span><br><span class="line">a, b = params</span><br><span class="line"><span class="built_in">print</span>(a, b)</span><br></pre></td></tr></table></figure>
-
-<p>Cette approche nous permet d’estimer les coefficients ‘a’ et ‘b’ de la fonction linéaire ‘a*x + b’ qui représente au mieux nos données.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, l’interpolation et l’approximation de données avec Scipy sont des outils puissants pour analyser et modéliser des ensembles de données. Que ce soit pour prédire des valeurs manquantes, lisser des données bruitées ou modéliser des tendances, ces techniques sont largement utilisées dans divers domaines tels que l’ingénierie, les sciences naturelles, l’économie, etc.</p>
-<p>En explorant davantage les fonctionnalités avancées de Scipy et en combinant ces techniques avec d’autres outils d’analyse de données, il est possible de réaliser des analyses approfondies et de tirer des insights précieux à partir de données réelles.</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Algebre-lineaire-avec-SciPy"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Algebre-lineaire-avec-SciPy/"
-    >Algèbre linéaire avec SciPy</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Algebre-lineaire-avec-SciPy/" class="article-date">
-  <time datetime="2024-03-01T08:04:24.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Algebre-lineaire-avec-SciPy"><a href="#Algebre-lineaire-avec-SciPy" class="headerlink" title="Algèbre linéaire avec SciPy"></a>Algèbre linéaire avec SciPy</h1><p>Scipy est une bibliothèque Python puissante et polyvalente pour le calcul scientifique. Dans cet article, nous allons explorer comment utiliser SciPy pour effectuer des opérations d’algèbre linéaire, telles que l’inversion de matrices, la résolution de systèmes d’équations linéaires et bien plus encore. </p>
-<h2 id="Introduction-a-l’algebre-lineaire"><a href="#Introduction-a-l’algebre-lineaire" class="headerlink" title="Introduction à l’algèbre linéaire"></a>Introduction à l’algèbre linéaire</h2><p>L’algèbre linéaire est une branche des mathématiques qui étudie les espaces vectoriels et les transformations linéaires. En informatique, elle est largement utilisée pour résoudre des problèmes mathématiques et informatiques complexes.</p>
-<h2 id="Installation-de-SciPy"><a href="#Installation-de-SciPy" class="headerlink" title="Installation de SciPy"></a>Installation de SciPy</h2><p>Avant de commencer, assurez-vous d’avoir SciPy installé. Si ce n’est pas le cas, vous pouvez l’installer à l’aide de <code>pip</code> :</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install scipy</span><br></pre></td></tr></table></figure>
-
-<h2 id="Operations-de-base-avec-les-matrices"><a href="#Operations-de-base-avec-les-matrices" class="headerlink" title="Opérations de base avec les matrices"></a>Opérations de base avec les matrices</h2><p>Commençons par créer une matrice à l’aide de SciPy :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> linalg</span><br><span class="line"></span><br><span class="line"><span class="comment"># Création d&#x27;une matrice</span></span><br><span class="line">A = np.array([[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>]])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Matrice A :\n&quot;</span>, A)</span><br></pre></td></tr></table></figure>
-
-<p>Maintenant, calculons l’inverse de cette matrice :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Calcul de l&#x27;inverse de la matrice</span></span><br><span class="line">A_inv = linalg.inv(A)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Inverse de A :\n&quot;</span>, A_inv)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Resolution-de-systemes-d’equations-lineaires"><a href="#Resolution-de-systemes-d’equations-lineaires" class="headerlink" title="Résolution de systèmes d’équations linéaires"></a>Résolution de systèmes d’équations linéaires</h2><p>Supposons que nous ayons un système d’équations linéaires de la forme Ax &#x3D; B. Nous pouvons utiliser SciPy pour résoudre ce système :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Définition du vecteur B</span></span><br><span class="line">B = np.array([<span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Résolution du système d&#x27;équations linéaires</span></span><br><span class="line">x = linalg.solve(A, B)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Solution du système d&#x27;équations linéaires :&quot;</span>, x)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Determinant-d’une-matrice"><a href="#Determinant-d’une-matrice" class="headerlink" title="Déterminant d’une matrice"></a>Déterminant d’une matrice</h2><p>Calculons maintenant le déterminant de la matrice A :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Calcul du déterminant de la matrice A</span></span><br><span class="line">det_A = linalg.det(A)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Déterminant de A :&quot;</span>, det_A)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Applications-de-l’algebre-lineaire-avec-SciPy"><a href="#Applications-de-l’algebre-lineaire-avec-SciPy" class="headerlink" title="Applications de l’algèbre linéaire avec SciPy"></a>Applications de l’algèbre linéaire avec SciPy</h2><p>L’algèbre linéaire est largement utilisée dans de nombreux domaines, tels que l’apprentissage automatique, le traitement d’images, la simulation numérique, etc. Avec SciPy, vous pouvez résoudre efficacement des problèmes complexes nécessitant des calculs d’algèbre linéaire avancés.</p>
-<p>En conclusion, SciPy offre une gamme d’outils puissants pour effectuer des opérations d’algèbre linéaire de manière efficace et précise. En explorant et en maîtrisant ces fonctionnalités, vous serez en mesure de résoudre une variété de problèmes mathématiques et informatiques. Amusez-vous à explorer le monde de l’algèbre linéaire avec SciPy ! 🚀</p>
-<p>Cet article vous a-t-il été utile ? N’hésitez pas à partager vos expériences et à poser des questions dans les commentaires. Merci de votre lecture !</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Traitement-du-signal-et-analyse-de-Fourier"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Traitement-du-signal-et-analyse-de-Fourier/"
-    >Traitement du signal et analyse de Fourier</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Traitement-du-signal-et-analyse-de-Fourier/" class="article-date">
-  <time datetime="2024-03-01T08:04:06.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Article-educatif-Traitement-du-signal-et-analyse-de-Fourier-avec-Scipy"><a href="#Article-educatif-Traitement-du-signal-et-analyse-de-Fourier-avec-Scipy" class="headerlink" title="Article educatif : Traitement du signal et analyse de Fourier avec Scipy"></a>Article educatif : Traitement du signal et analyse de Fourier avec Scipy</h1><hr>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Dans le domaine du traitement du signal, l’analyse de Fourier est un outil essentiel pour comprendre et manipuler des signaux. Scipy, une bibliothèque Python open-source, offre des fonctionnalités puissantes pour effectuer des opérations d’analyse de Fourier. Dans cet article, nous allons explorer les bases du traitement du signal et de l’analyse de Fourier en utilisant Scipy.</p>
-<hr>
-<h2 id="Qu’est-ce-que-le-traitement-du-signal-et-l’analyse-de-Fourier"><a href="#Qu’est-ce-que-le-traitement-du-signal-et-l’analyse-de-Fourier" class="headerlink" title="Qu’est-ce que le traitement du signal et l’analyse de Fourier?"></a>Qu’est-ce que le traitement du signal et l’analyse de Fourier?</h2><p>Le traitement du signal consiste en la manipulation de signaux afin d’extraire des informations utiles ou de les modifier d’une manière spécifique. L’analyse de Fourier est une méthode mathématique qui permet de décomposer un signal complexe en une somme de signaux sinusoïdaux plus simples.</p>
-<p>Nous allons maintenant illustrer ces concepts avec des exemples concrets en utilisant Scipy.</p>
-<hr>
-<h2 id="Exemple-de-traitement-du-signal-avec-Scipy"><a href="#Exemple-de-traitement-du-signal-avec-Scipy" class="headerlink" title="Exemple de traitement du signal avec Scipy"></a>Exemple de traitement du signal avec Scipy</h2><h3 id="1-Creation-d’un-signal-sinusoidal"><a href="#1-Creation-d’un-signal-sinusoidal" class="headerlink" title="1. Création d’un signal sinusoïdal"></a>1. Création d’un signal sinusoïdal</h3><p>Commençons par créer un signal sinusoïdal de fréquence 5 Hz et une durée de 1 seconde en utilisant Scipy :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> scipy.signal <span class="keyword">as</span> signal</span><br><span class="line"></span><br><span class="line"><span class="comment"># Paramètres du signal</span></span><br><span class="line">fs = <span class="number">1000</span>  <span class="comment"># Fréquence d&#x27;échantillonnage</span></span><br><span class="line">t = np.linspace(<span class="number">0</span>, <span class="number">1</span>, fs, endpoint=<span class="literal">False</span>)  <span class="comment"># Temps en seconde</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Création du signal sinusoïdal</span></span><br><span class="line">f = <span class="number">5</span>  <span class="comment"># Fréquence en Hz</span></span><br><span class="line">signal_sin = np.sin(<span class="number">2</span> * np.pi * f * t)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Affichage du signal</span></span><br><span class="line">plt.figure()</span><br><span class="line">plt.plot(t, signal_sin)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Temps (s)&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Amplitude&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Signal Sinusoïdal de 5 Hz&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-Analyse-de-Fourier-du-signal"><a href="#2-Analyse-de-Fourier-du-signal" class="headerlink" title="2. Analyse de Fourier du signal"></a>2. Analyse de Fourier du signal</h3><p>Maintenant, analysons le signal sinusoïdal que nous avons créé en utilisant la transformée de Fourier rapide (FFT) :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Calcul de la transformée de Fourier du signal</span></span><br><span class="line">fft_signal = np.fft.fft(signal_sin)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Calcul des fréquences associées à la FFT</span></span><br><span class="line">freqs = np.fft.fftfreq(<span class="built_in">len</span>(signal_sin), <span class="number">1</span>/fs)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Affichage du spectre de fréquence</span></span><br><span class="line">plt.figure()</span><br><span class="line">plt.plot(freqs[:fs//<span class="number">2</span>], np.<span class="built_in">abs</span>(fft_signal)[:fs//<span class="number">2</span>])</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Fréquence (Hz)&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Amplitude&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Spectre de Fréquence du Signal&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Le traitement du signal et l’analyse de Fourier sont des domaines essentiels en sciences et en ingénierie. En utilisant des outils comme Scipy, il est possible de manipuler et analyser efficacement des signaux pour en extraire des informations précieuses. Les applications du traitement du signal et de l’analyse de Fourier sont vastes, allant de la compression de données à la détection de motifs dans des signaux complexes. En continuant à explorer et à expérimenter avec Scipy, vous pourrez développer des compétences avancées dans ce domaine fascinant.</p>
-<hr>
-<p>N’hésitez pas à explorer davantage les fonctionnalités de Scipy pour approfondir vos connaissances en traitement du signal et en analyse de Fourier. Amusez-vous à manipuler différents types de signaux et à découvrir les multiples applications de ces concepts fondamentaux.</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Resolution-de-systemes-d-equations-lineaires"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Resolution-de-systemes-d-equations-lineaires/"
-    >Résolution de systèmes d&#39;équations linéaires</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Resolution-de-systemes-d-equations-lineaires/" class="article-date">
-  <time datetime="2024-03-01T08:03:53.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Resolution-de-systemes-d’equations-lineaires-avec-Scipy"><a href="#Resolution-de-systemes-d’equations-lineaires-avec-Scipy" class="headerlink" title="Résolution de systèmes d’équations linéaires avec Scipy"></a>Résolution de systèmes d’équations linéaires avec Scipy</h1><p>Bienvenue sur ce guide pédagogique pour débutants sur la résolution de systèmes d’équations linéaires avec Scipy. Dans cet article, nous allons explorer comment utiliser la bibliothèque Scipy en Python pour résoudre des systèmes d’équations linéaires. </p>
-<h2 id="Introduction-a-Scipy-et-l’algebre-lineaire"><a href="#Introduction-a-Scipy-et-l’algebre-lineaire" class="headerlink" title="Introduction à Scipy et l’algèbre linéaire"></a>Introduction à Scipy et l’algèbre linéaire</h2><p>Scipy est une bibliothèque open-source très utilisée en informatique scientifique dont de nombreuses fonctionnalités sont dédiées à l’algèbre linéaire. Une des tâches les plus courantes est la résolution de systèmes d’équations linéaires, un problème fondamental en mathématiques et en sciences.</p>
-<h2 id="Installation-de-Scipy"><a href="#Installation-de-Scipy" class="headerlink" title="Installation de Scipy"></a>Installation de Scipy</h2><p>Avant de commencer, assurez-vous d’avoir Scipy installé. Si ce n’est pas encore le cas, vous pouvez l’installer à l’aide de pip :  </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install scipy</span><br></pre></td></tr></table></figure>
-
-<h2 id="Comment-resoudre-un-systeme-d’equations-lineaires-avec-Scipy"><a href="#Comment-resoudre-un-systeme-d’equations-lineaires-avec-Scipy" class="headerlink" title="Comment résoudre un système d’équations linéaires avec Scipy"></a>Comment résoudre un système d’équations linéaires avec Scipy</h2><p>Pour résoudre un système d’équations linéaires avec Scipy, nous allons utiliser la fonction <code>solve</code> du module <code>scipy.linalg</code>. Voici un exemple simple pour illustrer ce processus :</p>
-<p>Considérons le système d’équations suivant :</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2x + 3y = 8</span><br><span class="line">4x - y = -2</span><br></pre></td></tr></table></figure>
-
-<p>Nous allons le résoudre en Python en utilisant Scipy :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy.linalg <span class="keyword">import</span> solve</span><br><span class="line"></span><br><span class="line"><span class="comment"># Matrice des coefficients</span></span><br><span class="line">A = np.array([[<span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, -<span class="number">1</span>]])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Vecteur des constantes</span></span><br><span class="line">b = np.array([<span class="number">8</span>, -<span class="number">2</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Résolution du système</span></span><br><span class="line">solution = solve(A, b)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;La solution est x =&quot;</span>, solution[<span class="number">0</span>], <span class="string">&quot;et y =&quot;</span>, solution[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
-
-<p>En exécutant ce code, vous obtiendrez la solution du système d’équations.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La résolution de systèmes d’équations linéaires est essentielle dans de nombreux domaines tels que l’ingénierie, la physique, ou encore l’informatique. Scipy simplifie grandement cette tâche en offrant des outils puissants et efficaces pour trouver rapidement des solutions précises.</p>
-<p>En explorant davantage Scipy et en maîtrisant la résolution de systèmes d’équations linéaires, vous serez en mesure d’aborder des problèmes complexes avec confiance et précision.</p>
-<p>N’hésitez pas à expérimenter et à découvrir les nombreuses possibilités offertes par Scipy dans le domaine de l’algèbre linéaire.</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Optimisation-et-ajustement-de-courbes"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Optimisation-et-ajustement-de-courbes/"
-    >Optimisation et ajustement de courbes</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Optimisation-et-ajustement-de-courbes/" class="article-date">
-  <time datetime="2024-03-01T08:03:39.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Optimisation-et-Ajustement-de-Courbes-avec-Scipy"><a href="#Optimisation-et-Ajustement-de-Courbes-avec-Scipy" class="headerlink" title="Optimisation et Ajustement de Courbes avec Scipy"></a>Optimisation et Ajustement de Courbes avec Scipy</h1><p>Bienvenue dans ce guide pédagogique pour débutants sur l’optimisation et l’ajustement de courbes avec Scipy. Dans ce tutoriel, nous allons explorer comment utiliser les outils de Scipy pour optimiser des fonctions et ajuster des courbes pour mieux représenter nos données. </p>
-<h2 id="Introduction-a-l’Optimisation-et-Ajustement-de-Courbes"><a href="#Introduction-a-l’Optimisation-et-Ajustement-de-Courbes" class="headerlink" title="Introduction à l’Optimisation et Ajustement de Courbes"></a>Introduction à l’Optimisation et Ajustement de Courbes</h2><p>L’optimisation et l’ajustement de courbes sont des techniques couramment utilisées en analyse de données pour trouver les paramètres optimaux d’un modèle mathématique qui correspond le mieux à nos données observées. Scipy, une bibliothèque Python, offre des fonctionnalités puissantes pour accomplir ces tâches.</p>
-<h2 id="Installation-de-Scipy"><a href="#Installation-de-Scipy" class="headerlink" title="Installation de Scipy"></a>Installation de Scipy</h2><p>Avant de commencer, assurez-vous d’avoir Scipy installé. Si ce n’est pas le cas, vous pouvez l’installer en exécutant la commande suivante dans votre terminal :</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install scipy</span><br></pre></td></tr></table></figure>
-
-<h2 id="Optimisation-de-Fonctions-avec-Scipy"><a href="#Optimisation-de-Fonctions-avec-Scipy" class="headerlink" title="Optimisation de Fonctions avec Scipy"></a>Optimisation de Fonctions avec Scipy</h2><p>L’optimisation de fonctions vise à trouver les valeurs des paramètres qui minimisent ou maximisent une fonction donnée. Voici un exemple simple d’optimisation en utilisant Scipy :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> minimize</span><br><span class="line"></span><br><span class="line"><span class="comment"># Définir la fonction à optimiser</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fonction_a_optimiser</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> (x-<span class="number">5</span>)**<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Trouver le minimum de la fonction</span></span><br><span class="line">resultat = minimize(fonction_a_optimiser, x0=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(resultat.x)  <span class="comment"># Affiche le résultat de l&#x27;optimisation</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Ajustement-de-Courbes-avec-Scipy"><a href="#Ajustement-de-Courbes-avec-Scipy" class="headerlink" title="Ajustement de Courbes avec Scipy"></a>Ajustement de Courbes avec Scipy</h2><p>L’ajustement de courbes consiste à trouver la courbe mathématique qui correspond le mieux à nos données observées. Voici un exemple d’ajustement de courbe en utilisant Scipy :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> curve_fit</span><br><span class="line"></span><br><span class="line"><span class="comment"># Définir une fonction pour l&#x27;ajustement de courbe</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fonction_de_courbe</span>(<span class="params">x, a, b</span>):</span><br><span class="line">    <span class="keyword">return</span> a * x + b</span><br><span class="line"></span><br><span class="line"><span class="comment"># Données à ajuster</span></span><br><span class="line">x = np.array([<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line">y = np.array([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Ajuster la courbe aux données</span></span><br><span class="line">parametres_optimaux, cov = curve_fit(fonction_de_courbe, x, y)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(parametres_optimaux)  <span class="comment"># Affiche les paramètres optimaux</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, l’utilisation de Scipy pour l’optimisation et l’ajustement de courbes offre une gamme d’outils puissants pour analyser et modéliser des données. En comprenant ces techniques, vous pourrez améliorer vos modèles et trouver des solutions optimales à divers problèmes rencontrés dans le domaine de l’analyse de données.</p>
-<p>N’hésitez pas à explorer davantage ces concepts et à les appliquer à vos propres projets pour en tirer pleinement parti. Happy coding!</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Integration-numerique-et-calcul-des-integrales"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Integration-numerique-et-calcul-des-integrales/"
-    >Intégration numérique et calcul des intégrales</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Integration-numerique-et-calcul-des-integrales/" class="article-date">
-  <time datetime="2024-03-01T08:03:20.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Article-pedagogique-sur-Scipy-Integration-numerique-et-calcul-des-integrales"><a href="#Article-pedagogique-sur-Scipy-Integration-numerique-et-calcul-des-integrales" class="headerlink" title="Article pédagogique sur Scipy : Intégration numérique et calcul des intégrales"></a>Article pédagogique sur Scipy : Intégration numérique et calcul des intégrales</h1><p>Dans ce guide, nous allons explorer comment utiliser Scipy pour effectuer l’intégration numérique et calculer des intégrales. L’intégration numérique est une méthode permettant d’approximer la valeur d’une intégrale définie, utile lorsque l’intégration analytique n’est pas possible. Scipy, une bibliothèque Python open-source, propose des outils puissants pour réaliser ces calculs de manière efficace. </p>
-<h2 id="Introduction-a-l’integration-numerique"><a href="#Introduction-a-l’integration-numerique" class="headerlink" title="Introduction à l’intégration numérique"></a>Introduction à l’intégration numérique</h2><p>L’intégration numérique consiste à diviser l’intervalle de l’intégration en petits segments et à approximer la valeur de l’intégrale en calculant la somme des aires de ces segments. Scipy propose différentes méthodes d’intégration numérique, telles que la méthode des trapèzes, la méthode de Simpson et la méthode de quadrature adaptative.</p>
-<h3 id="Exemple-de-code-Python-pour-l’integration-numerique"><a href="#Exemple-de-code-Python-pour-l’integration-numerique" class="headerlink" title="Exemple de code Python pour l’intégration numérique"></a>Exemple de code Python pour l’intégration numérique</h3><p>Voici un exemple simple illustrant comment utiliser Scipy pour effectuer l’intégration numérique en utilisant la méthode des trapèzes :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy.integrate <span class="keyword">import</span> trapz</span><br><span class="line"></span><br><span class="line"><span class="comment"># Définition de la fonction à intégrer</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> x**<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Génération des points pour l&#x27;intervalle [0, 1]</span></span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">100</span>)</span><br><span class="line">y = f(x)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Calcul de l&#x27;intégrale en utilisant la méthode des trapèzes</span></span><br><span class="line">resultat_integral = trapz(y, x)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Résultat de l&#x27;intégrale : &quot;</span>, resultat_integral)</span><br></pre></td></tr></table></figure>
-
-<p>Dans cet exemple, nous avons défini la fonction f(x) &#x3D; x^2 et calculé l’intégrale de cette fonction sur l’intervalle [0, 1] en utilisant la méthode des trapèzes.</p>
-<h2 id="Calcul-des-integrales-avec-Scipy"><a href="#Calcul-des-integrales-avec-Scipy" class="headerlink" title="Calcul des intégrales avec Scipy"></a>Calcul des intégrales avec Scipy</h2><p>Scipy offre la possibilité de calculer des intégrales unidimensionnelles, multidimensionnelles, ainsi que des intégrales définies et indéfinies. La fonction <code>quad</code> de Scipy est couramment utilisée pour le calcul des intégrales.</p>
-<h3 id="Exemple-de-code-Python-pour-le-calcul-des-integrales"><a href="#Exemple-de-code-Python-pour-le-calcul-des-integrales" class="headerlink" title="Exemple de code Python pour le calcul des intégrales"></a>Exemple de code Python pour le calcul des intégrales</h3><p>Voici un exemple montrant comment utiliser la fonction <code>quad</code> de Scipy pour calculer une intégrale définie :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.integrate <span class="keyword">import</span> quad</span><br><span class="line"></span><br><span class="line"><span class="comment"># Définition de la fonction à intégrer</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> x**<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Calcul de l&#x27;intégrale définie sur l&#x27;intervalle [0, 1]</span></span><br><span class="line">resultat_integral, erreur = quad(f, <span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Résultat de l&#x27;intégrale : &quot;</span>, resultat_integral)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Erreur estimée : &quot;</span>, erreur)</span><br></pre></td></tr></table></figure>
-
-<p>Dans cet exemple, nous avons utilisé la fonction <code>quad</code> pour calculer l’intégrale de la fonction f(x) &#x3D; x^2 sur l’intervalle [0, 1] et obtenu à la fois le résultat de l’intégrale et une estimation de l’erreur.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, l’intégration numérique et le calcul des intégrales sont des outils fondamentaux en mathématiques et en sciences. Scipy fournit une gamme d’outils puissants pour effectuer ces calculs de manière précise et efficace. En utilisant les méthodes disponibles dans Scipy, il est possible d’aborder une grande variété de problèmes d’intégration numérique, ce qui ouvre la voie à de nombreuses applications dans des domaines tels que la physique, la statistique, et l’ingénierie.</p>
-<p>Pour en savoir plus sur les applications spécifiques de l’intégration numérique et du calcul des intégrales avec Scipy, n’hésitez pas à explorer davantage la documentation officielle de Scipy et à expérimenter avec différents exemples et cas d’utilisation.</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Fonctions-speciales-et-leur-utilisation"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Fonctions-speciales-et-leur-utilisation/"
-    >Fonctions spéciales et leur utilisation</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Fonctions-speciales-et-leur-utilisation/" class="article-date">
-  <time datetime="2024-03-01T08:03:05.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Scipy-Fonctions-speciales-et-leur-utilisation"><a href="#Scipy-Fonctions-speciales-et-leur-utilisation" class="headerlink" title="Scipy : Fonctions spéciales et leur utilisation"></a>Scipy : Fonctions spéciales et leur utilisation</h1><p>Dans ce guide, nous allons nous plonger dans le monde des fonctions spéciales avec Scipy. Les fonctions spéciales sont des fonctions mathématiques qui apparaissent fréquemment dans divers domaines comme la physique, l’ingénierie et les sciences naturelles. Scipy offre une gamme étendue de fonctions spéciales qui peuvent être utilisées pour résoudre une variété de problèmes.</p>
-<h2 id="Introduction-aux-fonctions-speciales"><a href="#Introduction-aux-fonctions-speciales" class="headerlink" title="Introduction aux fonctions spéciales"></a>Introduction aux fonctions spéciales</h2><p>Les fonctions spéciales incluent des fonctions telles que les fonctions gamma, les fonctions de Bessel, les fonctions elliptiques, etc. Ces fonctions ont des propriétés mathématiques particulières qui les rendent essentielles pour résoudre des équations différentielles, des problèmes de valeurs propres, ou pour modéliser des phénomènes physiques complexes.</p>
-<h2 id="Utilisation-de-Scipy-pour-les-fonctions-speciales"><a href="#Utilisation-de-Scipy-pour-les-fonctions-speciales" class="headerlink" title="Utilisation de Scipy pour les fonctions spéciales"></a>Utilisation de Scipy pour les fonctions spéciales</h2><p>Scipy simplifie l’utilisation des fonctions spéciales grâce au module <code>scipy.special</code>. Jetons un coup d’œil à un exemple d’utilisation de la fonction gamma avec Scipy :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scipy.special</span><br><span class="line"></span><br><span class="line"><span class="comment"># Calcul de la fonction gamma</span></span><br><span class="line">x = <span class="number">5</span></span><br><span class="line">gamma_x = scipy.special.gamma(x)</span><br><span class="line"><span class="built_in">print</span>(gamma_x)</span><br></pre></td></tr></table></figure>
-
-<p>Dans cet exemple, nous importons le module <code>scipy.special</code> et utilisons la fonction <code>gamma</code> pour calculer la valeur de la fonction gamma pour x&#x3D;5.</p>
-<h2 id="Fonctions-speciales-plus-avancees"><a href="#Fonctions-speciales-plus-avancees" class="headerlink" title="Fonctions spéciales plus avancées"></a>Fonctions spéciales plus avancées</h2><p>Outre la fonction gamma, Scipy propose une multitude d’autres fonctions spéciales telles que les fonctions de Bessel, les fonctions de Legendre, les fonctions elliptiques, etc. Ces fonctions peuvent être utilisées pour résoudre des problèmes plus complexes nécessitant des outils mathématiques avancés.</p>
-<h2 id="Applications-des-fonctions-speciales"><a href="#Applications-des-fonctions-speciales" class="headerlink" title="Applications des fonctions spéciales"></a>Applications des fonctions spéciales</h2><p>Les fonctions spéciales trouvent des applications dans de nombreux domaines, notamment en physique quantique, en mécanique des fluides, en traitement du signal, et bien d’autres. Leur utilisation est indispensable pour modéliser des phénomènes physiques réels et résoudre des équations complexes.</p>
-<p>En conclusion, les fonctions spéciales jouent un rôle crucial en mathématiques appliquées et en sciences. En utilisant Scipy, vous pouvez facilement manipuler ces fonctions et les intégrer dans vos projets scientifiques. Expérimentez avec les différentes fonctions spéciales disponibles dans Scipy pour enrichir vos connaissances en mathématiques et explorer de nouveaux domaines d’application.</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Calcul-numerique-avec-les-arrays-NumPy"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Calcul-numerique-avec-les-arrays-NumPy/"
-    >Calcul numérique avec les arrays NumPy</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Calcul-numerique-avec-les-arrays-NumPy/" class="article-date">
-  <time datetime="2024-03-01T08:02:53.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Calcul-numerique-avec-les-arrays-NumPy"><a href="#Calcul-numerique-avec-les-arrays-NumPy" class="headerlink" title="Calcul numérique avec les arrays NumPy"></a>Calcul numérique avec les arrays NumPy</h1><p>Bienvenue dans cet article pédagogique qui va vous initier au calcul numérique avec les arrays NumPy, à travers la bibliothèque Scipy. </p>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>NumPy est une bibliothèque Python qui offre un support pour les tableaux multidimensionnels, ce qui en fait un outil puissant pour le calcul numérique. Scipy, qui s’appuie sur NumPy, propose des fonctionnalités supplémentaires pour effectuer des opérations scientifiques et d’ingénierie. Dans cet article, nous allons explorer comment utiliser les arrays NumPy pour réaliser des calculs numériques efficacement.</p>
-<h2 id="Premiers-pas-avec-NumPy"><a href="#Premiers-pas-avec-NumPy" class="headerlink" title="Premiers pas avec NumPy"></a>Premiers pas avec NumPy</h2><p>Pour commencer, nous devons importer NumPy dans notre environnement Python :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
-
-<p>Créons maintenant un array NumPy simple pour illustrer son utilisation :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])</span><br><span class="line"><span class="built_in">print</span>(array)</span><br></pre></td></tr></table></figure>
-
-<p>L’affichage devrait être <code>[1 2 3 4 5]</code>, montrant ainsi la création d’un array NumPy avec des valeurs initiales.</p>
-<h2 id="Operations-sur-les-arrays-NumPy"><a href="#Operations-sur-les-arrays-NumPy" class="headerlink" title="Opérations sur les arrays NumPy"></a>Opérations sur les arrays NumPy</h2><p>Les arrays NumPy permettent de réaliser des opérations mathématiques de manière vectorisée, ce qui les rend très efficaces pour le calcul numérique. Par exemple, calculons la somme des éléments de notre array :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array_sum = np.<span class="built_in">sum</span>(array)</span><br><span class="line"><span class="built_in">print</span>(array_sum)</span><br></pre></td></tr></table></figure>
-
-<p>Le résultat affiché devrait être <code>15</code>.</p>
-<h2 id="Manipulation-d’arrays-NumPy"><a href="#Manipulation-d’arrays-NumPy" class="headerlink" title="Manipulation d’arrays NumPy"></a>Manipulation d’arrays NumPy</h2><p>Il est également possible de manipuler les dimensions des arrays NumPy. Par exemple, redimensionnons notre array en une matrice 2x3 :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">reshaped_array = array.reshape(<span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(reshaped_array)</span><br></pre></td></tr></table></figure>
-
-<p>La sortie sera une matrice 2x3 avec les éléments de l’array réorganisés en conséquence.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, l’utilisation des arrays NumPy avec Scipy peut considérablement faciliter le travail en calcul numérique. Que ce soit pour effectuer des opérations mathématiques, manipuler des données multidimensionnelles ou résoudre des problèmes complexes, les arrays NumPy sont un outil indispensable pour les scientifiques et les ingénieurs. En explorant davantage ces bibliothèques, vous pourrez développer des applications numériques puissantes et efficaces.</p>
-<p>N’hésitez pas à explorer davantage les fonctionnalités offertes par NumPy et Scipy pour repousser les limites du calcul numérique !</p>
-<hr>
-<p>Avec cette structure, vous disposerez d’un article structuré de manière claire et concise pour aider les débutants à comprendre le Calcul numérique avec les arrays NumPy dans le cadre de la bibliothèque Scipy.</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Manipulation-de-bases-de-donnees-avec-SciPy"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Manipulation-de-bases-de-donnees-avec-SciPy/"
-    >Manipulation de bases de données avec SciPy</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Manipulation-de-bases-de-donnees-avec-SciPy/" class="article-date">
-  <time datetime="2024-03-01T08:02:41.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Manipulation-de-bases-de-donnees-avec-SciPy"><a href="#Manipulation-de-bases-de-donnees-avec-SciPy" class="headerlink" title="Manipulation de bases de données avec SciPy"></a>Manipulation de bases de données avec SciPy</h1><p>Dans cet article, nous allons explorer la manipulation de bases de données avec SciPy, un outil puissant en Python dédié à l’analyse scientifique et aux calculs numériques. Nous allons découvrir comment charger des données depuis une base de données, effectuer des opérations de base, et enregistrer des résultats dans une nouvelle base de données. </p>
-<h2 id="Charger-une-base-de-donnees-avec-SciPy"><a href="#Charger-une-base-de-donnees-avec-SciPy" class="headerlink" title="Charger une base de données avec SciPy"></a>Charger une base de données avec SciPy</h2><p>Pour commencer, nous pouvons utiliser le module <code>scipy.io</code> de SciPy pour charger une base de données existante. Par exemple, si nous avons une base de données au format matriciel, nous pouvons l’importer en utilisant la fonction <code>loadmat</code>. Voici un exemple de code :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.io <span class="keyword">import</span> loadmat</span><br><span class="line"></span><br><span class="line">data = loadmat(<span class="string">&#x27;data.mat&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(data)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Operations-de-base-sur-les-donnees"><a href="#Operations-de-base-sur-les-donnees" class="headerlink" title="Opérations de base sur les données"></a>Opérations de base sur les données</h2><p>Une fois que nous avons chargé la base de données, nous pouvons effectuer différentes opérations de manipulation des données. Par exemple, nous pouvons accéder à des colonnes spécifiques, effectuer des calculs statistiques, ou filtrer les données selon des critères prédéfinis. Voici un exemple de code pour accéder à une colonne spécifique :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">column = data[<span class="string">&#x27;column_name&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(column)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Enregistrer-les-resultats-dans-une-nouvelle-base-de-donnees"><a href="#Enregistrer-les-resultats-dans-une-nouvelle-base-de-donnees" class="headerlink" title="Enregistrer les résultats dans une nouvelle base de données"></a>Enregistrer les résultats dans une nouvelle base de données</h2><p>Après avoir manipulé les données, nous pouvons enregistrer les résultats dans une nouvelle base de données pour une utilisation ultérieure. Nous pouvons utiliser la fonction <code>savemat</code> pour cela. Voici un exemple de code :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.io <span class="keyword">import</span> savemat</span><br><span class="line"></span><br><span class="line">new_data = &#123;<span class="string">&#x27;result_column&#x27;</span>: column&#125;</span><br><span class="line">savemat(<span class="string">&#x27;results.mat&#x27;</span>, new_data)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La manipulation de bases de données avec SciPy offre une multitude d’applications dans le domaine de l’analyse des données scientifiques. En combinant les fonctionnalités de SciPy avec d’autres bibliothèques Python telles que NumPy et Pandas, il est possible de réaliser des analyses complexes et d’obtenir des informations précieuses à partir des données. Que vous travailliez dans la recherche, l’ingénierie ou tout autre domaine nécessitant l’analyse de grandes quantités de données, SciPy peut être un allié précieux. Explorez les possibilités offertes par la manipulation de bases de données avec SciPy et laissez libre cours à votre créativité pour résoudre des problèmes complexes.</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Installation-et-configuration-de-l-environnement-SciPy"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Installation-et-configuration-de-l-environnement-SciPy/"
-    >Installation et configuration de l&#39;environnement SciPy</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Installation-et-configuration-de-l-environnement-SciPy/" class="article-date">
-  <time datetime="2024-03-01T08:02:29.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Installation-et-configuration-de-l’environnement-SciPy"><a href="#Installation-et-configuration-de-l’environnement-SciPy" class="headerlink" title="Installation et configuration de l’environnement SciPy"></a>Installation et configuration de l’environnement SciPy</h1><p>Bienvenue dans cet article qui va vous guider pas à pas pour installer et configurer l’environnement SciPy, un package incontournable pour le calcul scientifique en Python. </p>
-<h2 id="Qu’est-ce-que-SciPy"><a href="#Qu’est-ce-que-SciPy" class="headerlink" title="Qu’est-ce que SciPy ?"></a>Qu’est-ce que SciPy ?</h2><p><strong>SciPy</strong> est une bibliothèque open-source utilisée pour les calculs de haut niveau en mathématiques, science et ingénierie. Elle offre des modules dédiés à l’optimisation, l’algèbre linéaire, l’intégration, le traitement du signal, et bien plus encore.</p>
-<h2 id="Installation-de-SciPy"><a href="#Installation-de-SciPy" class="headerlink" title="Installation de SciPy"></a>Installation de SciPy</h2><p>Pour commencer, assurez-vous d’avoir <strong>Python</strong> installé sur votre système. Ensuite, nous allons installer <strong>SciPy</strong> ainsi que ses dépendances via <strong>pip</strong>, le gestionnaire de packages Python.</p>
-<p>Ouvrez votre terminal et exécutez la commande suivante :</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install numpy scipy matplotlib</span><br></pre></td></tr></table></figure>
-
-<p>La commande ci-dessus va installer les packages <strong>NumPy</strong>, <strong>SciPy</strong> et <strong>Matplotlib</strong>, qui sont souvent utilisés ensemble pour le calcul scientifique.</p>
-<h2 id="Verification-de-l’installation"><a href="#Verification-de-l’installation" class="headerlink" title="Vérification de l’installation"></a>Vérification de l’installation</h2><p>Après l’installation, testons si <strong>SciPy</strong> est correctement installé. Lancez une session Python et importez le module <strong>scipy</strong> :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scipy</span><br><span class="line"><span class="built_in">print</span>(scipy.__version__)</span><br></pre></td></tr></table></figure>
-
-<p>Si vous voyez la version de <strong>SciPy</strong> s’afficher sans erreur, alors l’installation s’est bien déroulée.</p>
-<h2 id="Configuration-de-l’environnement-SciPy"><a href="#Configuration-de-l’environnement-SciPy" class="headerlink" title="Configuration de l’environnement SciPy"></a>Configuration de l’environnement SciPy</h2><p>Pour optimiser l’utilisation de <strong>SciPy</strong>, il est recommandé de travailler dans un environnement virtuel. Créez un environnement virtuel en utilisant <strong>venv</strong> :</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m venv mon_environnement</span><br></pre></td></tr></table></figure>
-
-<p>Activez ensuite l’environnement virtuel :</p>
-<ul>
-<li>Sur Linux&#x2F;macOS :</li>
+  <h1 id="Controle-de-la-luminosite-avec-un-potentiometre-Tutoriel-Arduino"><a href="#Controle-de-la-luminosite-avec-un-potentiometre-Tutoriel-Arduino" class="headerlink" title="Contrôle de la luminosité avec un potentiomètre - Tutoriel Arduino"></a>Contrôle de la luminosité avec un potentiomètre - Tutoriel Arduino</h1><p>Bienvenue dans ce tutoriel qui vous apprendra à contrôler la luminosité à l’aide d’un potentiomètre avec Arduino. Dans ce guide, nous allons découvrir comment utiliser un potentiomètre pour ajuster la luminosité d’une LED connectée à une carte Arduino. </p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Un potentiomètre est un composant électronique à trois broches permettant de régler une tension variable. En combinant un potentiomètre avec Arduino, nous pouvons contrôler la luminosité d’une LED en fonction de la position du potentiomètre.</p>
+<h2 id="Materiel-necessaire"><a href="#Materiel-necessaire" class="headerlink" title="Matériel nécessaire"></a>Matériel nécessaire</h2><ul>
+<li>Arduino Uno</li>
+<li>Potentiomètre</li>
+<li>LED</li>
+<li>Résistance 220 ohms</li>
+<li>Breadboard</li>
+<li>Fils de raccordement</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> mon_environnement/bin/activate</span><br></pre></td></tr></table></figure>
+<h2 id="Montage-du-circuit"><a href="#Montage-du-circuit" class="headerlink" title="Montage du circuit"></a>Montage du circuit</h2><p>Voici comment connecter les composants sur la breadboard :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Arduino Uno</span><br><span class="line">   |         </span><br><span class="line">   |         </span><br><span class="line">   V        </span><br><span class="line">Potentiomètre ----&gt; A0</span><br><span class="line">   |               |   </span><br><span class="line">   |               |   </span><br><span class="line">   V               V  </span><br><span class="line">Résistance 220 ohms ----&gt; LED ----&gt; GND</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>Sur Windows :</li>
+<h2 id="Code-Arduino"><a href="#Code-Arduino" class="headerlink" title="Code Arduino"></a>Code Arduino</h2><p>Voici le code à téléverser sur votre carte Arduino :</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> pinPotentiometer = A0;</span><br><span class="line"><span class="type">int</span> pinLed = <span class="number">9</span>;</span><br><span class="line"><span class="type">int</span> sensorValue = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> outputValue = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="built_in">pinMode</span>(pinLed, <span class="literal">OUTPUT</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  sensorValue = <span class="built_in">analogRead</span>(pinPotentiometer);</span><br><span class="line">  outputValue = <span class="built_in">map</span>(sensorValue, <span class="number">0</span>, <span class="number">1023</span>, <span class="number">0</span>, <span class="number">255</span>);</span><br><span class="line">  <span class="built_in">analogWrite</span>(pinLed, outputValue);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Explication-du-code"><a href="#Explication-du-code" class="headerlink" title="Explication du code"></a>Explication du code</h2><ul>
+<li>Nous déclarons les broches du potentiomètre et de la LED.</li>
+<li>La fonction <code>analogRead</code> lit la valeur analogique du potentiomètre.</li>
+<li>Avec <code>map</code>, nous convertissons la valeur lue en une valeur adaptée pour la luminosité de la LED.</li>
+<li>Enfin, <code>analogWrite</code> envoie cette valeur pour contrôler la luminosité de la LED.</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mon_environnement\Scripts\activate</span><br></pre></td></tr></table></figure>
-
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Félicitations, vous avez maintenant installé et configuré l’environnement SciPy ! Vous êtes prêt à explorer les innombrables possibilités offertes par cette puissante bibliothèque pour vos projets scientifiques et d’ingénierie en Python.</p>
-<p>N’hésitez pas à consulter la <a target="_blank" rel="noopener" href="https://www.scipy.org/">documentation officielle de SciPy</a> pour en savoir plus sur ses fonctionnalités avancées.</p>
+<h2 id="Test-du-circuit"><a href="#Test-du-circuit" class="headerlink" title="Test du circuit"></a>Test du circuit</h2><p>Téléversez le code sur votre Arduino et observez la LED varier en luminosité lorsque vous faites tourner le potentiomètre.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En maîtrisant le contrôle de la luminosité avec un potentiomètre, vous serez en mesure de créer des projets interactifs utilisant la lumière de manière variable. De la régulation de l’éclairage d’une pièce à la création d’une lampe d’ambiance personnalisable, les applications sont diverses et stimulantes.</p>
+<p>Amusez-vous à explorer davantage les possibilités offertes par le contrôle de la luminosité avec un potentiomètre et laissez parler votre créativité !</p>
 <hr>
-<p>Avec SciPy installé et configuré, vous pourrez aborder des domaines variés tels que l’analyse de données, la modélisation mathématique, ou encore la simulation numérique avec une facilité et une efficacité accrues. Bonne exploration !</p>
+<p>Ce tutoriel vous a permis de comprendre les bases du contrôle de la luminosité avec un potentiomètre grâce à Arduino. Nous espérons que vous pourrez désormais l’appliquer dans vos propres projets ! N’hésitez pas à partager vos réalisations et à nous poser vos questions. Merci de nous avoir suivi !</p>
  
       <!-- reward -->
       
@@ -784,7 +179,659 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/arduino/" rel="tag">arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/microcontroleurs/" rel="tag">microcontroleurs</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-La-communication-sans-fil-avec-les-modules-NRF24L01"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/La-communication-sans-fil-avec-les-modules-NRF24L01/"
+    >La communication sans fil avec les modules NRF24L01</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/La-communication-sans-fil-avec-les-modules-NRF24L01/" class="article-date">
+  <time datetime="2024-03-01T18:44:59.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Arduino/">Arduino</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Arduino-La-communication-sans-fil-avec-les-modules-NRF24L01"><a href="#Arduino-La-communication-sans-fil-avec-les-modules-NRF24L01" class="headerlink" title="Arduino : La communication sans fil avec les modules NRF24L01"></a>Arduino : La communication sans fil avec les modules NRF24L01</h1><p>Bienvenue dans cet article pédagogique dédié à la communication sans fil avec les modules NRF24L01 sur Arduino. Dans ce tutoriel, vous allez apprendre à mettre en place une communication sans fil fiable et efficace entre vos projets Arduino en utilisant ces modules.</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Les modules NRF24L01 sont des modules de communication sans fil très populaires parmi les adeptes d’Arduino en raison de leur faible coût et de leur facilité d’utilisation. Ils fonctionnent selon le principe de la communication par radiofréquence, ce qui permet d’établir une liaison bidirectionnelle entre deux ou plusieurs modules.</p>
+<h2 id="Materiel-requis"><a href="#Materiel-requis" class="headerlink" title="Matériel requis"></a>Matériel requis</h2><p>Avant de commencer, assurez-vous de disposer du matériel suivant :</p>
+<ul>
+<li>Deux modules NRF24L01</li>
+<li>Deux Arduino Uno ou équivalents</li>
+<li>Des câbles de connexion</li>
+</ul>
+<h2 id="Installation-des-bibliotheques"><a href="#Installation-des-bibliotheques" class="headerlink" title="Installation des bibliothèques"></a>Installation des bibliothèques</h2><p>Pour utiliser les modules NRF24L01 avec Arduino, vous devez installer la bibliothèque RF24. Voici comment le faire :</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> Ouvrez l&#x27;IDE Arduino</span><br><span class="line"><span class="bullet">2.</span> Allez dans &quot;Croquis&quot; -&gt; &quot;Inclure une bibliothèque&quot; -&gt; &quot;Gérer les bibliothèques&quot;</span><br><span class="line"><span class="bullet">3.</span> Recherchez &quot;RF24&quot; et installez la bibliothèque</span><br></pre></td></tr></table></figure>
+
+<h2 id="Configuration-des-modules-NRF24L01"><a href="#Configuration-des-modules-NRF24L01" class="headerlink" title="Configuration des modules NRF24L01"></a>Configuration des modules NRF24L01</h2><p>Avant d’établir une communication sans fil, vous devez configurer les modules NRF24L01. Voici un exemple de code pour configurer un module en mode émission et l’autre en mode réception :</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Module émetteur</span></span><br><span class="line">radio.begin();</span><br><span class="line">radio.openWritingPipe(adresse);</span><br><span class="line">radio.stopListening();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Module récepteur</span></span><br><span class="line">radio.begin();</span><br><span class="line">radio.openReadingPipe(<span class="number">1</span>, adresse);</span><br><span class="line">radio.startListening();</span><br></pre></td></tr></table></figure>
+
+<p>Assurez-vous d’adapter les adresses à votre configuration. Les adresses doivent être identiques sur le module émetteur et le module récepteur.</p>
+<h2 id="Envoi-et-reception-de-donnees"><a href="#Envoi-et-reception-de-donnees" class="headerlink" title="Envoi et réception de données"></a>Envoi et réception de données</h2><p>Maintenant que les modules sont configurés, vous pouvez commencer à envoyer et recevoir des données. Voici un exemple simple d’envoi de données depuis le module émetteur :</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Envoi de données</span></span><br><span class="line"><span class="type">char</span> message[] = <span class="string">&quot;Hello, NRF24L01!&quot;</span>;</span><br><span class="line">radio.write(&amp;message, <span class="keyword">sizeof</span>(message));</span><br></pre></td></tr></table></figure>
+
+<p>Et voici comment recevoir ces données sur le module récepteur :</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Réception de données</span></span><br><span class="line"><span class="keyword">if</span> (radio.available()) &#123;</span><br><span class="line">  <span class="type">char</span> message[<span class="number">32</span>];</span><br><span class="line">  radio.read(&amp;message, <span class="keyword">sizeof</span>(message));</span><br><span class="line">  Serial.println(message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La communication sans fil avec les modules NRF24L01 offre un moyen pratique et abordable de connecter vos projets Arduino. Que ce soit pour contrôler des robots, surveiller des capteurs à distance ou même créer un réseau de capteurs sans fil, les possibilités sont infinies. En combinant ces modules avec d’autres composants, vous pouvez réaliser des projets innovants et passionnants.</p>
+<p>N’oubliez pas d’expérimenter et de vous amuser avec les modules NRF24L01 dans vos projets Arduino. Bonne création !</p>
+<hr>
+<p>Avec ce guide, vous devriez maintenant être bien équipé pour explorer le monde fascinant de la communication sans fil avec les modules NRF24L01 sur Arduino. N’hésitez pas à poser des questions et à partager vos expériences dans les commentaires. Happy coding!</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/arduino/" rel="tag">arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/microcontroleurs/" rel="tag">microcontroleurs</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Utilisation-d-un-module-GPS-en-Arduino"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Utilisation-d-un-module-GPS-en-Arduino/"
+    >Utilisation d&#39;un module GPS en Arduino</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Utilisation-d-un-module-GPS-en-Arduino/" class="article-date">
+  <time datetime="2024-03-01T18:44:42.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Arduino/">Arduino</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Article-pedagogique-Utilisation-d’un-module-GPS-en-Arduino"><a href="#Article-pedagogique-Utilisation-d’un-module-GPS-en-Arduino" class="headerlink" title="Article pédagogique : Utilisation d’un module GPS en Arduino"></a>Article pédagogique : Utilisation d’un module GPS en Arduino</h1><hr>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Dans ce tutoriel, nous allons explorer comment utiliser un module GPS avec une carte Arduino. Les modules GPS (Global Positioning System) sont des dispositifs compacts et puissants capables de fournir des données de localisation précises. En combinant un module GPS avec une carte Arduino, vous pouvez créer des projets intéressants tels que des systèmes de suivi en temps réel, des dispositifs de navigation et bien plus encore. </p>
+<hr>
+<h2 id="Materiel-requis"><a href="#Materiel-requis" class="headerlink" title="Matériel requis"></a>Matériel requis</h2><p>Avant de commencer, assurez-vous d’avoir les éléments suivants :</p>
+<ul>
+<li>Une carte Arduino (comme Arduino Uno)</li>
+<li>Un module GPS compatible avec Arduino (par exemple, le module NEO-6M)</li>
+<li>Câbles de raccordement</li>
+<li>Un ordinateur avec l’IDE Arduino installé</li>
+</ul>
+<hr>
+<h2 id="Branchement-du-module-GPS"><a href="#Branchement-du-module-GPS" class="headerlink" title="Branchement du module GPS"></a>Branchement du module GPS</h2><p>Tout d’abord, connectez votre module GPS à votre Arduino en suivant les instructions du fabricant. Généralement, le câblage implique de connecter le TX du module GPS au pin RX de l’Arduino et le RX du module GPS au pin TX de l’Arduino. Assurez-vous également de connecter la broche VCC du module GPS à une sortie 5V de l’Arduino et la broche GND à la masse de l’Arduino.</p>
+<hr>
+<h2 id="Collecte-des-donnees-GPS"><a href="#Collecte-des-donnees-GPS" class="headerlink" title="Collecte des données GPS"></a>Collecte des données GPS</h2><p>Une fois le branchement effectué, nous pouvons commencer à collecter des données GPS. Utilisez le code suivant dans l’IDE Arduino pour lire les données provenant du module GPS :</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;SoftwareSerial.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function">SoftwareSerial <span class="title">gpsSerial</span><span class="params">(<span class="number">3</span>, <span class="number">4</span>)</span></span>; <span class="comment">// RX, TX</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Serial.<span class="built_in">begin</span>(<span class="number">9600</span>);</span><br><span class="line">  gpsSerial.<span class="built_in">begin</span>(<span class="number">9600</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (gpsSerial.<span class="built_in">available</span>() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    Serial.<span class="built_in">write</span>(gpsSerial.<span class="built_in">read</span>());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Ce code crée une connexion logicielle avec le module GPS via les pins 3 et 4 de l’Arduino. Il lit les données GPS et les affiche via le moniteur série de l’IDE Arduino.</p>
+<hr>
+<h2 id="Interpretation-des-donnees-GPS"><a href="#Interpretation-des-donnees-GPS" class="headerlink" title="Interprétation des données GPS"></a>Interprétation des données GPS</h2><p>Les données GPS peuvent sembler cryptiques à première vue. Cependant, elles contiennent des informations précises sur la longitude, la latitude, l’altitude et bien plus encore. Vous pouvez utiliser des bibliothèques Arduino dédiées pour traiter ces données et les afficher de manière conviviale.</p>
+<hr>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En utilisant un module GPS avec votre Arduino, vous pouvez créer des projets fascinants basés sur la localisation. Que vous construisiez un tracker GPS, un navigateur ou un système d’alerte basé sur la position, les possibilités sont infinies. Expérimentez avec les données GPS, intégrez-les à d’autres capteurs et laissez libre cours à votre créativité !</p>
+<p>N’oubliez pas d’explorer davantage les fonctionnalités avancées des modules GPS, comme la sauvegarde de waypoints, le suivi en temps réel et la cartographie. Amusez-vous et explorez le monde de la géolocalisation avec Arduino !</p>
+<hr>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/arduino/" rel="tag">arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/microcontroleurs/" rel="tag">microcontroleurs</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Le-prototypage-rapide-avec-Arduino"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Le-prototypage-rapide-avec-Arduino/"
+    >Le prototypage rapide avec Arduino</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Le-prototypage-rapide-avec-Arduino/" class="article-date">
+  <time datetime="2024-03-01T18:44:18.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Arduino/">Arduino</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Le-prototypage-rapide-avec-Arduino"><a href="#Le-prototypage-rapide-avec-Arduino" class="headerlink" title="Le prototypage rapide avec Arduino"></a>Le prototypage rapide avec Arduino</h1><p>Bienvenue dans notre article dédié au prototypage rapide avec Arduino, un outil puissant pour concrétiser facilement des idées innovantes. Dans cet article, nous allons explorer les concepts de base de cette technique, en utilisant des exemples pratiques pour faciliter la compréhension.</p>
+<h2 id="Qu’est-ce-que-le-prototypage-avec-Arduino"><a href="#Qu’est-ce-que-le-prototypage-avec-Arduino" class="headerlink" title="Qu’est-ce que le prototypage avec Arduino?"></a>Qu’est-ce que le prototypage avec Arduino?</h2><p>Le prototypage rapide avec Arduino consiste à utiliser la plateforme Arduino pour créer des prototypes fonctionnels rapidement. Arduino est une carte électronique open-source dotée d’un microcontrôleur programmable, ce qui en fait l’outil idéal pour les projets de prototypage.</p>
+<h3 id="Exemple"><a href="#Exemple" class="headerlink" title="Exemple:"></a>Exemple:</h3><p>Imaginez que vous souhaitez créer un système de contrôle de la température pour une serre. Avec Arduino, vous pouvez facilement assembler des capteurs de température et un actionneur pour contrôler le chauffage ou la ventilation.</p>
+<h2 id="Les-avantages-du-prototypage-rapide-avec-Arduino"><a href="#Les-avantages-du-prototypage-rapide-avec-Arduino" class="headerlink" title="Les avantages du prototypage rapide avec Arduino"></a>Les avantages du prototypage rapide avec Arduino</h2><p>Le prototypage rapide avec Arduino présente de nombreux avantages pour les débutants et les professionnels. Parmi ceux-ci, on peut citer:</p>
+<ul>
+<li>Facilité d’utilisation: Arduino est convivial et propose une grande communauté en ligne pour vous accompagner.</li>
+<li>Coût abordable: Les cartes Arduino et les composants nécessaires sont abordables, ce qui en fait un choix économique pour les projets de prototypage.</li>
+<li>Rapidité: Vous pouvez rapidement assembler et tester vos idées, ce qui accélère le processus de développement.</li>
+</ul>
+<h3 id="Exemple-1"><a href="#Exemple-1" class="headerlink" title="Exemple:"></a>Exemple:</h3><p>En utilisant Arduino, vous pouvez créer un prototype de système de surveillance à distance en quelques heures seulement, grâce à sa facilité de programmation et de connexion à des capteurs et des modules sans fil.</p>
+<h2 id="Etapes-pour-realiser-un-prototype-avec-Arduino"><a href="#Etapes-pour-realiser-un-prototype-avec-Arduino" class="headerlink" title="Étapes pour réaliser un prototype avec Arduino"></a>Étapes pour réaliser un prototype avec Arduino</h2><p>Voici les étapes essentielles pour réaliser un prototype avec Arduino:</p>
+<ol>
+<li><strong>Définir les besoins</strong>: Identifiez clairement les objectifs de votre prototype et les fonctionnalités requises.</li>
+<li><strong>Assemblage des composants</strong>: Connectez les capteurs, actionneurs et autres composants à la carte Arduino selon le schéma électronique.</li>
+<li><strong>Programmation</strong>: Écrivez le code nécessaire pour contrôler les composants et traiter les données des capteurs.</li>
+<li><strong>Test et ajustement</strong>: Testez le prototype, identifiez les problèmes éventuels et apportez les ajustements nécessaires.</li>
+</ol>
+<h3 id="Exemple-2"><a href="#Exemple-2" class="headerlink" title="Exemple:"></a>Exemple:</h3><p>Prenons l’exemple d’un prototype de lampe intelligente. Vous devez connecter un capteur de luminosité, un module relais pour contrôler l’interrupteur et écrire un code simple pour allumer ou éteindre la lampe en fonction de la luminosité ambiante.</p>
+<h2 id="Applications-du-prototypage-rapide-avec-Arduino"><a href="#Applications-du-prototypage-rapide-avec-Arduino" class="headerlink" title="Applications du prototypage rapide avec Arduino"></a>Applications du prototypage rapide avec Arduino</h2><p>Le prototypage rapide avec Arduino trouve des applications dans de nombreux domaines, tels que l’automatisation domestique, l’IoT, la robotique, et bien d’autres. En combinant la flexibilité d’Arduino avec votre créativité, les possibilités de création sont infinies.</p>
+<p>En conclusion, le prototypage rapide avec Arduino est un excellent moyen de concrétiser rapidement vos idées et de tester des concepts innovants. En explorant les bases de ce processus et en pratiquant avec des exemples concrets, vous serez en mesure de réaliser vos propres prototypes efficacement et de laisser libre cours à votre imagination.</p>
+<p>N’hésitez pas à explorer davantage les multiples projets réalisables avec Arduino et à pousser les limites de la créativité dans le domaine du prototypage électronique !</p>
+<hr>
+<p><em>Autor: Assistant Markdown</em></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/arduino/" rel="tag">arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/microcontroleurs/" rel="tag">microcontroleurs</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Utilisation-du-module-Bluetooth-en-Arduino"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Utilisation-du-module-Bluetooth-en-Arduino/"
+    >Utilisation du module Bluetooth en Arduino</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Utilisation-du-module-Bluetooth-en-Arduino/" class="article-date">
+  <time datetime="2024-03-01T18:44:02.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Arduino/">Arduino</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Article-sur-l’utilisation-du-module-Bluetooth-en-Arduino"><a href="#Article-sur-l’utilisation-du-module-Bluetooth-en-Arduino" class="headerlink" title="Article sur l’utilisation du module Bluetooth en Arduino"></a>Article sur l’utilisation du module Bluetooth en Arduino</h1><p>Bienvenue dans ce guide destiné aux débutants en Arduino ! Aujourd’hui, nous allons aborder un sujet passionnant : l’utilisation du module Bluetooth en Arduino. Que vous soyez un néophyte ou un amateur éclairé, vous découvrirez dans cet article comment intégrer cette technologie sans fil à vos projets Arduino.</p>
+<h2 id="Introduction-au-module-Bluetooth"><a href="#Introduction-au-module-Bluetooth" class="headerlink" title="Introduction au module Bluetooth"></a>Introduction au module Bluetooth</h2><p>Le module Bluetooth est un composant essentiel pour communiquer sans fil avec d’autres appareils. En utilisant ce module avec votre Arduino, vous pourrez contrôler votre projet à distance, recevoir des données d’un smartphone ou d’un ordinateur, ou même créer une connexion entre plusieurs microcontrôleurs.</p>
+<h3 id="Installation-du-module-Bluetooth"><a href="#Installation-du-module-Bluetooth" class="headerlink" title="Installation du module Bluetooth"></a>Installation du module Bluetooth</h3><p>Avant de commencer à utiliser le module Bluetooth avec Arduino, assurez-vous d’avoir correctement connecté le module à votre carte Arduino. Généralement, un module Bluetooth se connecte à l’Arduino via des broches TX et RX.</p>
+<p>Voici un exemple de connexion entre un module Bluetooth HC-05 et un Arduino Uno :</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+---+--------------+-------------------+</span><br><span class="line">| HC-05 | Arduino Uno |</span><br><span class="line">+---+--------------+-------------------+</span><br><span class="line">| VCC  | 5V          |</span><br><span class="line">| GND  | GND         |</span><br><span class="line">| TX   | RX (pin 0)  |</span><br><span class="line">| RX   | TX (pin 1)  |</span><br><span class="line">+---+--------------+-------------------+</span><br></pre></td></tr></table></figure>
+
+<h3 id="Programmation-avec-le-module-Bluetooth"><a href="#Programmation-avec-le-module-Bluetooth" class="headerlink" title="Programmation avec le module Bluetooth"></a>Programmation avec le module Bluetooth</h3><p>Une fois le module Bluetooth connecté, vous pouvez commencer à programmer votre Arduino pour communiquer avec d’autres appareils via Bluetooth. Voici un exemple de code simple pour recevoir des données d’un smartphone :</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;SoftwareSerial.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="built_in">SoftwareSerial</span> <span class="title">BTserial</span><span class="params">(<span class="number">0</span>, <span class="number">1</span>)</span></span>; <span class="comment">// RX, TX</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="built_in">Serial</span>.<span class="built_in">begin</span>(<span class="number">9600</span>);</span><br><span class="line">  BTserial.<span class="built_in">begin</span>(<span class="number">9600</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (BTserial.<span class="built_in">available</span>()) &#123;</span><br><span class="line">    <span class="type">char</span> c = BTserial.<span class="built_in">read</span>();</span><br><span class="line">    <span class="built_in">Serial</span>.<span class="built_in">print</span>(c);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Ce code configure une communication série via SoftwareSerial pour recevoir des données du module Bluetooth et les afficher sur le moniteur série de l’Arduino.</p>
+<h2 id="Applications-de-l’utilisation-du-module-Bluetooth-en-Arduino"><a href="#Applications-de-l’utilisation-du-module-Bluetooth-en-Arduino" class="headerlink" title="Applications de l’utilisation du module Bluetooth en Arduino"></a>Applications de l’utilisation du module Bluetooth en Arduino</h2><p>L’utilisation du module Bluetooth en Arduino ouvre un large éventail de possibilités pour vos projets. Voici quelques exemples d’applications :</p>
+<ul>
+<li>Contrôle à distance d’un robot ou d’un véhicule via une application mobile.</li>
+<li>Surveillance à distance de capteurs environnementaux.</li>
+<li>Communication entre plusieurs dispositifs Arduino pour créer un système de domotique personnalisé.</li>
+</ul>
+<p>En explorant les capacités de ce module, vous pourrez enrichir vos projets Arduino et leur apporter une dimension interactive et connectée.</p>
+<p>N’attendez plus pour plonger dans le monde fascinant de l’Arduino en utilisant le module Bluetooth ! Amusez-vous à expérimenter et à créer des projets innovants grâce à cette technologie sans fil.</p>
+<hr>
+<p>Avec ce guide, vous êtes maintenant prêt à explorer le passionnant domaine de l’utilisation du module Bluetooth en Arduino. N’hésitez pas à partager vos expériences et vos projets dans les commentaires, et à continuer à apprendre et à développer vos compétences en électronique et en programmation. Amusez-vous bien !</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/arduino/" rel="tag">arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/microcontroleurs/" rel="tag">microcontroleurs</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Utilisation-du-module-Wi-Fi-en-Arduino"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Utilisation-du-module-Wi-Fi-en-Arduino/"
+    >Utilisation du module Wi-Fi en Arduino</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Utilisation-du-module-Wi-Fi-en-Arduino/" class="article-date">
+  <time datetime="2024-03-01T18:43:42.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Arduino/">Arduino</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Utilisation-du-module-Wi-Fi-en-Arduino"><a href="#Utilisation-du-module-Wi-Fi-en-Arduino" class="headerlink" title="Utilisation du module Wi-Fi en Arduino"></a>Utilisation du module Wi-Fi en Arduino</h1><p>Bienvenue dans ce guide pour débutants sur l’utilisation du module Wi-Fi en Arduino ! Dans cet article, nous allons explorer les bases de la connexion Wi-Fi en Arduino et comment vous pouvez l’intégrer dans vos projets.</p>
+<h2 id="Presentation-du-module-Wi-Fi-en-Arduino"><a href="#Presentation-du-module-Wi-Fi-en-Arduino" class="headerlink" title="Présentation du module Wi-Fi en Arduino"></a>Présentation du module Wi-Fi en Arduino</h2><p>Le module Wi-Fi en Arduino est un composant permettant à votre carte Arduino de se connecter à un réseau sans fil, ouvrant ainsi un monde de possibilités pour la communication et le contrôle à distance. Avec le module Wi-Fi, vous pouvez envoyer et recevoir des données via Internet, contrôler des appareils à distance et bien plus encore.</p>
+<h2 id="Configuration-du-module-Wi-Fi"><a href="#Configuration-du-module-Wi-Fi" class="headerlink" title="Configuration du module Wi-Fi"></a>Configuration du module Wi-Fi</h2><p>Avant de commencer à utiliser le module Wi-Fi, vous devez le configurer pour qu’il puisse se connecter à votre réseau. Voici un exemple de code pour configurer et initialiser la connexion Wi-Fi en Arduino :</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;WiFi.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">char</span>* ssid = <span class="string">&quot;NomDuReseau&quot;</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">char</span>* password = <span class="string">&quot;MotDePasse&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Serial.<span class="built_in">begin</span>(<span class="number">9600</span>);</span><br><span class="line">  WiFi.<span class="built_in">begin</span>(ssid, password);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (WiFi.<span class="built_in">status</span>() != WL_CONNECTED) &#123;</span><br><span class="line">    <span class="built_in">delay</span>(<span class="number">1000</span>);</span><br><span class="line">    Serial.<span class="built_in">println</span>(<span class="string">&quot;Connexion en cours...&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  Serial.<span class="built_in">println</span>(<span class="string">&quot;Connecté au réseau Wi-Fi !&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="comment">// Votre code ici</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Assurez-vous de remplacer “NomDuReseau” et “MotDePasse” par les informations de votre réseau Wi-Fi.</p>
+<h2 id="Envoi-de-donnees-via-Wi-Fi"><a href="#Envoi-de-donnees-via-Wi-Fi" class="headerlink" title="Envoi de données via Wi-Fi"></a>Envoi de données via Wi-Fi</h2><p>Maintenant que votre module Wi-Fi est connecté, vous pouvez commencer à envoyer et recevoir des données. Voici un exemple simple pour envoyer une requête HTTP vers un serveur distant :</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;WiFi.h&gt;</span></span></span><br><span class="line"></span><br><span class="line">WiFiClient client;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="comment">// Initialisation de la connexion Wi-Fi</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (client.<span class="built_in">connect</span>(<span class="string">&quot;www.example.com&quot;</span>, <span class="number">80</span>)) &#123;</span><br><span class="line">    client.<span class="built_in">println</span>(<span class="string">&quot;GET / HTTP/1.1&quot;</span>);</span><br><span class="line">    client.<span class="built_in">println</span>(<span class="string">&quot;Host: www.example.com&quot;</span>);</span><br><span class="line">    client.<span class="built_in">println</span>(<span class="string">&quot;Connection: close&quot;</span>);</span><br><span class="line">    client.<span class="built_in">println</span>();</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    Serial.<span class="built_in">println</span>(<span class="string">&quot;Erreur de connexion&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">delay</span>(<span class="number">5000</span>); <span class="comment">// Attente de 5 secondes</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Dans cet exemple, nous établissons une connexion avec un serveur distant et envoyons une requête HTTP. Vous pouvez personnaliser le contenu de la requête en fonction de vos besoins.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>L’utilisation du module Wi-Fi en Arduino ouvre un large éventail d’applications possibles, allant de la domotique à l’IoT en passant par la robotique. En apprenant à maîtriser la connexion Wi-Fi, vous pourrez créer des projets interactifs et connectés qui repoussent les limites de votre créativité.</p>
+<p>N’hésitez pas à explorer davantage les fonctionnalités du module Wi-Fi en Arduino et à expérimenter avec différents projets pour découvrir tout son potentiel. Amusez-vous bien dans votre voyage vers l’Internet des objets !</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/arduino/" rel="tag">arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/microcontroleurs/" rel="tag">microcontroleurs</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Utilisation-de-capteurs-de-mouvement"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Utilisation-de-capteurs-de-mouvement/"
+    >Utilisation de capteurs de mouvement</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Utilisation-de-capteurs-de-mouvement/" class="article-date">
+  <time datetime="2024-03-01T18:43:23.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Arduino/">Arduino</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Utilisation-de-capteurs-de-mouvement-avec-Arduino"><a href="#Utilisation-de-capteurs-de-mouvement-avec-Arduino" class="headerlink" title="Utilisation de capteurs de mouvement avec Arduino"></a>Utilisation de capteurs de mouvement avec Arduino</h1><p>Les capteurs de mouvement sont des composants très utiles en électronique et en robotique. Ils permettent de détecter des mouvements physiques et sont largement utilisés dans de nombreux projets, tels que les systèmes d’alarme, les robots autonomes, les jeux interactifs, etc. Dans cet article, nous allons explorer comment utiliser des capteurs de mouvement avec Arduino.</p>
+<h2 id="Introduction-aux-capteurs-de-mouvement"><a href="#Introduction-aux-capteurs-de-mouvement" class="headerlink" title="Introduction aux capteurs de mouvement"></a>Introduction aux capteurs de mouvement</h2><p>Les capteurs de mouvement sont des dispositifs électroniques capables de détecter des mouvements physiques tels que l’accélération, la vitesse angulaire, l’inclinaison, etc. Ils transforment ces mouvements en signaux électriques que l’Arduino peut interpréter.</p>
+<h2 id="Types-de-capteurs-de-mouvement"><a href="#Types-de-capteurs-de-mouvement" class="headerlink" title="Types de capteurs de mouvement"></a>Types de capteurs de mouvement</h2><p>Il existe différents types de capteurs de mouvement:</p>
+<ul>
+<li>Capteurs d’accélération: mesurent l’accélération linéaire d’un objet.</li>
+<li>Gyroscope: mesure l’orientation angulaire d’un objet.</li>
+<li>Capteurs de proximité: détectent la présence et la distance d’objets à proximité.</li>
+</ul>
+<h2 id="Connexion-d’un-capteur-de-mouvement-a-Arduino"><a href="#Connexion-d’un-capteur-de-mouvement-a-Arduino" class="headerlink" title="Connexion d’un capteur de mouvement à Arduino"></a>Connexion d’un capteur de mouvement à Arduino</h2><p>Voici comment connecter un capteur de mouvement à Arduino:</p>
+<ol>
+<li>Identifiez les broches de signal, de masse et de puissance du capteur.</li>
+<li>Connectez la broche de signal du capteur à une broche d’entrée de l’Arduino.</li>
+<li>Connectez la broche de masse du capteur à la masse de l’Arduino.</li>
+<li>Connectez la broche de puissance du capteur à une broche d’alimentation de l’Arduino.</li>
+</ol>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Exemple de connexion d&#x27;un capteur d&#x27;accélération à Arduino</span></span><br><span class="line"><span class="type">int</span> pinSignal = <span class="number">2</span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="built_in">pinMode</span>(pinSignal, <span class="literal">INPUT</span>);</span><br><span class="line">  <span class="built_in">Serial</span>.<span class="built_in">begin</span>(<span class="number">9600</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> valeur = <span class="built_in">digitalRead</span>(pinSignal);</span><br><span class="line">  <span class="built_in">Serial</span>.<span class="built_in">println</span>(valeur);</span><br><span class="line">  <span class="built_in">delay</span>(<span class="number">1000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Lecture-des-donnees-du-capteur-de-mouvement"><a href="#Lecture-des-donnees-du-capteur-de-mouvement" class="headerlink" title="Lecture des données du capteur de mouvement"></a>Lecture des données du capteur de mouvement</h2><p>Une fois le capteur connecté, vous pouvez lire ses données à l’aide de l’Arduino. Par exemple, si vous utilisez un capteur d’accélération, vous pouvez lire les valeurs d’accélération sur différentes axes (x, y, z) et les utiliser dans votre programme.</p>
+<h2 id="Applications-des-capteurs-de-mouvement"><a href="#Applications-des-capteurs-de-mouvement" class="headerlink" title="Applications des capteurs de mouvement"></a>Applications des capteurs de mouvement</h2><p>Les capteurs de mouvement ont de nombreuses applications pratiques:</p>
+<ul>
+<li>Systèmes d’alarme: les capteurs de mouvement sont utilisés pour détecter les intrusions.</li>
+<li>Robots mobiles: les capteurs de mouvement aident les robots à se déplacer et à éviter les obstacles.</li>
+<li>Jeux interactifs: les capteurs de mouvement permettent de contrôler des jeux en se déplaçant physiquement.</li>
+</ul>
+<p>En conclusion, l’utilisation de capteurs de mouvement avec Arduino ouvre un large éventail de possibilités pour la création de projets interactifs et innovants. En combinant la puissance de l’Arduino avec la précision des capteurs de mouvement, les makers peuvent réaliser des projets passionnants dans divers domaines.</p>
+<p>N’hésitez pas à expérimenter et à explorer davantage les capteurs de mouvement pour créer des projets uniques et stimulants avec votre Arduino!</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/arduino/" rel="tag">arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/microcontroleurs/" rel="tag">microcontroleurs</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Les-entrees-sorties-numeriques-en-Arduino"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Les-entrees-sorties-numeriques-en-Arduino/"
+    >Les entrées/sorties numériques en Arduino</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Les-entrees-sorties-numeriques-en-Arduino/" class="article-date">
+  <time datetime="2024-03-01T18:43:03.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Arduino/">Arduino</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Les-entrees-sorties-numeriques-en-Arduino"><a href="#Les-entrees-sorties-numeriques-en-Arduino" class="headerlink" title="Les entrées&#x2F;sorties numériques en Arduino"></a>Les entrées&#x2F;sorties numériques en Arduino</h1><p>Bienvenue dans ce guide destiné aux débutants en Arduino ! Aujourd’hui, nous allons aborder un sujet fondamental : les entrées&#x2F;sorties numériques en Arduino. Comprendre comment interagir avec ces pins est essentiel pour créer des projets électroniques excitants. Avec un peu de pratique, vous pourrez contrôler des LEDs, des moteurs, des capteurs et bien plus encore ! </p>
+<h2 id="Qu’est-ce-qu’une-entree-sortie-numerique"><a href="#Qu’est-ce-qu’une-entree-sortie-numerique" class="headerlink" title="Qu’est-ce qu’une entrée&#x2F;sortie numérique ?"></a>Qu’est-ce qu’une entrée&#x2F;sortie numérique ?</h2><p>Les pins numériques d’une carte Arduino peuvent être configurées en tant qu’entrées ou sorties. En tant qu’entrée, elles peuvent recevoir des signaux (HIGH ou LOW) de composants externes. En tant que sorties, elles peuvent envoyer des signaux (HIGH ou LOW) vers ces composants. C’est comme un interrupteur : HIGH correspond à allumé, et LOW à éteint.</p>
+<h2 id="Configuration-des-pins-en-entree-ou-sortie"><a href="#Configuration-des-pins-en-entree-ou-sortie" class="headerlink" title="Configuration des pins en entrée ou sortie"></a>Configuration des pins en entrée ou sortie</h2><p>Pour configurer une pin en tant qu’entrée ou sortie, utilisez les fonctions <code>pinMode()</code> et <code>digitalWrite()</code>.</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Configuration d&#x27;une pin 7 en tant que sortie</span></span><br><span class="line"><span class="type">int</span> pin = <span class="number">7</span>;</span><br><span class="line"><span class="built_in">pinMode</span>(pin, <span class="literal">OUTPUT</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Configuration d&#x27;une pin 12 en tant qu&#x27;entrée</span></span><br><span class="line"><span class="type">int</span> pin2 = <span class="number">12</span>;</span><br><span class="line"><span class="built_in">pinMode</span>(pin2, <span class="literal">INPUT</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Lire-et-ecrire-sur-les-pins"><a href="#Lire-et-ecrire-sur-les-pins" class="headerlink" title="Lire et écrire sur les pins"></a>Lire et écrire sur les pins</h2><p>Maintenant que vos pins sont configurées, vous pouvez les lire (input) ou écrire (output) des valeurs. Voici comment :</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Lire la valeur d&#x27;une pin</span></span><br><span class="line"><span class="type">int</span> value = <span class="built_in">digitalRead</span>(pin2);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Ecrire une valeur sur une pin</span></span><br><span class="line"><span class="built_in">digitalWrite</span>(pin, <span class="literal">HIGH</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Exemple-d’application-clignotement-d’une-LED"><a href="#Exemple-d’application-clignotement-d’une-LED" class="headerlink" title="Exemple d’application : clignotement d’une LED"></a>Exemple d’application : clignotement d’une LED</h2><p>Voyons comment faire clignoter une LED connectée à la pin 13. </p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> ledPin = <span class="number">13</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="built_in">pinMode</span>(ledPin, <span class="literal">OUTPUT</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="built_in">digitalWrite</span>(ledPin, <span class="literal">HIGH</span>);</span><br><span class="line">  <span class="built_in">delay</span>(<span class="number">1000</span>); <span class="comment">// Attente d&#x27;une seconde</span></span><br><span class="line">  <span class="built_in">digitalWrite</span>(ledPin, <span class="literal">LOW</span>);</span><br><span class="line">  <span class="built_in">delay</span>(<span class="number">1000</span>); <span class="comment">// Attente d&#x27;une seconde</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Les entrées&#x2F;sorties numériques en Arduino sont la base de nombreux projets électroniques. En comprenant comment les configurer, les lire et les écrire, vous ouvrez un monde d’applications potentielles : des systèmes d’alarme aux robots autonomes, en passant par des interfaces utilisateur interactives. Nous espérons que ce guide vous aidera à démarrer avec succès votre aventure Arduino !</p>
+<p>N’hésitez pas à explorer davantage et à expérimenter par vous-même. L’électronique et la programmation offrent une infinité de possibilités créatives et innovantes. Amusez-vous bien !🚀</p>
+<hr>
+<p><em>Pour en savoir plus sur les entrées&#x2F;sorties numériques en Arduino, consultez la <a target="_blank" rel="noopener" href="https://www.arduino.cc/reference/en/">documentation officielle</a>.</em></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/arduino/" rel="tag">arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/microcontroleurs/" rel="tag">microcontroleurs</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Les-ecrans-LCD-en-Arduino"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Les-ecrans-LCD-en-Arduino/"
+    >Les écrans LCD en Arduino</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Les-ecrans-LCD-en-Arduino/" class="article-date">
+  <time datetime="2024-03-01T18:42:48.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Arduino/">Arduino</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Les-ecrans-LCD-en-Arduino"><a href="#Les-ecrans-LCD-en-Arduino" class="headerlink" title="Les écrans LCD en Arduino"></a>Les écrans LCD en Arduino</h1><p>Les écrans LCD (Liquid Crystal Display) sont des composants populaires dans le domaine de l’Arduino pour afficher des informations textuelles ou graphiques. Dans cet article, nous allons explorer comment utiliser les écrans LCD avec Arduino pour créer des projets intéressants et ludiques.</p>
+<h2 id="Introduction-aux-ecrans-LCD"><a href="#Introduction-aux-ecrans-LCD" class="headerlink" title="Introduction aux écrans LCD"></a>Introduction aux écrans LCD</h2><p>Les écrans LCD sont des dispositifs d’affichage qui peuvent être utilisés pour visualiser des données en temps réel. Ils sont composés de cristaux liquides qui réagissent à des signaux électriques pour former des caractères ou des images. Les écrans LCD sont disponibles en différentes tailles et résolutions, ce qui les rend polyvalents pour divers projets Arduino.</p>
+<h2 id="Connexion-de-l’ecran-LCD-a-Arduino"><a href="#Connexion-de-l’ecran-LCD-a-Arduino" class="headerlink" title="Connexion de l’écran LCD à Arduino"></a>Connexion de l’écran LCD à Arduino</h2><p>Pour connecter un écran LCD à Arduino, vous aurez besoin de quelques composants supplémentaires tels qu’un potentiomètre pour régler le contraste et un module d’interface I2C si l’écran LCD en utilise un. Voici un exemple de schéma de connexion entre un écran LCD 16x2 et Arduino :</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// Exemple de schéma de connexion</span><br><span class="line">// LCD | Arduino</span><br><span class="line">// VSS | GND</span><br><span class="line">// VDD | 5V</span><br><span class="line">// VO  | Potentiomètre (Contraste)</span><br><span class="line">// RS  | D7</span><br><span class="line">// RW  | GND</span><br><span class="line">// E   | D6</span><br><span class="line">// D4  | D5</span><br><span class="line">// D5  | D4</span><br><span class="line">// D6  | D3</span><br><span class="line">// D7  | D2</span><br></pre></td></tr></table></figure>
+
+<p>Assurez-vous de vérifier le datasheet de votre écran LCD et de suivre les instructions de connexion spécifiques.</p>
+<h2 id="Affichage-de-texte-sur-l’ecran-LCD"><a href="#Affichage-de-texte-sur-l’ecran-LCD" class="headerlink" title="Affichage de texte sur l’écran LCD"></a>Affichage de texte sur l’écran LCD</h2><p>Une fois l’écran LCD correctement connecté, vous pouvez commencer à afficher du texte. Voici un exemple de code Arduino pour afficher “Hello, World!” sur un écran LCD :</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;LiquidCrystal.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Initialise l&#x27;écran LCD</span></span><br><span class="line"><span class="function"><span class="built_in">LiquidCrystal</span> <span class="title">lcd</span><span class="params">(<span class="number">7</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  lcd.<span class="built_in">begin</span>(<span class="number">16</span>, <span class="number">2</span>); <span class="comment">// Initialise l&#x27;écran LCD en 16 colonnes et 2 lignes</span></span><br><span class="line">  lcd.<span class="built_in">print</span>(<span class="string">&quot;Hello, World!&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="comment">// Code à exécuter en boucle</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Creation-d’interfaces-utilisateur-simples"><a href="#Creation-d’interfaces-utilisateur-simples" class="headerlink" title="Création d’interfaces utilisateur simples"></a>Création d’interfaces utilisateur simples</h2><p>Les écrans LCD peuvent être utilisés pour créer des interfaces utilisateur simples pour vos projets Arduino. Vous pouvez afficher des menus, des boutons, des indicateurs et bien plus encore pour interagir avec votre projet de manière conviviale.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Les écrans LCD offrent un moyen efficace et pratique d’afficher des informations dans vos projets Arduino. Leur polyvalence et leur facilité d’utilisation en font un choix populaire parmi les makers et les passionnés d’électronique. En explorant davantage les fonctionnalités des écrans LCD et en les intégrant dans vos projets, vous pourriez créer des dispositifs interactifs et informatifs fascinants.</p>
+<p>Pour aller plus loin, n’hésitez pas à expérimenter avec des bibliothèques supplémentaires et à explorer des projets plus avancés qui exploitent pleinement les capacités des écrans LCD en Arduino.</p>
+<hr>
+<p><em>Article rédigé par <a target="_blank" rel="noopener" href="https://www.example.com/">Assistant Educatif</a></em></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/arduino/" rel="tag">arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/microcontroleurs/" rel="tag">microcontroleurs</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Creation-d-un-petit-robot-avec-Arduino"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Creation-d-un-petit-robot-avec-Arduino/"
+    >Création d&#39;un petit robot avec Arduino</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Creation-d-un-petit-robot-avec-Arduino/" class="article-date">
+  <time datetime="2024-03-01T18:42:33.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Arduino/">Arduino</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Creation-d’un-petit-robot-avec-Arduino"><a href="#Creation-d’un-petit-robot-avec-Arduino" class="headerlink" title="Création d’un petit robot avec Arduino"></a>Création d’un petit robot avec Arduino</h1><p>Bienvenue dans ce guide pédagogique sur la création d’un petit robot avec Arduino ! Que vous soyez débutant en électronique ou passionné par les robots, ce tutoriel vous accompagnera pas à pas dans la réalisation de votre propre robot simple et amusant.</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Arduino est une plateforme open-source très populaire pour créer des projets électroniques. Pour construire un robot avec Arduino, vous aurez besoin de quelques composants de base tels que des moteurs, des capteurs et bien sûr une carte Arduino.</p>
+<h2 id="Materiel-requis"><a href="#Materiel-requis" class="headerlink" title="Matériel requis"></a>Matériel requis</h2><p>Avant de commencer, assurez-vous d’avoir les éléments suivants :</p>
+<ul>
+<li>Carte Arduino Uno</li>
+<li>Châssis de robot</li>
+<li>Moteurs à courant continu</li>
+<li>Roues et chenilles</li>
+<li>Capteurs de distance</li>
+<li>Batterie</li>
+<li>Câbles de connexion</li>
+</ul>
+<h2 id="Montage-du-robot"><a href="#Montage-du-robot" class="headerlink" title="Montage du robot"></a>Montage du robot</h2><ol>
+<li>Fixez les moteurs sur le châssis à l’aide de vis.</li>
+<li>Connectez les roues ou les chenilles aux moteurs.</li>
+<li>Installez les capteurs de distance à l’avant du robot.</li>
+<li>Câblez les moteurs et les capteurs à la carte Arduino en suivant un schéma de montage.</li>
+</ol>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Exemple de câblage :</span><br><span class="line"></span><br><span class="line">Moteur gauche -&gt; broches A0 et A1 sur la carte</span><br><span class="line">Moteur droit -&gt; broches A2 et A3 sur la carte</span><br><span class="line">Capteur de distance -&gt; broche A4 sur la carte</span><br></pre></td></tr></table></figure>
+
+<h2 id="Programmation-du-robot"><a href="#Programmation-du-robot" class="headerlink" title="Programmation du robot"></a>Programmation du robot</h2><p>Une fois le câblage terminé, il est temps de programmer votre robot ! Utilisez l’IDE Arduino et un langage de programmation basé sur C pour contrôler les moteurs et les capteurs.</p>
+<p>Voici un exemple de code simple pour faire avancer le robot lorsque le capteur détecte un obstacle :</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> moteurGaucheAvant = <span class="number">9</span>;</span><br><span class="line"><span class="type">int</span> moteurGaucheArriere = <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> moteurDroitAvant = <span class="number">11</span>;</span><br><span class="line"><span class="type">int</span> moteurDroitArriere = <span class="number">12</span>;</span><br><span class="line"><span class="type">int</span> capteurDistance = A4;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="built_in">pinMode</span>(moteurGaucheAvant, <span class="literal">OUTPUT</span>);</span><br><span class="line">  <span class="built_in">pinMode</span>(moteurGaucheArriere, <span class="literal">OUTPUT</span>);</span><br><span class="line">  <span class="built_in">pinMode</span>(moteurDroitAvant, <span class="literal">OUTPUT</span>);</span><br><span class="line">  <span class="built_in">pinMode</span>(moteurDroitArriere, <span class="literal">OUTPUT</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> distance = <span class="built_in">analogRead</span>(capteurDistance);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">if</span>(distance &lt; <span class="number">20</span>)&#123;</span><br><span class="line">    <span class="comment">// Arrêter les moteurs si un obstacle est détecté</span></span><br><span class="line">    <span class="comment">// Code pour faire demi-tour ou prendre une autre action</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// Faire avancer le robot</span></span><br><span class="line">    <span class="comment">// Code pour activer les moteurs dans la direction souhaitée</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La création d’un petit robot avec Arduino est une introduction passionnante au monde de la robotique et de la programmation. Une fois que vous maîtrisez les bases, les possibilités sont infinies : vous pourrez concevoir des robots plus complexes, explorer la navigation autonome ou même intégrer des capteurs supplémentaires pour des fonctionnalités avancées.</p>
+<p>Commencez dès aujourd’hui votre aventure dans la robotique en créant votre premier robot avec Arduino !</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/arduino/" rel="tag">arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/microcontroleurs/" rel="tag">microcontroleurs</a></li></ul>
 
     </footer>
   </div>
@@ -800,7 +847,7 @@
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/7/">Page précédente</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/9/">Page suivante</a>
+    <a class="extend prev" rel="prev" href="/page/7/">Page précédente</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><a class="extend next" rel="next" href="/page/9/">Page suivante</a>
   </nav>
   
 </section>
@@ -865,6 +912,22 @@
     </li>
     
     <li class="nav-item">
+      <a class="nav-item-link" href="/categories/bienetre/">Bien être</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/Arduino/">Arduino</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/ESP8266/">ESP8266</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/Electronique">Electronique</a>
+    </li>
+    
+    <li class="nav-item">
       <a class="nav-item-link" href="/categories/Python/">Python</a>
     </li>
     
@@ -894,6 +957,10 @@
     
     <li class="nav-item">
       <a class="nav-item-link" href="/categories/Scipy/">Scipy</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/Tkinter">Tkinter</a>
     </li>
     
     <li class="nav-item">

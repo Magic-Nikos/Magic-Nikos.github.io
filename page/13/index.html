@@ -111,7 +111,7 @@
     
     
     <article
-  id="post-Graphiques-3D-Surfaces-scatter-plots-et-lignes"
+  id="post-Gestion-des-evenements-et-des-interactions"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -122,8 +122,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Graphiques-3D-Surfaces-scatter-plots-et-lignes/"
-    >Graphiques 3D : Surfaces, scatter plots et lignes</a> 
+  <a class="article-title" href="/2024/03/01/Gestion-des-evenements-et-des-interactions/"
+    >Gestion des événements et des interactions</a> 
 </h2>
  
 
@@ -131,33 +131,28 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Graphiques-3D-Surfaces-scatter-plots-et-lignes/" class="article-date">
-  <time datetime="2024-03-01T07:31:21.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Gestion-des-evenements-et-des-interactions/" class="article-date">
+  <time datetime="2024-03-01T16:58:15.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+    <a class="article-category-link" href="/categories/Tkinter/">Tkinter</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Article-pedagogique-Graphiques-3D-avec-Plotly"><a href="#Article-pedagogique-Graphiques-3D-avec-Plotly" class="headerlink" title="Article pédagogique : Graphiques 3D avec Plotly"></a>Article pédagogique : Graphiques 3D avec Plotly</h1><p>Bienvenue dans cet article où nous allons explorer l’utilisation de Plotly pour créer des graphiques 3D, notamment des surfaces, des scatter plots et des lignes. Plotly est une bibliothèque Python puissante et flexible qui permet de visualiser facilement des données en 2D et en 3D. Dans ce tutoriel, nous allons découvrir comment créer ces différents types de graphiques pour représenter des données en trois dimensions.</p>
-<h2 id="1-Graphique-3D-avec-des-Surfaces"><a href="#1-Graphique-3D-avec-des-Surfaces" class="headerlink" title="1. Graphique 3D avec des Surfaces"></a>1. Graphique 3D avec des Surfaces</h2><p>Les graphiques 3D de type surfaces sont parfaitement adaptés pour visualiser des fonctions mathématiques ou des ensembles de données qui évoluent dans un espace tridimensionnel.</p>
-<p>Voici un exemple de code Python utilisant Plotly pour créer un graphique 3D avec une surface :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">x = np.linspace(-<span class="number">5</span>, <span class="number">5</span>, <span class="number">100</span>)</span><br><span class="line">y = np.linspace(-<span class="number">5</span>, <span class="number">5</span>, <span class="number">100</span>)</span><br><span class="line">X, Y = np.meshgrid(x, y)</span><br><span class="line">Z = np.sin(np.sqrt(X**<span class="number">2</span> + Y**<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=[go.Surface(z=Z, x=X, y=Y)])</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+  <h1 id="Article-pedagogique-Gestion-des-evenements-et-des-interactions-en-Tkinter"><a href="#Article-pedagogique-Gestion-des-evenements-et-des-interactions-en-Tkinter" class="headerlink" title="Article pédagogique : Gestion des événements et des interactions en Tkinter"></a>Article pédagogique : Gestion des événements et des interactions en Tkinter</h1><p>Dans ce tutoriel, nous allons explorer la gestion des événements et des interactions dans Tkinter, l’une des bibliothèques les plus populaires pour le développement d’interfaces graphiques en Python. Comprendre comment gérer les événements et les interactions est crucial pour créer des applications interactives et réactives. </p>
+<h2 id="Introduction-a-la-gestion-des-evenements"><a href="#Introduction-a-la-gestion-des-evenements" class="headerlink" title="Introduction à la gestion des événements"></a>Introduction à la gestion des événements</h2><p>Avant de plonger dans les détails, il est important de comprendre ce qu’est un événement en Tkinter. Un événement est une action qui se produit lorsqu’un utilisateur interagit avec un widget (comme un bouton, une entrée de texte, etc.). La gestion des événements implique de définir des actions à effectuer en réponse à ces interactions.</p>
+<h2 id="Capturer-les-evenements"><a href="#Capturer-les-evenements" class="headerlink" title="Capturer les événements"></a>Capturer les événements</h2><p>Pour capturer un événement dans Tkinter, vous pouvez associer une fonction à un widget spécifique et à un événement spécifique en utilisant la méthode <code>bind()</code>. Par exemple, pour associer une fonction à un clic de souris sur un bouton :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">on_button_click</span>(<span class="params">event</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Bouton cliqué&quot;</span>)</span><br><span class="line"></span><br><span class="line">root = tk.Tk()</span><br><span class="line">button = tk.Button(root, text=<span class="string">&quot;Cliquez moi&quot;</span>)</span><br><span class="line">button.pack()</span><br><span class="line">button.bind(<span class="string">&quot;&lt;Button-1&gt;&quot;</span>, on_button_click)</span><br><span class="line"></span><br><span class="line">root.mainloop()</span><br></pre></td></tr></table></figure>
 
-<h2 id="2-Graphique-3D-avec-des-Scatter-Plots"><a href="#2-Graphique-3D-avec-des-Scatter-Plots" class="headerlink" title="2. Graphique 3D avec des Scatter Plots"></a>2. Graphique 3D avec des Scatter Plots</h2><p>Les scatter plots en 3D permettent de représenter des ensembles de points dans un espace tridimensionnel. Ce type de graphique est idéal pour visualiser la répartition des données selon trois variables.</p>
-<p>Voici un exemple de code Python pour créer un scatter plot 3D avec Plotly :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">N = <span class="number">100</span></span><br><span class="line">x = np.random.rand(N)</span><br><span class="line">y = np.random.rand(N)</span><br><span class="line">z = np.random.rand(N)</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=[go.Scatter3d(x=x, y=y, z=z, mode=<span class="string">&#x27;markers&#x27;</span>)])</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-Graphique-3D-avec-des-Lignes"><a href="#3-Graphique-3D-avec-des-Lignes" class="headerlink" title="3. Graphique 3D avec des Lignes"></a>3. Graphique 3D avec des Lignes</h2><p>Les graphiques 3D de type lignes sont utiles pour représenter des trajectoires, des courbes ou des connexions entre des points dans un espace tridimensionnel.</p>
-<p>Voici un exemple de code Python pour créer un graphique 3D avec des lignes en utilisant Plotly :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">t = np.linspace(<span class="number">0</span>, <span class="number">10</span>, <span class="number">100</span>)</span><br><span class="line">x = np.sin(t)</span><br><span class="line">y = np.cos(t)</span><br><span class="line">z = t</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=[go.Scatter3d(x=x, y=y, z=z, mode=<span class="string">&#x27;lines&#x27;</span>)])</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Les graphiques 3D avec Plotly offrent une manière visuellement attractive de représenter des données complexes dans un espace tridimensionnel. Que ce soit pour visualiser des fonctions mathématiques, des ensembles de points ou des trajectoires, l’utilisation de Plotly permet de créer facilement des graphiques interactifs et personnalisables.</p>
-<p>En explorant davantage les fonctionnalités avancées de Plotly et en combinant différents types de graphiques 3D, il est possible de créer des visualisations informatives et esthétiques pour divers domaines tels que la recherche scientifique, la finance ou la modélisation de données.</p>
-<p>N’hésitez pas à expérimenter et à découvrir de nouvelles applications des graphiques 3D avec Plotly pour enrichir vos analyses et vos présentations de données. Happy coding!</p>
+<p>Dans cet exemple, la fonction <code>on_button_click</code> est appelée chaque fois que l’utilisateur clique sur le bouton.</p>
+<h2 id="Types-d’evenements-courants"><a href="#Types-d’evenements-courants" class="headerlink" title="Types d’événements courants"></a>Types d’événements courants</h2><p>Tkinter prend en charge de nombreux types d’événements, tels que les clics de souris, les pressions de touches, les mouvements de souris, etc. Vous pouvez les capturer et y répondre en conséquence pour rendre votre application plus interactive.</p>
+<h2 id="Gestion-des-actions-utilisateur"><a href="#Gestion-des-actions-utilisateur" class="headerlink" title="Gestion des actions utilisateur"></a>Gestion des actions utilisateur</h2><p>En plus de capturer des événements, vous pouvez également définir des actions à effectuer en réponse à ces événements. Par exemple, changer le texte d’un widget après un clic de souris ou valider le contenu d’une entrée de texte sur pression de la touche “Entrée”.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La gestion des événements et des interactions en Tkinter est essentielle pour créer des applications conviviales et interactives. En comprenant comment capturer les événements, associer des fonctions aux widgets et définir des actions, vous pouvez offrir une expérience utilisateur améliorée. Que ce soit pour créer des jeux simples, des formulaires interactifs ou des applications plus complexes, la gestion des événements joue un rôle clé dans le développement d’applications graphiques.</p>
+<p>En maîtrisant ces concepts, vous serez en mesure de concevoir des interfaces utilisateur interactives et réactives avec Tkinter. Explorez les nombreuses possibilités offertes par la gestion des événements et des interactions pour créer des applications Python plus dynamiques et engageantes.</p>
+<p>N’hésitez pas à pratiquer ces concepts et à expérimenter avec différents types d’événements pour approfondir votre compréhension de la gestion des événements en Tkinter.</p>
  
       <!-- reward -->
       
@@ -168,7 +163,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tkinter/" rel="tag">tkinter</a></li></ul>
 
     </footer>
   </div>
@@ -179,7 +174,7 @@
 
     
     <article
-  id="post-Cartographies-et-donnees-geographiques-avec-Plotly"
+  id="post-Gestion-des-fenetres-et-des-widgets"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -190,8 +185,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Cartographies-et-donnees-geographiques-avec-Plotly/"
-    >Cartographies et données géographiques avec Plotly</a> 
+  <a class="article-title" href="/2024/03/01/Gestion-des-fenetres-et-des-widgets/"
+    >Gestion des fenêtres et des widgets</a> 
 </h2>
  
 
@@ -199,36 +194,34 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Cartographies-et-donnees-geographiques-avec-Plotly/" class="article-date">
-  <time datetime="2024-03-01T07:31:06.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Gestion-des-fenetres-et-des-widgets/" class="article-date">
+  <time datetime="2024-03-01T16:57:56.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+    <a class="article-category-link" href="/categories/Tkinter/">Tkinter</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Cartographies-et-donnees-geographiques-avec-Plotly"><a href="#Cartographies-et-donnees-geographiques-avec-Plotly" class="headerlink" title="Cartographies et données géographiques avec Plotly"></a>Cartographies et données géographiques avec Plotly</h1><p>Bienvenue dans cet article où nous allons explorer l’univers fascinant des cartographies et des données géographiques avec Plotly. Que vous soyez débutant ou non, nous allons vous guider à travers les étapes essentielles pour maîtriser la visualisation de données géographiques de manière efficace.</p>
-<h2 id="Introduction-a-Plotly-et-aux-donnees-geographiques"><a href="#Introduction-a-Plotly-et-aux-donnees-geographiques" class="headerlink" title="Introduction à Plotly et aux données géographiques"></a>Introduction à Plotly et aux données géographiques</h2><p>Plotly est une bibliothèque Python puissante qui offre de nombreuses fonctionnalités pour la création de visualisations interactives. Lorsqu’il s’agit de données géographiques, Plotly permet de représenter des informations spatiales de manière claire et esthétique.</p>
-<p>Pour commencer, assurez-vous d’installer Plotly en exécutant la commande suivante :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
+  <h1 id="Gestion-des-fenetres-et-des-widgets-en-Tkinter"><a href="#Gestion-des-fenetres-et-des-widgets-en-Tkinter" class="headerlink" title="Gestion des fenêtres et des widgets en Tkinter"></a>Gestion des fenêtres et des widgets en Tkinter</h1><p>Tkinter est une bibliothèque graphique populaire pour créer des interfaces utilisateur en Python. La gestion des fenêtres et des widgets est essentielle pour développer des applications interactives. Dans cet article, nous allons explorer les concepts fondamentaux de la gestion des fenêtres et des widgets en Tkinter.</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Tkinter repose sur le concept de fenêtres et de widgets. Les fenêtres sont les cadres principaux de votre application, tandis que les widgets sont les éléments graphiques tels que les boutons, les labels et les champs de texte.</p>
+<h2 id="Creation-d’une-fenetre"><a href="#Creation-d’une-fenetre" class="headerlink" title="Création d’une fenêtre"></a>Création d’une fenêtre</h2><p>Pour commencer, créons une fenêtre Tkinter de base :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"></span><br><span class="line"><span class="comment"># Créer une fenêtre</span></span><br><span class="line">fenetre = tk.Tk()</span><br><span class="line">fenetre.title(<span class="string">&quot;Ma première fenêtre Tkinter&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Code pour exécuter la fenêtre</span></span><br><span class="line">fenetre.mainloop()</span><br></pre></td></tr></table></figure>
 
-<h2 id="Creation-de-cartographies-simples"><a href="#Creation-de-cartographies-simples" class="headerlink" title="Création de cartographies simples"></a>Création de cartographies simples</h2><p>Tout d’abord, créons une carte simple en utilisant Plotly. Voici un exemple de code pour afficher une carte du monde :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"></span><br><span class="line">fig = px.choropleth(locations=[<span class="string">&quot;USA&quot;</span>, <span class="string">&quot;CAN&quot;</span>, <span class="string">&quot;FRA&quot;</span>, <span class="string">&quot;GBR&quot;</span>],</span><br><span class="line">                    locationmode=<span class="string">&quot;ISO-3&quot;</span>,</span><br><span class="line">                    color=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line"></span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+<p>Dans cet exemple, <code>tk.Tk()</code> crée une nouvelle fenêtre, <code>fenetre.title()</code> définit le titre de la fenêtre et <code>fenetre.mainloop()</code> lance la boucle principale de l’interface utilisateur.</p>
+<h2 id="Ajout-de-widgets"><a href="#Ajout-de-widgets" class="headerlink" title="Ajout de widgets"></a>Ajout de widgets</h2><p>Maintenant, ajoutons un widget à notre fenêtre.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"></span><br><span class="line">fenetre = tk.Tk()</span><br><span class="line">fenetre.title(<span class="string">&quot;Ma première fenêtre Tkinter&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Ajouter un label</span></span><br><span class="line">label = tk.Label(fenetre, text=<span class="string">&quot;Bonjour, Tkinter!&quot;</span>)</span><br><span class="line">label.pack()</span><br><span class="line"></span><br><span class="line">fenetre.mainloop()</span><br></pre></td></tr></table></figure>
 
-<p>En exécutant ce code, vous obtiendrez une carte du monde avec des couleurs différentes pour chaque pays.</p>
-<h2 id="Personnalisation-avancee-des-cartes"><a href="#Personnalisation-avancee-des-cartes" class="headerlink" title="Personnalisation avancée des cartes"></a>Personnalisation avancée des cartes</h2><p>Pour personnaliser davantage votre carte, vous pouvez jouer avec les différents paramètres disponibles. Par exemple, voici comment ajouter des annotations aux cartes :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fig.update_geos(showcountries=<span class="literal">True</span>, countrycolor=<span class="string">&quot;Black&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>Ici, <code>tk.Label()</code> crée un label contenant du texte et <code>label.pack()</code> l’ajoute à la fenêtre.</p>
+<h2 id="Gestion-des-evenements"><a href="#Gestion-des-evenements" class="headerlink" title="Gestion des événements"></a>Gestion des événements</h2><p>Tkinter vous permet de gérer les événements comme les clics de souris ou les presses de touche. Voici un exemple avec un bouton :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">afficher_message</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Bouton cliqué!&quot;</span>)</span><br><span class="line"></span><br><span class="line">fenetre = tk.Tk()</span><br><span class="line">fenetre.title(<span class="string">&quot;Ma première fenêtre Tkinter&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Créer un bouton</span></span><br><span class="line">bouton = tk.Button(fenetre, text=<span class="string">&quot;Cliquez ici&quot;</span>, command=afficher_message)</span><br><span class="line">bouton.pack()</span><br><span class="line"></span><br><span class="line">fenetre.mainloop()</span><br></pre></td></tr></table></figure>
 
-<p>En ajoutant cette ligne à votre code, vous pourrez afficher les frontières des pays en noir.</p>
-<h2 id="Utilisation-de-donnees-reelles"><a href="#Utilisation-de-donnees-reelles" class="headerlink" title="Utilisation de données réelles"></a>Utilisation de données réelles</h2><p>Pour visualiser des données réelles sur une carte, vous pouvez charger un jeu de données et le mapper. Par exemple, avec un jeu de données sur la population mondiale, vous pouvez créer une carte choroplèthe :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line">df = px.data.gapminder().query(<span class="string">&quot;year == 2007&quot;</span>)</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=go.Choropleth(</span><br><span class="line">    locations=df[<span class="string">&#x27;iso_alpha&#x27;</span>],</span><br><span class="line">    z=df[<span class="string">&#x27;gdpPercap&#x27;</span>],</span><br><span class="line">    text=df[<span class="string">&#x27;country&#x27;</span>],</span><br><span class="line">    colorscale=<span class="string">&#x27;Viridis&#x27;</span>,</span><br><span class="line">    autocolorscale=<span class="literal">False</span>,</span><br><span class="line">    reversescale=<span class="literal">True</span>,</span><br><span class="line">    marker_line_color=<span class="string">&#x27;darkgray&#x27;</span>,</span><br><span class="line">    marker_line_width=<span class="number">0.5</span>,</span><br><span class="line">    colorbar_title=<span class="string">&#x27;GDP per Capita&#x27;</span>,</span><br><span class="line">))</span><br><span class="line"></span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, la visualisation de cartographies et de données géographiques avec Plotly offre un moyen puissant de présenter des informations spatiales de manière claire et attrayante. Que ce soit pour analyser des données démographiques, des performances commerciales par région, ou simplement explorer le monde à travers des visualisations interactives, les possibilités sont infinies.</p>
-<p>En maîtrisant les concepts de base et en expérimentant avec les fonctionnalités avancées de Plotly, vous serez en mesure de créer des cartographies riches en informations et de raconter des histoires captivantes à travers vos visualisations.</p>
-<p>N’oubliez pas d’explorer davantage et d’expérimenter avec vos propres ensembles de données pour découvrir tout le potentiel de Plotly dans le domaine des cartographies et des données géographiques. Amusez-vous bien !</p>
+<p>Dans cet exemple, <code>tk.Button()</code> crée un bouton avec un texte et une fonction <code>command</code> qui est appelée lors du clic.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La gestion des fenêtres et des widgets en Tkinter est essentielle pour créer des interfaces utilisateur interactives en Python. En comprenant ces concepts de base, vous pourrez développer des applications plus complexes et intuitives. Explorez les nombreuses possibilités offertes par Tkinter pour concevoir des interfaces utilisateur riches et conviviales.</p>
+<p>Pour aller plus loin, vous pouvez explorer des tutoriels avancés sur la mise en page, les styles et les interactions avancées entre les widgets. Tkinter est un outil puissant pour donner vie à vos idées et créer des applications graphiques impressionnantes en Python.</p>
+<p>Commencez dès aujourd’hui à explorer et à expérimenter avec la gestion des fenêtres et des widgets en Tkinter pour développer vos propres applications personnalisées et interactives. Amusez-vous bien !</p>
  
       <!-- reward -->
       
@@ -239,7 +232,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tkinter/" rel="tag">tkinter</a></li></ul>
 
     </footer>
   </div>
@@ -250,7 +243,7 @@
 
     
     <article
-  id="post-Coordonnees-polaires-et-radiales"
+  id="post-Les-bases-de-la-programmation-Tkinter"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -261,8 +254,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Coordonnees-polaires-et-radiales/"
-    >Coordonnées polaires et radiales</a> 
+  <a class="article-title" href="/2024/03/01/Les-bases-de-la-programmation-Tkinter/"
+    >Les bases de la programmation Tkinter</a> 
 </h2>
  
 
@@ -270,32 +263,33 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Coordonnees-polaires-et-radiales/" class="article-date">
-  <time datetime="2024-03-01T07:30:50.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Les-bases-de-la-programmation-Tkinter/" class="article-date">
+  <time datetime="2024-03-01T16:57:42.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+    <a class="article-category-link" href="/categories/Tkinter/">Tkinter</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Coordonnees-Polaires-et-Radiales-avec-Plotly"><a href="#Coordonnees-Polaires-et-Radiales-avec-Plotly" class="headerlink" title="Coordonnées Polaires et Radiales avec Plotly"></a>Coordonnées Polaires et Radiales avec Plotly</h1><p>Bienvenue dans ce tutoriel sur les coordonnées polaires et radiales avec Plotly. Dans cet article, nous allons explorer comment travailler avec des graphiques en coordonnées polaires et radiales, en utilisant la bibliothèque Plotly en Python. </p>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Les coordonnées polaires offrent une manière alternative de représentation des données, en utilisant un système de coordonnées basé sur l’angle et la distance par rapport à un point central, tandis que les coordonnées radiales mesurent uniquement la distance. </p>
-<h2 id="Installation-de-Plotly"><a href="#Installation-de-Plotly" class="headerlink" title="Installation de Plotly"></a>Installation de Plotly</h2><p>Assurez-vous d’avoir Plotly installé en exécutant la commande suivante dans votre terminal :</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
+  <h1 id="Les-bases-de-la-programmation-Tkinter"><a href="#Les-bases-de-la-programmation-Tkinter" class="headerlink" title="Les bases de la programmation Tkinter"></a>Les bases de la programmation Tkinter</h1><p>Tkinter est une bibliothèque populaire de GUI (Graphical User Interface) pour Python, permettant de créer des applications graphiques de manière simple et efficace. Dans cet article, nous allons explorer les bases de la programmation Tkinter, en fournissant des explications claires et des exemples pratiques pour vous aider à démarrer.</p>
+<h2 id="Introduction-a-Tkinter"><a href="#Introduction-a-Tkinter" class="headerlink" title="Introduction à Tkinter"></a>Introduction à Tkinter</h2><p>Tkinter est livré avec Python, ce qui le rend facilement accessible aux développeurs Python. Il offre une variété de widgets (éléments graphiques) tels que les boutons, les étiquettes, les champs de texte et les listes déroulantes, pour concevoir des interfaces utilisateur interactives.</p>
+<h2 id="Creer-une-fenetre-Tkinter"><a href="#Creer-une-fenetre-Tkinter" class="headerlink" title="Créer une fenêtre Tkinter"></a>Créer une fenêtre Tkinter</h2><p>Pour commencer, créons une fenêtre Tkinter de base en utilisant le code suivant :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"></span><br><span class="line"><span class="comment"># Créer une instance de la classe Tk</span></span><br><span class="line">root = tk.Tk()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Titre de la fenêtre</span></span><br><span class="line">root.title(<span class="string">&quot;Ma première application Tkinter&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Taille de la fenêtre</span></span><br><span class="line">root.geometry(<span class="string">&quot;400x300&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Boucle principale Tkinter</span></span><br><span class="line">root.mainloop()</span><br></pre></td></tr></table></figure>
 
-<h2 id="Creation-d’un-Graphique-en-Coordonnees-Polaires"><a href="#Creation-d’un-Graphique-en-Coordonnees-Polaires" class="headerlink" title="Création d’un Graphique en Coordonnées Polaires"></a>Création d’un Graphique en Coordonnées Polaires</h2><p>Commençons par créer un graphique en coordonnées polaires avec Plotly. Voici un exemple de code Python :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"></span><br><span class="line">df = px.data.wind()</span><br><span class="line">fig = px.scatter_polar(df, r=<span class="string">&quot;frequency&quot;</span>, theta=<span class="string">&quot;direction&quot;</span>, color=<span class="string">&quot;strength&quot;</span>)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+<p>En exécutant ce code, vous devriez voir une fenêtre vide avec le titre spécifié.</p>
+<h2 id="Ajouter-des-widgets"><a href="#Ajouter-des-widgets" class="headerlink" title="Ajouter des widgets"></a>Ajouter des widgets</h2><p>Ajoutons maintenant un bouton à notre fenêtre pour une interaction élémentaire. Voici comment créer et afficher un bouton Tkinter :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"></span><br><span class="line">root = tk.Tk()</span><br><span class="line">root.title(<span class="string">&quot;Ma première application Tkinter&quot;</span>)</span><br><span class="line">root.geometry(<span class="string">&quot;400x300&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Créer un bouton</span></span><br><span class="line">btn = tk.Button(root, text=<span class="string">&quot;Cliquez-moi&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Afficher le bouton à l&#x27;aide de la méthode pack()</span></span><br><span class="line">btn.pack()</span><br><span class="line"></span><br><span class="line">root.mainloop()</span><br></pre></td></tr></table></figure>
 
-<p>Dans cet exemple, nous utilisons <code>scatter_polar</code> pour créer un diagramme de dispersion en coordonnées polaires.</p>
-<h2 id="Graphique-en-Coordonnees-Radiales"><a href="#Graphique-en-Coordonnees-Radiales" class="headerlink" title="Graphique en Coordonnées Radiales"></a>Graphique en Coordonnées Radiales</h2><p>Pour créer un graphique en coordonnées radiales, nous pouvons utiliser un diagramme en secteurs. Voici un exemple :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line">labels = [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>]</span><br><span class="line">values = [<span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">10</span>]</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=[go.Pie(labels=labels, values=values)])</span><br><span class="line">fig.update_traces(hole=<span class="number">0.4</span>)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+<p>En exécutant ce code, vous verrez un bouton affiché à l’intérieur de la fenêtre.</p>
+<h2 id="Gerer-les-evenements"><a href="#Gerer-les-evenements" class="headerlink" title="Gérer les événements"></a>Gérer les événements</h2><p>Les événements sont des actions déclenchées par l’utilisateur, tels que cliquer sur un bouton. Voici comment ajouter une action à un bouton :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">clic_bouton</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Bouton cliqué!&quot;</span>)</span><br><span class="line"></span><br><span class="line">root = tk.Tk()</span><br><span class="line">root.title(<span class="string">&quot;Ma première application Tkinter&quot;</span>)</span><br><span class="line">root.geometry(<span class="string">&quot;400x300&quot;</span>)</span><br><span class="line"></span><br><span class="line">btn = tk.Button(root, text=<span class="string">&quot;Cliquez-moi&quot;</span>, command=clic_bouton)</span><br><span class="line">btn.pack()</span><br><span class="line"></span><br><span class="line">root.mainloop()</span><br></pre></td></tr></table></figure>
 
-<p>Ce code crée un graphique en coordonnées radiales avec un diagramme en secteurs.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Les coordonnées polaires et radiales offrent une manière expressive de visualiser des données, en particulier pour les données circulaires. En utilisant Plotly, vous pouvez facilement créer des graphiques interactifs en coordonnées polaires et radiales pour explorer vos données de manière visuelle.</p>
-<p>Explorez davantage les possibilités offertes par les coordonnées polaires et radiales dans vos visualisations avec Plotly pour des représentations graphiques uniques et attrayantes de vos données.</p>
+<p>Maintenant, lorsque vous cliquez sur le bouton, le message “Bouton cliqué!” sera affiché dans la console.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En maîtrisant les bases de la programmation Tkinter, vous serez en mesure de créer des interfaces graphiques interactives et conviviales pour vos projets Python. Tkinter offre un large éventail de fonctionnalités pour personnaliser et améliorer l’expérience utilisateur.</p>
+<p>Explorez davantage les fonctionnalités avancées de Tkinter pour créer des applications plus complexes et intuitives. Bonne programmation Tkinter !</p>
  
       <!-- reward -->
       
@@ -306,7 +300,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tkinter/" rel="tag">tkinter</a></li></ul>
 
     </footer>
   </div>
@@ -317,7 +311,7 @@
 
     
     <article
-  id="post-Visualisation-de-donnees-en-bulles-et-scatter-plots"
+  id="post-Installation-et-configuration-de-Tkinter"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -328,8 +322,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Visualisation-de-donnees-en-bulles-et-scatter-plots/"
-    >Visualisation de données en bulles et scatter plots</a> 
+  <a class="article-title" href="/2024/03/01/Installation-et-configuration-de-Tkinter/"
+    >Installation et configuration de Tkinter</a> 
 </h2>
  
 
@@ -337,28 +331,40 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Visualisation-de-donnees-en-bulles-et-scatter-plots/" class="article-date">
-  <time datetime="2024-03-01T07:30:35.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Installation-et-configuration-de-Tkinter/" class="article-date">
+  <time datetime="2024-03-01T16:57:25.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+    <a class="article-category-link" href="/categories/Tkinter/">Tkinter</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Visualisation-de-donnees-en-bulles-et-scatter-plots-avec-Plotly"><a href="#Visualisation-de-donnees-en-bulles-et-scatter-plots-avec-Plotly" class="headerlink" title="Visualisation de données en bulles et scatter plots avec Plotly"></a>Visualisation de données en bulles et scatter plots avec Plotly</h1><p>La visualisation de données en bulles et scatter plots est un moyen puissant d’explorer et de présenter des données. Dans cet article, nous allons vous guider à travers les bases de la création de ces types de graphiques en utilisant la bibliothèque Plotly en Python.</p>
-<h2 id="Introduction-a-Plotly"><a href="#Introduction-a-Plotly" class="headerlink" title="Introduction à Plotly"></a>Introduction à Plotly</h2><p>Plotly est une bibliothèque graphique interactive qui permet de créer une grande variété de visualisations de données. Pour commencer à utiliser Plotly, assurez-vous de l’avoir installé en exécutant la commande suivante :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!pip install plotly</span><br></pre></td></tr></table></figure>
+  <h1 id="Guide-pour-l’Installation-et-Configuration-de-Tkinter"><a href="#Guide-pour-l’Installation-et-Configuration-de-Tkinter" class="headerlink" title="Guide pour l’Installation et Configuration de Tkinter"></a>Guide pour l’Installation et Configuration de Tkinter</h1><p>Bienvenue dans ce guide dédié à l’installation et à la configuration de Tkinter ! Tkinter est une bibliothèque graphique de Python largement utilisée pour créer des interfaces utilisateur. Dans cet article, nous allons explorer les étapes essentielles pour installer et configurer Tkinter sur votre système.</p>
+<h2 id="Installation-de-Tkinter"><a href="#Installation-de-Tkinter" class="headerlink" title="Installation de Tkinter"></a>Installation de Tkinter</h2><p>Pour commencer, vérifions si Tkinter est déjà installé sur votre machine. Ouvrez un terminal et exécutez la commande suivante :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m tkinter</span><br></pre></td></tr></table></figure>
 
-<h2 id="Scatter-Plot"><a href="#Scatter-Plot" class="headerlink" title="Scatter Plot"></a>Scatter Plot</h2><p>Le scatter plot est l’un des types de graphiques les plus couramment utilisés pour visualiser la corrélation entre deux variables. Voici un exemple de code Python utilisant Plotly pour créer un scatter plot :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># Création des données</span></span><br><span class="line">df = pd.DataFrame(&#123;</span><br><span class="line">    <span class="string">&quot;x&quot;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>],</span><br><span class="line">    <span class="string">&quot;y&quot;</span>: [<span class="number">10</span>, <span class="number">12</span>, <span class="number">14</span>, <span class="number">16</span>, <span class="number">18</span>]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Création du scatter plot</span></span><br><span class="line">fig = px.scatter(df, x=<span class="string">&quot;x&quot;</span>, y=<span class="string">&quot;y&quot;</span>, title=<span class="string">&quot;Exemple de Scatter Plot&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Affichage du graphique</span></span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+<p>Si Tkinter est installé, une fenêtre vide s’ouvrira. Sinon, vous devrez installer Tkinter en utilisant l’outil de gestion de paquets de Python, pip. Voici comment procéder :</p>
+<ol>
+<li>Tout d’abord, assurez-vous que vous avez Python installé sur votre système.</li>
+<li>Ouvrez un terminal et exécutez la commande suivante pour installer Tkinter :</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install tk</span><br></pre></td></tr></table></figure>
 
-<h2 id="Bubble-Chart"><a href="#Bubble-Chart" class="headerlink" title="Bubble Chart"></a>Bubble Chart</h2><p>Le bubble chart, ou graphique en bulles, est similaire au scatter plot mais inclut une troisième dimension sous forme de taille de bulle. Voici un exemple de code Python pour créer un bubble chart avec Plotly :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Création des données</span></span><br><span class="line">df = pd.DataFrame(&#123;</span><br><span class="line">    <span class="string">&quot;x&quot;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>],</span><br><span class="line">    <span class="string">&quot;y&quot;</span>: [<span class="number">10</span>, <span class="number">12</span>, <span class="number">14</span>, <span class="number">16</span>, <span class="number">18</span>],</span><br><span class="line">    <span class="string">&quot;size&quot;</span>: [<span class="number">30</span>, <span class="number">60</span>, <span class="number">90</span>, <span class="number">120</span>, <span class="number">150</span>]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Création du bubble chart</span></span><br><span class="line">fig = px.scatter(df, x=<span class="string">&quot;x&quot;</span>, y=<span class="string">&quot;y&quot;</span>, size=<span class="string">&quot;size&quot;</span>, title=<span class="string">&quot;Exemple de Bubble Chart&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Affichage du graphique</span></span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+<p>Une fois l’installation terminée, vous pouvez vérifier à nouveau l’installation en exécutant la commande <code>python -m tkinter</code>.</p>
+<h2 id="Configuration-de-Tkinter"><a href="#Configuration-de-Tkinter" class="headerlink" title="Configuration de Tkinter"></a>Configuration de Tkinter</h2><p>Maintenant que Tkinter est installé, vous êtes prêt à commencer à travailler avec cette bibliothèque. Pour configurer correctement Tkinter dans vos scripts Python, vous devez simplement l’importer au début de votre code :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br></pre></td></tr></table></figure>
 
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, la visualisation de données en bulles et scatter plots avec Plotly offre une manière interactive et efficace d’explorer les relations entre les variables. Ces types de graphiques sont largement utilisés dans de nombreux domaines tels que la finance, la science des données et la visualisation de données en général. En maîtrisant ces techniques, vous serez en mesure de créer des visualisations percutantes pour communiquer vos résultats de manière claire et efficace.</p>
+<h2 id="Exemple-d’Utilisation"><a href="#Exemple-d’Utilisation" class="headerlink" title="Exemple d’Utilisation"></a>Exemple d’Utilisation</h2><p>Pour illustrer l’utilisation de Tkinter, voici un exemple simple de création d’une fenêtre pop-up avec un bouton :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"></span><br><span class="line"><span class="comment"># Créer une fenêtre</span></span><br><span class="line">root = tk.Tk()</span><br><span class="line">root.title(<span class="string">&quot;Fenêtre Tkinter&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Ajouter un bouton</span></span><br><span class="line">btn = tk.Button(root, text=<span class="string">&quot;Cliquez-moi !&quot;</span>)</span><br><span class="line">btn.pack()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Lancer la boucle principale</span></span><br><span class="line">root.mainloop()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Félicitations ! Vous avez désormais installé et configuré Tkinter sur votre système. En utilisant ces connaissances, vous pouvez maintenant créer des interfaces graphiques interactives en Python. Tkinter est une bibliothèque puissante et polyvalente qui peut être utilisée pour développer une variété d’applications, des simples outils aux interfaces utilisateur sophistiquées.</p>
+<p>Explorez davantage les fonctionnalités de Tkinter et commencez à créer vos propres interfaces utilisateur personnalisées dès aujourd’hui !</p>
+<p>N’hésitez pas à consulter la <a target="_blank" rel="noopener" href="https://docs.python.org/3/library/tk.html">documentation officielle de Tkinter</a> pour approfondir vos connaissances et découvrir tout le potentiel de cette bibliothèque.</p>
+<hr>
+<p>En espérant que ce guide vous soit utile et vous inspire à explorer davantage le monde de Tkinter ! Si vous avez des questions ou des retours, n’hésitez pas à les partager. Merci de nous avoir lu !</p>
  
       <!-- reward -->
       
@@ -369,7 +375,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tkinter/" rel="tag">tkinter</a></li></ul>
 
     </footer>
   </div>
@@ -380,7 +386,7 @@
 
     
     <article
-  id="post-Graphiques-en-secteurs-et-en-anneau"
+  id="post-Introduction-a-Tkinter-et-GUI"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -391,8 +397,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Graphiques-en-secteurs-et-en-anneau/"
-    >Graphiques en secteurs et en anneau</a> 
+  <a class="article-title" href="/2024/03/01/Introduction-a-Tkinter-et-GUI/"
+    >Introduction à Tkinter et GUI</a> 
 </h2>
  
 
@@ -400,33 +406,40 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Graphiques-en-secteurs-et-en-anneau/" class="article-date">
-  <time datetime="2024-03-01T07:30:21.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Introduction-a-Tkinter-et-GUI/" class="article-date">
+  <time datetime="2024-03-01T16:57:08.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+    <a class="article-category-link" href="/categories/Tkinter/">Tkinter</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Article-Pedagogique-Graphiques-en-secteurs-et-en-anneau-avec-Plotly"><a href="#Article-Pedagogique-Graphiques-en-secteurs-et-en-anneau-avec-Plotly" class="headerlink" title="Article Pédagogique: Graphiques en secteurs et en anneau avec Plotly"></a>Article Pédagogique: Graphiques en secteurs et en anneau avec Plotly</h1><p>Bienvenue dans cet article où nous allons explorer l’utilisation de Plotly pour créer des graphiques en secteurs et en anneau. Les graphiques en secteurs et en anneau sont des moyens efficaces de visualiser des données sous forme de parts proportionnelles d’un tout. Avec Plotly, nous pouvons créer ces graphiques de manière simple et efficace en utilisant Python. Dans cet article, nous allons apprendre comment le faire.</p>
-<h2 id="Introduction-a-Plotly"><a href="#Introduction-a-Plotly" class="headerlink" title="Introduction à Plotly"></a>Introduction à Plotly</h2><p>Plotly est une bibliothèque de visualisation interactive basée sur Python qui permet de créer une grande variété de graphiques, y compris des graphiques en secteurs et en anneau. Pour commencer, vous devez installer Plotly en utilisant la commande suivante:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
+  <h1 id="Introduction-a-Tkinter-et-GUI"><a href="#Introduction-a-Tkinter-et-GUI" class="headerlink" title="Introduction à Tkinter et GUI"></a>Introduction à Tkinter et GUI</h1><p>Bienvenue dans cet article où nous allons explorer les bases de Tkinter, l’une des bibliothèques les plus populaires pour créer des interfaces graphiques utilisateur (GUI) en Python.</p>
+<h2 id="Qu’est-ce-que-Tkinter"><a href="#Qu’est-ce-que-Tkinter" class="headerlink" title="Qu’est-ce que Tkinter ?"></a>Qu’est-ce que Tkinter ?</h2><p>Tkinter est une bibliothèque standard de Python qui permet de créer des interfaces graphiques en utilisant des widgets tels que des boutons, des étiquettes, des entrées, des listes déroulantes, etc. Les GUI rendent les applications interactives et conviviales pour les utilisateurs.</p>
+<h2 id="Premiers-pas-avec-Tkinter"><a href="#Premiers-pas-avec-Tkinter" class="headerlink" title="Premiers pas avec Tkinter"></a>Premiers pas avec Tkinter</h2><p>Pour commencer à utiliser Tkinter, vous devez d’abord l’importer dans votre script Python :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br></pre></td></tr></table></figure>
 
-<p>Assurez-vous d’avoir Plotly installé avant de continuer.</p>
-<h2 id="Creation-d’un-Graphique-en-Secteurs"><a href="#Creation-d’un-Graphique-en-Secteurs" class="headerlink" title="Création d’un Graphique en Secteurs"></a>Création d’un Graphique en Secteurs</h2><p>Commençons par créer un graphique en secteurs simple en utilisant Plotly. Voici un exemple de code qui crée un graphique en secteurs basé sur des données de vente fictives :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"></span><br><span class="line">data = &#123;<span class="string">&#x27;Catégorie&#x27;</span>: [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>],</span><br><span class="line">        <span class="string">&#x27;Ventes&#x27;</span>: [<span class="number">350</span>, <span class="number">240</span>, <span class="number">400</span>, <span class="number">220</span>]&#125;</span><br><span class="line"></span><br><span class="line">fig = px.pie(data, values=<span class="string">&#x27;Ventes&#x27;</span>, names=<span class="string">&#x27;Catégorie&#x27;</span>, title=<span class="string">&#x27;Répartition des Ventes par Catégorie&#x27;</span>)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+<p>Ensuite, vous pouvez créer une fenêtre de base en utilisant la classe <code>Tk</code> :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Créer une fenêtre</span></span><br><span class="line">app = tk.Tk()</span><br><span class="line">app.title(<span class="string">&quot;Ma première application avec Tkinter&quot;</span>)</span><br><span class="line">app.mainloop()</span><br></pre></td></tr></table></figure>
 
-<p>Exécutez ce code dans votre environnement Python pour visualiser le graphique en secteurs généré.</p>
-<h2 id="Creation-d’un-Graphique-en-Anneau"><a href="#Creation-d’un-Graphique-en-Anneau" class="headerlink" title="Création d’un Graphique en Anneau"></a>Création d’un Graphique en Anneau</h2><p>Maintenant, explorons la création d’un graphique en anneau avec Plotly. Voici un exemple de code qui crée un graphique en anneau basé sur les mêmes données que précédemment :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fig = px.pie(data, values=<span class="string">&#x27;Ventes&#x27;</span>, names=<span class="string">&#x27;Catégorie&#x27;</span>, title=<span class="string">&#x27;Répartition des Ventes par Catégorie&#x27;</span>, hole=<span class="number">0.5</span>)</span><br><span class="line">fig.update_traces(textinfo=<span class="string">&#x27;percent+label&#x27;</span>)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+<p>En exécutant ce code, vous devriez voir apparaître une fenêtre vide avec le titre spécifié.</p>
+<h2 id="Creation-de-widgets"><a href="#Creation-de-widgets" class="headerlink" title="Création de widgets"></a>Création de widgets</h2><p>Pour ajouter des widgets à votre fenêtre, vous pouvez utiliser les différentes classes de widgets disponibles dans Tkinter. Par exemple, pour créer un bouton :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">button = tk.Button(app, text=<span class="string">&quot;Cliquez-moi&quot;</span>)</span><br><span class="line">button.pack()</span><br></pre></td></tr></table></figure>
 
-<p>En exécutant ce code, vous verrez le graphique en anneau qui affiche les mêmes données sous une forme différente.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Les graphiques en secteurs et en anneau sont des outils puissants pour visualiser des données sous forme de parts proportionnelles. Avec Plotly, il est facile de créer ces graphiques de manière interactive et esthétique en utilisant Python. En explorant ces types de graphiques, vous pouvez mieux comprendre la répartition des données et identifier les tendances clés. N’hésitez pas à expérimenter avec différentes données et personnalisations pour créer des graphiques uniques et informatifs.</p>
-<p>À travers cet article, vous avez appris les bases de la création de graphiques en secteurs et en anneau avec Plotly. Maintenant, à vous de jouer et d’explorer les nombreuses applications de ces graphiques dans divers domaines tels que les affaires, les finances, la recherche, etc.</p>
-<p>N’oubliez pas que la pratique est la clé pour devenir plus compétent dans la création de graphiques avec Plotly. Amusez-vous à explorer et à visualiser vos propres données de manière créative !</p>
+<p>En exécutant ce code, un bouton avec le texte “Cliquez-moi” devrait apparaître dans la fenêtre.</p>
+<h2 id="Gestion-des-evenements"><a href="#Gestion-des-evenements" class="headerlink" title="Gestion des événements"></a>Gestion des événements</h2><p>Les événements tels que les clics de souris peuvent être gérés en associant des fonctions aux widgets. Par exemple, pour afficher un message lorsqu’un bouton est cliqué :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">showMessage</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Bonjour Tkinter!&quot;</span>)</span><br><span class="line"></span><br><span class="line">button = tk.Button(app, text=<span class="string">&quot;Cliquez-moi&quot;</span>, command=showMessage)</span><br></pre></td></tr></table></figure>
+
+<p>Maintenant, chaque fois que le bouton est cliqué, “Bonjour Tkinter!” sera affiché dans la console.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, Tkinter est une bibliothèque puissante pour créer des GUI en Python de manière simple et efficace. En apprenant à utiliser Tkinter, vous pourrez développer des applications interactives et conviviales pour divers besoins.</p>
+<p>Explorez davantage les fonctionnalités de Tkinter et mettez en pratique vos connaissances en créant des GUI personnalisés pour vos projets.</p>
+<p>N’oubliez pas que la pratique régulière est essentielle pour maîtriser Tkinter et créer des interfaces graphiques élégantes et fonctionnelles. Amusez-vous à expérimenter et à créer des applications impressionnantes avec Tkinter !</p>
+<p>Rejoignez la communauté des développeurs Python et partagez vos créations GUI pour inspirer et être inspiré par d’autres passionnés de programmation.</p>
+<hr>
+<p>Ce contenu a été créé pour aider les débutants à comprendre les bases de Tkinter et à démarrer la création de GUI en Python. Amusez-vous à explorer et à créer des interfaces graphiques interactives avec Tkinter !</p>
  
       <!-- reward -->
       
@@ -437,7 +450,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tkinter/" rel="tag">tkinter</a></li></ul>
 
     </footer>
   </div>
@@ -448,7 +461,7 @@
 
     
     <article
-  id="post-Tracer-des-lignes-et-des-graphiques-de-zone"
+  id="post-Projets-pratiques"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -459,8 +472,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Tracer-des-lignes-et-des-graphiques-de-zone/"
-    >Tracer des lignes et des graphiques de zone</a> 
+  <a class="article-title" href="/2024/03/01/Projets-pratiques/"
+    >Projets pratiques</a> 
 </h2>
  
 
@@ -468,34 +481,27 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Tracer-des-lignes-et-des-graphiques-de-zone/" class="article-date">
-  <time datetime="2024-03-01T07:30:08.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Projets-pratiques/" class="article-date">
+  <time datetime="2024-03-01T14:29:35.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+    <a class="article-category-link" href="/categories/OpenCV/">OpenCV</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Tracer-des-lignes-et-des-graphiques-de-zone-avec-Plotly"><a href="#Tracer-des-lignes-et-des-graphiques-de-zone-avec-Plotly" class="headerlink" title="Tracer des lignes et des graphiques de zone avec Plotly"></a>Tracer des lignes et des graphiques de zone avec Plotly</h1><p>Plotly est une bibliothèque Python puissante et flexible qui permet de créer des graphiques interactifs de grande qualité. Dans cet article, nous allons explorer comment tracer des lignes et des graphiques de zone en utilisant Plotly. Ces types de graphiques sont utiles pour visualiser les tendances, les variations et les comparaisons entre différentes séries de données.</p>
-<h2 id="Introduction-a-Plotly"><a href="#Introduction-a-Plotly" class="headerlink" title="Introduction à Plotly"></a>Introduction à Plotly</h2><p>Avant de commencer à tracer des lignes et des graphiques de zone, assurez-vous d’installer Plotly en utilisant la commande suivante :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!pip install plotly</span><br></pre></td></tr></table></figure>
+  <h1 id="Debutants-en-OpenCV-Projets-pratiques"><a href="#Debutants-en-OpenCV-Projets-pratiques" class="headerlink" title="Débutants en OpenCV : Projets pratiques"></a>Débutants en OpenCV : Projets pratiques</h1><p>Bienvenue dans cet article dédié aux projets pratiques en OpenCV, un outil puissant pour le traitement d’images et de vidéos. Dans cette publication, nous allons explorer différentes applications pratiques que vous pouvez réaliser en utilisant OpenCV. Que vous soyez un débutant ou un amateur d’informatique visuelle, ces projets vous aideront à mettre en pratique vos compétences en OpenCV.</p>
+<h2 id="Projet-1-Detection-de-visages"><a href="#Projet-1-Detection-de-visages" class="headerlink" title="Projet 1 : Détection de visages"></a>Projet 1 : Détection de visages</h2><p>La première application pratique que nous allons aborder est la détection de visages. OpenCV propose des fonctionnalités de détection d’objets prédéfinis, ce qui facilite la détection de visages dans une image ou une vidéo. Voici un exemple de code en Python pour détecter les visages à l’aide de CascadeClassifier :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="comment"># Chargement du cascade classifier pré-entraîné</span></span><br><span class="line">face_cascade = cv2.CascadeClassifier(<span class="string">&#x27;haarcascade_frontalface_default.xml&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Lecture de l&#x27;image d&#x27;entrée</span></span><br><span class="line">img = cv2.imread(<span class="string">&#x27;face.jpg&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Conversion en niveaux de gris</span></span><br><span class="line">gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Détection des visages</span></span><br><span class="line">faces = face_cascade.detectMultiScale(gray, scaleFactor=<span class="number">1.1</span>, minNeighbors=<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Dessiner des rectangles autour des visages détectés</span></span><br><span class="line"><span class="keyword">for</span> (x, y, w, h) <span class="keyword">in</span> faces:</span><br><span class="line">    cv2.rectangle(img, (x, y), (x+w, y+h), (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Affichage de l&#x27;image avec les visages détectés</span></span><br><span class="line">cv2.imshow(<span class="string">&#x27;Detected Faces&#x27;</span>, img)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
 
-<p>Ensuite, importez les modules nécessaires :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br></pre></td></tr></table></figure>
+<h2 id="Projet-2-Reconnaissance-d’objets"><a href="#Projet-2-Reconnaissance-d’objets" class="headerlink" title="Projet 2 : Reconnaissance d’objets"></a>Projet 2 : Reconnaissance d’objets</h2><p>Dans ce deuxième projet, nous allons aborder la reconnaissance d’objets à l’aide d’OpenCV et de modèles pré-entrainés tels que YOLO (You Only Look Once). Voici un exemple pour détecter des objets dans une vidéo :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="comment"># Chargement du modèle YOLO</span></span><br><span class="line">net = cv2.dnn.readNet(<span class="string">&#x27;yolov3.weights&#x27;</span>, <span class="string">&#x27;yolov3.cfg&#x27;</span>)</span><br><span class="line">classes = []</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;coco.names&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    classes = f.read().splitlines()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Lecture de la vidéo d&#x27;entrée</span></span><br><span class="line">cap = cv2.VideoCapture(<span class="string">&#x27;object_detection.mp4&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    success, img = cap.read()</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> success:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">    blob = cv2.dnn.blobFromImage(img, <span class="number">1</span>/<span class="number">255</span>, (<span class="number">416</span>, <span class="number">416</span>), (<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="literal">True</span>, crop=<span class="literal">False</span>)</span><br><span class="line">    net.setInput(blob)</span><br><span class="line">    output_layers_names = net.getUnconnectedOutLayersNames()</span><br><span class="line">    layer_outputs = net.forward(output_layers_names)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Afficher les détections des objets</span></span><br><span class="line">    <span class="keyword">for</span> output <span class="keyword">in</span> layer_outputs:</span><br><span class="line">        <span class="keyword">for</span> detection <span class="keyword">in</span> output:</span><br><span class="line">            <span class="comment"># ...</span></span><br><span class="line">    </span><br><span class="line">    cv2.imshow(<span class="string">&#x27;Object Detection&#x27;</span>, img)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == <span class="built_in">ord</span>(<span class="string">&#x27;q&#x27;</span>):</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">cap.release()</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
 
-<h2 id="Tracer-des-lignes"><a href="#Tracer-des-lignes" class="headerlink" title="Tracer des lignes"></a>Tracer des lignes</h2><p>Pour tracer une simple ligne avec Plotly, vous pouvez utiliser la classe <code>Scatter</code> :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">y = [<span class="number">10</span>, <span class="number">15</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">20</span>]</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=go.Scatter(x=x, y=y))</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<p>Ce code créera un graphique avec une ligne reliant les points définis par les listes <code>x</code> et <code>y</code>.</p>
-<h2 id="Tracer-des-graphiques-de-zone"><a href="#Tracer-des-graphiques-de-zone" class="headerlink" title="Tracer des graphiques de zone"></a>Tracer des graphiques de zone</h2><p>Les graphiques de zone sont utiles pour mettre en évidence des zones spécifiques sous une courbe. Voici un exemple simple :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">y1 = [<span class="number">10</span>, <span class="number">15</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">20</span>]</span><br><span class="line">y2 = [<span class="number">8</span>, <span class="number">11</span>, <span class="number">9</span>, <span class="number">14</span>, <span class="number">16</span>]</span><br><span class="line"></span><br><span class="line">fig = go.Figure()</span><br><span class="line">fig.add_trace(go.Scatter(x=x, y=y1, fill=<span class="string">&#x27;tozeroy&#x27;</span>, mode=<span class="string">&#x27;none&#x27;</span>, name=<span class="string">&#x27;Zone 1&#x27;</span>))</span><br><span class="line">fig.add_trace(go.Scatter(x=x, y=y2, fill=<span class="string">&#x27;tonexty&#x27;</span>, mode=<span class="string">&#x27;none&#x27;</span>, name=<span class="string">&#x27;Zone 2&#x27;</span>))</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<p>Dans cet exemple, deux graphiques de zone sont tracés pour mettre en évidence les différentes zones situées sous les courbes <code>y1</code> et <code>y2</code>.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, tracer des lignes et des graphiques de zone avec Plotly offre une manière dynamique et interactive de visualiser les données. Ces types de graphiques peuvent être utilisés pour analyser les tendances, les variations et les comparaisons dans divers domaines tels que la finance, la météo, ou la science des données.</p>
-<p>Explorez les fonctionnalités avancées de Plotly pour personnaliser davantage vos graphiques et créer des visualisations accrocheuses pour vos projets. Amusez-vous à explorer et à expérimenter avec Plotly !</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Les projets pratiques en OpenCV offrent une multitude d’applications possibles, de la détection de visages à la reconnaissance d’objets en passant par la segmentation d’images. En mettant en pratique ces projets, vous allez acquérir une expérience précieuse dans le domaine du traitement d’images et de vidéos. N’hésitez pas à explorer davantage pour découvrir les multiples utilisations fascinantes des capacités d’OpenCV.</p>
+<p>N’oubliez pas que la pratique est essentielle pour maîtriser OpenCV. Alors lancez-vous dans ces projets pratiques et explorez les possibilités infinies qu’OpenCV a à offrir !</p>
+<p>Pour en savoir plus sur OpenCV et ses applications, consultez <a target="_blank" rel="noopener" href="https://opencv.org/">le site officiel d’OpenCV</a>. Profitez de votre voyage dans le monde captivant du traitement d’images ! 🌟</p>
  
       <!-- reward -->
       
@@ -506,7 +512,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
 
     </footer>
   </div>
@@ -517,7 +523,7 @@
 
     
     <article
-  id="post-Graphiques-a-barres-et-histogrammes"
+  id="post-Applications-de-realite-augmentee"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -528,8 +534,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Graphiques-a-barres-et-histogrammes/"
-    >Graphiques à barres et histogrammes</a> 
+  <a class="article-title" href="/2024/03/01/Applications-de-realite-augmentee/"
+    >Applications de réalité augmentée</a> 
 </h2>
  
 
@@ -537,39 +543,39 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Graphiques-a-barres-et-histogrammes/" class="article-date">
-  <time datetime="2024-03-01T07:29:50.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Applications-de-realite-augmentee/" class="article-date">
+  <time datetime="2024-03-01T14:29:18.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+    <a class="article-category-link" href="/categories/OpenCV/">OpenCV</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Article-pedagogique-Graphiques-a-barres-et-histogrammes-avec-Plotly"><a href="#Article-pedagogique-Graphiques-a-barres-et-histogrammes-avec-Plotly" class="headerlink" title="Article pédagogique : Graphiques à barres et histogrammes avec Plotly"></a>Article pédagogique : Graphiques à barres et histogrammes avec Plotly</h1><p>Dans ce tutoriel, nous allons explorer les concepts des graphiques à barres et des histogrammes en utilisant la bibliothèque Plotly en Python. Les graphiques à barres et les histogrammes sont des outils essentiels pour visualiser les données de manière claire et efficace.</p>
-<hr>
-<h2 id="Introduction-a-Plotly"><a href="#Introduction-a-Plotly" class="headerlink" title="Introduction à Plotly"></a>Introduction à Plotly</h2><p>Plotly est une bibliothèque Python qui permet de créer des visualisations interactives de données. Elle offre de nombreuses possibilités pour personnaliser et explorer graphiquement vos données de façon dynamique.</p>
-<p>Pour commencer, assurez-vous d’installer Plotly en exécutant la commande suivante :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
+  <h1 id="Debutants-en-OpenCV-Applications-de-realite-augmentee"><a href="#Debutants-en-OpenCV-Applications-de-realite-augmentee" class="headerlink" title="Débutants en OpenCV : Applications de réalité augmentée"></a>Débutants en OpenCV : Applications de réalité augmentée</h1><hr>
+<p>La réalité augmentée est une technologie fascinante qui mélange le monde réel avec des éléments virtuels en temps réel. Avec l’utilisation d’OpenCV, une bibliothèque open source de vision par ordinateur, il est possible de créer des applications de réalité augmentée captivantes. Dans cet article, nous allons explorer les bases de la réalité augmentée et comment vous pouvez commencer à créer vos propres applications.</p>
+<h2 id="Qu’est-ce-que-la-realite-augmentee"><a href="#Qu’est-ce-que-la-realite-augmentee" class="headerlink" title="Qu’est-ce que la réalité augmentée ?"></a>Qu’est-ce que la réalité augmentée ?</h2><p>La réalité augmentée est la superposition d’éléments virtuels tels que des images, des vidéos ou des modèles 3D sur le monde réel. Cette technologie donne l’impression que ces éléments virtuels font partie de l’environnement réel observé par une caméra. Les applications de réalité augmentée sont utilisées dans divers domaines tels que les jeux, la publicité, l’éducation et la formation.</p>
+<h2 id="Comment-fonctionne-la-realite-augmentee-avec-OpenCV"><a href="#Comment-fonctionne-la-realite-augmentee-avec-OpenCV" class="headerlink" title="Comment fonctionne la réalité augmentée avec OpenCV ?"></a>Comment fonctionne la réalité augmentée avec OpenCV ?</h2><p>Pour créer une application de réalité augmentée, vous avez besoin de plusieurs éléments essentiels : </p>
+<ul>
+<li>Une source d’images du monde réel, généralement une caméra.</li>
+<li>Des marqueurs ou des repères visuels pour détecter et suivre les objets dans l’environnement.</li>
+<li>Des modèles 3D ou des éléments virtuels à superposer sur les marqueurs détectés.</li>
+</ul>
+<p>OpenCV offre des fonctionnalités puissantes pour la détection d’objets, le suivi de la pose et le rendu des éléments virtuels. En utilisant ces fonctionnalités, vous pouvez créer des expériences immersives de réalité augmentée.</p>
+<h2 id="Exemple-d’application-de-realite-augmentee-avec-OpenCV"><a href="#Exemple-d’application-de-realite-augmentee-avec-OpenCV" class="headerlink" title="Exemple d’application de réalité augmentée avec OpenCV"></a>Exemple d’application de réalité augmentée avec OpenCV</h2><p>Imaginons que vous souhaitiez créer une application de réalité augmentée qui superpose un emoji souriant sur le visage d’une personne détectée par la caméra. Voici les étapes clés pour réaliser cela :</p>
+<ol>
+<li>Capturer une image de la caméra en temps réel.</li>
+<li>Détecter le visage dans l’image en utilisant des techniques de vision par ordinateur.</li>
+<li>Superposer l’emoji souriant sur le visage détecté.</li>
+<li>Afficher l’image résultante avec l’emoji augmenté.</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Exemple de code pour superposer un emoji sur un visage</span></span><br><span class="line"><span class="comment"># (Code Python utilisant OpenCV)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="comment"># Capturer l&#x27;image de la caméra</span></span><br><span class="line">cap = cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line">ret, frame = cap.read()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Détecter le visage dans l&#x27;image</span></span><br><span class="line"><span class="comment"># (Code de détection du visage va ici)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Superposer l&#x27;emoji souriant sur le visage</span></span><br><span class="line"><span class="comment"># (Code de superposition de l&#x27;emoji va ici)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Afficher l&#x27;image avec l&#x27;emoji augmenté</span></span><br><span class="line">cv2.imshow(<span class="string">&#x27;Augmented Reality&#x27;</span>, frame)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
 
+<h2 id="Les-applications-potentielles-de-la-realite-augmentee"><a href="#Les-applications-potentielles-de-la-realite-augmentee" class="headerlink" title="Les applications potentielles de la réalité augmentée"></a>Les applications potentielles de la réalité augmentée</h2><p>Les applications de la réalité augmentée sont infinies. Elles peuvent inclure des jeux interactifs basés sur la géolocalisation, des outils de visualisation pour l’architecture et le design, des applications éducatives immersives, des expériences de shopping virtuel, et bien plus encore. La réalité augmentée ouvre de nouvelles possibilités créatives et pratiques dans de nombreux domaines.</p>
 <hr>
-<h2 id="Graphiques-a-barres"><a href="#Graphiques-a-barres" class="headerlink" title="Graphiques à barres"></a>Graphiques à barres</h2><p>Les graphiques à barres sont utiles pour comparer des catégories de données distinctes. Ils affichent les valeurs numériques associées à chaque catégorie sous forme de barres de longueurs différentes. Voici un exemple de code pour créer un graphique à barres simple :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line">categories = [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>]</span><br><span class="line">values = [<span class="number">20</span>, <span class="number">35</span>, <span class="number">25</span>, <span class="number">40</span>]</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=[go.Bar(x=categories, y=values)])</span><br><span class="line"></span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<p>Ce code crée un graphique à barres basique avec les catégories ‘A’, ‘B’, ‘C’, ‘D’ et les valeurs correspondantes. Vous pouvez personnaliser les couleurs, les titres et d’autres aspects du graphique selon vos besoins.</p>
-<hr>
-<h2 id="Histogrammes"><a href="#Histogrammes" class="headerlink" title="Histogrammes"></a>Histogrammes</h2><p>Les histogrammes sont utilisés pour visualiser la répartition d’une variable continue en regroupant les données en intervalles. Voici un exemple de code pour créer un histogramme simple à partir d’un jeu de données aléatoires :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.figure_factory <span class="keyword">as</span> ff</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">np.random.seed(<span class="number">42</span>)</span><br><span class="line">data = np.random.randn(<span class="number">1000</span>)</span><br><span class="line"></span><br><span class="line">fig = ff.create_distplot([data], [<span class="string">&#x27;Distribution&#x27;</span>])</span><br><span class="line"></span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<p>Ce code génère un histogramme basique de la distribution des données aléatoires. Vous pouvez ajuster le nombre d’intervalles et d’autres paramètres pour mieux visualiser vos données.</p>
-<hr>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, les graphiques à barres et les histogrammes sont des outils essentiels de visualisation de données. Avec Plotly, vous pouvez créer des graphiques interactifs et personnalisables pour explorer et communiquer efficacement vos résultats.</p>
-<p>Les applications possibles des graphiques à barres et des histogrammes sont nombreuses, que ce soit pour analyser des ventes, étudier des tendances, ou visualiser des données statistiques. N’hésitez pas à expérimenter avec Plotly pour découvrir tout le potentiel de ces types de graphiques !</p>
-<p>N’oubliez pas de consulter la documentation officielle de Plotly pour en apprendre davantage sur les possibilités de visualisation offertes par cette bibliothèque : <a target="_blank" rel="noopener" href="https://plot.ly/python/">Site officiel de Plotly</a></p>
-<hr>
-<p>En espérant que ce tutoriel vous ait été utile pour comprendre les graphiques à barres et les histogrammes avec Plotly en Python !</p>
+<p>En conclusion, la réalité augmentée avec OpenCV offre un monde d’opportunités pour créer des expériences visuelles uniques et engageantes. En combinant la puissance de la vision par ordinateur avec la magie de la superposition d’éléments virtuels sur le monde réel, vous pouvez explorer de nouvelles frontières de l’interaction homme-machine. Alors, lancez-vous et commencez à explorer les possibilités infinies des applications de réalité augmentée avec OpenCV !</p>
  
       <!-- reward -->
       
@@ -580,7 +586,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
 
     </footer>
   </div>
@@ -591,7 +597,7 @@
 
     
     <article
-  id="post-Personnalisation-des-graphiques"
+  id="post-Traitement-d-images-satellite"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -602,8 +608,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Personnalisation-des-graphiques/"
-    >Personnalisation des graphiques</a> 
+  <a class="article-title" href="/2024/03/01/Traitement-d-images-satellite/"
+    >Traitement d&#39;images satellite</a> 
 </h2>
  
 
@@ -611,42 +617,33 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Personnalisation-des-graphiques/" class="article-date">
-  <time datetime="2024-03-01T07:29:29.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Traitement-d-images-satellite/" class="article-date">
+  <time datetime="2024-03-01T14:29:02.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+    <a class="article-category-link" href="/categories/OpenCV/">OpenCV</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Article-pedagogique-Personnalisation-des-graphiques-avec-Plotly"><a href="#Article-pedagogique-Personnalisation-des-graphiques-avec-Plotly" class="headerlink" title="Article pédagogique : Personnalisation des graphiques avec Plotly"></a>Article pédagogique : Personnalisation des graphiques avec Plotly</h1><hr>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Dans le domaine de la visualisation de données, la personnalisation des graphiques est essentielle pour rendre les données plus compréhensibles et attrayantes. Plotly, une bibliothèque de visualisation de données en Python, offre de nombreuses options de personnalisation pour créer des graphiques uniques et informatifs. Dans cet article, nous allons explorer quelques-unes de ces possibilités pour maîtriser l’art de la personnalisation des graphiques avec Plotly.</p>
-<hr>
-<h2 id="Installation-de-Plotly"><a href="#Installation-de-Plotly" class="headerlink" title="Installation de Plotly"></a>Installation de Plotly</h2><p>Avant de commencer, assurez-vous d’installer Plotly en exécutant la commande suivante dans votre environnement Python :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
+  <h1 id="Guide-de-Traitement-d’images-satellite-avec-OpenCV"><a href="#Guide-de-Traitement-d’images-satellite-avec-OpenCV" class="headerlink" title="Guide de Traitement d’images satellite avec OpenCV"></a>Guide de Traitement d’images satellite avec OpenCV</h1><p>Bienvenue dans ce guide qui vous initiera au traitement d’images satellite en utilisant OpenCV. Dans cet article, nous allons explorer les bases de ce sujet passionnant, en abordant les concepts essentiels et en fournissant des exemples concrets pour une meilleure compréhension.</p>
+<h2 id="Introduction-a-l’imagerie-satellite"><a href="#Introduction-a-l’imagerie-satellite" class="headerlink" title="Introduction à l’imagerie satellite"></a>Introduction à l’imagerie satellite</h2><p>L’imagerie satellite consiste à capturer des images de la Terre depuis des satellites en orbite. Ces images sont riches en informations et peuvent être utilisées dans de nombreux domaines tels que la cartographie, l’agriculture, la surveillance environnementale, etc. Le traitement d’images satellite vise à extraire des informations utiles à partir de ces images en utilisant des techniques informatiques.</p>
+<h2 id="Installation-d’OpenCV"><a href="#Installation-d’OpenCV" class="headerlink" title="Installation d’OpenCV"></a>Installation d’OpenCV</h2><p>Avant de commencer, assurez-vous d’avoir OpenCV installé sur votre système. Vous pouvez le faire en exécutant la commande suivante :</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install opencv-python</span><br></pre></td></tr></table></figure>
 
-<hr>
-<h2 id="Personnalisation-des-titres-et-des-axes"><a href="#Personnalisation-des-titres-et-des-axes" class="headerlink" title="Personnalisation des titres et des axes"></a>Personnalisation des titres et des axes</h2><p>Une première étape importante dans la personnalisation des graphiques est la mise en forme des titres et des axes. Voici un exemple de code pour créer un graphique simple avec des titres personnalisés :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=go.Scatter(x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], y=[<span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>]))</span><br><span class="line">fig.update_layout(</span><br><span class="line">    title=<span class="string">&quot;Exemple de graphique personnalisé&quot;</span>,</span><br><span class="line">    xaxis_title=<span class="string">&quot;Axe des abscisses&quot;</span>,</span><br><span class="line">    yaxis_title=<span class="string">&quot;Axe des ordonnées&quot;</span></span><br><span class="line">)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+<h2 id="Chargement-de-l’image-satellite"><a href="#Chargement-de-l’image-satellite" class="headerlink" title="Chargement de l’image satellite"></a>Chargement de l’image satellite</h2><p>La première étape consiste à charger une image satellite à l’aide de OpenCV. Voici un exemple de code pour charger une image et l’afficher :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;satellite_image.jpg&#x27;</span>)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;Image satellite&#x27;</span>, image)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
 
-<p>Dans cet exemple, nous avons utilisé les fonctions <code>update_layout()</code> et les paramètres <code>title</code>, <code>xaxis_title</code> et <code>yaxis_title</code> pour personnaliser les titres du graphique et des axes.</p>
-<hr>
-<h2 id="Personnalisation-des-couleurs-et-des-styles"><a href="#Personnalisation-des-couleurs-et-des-styles" class="headerlink" title="Personnalisation des couleurs et des styles"></a>Personnalisation des couleurs et des styles</h2><p>Pour rendre vos graphiques plus attrayants, vous pouvez également personnaliser les couleurs et les styles. Voici un exemple de code pour changer la couleur du tracé :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fig = go.Figure(data=go.Scatter(x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], y=[<span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>], mode=<span class="string">&#x27;markers&#x27;</span>, marker=<span class="built_in">dict</span>(color=<span class="string">&#x27;rgb(255, 0, 0)&#x27;</span>)))</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+<h2 id="Pretraitement-de-l’image"><a href="#Pretraitement-de-l’image" class="headerlink" title="Prétraitement de l’image"></a>Prétraitement de l’image</h2><p>Avant d’appliquer des techniques de traitement d’images, il est souvent nécessaire de prétraiter l’image. Cela peut inclure des opérations telles que la normalisation, le filtrage et la correction de distorsion. Voici un exemple de filtre de flou appliqué sur l’image :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blurred_image = cv2.GaussianBlur(image, (<span class="number">5</span>, <span class="number">5</span>), <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
 
-<p>Dans cet exemple, nous avons utilisé le paramètre <code>marker</code> avec la clé <code>color</code> pour définir la couleur du tracé. Vous pouvez expérimenter avec différentes valeurs de couleurs pour obtenir le style souhaité.</p>
-<hr>
-<h2 id="Personnalisation-avancee-avec-les-mises-en-page"><a href="#Personnalisation-avancee-avec-les-mises-en-page" class="headerlink" title="Personnalisation avancée avec les mises en page"></a>Personnalisation avancée avec les mises en page</h2><p>Enfin, pour une personnalisation avancée, Plotly offre la possibilité de modifier la mise en page du graphique en utilisant les fonctions de mise en page. Voici un exemple de code pour ajuster la taille du graphique et la légende :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">fig = go.Figure(data=go.Scatter(x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], y=[<span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>]))</span><br><span class="line">fig.update_layout(</span><br><span class="line">    width=<span class="number">800</span>,</span><br><span class="line">    height=<span class="number">400</span>,</span><br><span class="line">    legend=<span class="built_in">dict</span>(</span><br><span class="line">        x=<span class="number">0</span>,</span><br><span class="line">        y=<span class="number">1</span>,</span><br><span class="line">        traceorder=<span class="string">&#x27;normal&#x27;</span></span><br><span class="line">    )</span><br><span class="line">)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+<h2 id="Detection-des-elements-d’interet"><a href="#Detection-des-elements-d’interet" class="headerlink" title="Détection des éléments d’intérêt"></a>Détection des éléments d’intérêt</h2><p>Une des tâches courantes en traitement d’images satellite est la détection des éléments d’intérêt tels que les bâtiments, les routes ou les cours d’eau. Cela peut être réalisé en utilisant des algorithmes de détection d’objets ou de segmentation. Voici un exemple simple de détection de contours :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gray_image = cv2.cvtColor(blurred_image, cv2.COLOR_BGR2GRAY)</span><br><span class="line">edges = cv2.Canny(gray_image, <span class="number">50</span>, <span class="number">150</span>)</span><br></pre></td></tr></table></figure>
 
-<p>Dans cet exemple, nous avons utilisé les paramètres <code>width</code>, <code>height</code> et <code>legend</code> pour personnaliser la taille du graphique et l’emplacement de la légende. Ces ajustements permettent de contrôler l’apparence globale du graphique.</p>
-<hr>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La personnalisation des graphiques avec Plotly offre une grande flexibilité pour créer des visualisations uniques et informatives. En maîtrisant les différentes options de personnalisation, vous pouvez produire des graphiques qui mettent en valeur vos données de manière efficace. Que ce soit pour des présentations professionnelles, des rapports d’analyse ou des projets académiques, la personnalisation des graphiques avec Plotly est un outil puissant pour communiquer visuellement des informations complexes de manière claire et concise.</p>
-<hr>
-<p>N’oubliez pas d’explorer davantage les possibilités de personnalisation offertes par Plotly pour enrichir vos graphiques et captiver votre public !</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Le traitement d’images satellite avec OpenCV ouvre un large éventail d’applications potentielles, allant de la surveillance urbaine à la gestion des catastrophes naturelles. En acquérant des compétences dans ce domaine, vous serez en mesure d’analyser et d’extraire des informations précieuses à partir d’images satellite pour prendre des décisions éclairées dans divers domaines.</p>
+<p>N’hésitez pas à explorer davantage les fonctionnalités d’OpenCV et à expérimenter avec différents algorithmes pour approfondir vos connaissances en traitement d’images satellite. Bonne exploration !</p>
  
       <!-- reward -->
       
@@ -657,7 +654,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
 
     </footer>
   </div>
@@ -668,7 +665,7 @@
 
     
     <article
-  id="post-Creation-de-graphiques-de-base-avec-Plotly-Express"
+  id="post-Traitement-d-images-medicales"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -679,8 +676,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Creation-de-graphiques-de-base-avec-Plotly-Express/"
-    >Création de graphiques de base avec Plotly Express</a> 
+  <a class="article-title" href="/2024/03/01/Traitement-d-images-medicales/"
+    >Traitement d&#39;images médicales</a> 
 </h2>
  
 
@@ -688,35 +685,30 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Creation-de-graphiques-de-base-avec-Plotly-Express/" class="article-date">
-  <time datetime="2024-03-01T07:29:12.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Traitement-d-images-medicales/" class="article-date">
+  <time datetime="2024-03-01T14:28:46.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+    <a class="article-category-link" href="/categories/OpenCV/">OpenCV</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Article-Pedagogique-Creation-de-graphiques-de-base-avec-Plotly-Express"><a href="#Article-Pedagogique-Creation-de-graphiques-de-base-avec-Plotly-Express" class="headerlink" title="Article Pédagogique : Création de graphiques de base avec Plotly Express"></a>Article Pédagogique : Création de graphiques de base avec Plotly Express</h1><hr>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Dans cet article, nous allons explorer la création de graphiques de base en utilisant Plotly Express, un outil puissant et convivial pour visualiser des données en Python. Nous allons couvrir les concepts essentiels pour que vous puissiez commencer à créer vos propres graphiques de manière efficace et intuitive.</p>
-<h2 id="Presentation-de-Plotly-Express"><a href="#Presentation-de-Plotly-Express" class="headerlink" title="Présentation de Plotly Express"></a>Présentation de Plotly Express</h2><p>Plotly Express est une bibliothèque de visualisation de données basée sur Plotly, conçue pour simplifier la création de graphiques interactifs. Elle offre une interface simple et expressive pour générer une grande variété de visualisations, allant des graphiques simples aux graphiques complexes.</p>
-<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>Avant de commencer, assurez-vous d’avoir installé Plotly Express en utilisant pip :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
+  <h1 id="Traitement-d’images-medicales-avec-OpenCV"><a href="#Traitement-d’images-medicales-avec-OpenCV" class="headerlink" title="Traitement d’images médicales avec OpenCV"></a>Traitement d’images médicales avec OpenCV</h1><p>Le traitement d’images médicales est un domaine fascinant de l’informatique médicale qui utilise des techniques d’imagerie numérique pour aider les professionnels de la santé à diagnostiquer et traiter les patients. Dans cet article, nous allons explorer comment OpenCV, une bibliothèque open source populaire pour le traitement d’images, peut être utilisée dans le contexte spécifique du domaine médical.</p>
+<h2 id="Introduction-a-l’OpenCV-et-aux-images-medicales"><a href="#Introduction-a-l’OpenCV-et-aux-images-medicales" class="headerlink" title="Introduction à l’OpenCV et aux images médicales"></a>Introduction à l’OpenCV et aux images médicales</h2><p>OpenCV est une bibliothèque open source largement utilisée pour le traitement d’images. Elle offre une multitude de fonctions pour manipuler et analyser des images, ce qui la rend particulièrement utile dans le domaine médical. Les images médicales, telles que les radiographies, les IRM et les scanners, peuvent être traitées pour extraire des informations précieuses qui aident les professionnels de la santé dans leur diagnostic et leur traitement.</p>
+<h2 id="Chargement-et-affichage-d’images-medicales"><a href="#Chargement-et-affichage-d’images-medicales" class="headerlink" title="Chargement et affichage d’images médicales"></a>Chargement et affichage d’images médicales</h2><p>Avant de commencer tout traitement sur une image médicale, il est essentiel de la charger correctement dans notre application. OpenCV fournit des fonctions simples pour charger et afficher des images, que ce soit en niveaux de gris ou en couleur. Par exemple, pour charger une image en niveaux de gris en utilisant OpenCV en Python, on peut utiliser le code suivant :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;medical_image.jpg&#x27;</span>, cv2.IMREAD_GRAYSCALE)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;Medical Image&#x27;</span>, image)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
 
-<h2 id="Creation-d’un-graphique-lineaire"><a href="#Creation-d’un-graphique-lineaire" class="headerlink" title="Création d’un graphique linéaire"></a>Création d’un graphique linéaire</h2><p>Pour commencer, créons un graphique linéaire basique à l’aide de Plotly Express. Dans cet exemple, nous allons tracer une série de points en fonction de leur position sur l’axe des x.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.DataFrame(&#123;<span class="string">&#x27;x&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>], <span class="string">&#x27;y&#x27;</span>: [<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>]&#125;)</span><br><span class="line"></span><br><span class="line">fig = px.line(df, x=<span class="string">&#x27;x&#x27;</span>, y=<span class="string">&#x27;y&#x27;</span>, title=<span class="string">&#x27;Graphique linéaire de base&#x27;</span>)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+<h2 id="Pretraitement-des-images-medicales"><a href="#Pretraitement-des-images-medicales" class="headerlink" title="Prétraitement des images médicales"></a>Prétraitement des images médicales</h2><p>Avant d’appliquer des algorithmes plus avancés sur les images médicales, il est courant de prétraiter ces images pour améliorer leur qualité et faciliter l’analyse ultérieure. Le prétraitement peut inclure des opérations telles que la réduction du bruit, la normalisation de l’histogramme et la détection des bords. OpenCV offre des fonctions pour effectuer ces opérations. Par exemple, pour réduire le bruit dans une image médicale, on peut utiliser un filtre de lissage comme le filtre gaussien :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">image_smoothed = cv2.GaussianBlur(image, (<span class="number">5</span>, <span class="number">5</span>), <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
 
-<p>Dans cet exemple, nous avons créé un DataFrame simple contenant des coordonnées x et y, puis utilisé Plotly Express pour tracer un graphique linéaire en spécifiant les données et les axes.</p>
-<h2 id="Creation-d’un-diagramme-en-barres"><a href="#Creation-d’un-diagramme-en-barres" class="headerlink" title="Création d’un diagramme en barres"></a>Création d’un diagramme en barres</h2><p>En plus des graphiques linéaires, Plotly Express permet de créer facilement des diagrammes en barres. Voici un exemple pour illustrer cette fonctionnalité :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">df = pd.DataFrame(&#123;<span class="string">&#x27;categorie&#x27;</span>: [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>], <span class="string">&#x27;valeurs&#x27;</span>: [<span class="number">10</span>, <span class="number">20</span>, <span class="number">15</span>, <span class="number">25</span>]&#125;)</span><br><span class="line"></span><br><span class="line">fig = px.bar(df, x=<span class="string">&#x27;categorie&#x27;</span>, y=<span class="string">&#x27;valeurs&#x27;</span>, title=<span class="string">&#x27;Diagramme en barres simple&#x27;</span>)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+<h2 id="Segmentation-d’images-medicales"><a href="#Segmentation-d’images-medicales" class="headerlink" title="Segmentation d’images médicales"></a>Segmentation d’images médicales</h2><p>La segmentation d’images médicales consiste à diviser une image en régions ou objets d’intérêt. Cela peut être utile pour détecter des tissus spécifiques ou des anomalies dans une image médicale. OpenCV propose des techniques de segmentation avancées, telles que la segmentation par seuillage ou par regroupement de pixels. Par exemple, pour segmenter une image en utilisant un seuil, on peut utiliser la fonction <code>threshold</code> :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ret, thresholded_image = cv2.threshold(image, <span class="number">127</span>, <span class="number">255</span>, cv2.THRESH_BINARY)</span><br></pre></td></tr></table></figure>
 
-<p>En utilisant la fonction <code>px.bar</code>, nous pouvons rapidement visualiser les valeurs différentes des catégories données sous forme de diagramme en barres.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, ce guide vous a introduit aux bases de la création de graphiques avec Plotly Express en Python. Grâce à sa simplicité d’utilisation et ses fonctionnalités puissantes, Plotly Express vous permet de créer des visualisations attrayantes et informatives pour explorer et présenter vos données. Que ce soit pour créer des graphiques linéaires, des diagrammes en barres ou d’autres types de visualisations, Plotly Express offre un large éventail d’options pour répondre à vos besoins en matière de visualisation de données.</p>
-<p>Continuez d’explorer les différentes fonctionnalités de Plotly Express et entraînez-vous à créer vos propres graphiques pour donner vie à vos données de manière captivante et interactive. Amusez-vous à créer des visualisations uniques et originales pour communiquer efficacement vos résultats et enrichir vos analyses de données.</p>
-<hr>
-<p>Cet article devrait vous aider à démarrer avec la création de graphiques de base en utilisant Plotly Express. N’hésitez pas à explorer davantage les fonctionnalités de cette bibliothèque pour des visualisations plus avancées et interactives.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Le traitement d’images médicales avec OpenCV offre un potentiel énorme pour améliorer les soins de santé en permettant une analyse rapide et précise des images médicales. En combinant les fonctionnalités avancées d’OpenCV avec des techniques d’apprentissage automatique, il est possible de créer des systèmes d’aide au diagnostic puissants et efficaces. Ce domaine en pleine croissance ouvre la voie à de nombreuses applications passionnantes dans le domaine médical.</p>
+<p>Dans cet article, nous avons effleuré quelques-unes des techniques de base utilisées dans le traitement d’images médicales avec OpenCV. En explorant davantage la bibliothèque et en expérimentant avec des jeux de données médicaux, vous pourrez découvrir tout le potentiel de cette combinaison pour l’analyse et la visualisation d’images en médecine.</p>
  
       <!-- reward -->
       
@@ -727,7 +719,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
 
     </footer>
   </div>
@@ -738,7 +730,7 @@
 
     
     <article
-  id="post-Principes-de-base-de-la-visualisation"
+  id="post-Camera-stereo"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -749,8 +741,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Principes-de-base-de-la-visualisation/"
-    >Principes de base de la visualisation</a> 
+  <a class="article-title" href="/2024/03/01/Camera-stereo/"
+    >Caméra stéréo</a> 
 </h2>
  
 
@@ -758,35 +750,25 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Principes-de-base-de-la-visualisation/" class="article-date">
-  <time datetime="2024-03-01T07:28:58.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Camera-stereo/" class="article-date">
+  <time datetime="2024-03-01T14:28:33.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+    <a class="article-category-link" href="/categories/OpenCV/">OpenCV</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Principes-de-base-de-la-visualisation-avec-Plotly"><a href="#Principes-de-base-de-la-visualisation-avec-Plotly" class="headerlink" title="Principes de base de la visualisation avec Plotly"></a>Principes de base de la visualisation avec Plotly</h1><p>La visualisation des données est un élément essentiel de l’analyse des données. Elle permet de représenter graphiquement les informations de manière à les rendre compréhensibles et facilement interprétables. Plotly est un outil puissant en Python qui permet de créer des visualisations interactives de haute qualité. Dans cet article, nous allons explorer les principes de base de la visualisation en utilisant Plotly.</p>
-<h2 id="Introduction-a-Plotly"><a href="#Introduction-a-Plotly" class="headerlink" title="Introduction à Plotly"></a>Introduction à Plotly</h2><p>Plotly est une bibliothèque Python qui offre une variété de graphiques et de diagrammes interactifs. Pour commencer à utiliser Plotly, vous devez d’abord l’installer. Voici comment vous pouvez le faire en utilisant pip :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
+  <h1 id="Decouvrir-la-magie-de-la-Camera-Stereo-avec-OpenCV"><a href="#Decouvrir-la-magie-de-la-Camera-Stereo-avec-OpenCV" class="headerlink" title="Découvrir la magie de la Caméra Stéréo avec OpenCV"></a>Découvrir la magie de la Caméra Stéréo avec OpenCV</h1><p>La caméra stéréo est une technologie fascinante utilisée en vision par ordinateur pour capturer des images en 3D et est largement implémentée dans des applications telles que la réalité augmentée, la reconstruction 3D, et la robotique. Avec OpenCV, une bibliothèque très populaire en vision par ordinateur, il est possible d’exploiter pleinement le potentiel des caméras stéréo. </p>
+<h2 id="Qu’est-ce-qu’une-Camera-Stereo"><a href="#Qu’est-ce-qu’une-Camera-Stereo" class="headerlink" title="Qu’est-ce qu’une Caméra Stéréo ?"></a>Qu’est-ce qu’une Caméra Stéréo ?</h2><p>Une caméra stéréo se compose de deux caméras placées à une distance fixe l’une de l’autre, simulant la vision humaine binoculaire. Ces deux caméras capturent des images d’une scène depuis des points de vue légèrement différents, ce qui permet de calculer la profondeur et la distance des objets à l’aide de la vision stéréoscopique.</p>
+<h2 id="Comment-fonctionne-la-Vision-Stereo-avec-OpenCV"><a href="#Comment-fonctionne-la-Vision-Stereo-avec-OpenCV" class="headerlink" title="Comment fonctionne la Vision Stéréo avec OpenCV ?"></a>Comment fonctionne la Vision Stéréo avec OpenCV ?</h2><p>OpenCV propose des fonctions et des méthodes spécifiques pour traiter les images capturées par des caméras stéréo. Voici un exemple de code simple pour charger des images provenant de deux caméras stéréo et calculer la carte de profondeur :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="comment"># Charger les images pour la vision stéréo</span></span><br><span class="line">img_left = cv2.imread(<span class="string">&#x27;image_gauche.jpg&#x27;</span>)</span><br><span class="line">img_right = cv2.imread(<span class="string">&#x27;image_droite.jpg&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Définir les paramètres de la vision stéréo</span></span><br><span class="line">stereo = cv2.StereoBM_create(numDisparities=<span class="number">16</span>, blockSize=<span class="number">15</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Calculer la carte de profondeur</span></span><br><span class="line">disparity = stereo.compute(img_left, img_right)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Afficher la carte de profondeur</span></span><br><span class="line">cv2.imshow(<span class="string">&#x27;Disparity Map&#x27;</span>, disparity)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
 
-<p>Une fois installé, vous pouvez importer Plotly dans votre script Python en utilisant :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br></pre></td></tr></table></figure>
-
-<h2 id="Creation-d’un-graphique-de-base"><a href="#Creation-d’un-graphique-de-base" class="headerlink" title="Création d’un graphique de base"></a>Création d’un graphique de base</h2><p>Pour commencer, créons un simple graphique en nuage de points pour illustrer les principes de base de la visualisation. Voici un exemple de code qui crée un graphique de dispersion avec des données aléatoires :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">x = np.random.rand(<span class="number">100</span>)</span><br><span class="line">y = np.random.rand(<span class="number">100</span>)</span><br><span class="line"></span><br><span class="line">fig = px.scatter(x=x, y=y)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<p>L’exemple de code ci-dessus crée un nuage de points en utilisant des données aléatoires pour les valeurs x et y. Vous pouvez personnaliser ce graphique en ajoutant des titres, des légendes, et en modifiant les couleurs.</p>
-<h2 id="Personnalisation-des-graphiques"><a href="#Personnalisation-des-graphiques" class="headerlink" title="Personnalisation des graphiques"></a>Personnalisation des graphiques</h2><p>L’un des avantages de Plotly est sa facilité de personnalisation des graphiques. Vous pouvez modifier divers aspects du graphique tels que les couleurs, les tailles, les labels et les titres. Voici un exemple de code qui personnalise le graphique précédent en ajoutant des titres :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fig.update_layout(</span><br><span class="line">    title=<span class="string">&quot;Nuage de points aléatoires&quot;</span>,</span><br><span class="line">    xaxis_title=<span class="string">&quot;Valeurs de x&quot;</span>,</span><br><span class="line">    yaxis_title=<span class="string">&quot;Valeurs de y&quot;</span></span><br><span class="line">)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<p>En utilisant la fonction <code>update_layout</code>, vous pouvez ajouter des titres aux axes et au graphique lui-même pour améliorer la lisibilité du graphique.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, les principes de base de la visualisation avec Plotly sont essentiels pour créer des graphiques efficaces et informatifs. En comprenant comment créer et personnaliser différents types de graphiques, vous serez en mesure de communiquer visuellement les résultats de vos analyses de données de manière claire et percutante.</p>
-<p>Les compétences acquises en matière de visualisation avec Plotly peuvent être appliquées à divers domaines tels que l’analyse des ventes, la visualisation des données météorologiques, ou encore la présentation de rapports professionnels. En continuant à explorer les fonctionnalités avancées de Plotly, vous pourrez créer des visualisations interactives et dynamiques qui captiveront votre audience.</p>
-<p>N’oubliez pas que la pratique est la clé pour maîtriser l’art de la visualisation des données. Alors, lancez-vous, explorez Plotly et laissez libre cours à votre créativité pour créer des visualisations époustouflantes !</p>
+<p>Ce code simple démontre la puissance de la vision stéréo avec OpenCV pour calculer une carte de profondeur à partir d’images stéréo.</p>
+<h2 id="Utilisations-et-Applications-de-la-Camera-Stereo"><a href="#Utilisations-et-Applications-de-la-Camera-Stereo" class="headerlink" title="Utilisations et Applications de la Caméra Stéréo"></a>Utilisations et Applications de la Caméra Stéréo</h2><p>La caméra stéréo offre de nombreuses applications potentielles dans divers domaines. Certaines utilisations courantes incluent la reconstruction 3D de scènes, la détection d’obstacles pour la navigation des robots, et même la réalité augmentée pour superposer des éléments virtuels sur un environnement réel de manière précise.</p>
+<p>En conclusion, la caméra stéréo associée à OpenCV ouvre un monde de possibilités en vision par ordinateur. En comprenant les concepts de base et en explorant les fonctionnalités offertes par cette combinaison, il devient possible de créer des applications innovantes et interactives basées sur la vision tridimensionnelle.</p>
  
       <!-- reward -->
       
@@ -797,7 +779,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
 
     </footer>
   </div>
@@ -813,7 +795,7 @@
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/12/">Page précédente</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/14/">Page suivante</a>
+    <a class="extend prev" rel="prev" href="/page/12/">Page précédente</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><a class="extend next" rel="next" href="/page/14/">Page suivante</a>
   </nav>
   
 </section>
@@ -878,6 +860,22 @@
     </li>
     
     <li class="nav-item">
+      <a class="nav-item-link" href="/categories/bienetre/">Bien être</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/Arduino/">Arduino</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/ESP8266/">ESP8266</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/Electronique">Electronique</a>
+    </li>
+    
+    <li class="nav-item">
       <a class="nav-item-link" href="/categories/Python/">Python</a>
     </li>
     
@@ -907,6 +905,10 @@
     
     <li class="nav-item">
       <a class="nav-item-link" href="/categories/Scipy/">Scipy</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/Tkinter">Tkinter</a>
     </li>
     
     <li class="nav-item">

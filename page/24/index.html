@@ -111,7 +111,7 @@
     
     
     <article
-  id="post-Theory-of-Disruption-and-Engagement-in-Games"
+  id="post-Utilisation-des-composants-Dash-Core"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -122,8 +122,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/02/29/Theory-of-Disruption-and-Engagement-in-Games/"
-    >Theory of Disruption and Engagement in Games</a> 
+  <a class="article-title" href="/2024/03/01/Utilisation-des-composants-Dash-Core/"
+    >Utilisation des composants Dash Core</a> 
 </h2>
  
 
@@ -131,54 +131,173 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/02/29/Theory-of-Disruption-and-Engagement-in-Games/" class="article-date">
-  <time datetime="2024-02-29T16:33:42.000Z" itemprop="datePublished">2024-02-29</time>
+      <a href="/2024/03/01/Utilisation-des-composants-Dash-Core/" class="article-date">
+  <time datetime="2024-03-01T07:40:33.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Game-Design/">Game Design</a>
+    <a class="article-category-link" href="/categories/Dash/">Dash</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Titre-La-theorie-de-la-Disruption-et-de-l’Engagement-dans-les-jeux-selon-Nicole-Lazzaro"><a href="#Titre-La-theorie-de-la-Disruption-et-de-l’Engagement-dans-les-jeux-selon-Nicole-Lazzaro" class="headerlink" title="Titre : La théorie de la Disruption et de l’Engagement dans les jeux selon Nicole Lazzaro"></a>Titre : La théorie de la Disruption et de l’Engagement dans les jeux selon Nicole Lazzaro</h1><h2 id="Auteur-Nicole-Lazzaro"><a href="#Auteur-Nicole-Lazzaro" class="headerlink" title="Auteur : Nicole Lazzaro"></a>Auteur : Nicole Lazzaro</h2><p>Nicole Lazzaro est une célèbre créatrice de jeux vidéo et psychologue renommée dans l’industrie du jeu. Sa théorie de la Disruption et de l’Engagement dans les jeux explore les différents types d’expériences émotionnelles que les joueurs ressentent lorsqu’ils interagissent avec un jeu.</p>
-<h2 id="Explication-de-la-theorie"><a href="#Explication-de-la-theorie" class="headerlink" title="Explication de la théorie :"></a>Explication de la théorie :</h2><p>La théorie de la Disruption et de l’Engagement divise l’expérience de jeu en quatre états émotionnels clés : </p>
+  <h1 id="Utilisation-des-composants-Dash-Core"><a href="#Utilisation-des-composants-Dash-Core" class="headerlink" title="Utilisation des composants Dash Core"></a>Utilisation des composants Dash Core</h1><p>Dans cet article, nous allons explorer l’utilisation des composants Dash Core, qui sont au cœur du framework Dash pour la création d’applications web interactives en Python. Les composants Dash Core offrent une grande variété de fonctionnalités pour construire des interfaces utilisateur dynamiques et réactives. </p>
+<h2 id="Introduction-a-Dash-Core"><a href="#Introduction-a-Dash-Core" class="headerlink" title="Introduction à Dash Core"></a>Introduction à Dash Core</h2><p>Dash Core comprend une série de composants prêts à l’emploi qui permettent de créer des interfaces graphiques personnalisées. Ces composants peuvent être utilisés pour afficher des données, collecter des informations de l’utilisateur et gérer les interactions dans une application Dash.</p>
+<h2 id="Creation-d’une-application-simple"><a href="#Creation-d’une-application-simple" class="headerlink" title="Création d’une application simple"></a>Création d’une application simple</h2><p>Pour illustrer l’utilisation des composants Dash Core, commençons par créer une application simple affichant un graphique de lignes. Voici un exemple de code Python utilisant les composants <code>dcc.Graph</code> et <code>dash.Dash</code> :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">import</span> dash_core_components <span class="keyword">as</span> dcc</span><br><span class="line"><span class="keyword">import</span> dash_html_components <span class="keyword">as</span> html</span><br><span class="line"></span><br><span class="line">app = dash.Dash(__name__)</span><br><span class="line"></span><br><span class="line">app.layout = html.Div([</span><br><span class="line">    html.H1(<span class="string">&#x27;Exemple de graphique avec Dash&#x27;</span>),</span><br><span class="line">    dcc.Graph(</span><br><span class="line">        <span class="built_in">id</span>=<span class="string">&#x27;example-graph&#x27;</span>,</span><br><span class="line">        figure=&#123;</span><br><span class="line">            <span class="string">&#x27;data&#x27;</span>: [</span><br><span class="line">                &#123;<span class="string">&#x27;x&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">&#x27;y&#x27;</span>: [<span class="number">4</span>, <span class="number">1</span>, <span class="number">2</span>], <span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;line&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;Trace 1&#x27;</span>&#125;,</span><br><span class="line">                &#123;<span class="string">&#x27;x&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">&#x27;y&#x27;</span>: [<span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>], <span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;line&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;Trace 2&#x27;</span>&#125;,</span><br><span class="line">            ],</span><br><span class="line">            <span class="string">&#x27;layout&#x27;</span>: &#123;</span><br><span class="line">                <span class="string">&#x27;title&#x27;</span>: <span class="string">&#x27;Graphique de lignes simple&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    )</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Dans cet exemple, nous utilisons <code>dcc.Graph</code> pour afficher un graphique de lignes avec deux traces différentes. Le graphique est intégré dans une interface utilisateur HTML générée par <code>html.Div</code>.</p>
+<h2 id="Interaction-avec-les-composants"><a href="#Interaction-avec-les-composants" class="headerlink" title="Interaction avec les composants"></a>Interaction avec les composants</h2><p>Les composants Dash Core permettent également de créer des interactions entre les différents éléments d’une application. Par exemple, vous pouvez utiliser le composant <code>dcc.Input</code> pour saisir des données et les afficher dynamiquement dans un graphique.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En résumé, les composants Dash Core offrent une façon efficace de construire des applications web interactives en Python. En combinant ces composants avec du code Python, il est possible de créer des interfaces utilisateur riches et personnalisées. Explorez les nombreuses possibilités offertes par Dash Core pour développer vos propres applications web puissantes et intuitives.</p>
+<p>Pour en savoir plus sur les composants Dash Core et découvrir d’autres fonctionnalités, consultez la documentation officielle de Dash : <a target="_blank" rel="noopener" href="https://dash.plotly.com/">Dash Documentation</a>.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Dash/" rel="tag">python, Dash</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Layouts-et-styles-dans-Dash"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Layouts-et-styles-dans-Dash/"
+    >Layouts et styles dans Dash</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Layouts-et-styles-dans-Dash/" class="article-date">
+  <time datetime="2024-03-01T07:40:17.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Dash/">Dash</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Layouts-et-Styles-dans-Dash"><a href="#Layouts-et-Styles-dans-Dash" class="headerlink" title="Layouts et Styles dans Dash"></a>Layouts et Styles dans Dash</h1><p>Bienvenue dans cet article pédagogique conçu pour vous initier aux layouts et styles dans Dash. Dans cet article, vous apprendrez les bases essentielles pour structurer et styliser vos applications web avec Dash, une librairie Python célèbre pour la création d’interfaces utilisateur interactives.</p>
+<h2 id="Introduction-a-Dash"><a href="#Introduction-a-Dash" class="headerlink" title="Introduction à Dash"></a>Introduction à Dash</h2><p>Dash est un framework web open-source développé par Plotly qui permet de créer des applications web analytiques de manière simple et efficace en utilisant uniquement du code Python. L’un des aspects fondamentaux de la création d’applications web est la gestion des layouts et des styles pour une présentation visuelle attrayante et fonctionnelle.</p>
+<h2 id="Les-Layouts-dans-Dash"><a href="#Les-Layouts-dans-Dash" class="headerlink" title="Les Layouts dans Dash"></a>Les Layouts dans Dash</h2><p>Les layouts dans Dash définissent la structure et l’organisation des différents éléments graphiques au sein de votre application. Vous pouvez créer des layouts en utilisant les composants de Dash tels que <code>html.Div</code> et <code>dcc.Graph</code>.</p>
+<p>Voici un exemple de code Python illustrant un layout simple avec Dash :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">import</span> dash_html_components <span class="keyword">as</span> html</span><br><span class="line"></span><br><span class="line">app = dash.Dash(__name__)</span><br><span class="line"></span><br><span class="line">app.layout = html.Div([</span><br><span class="line">    html.H1(<span class="string">&#x27;Bienvenue sur mon application Dash !&#x27;</span>),</span><br><span class="line">    html.P(<span class="string">&#x27;Ceci est un exemple de paragraphe.&#x27;</span>)</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Dans cet exemple, nous utilisons <code>html.Div</code> pour organiser un titre (<code>html.H1</code>) et un paragraphe (<code>html.P</code>) dans une structure de type conteneur.</p>
+<h2 id="Les-Styles-dans-Dash"><a href="#Les-Styles-dans-Dash" class="headerlink" title="Les Styles dans Dash"></a>Les Styles dans Dash</h2><p>Les styles dans Dash permettent de personnaliser l’apparence des différents composants graphiques tels que les couleurs, les polices, les marges, etc. Vous pouvez appliquer des styles en utilisant les attributs CSS des composants de Dash ou en intégrant des feuilles de style externes.</p>
+<p>Voici un exemple de code Python illustrant l’application de styles à un composant avec Dash :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">import</span> dash_html_components <span class="keyword">as</span> html</span><br><span class="line"></span><br><span class="line">app = dash.Dash(__name__)</span><br><span class="line"></span><br><span class="line">app.layout = html.Div([</span><br><span class="line">    html.H1(<span class="string">&#x27;Bienvenue sur mon application Dash !&#x27;</span>, style=&#123;<span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;blue&#x27;</span>, <span class="string">&#x27;font-size&#x27;</span>: <span class="string">&#x27;24px&#x27;</span>&#125;),</span><br><span class="line">    html.P(<span class="string">&#x27;Ceci est un exemple de paragraphe.&#x27;</span>, style=&#123;<span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;green&#x27;</span>, <span class="string">&#x27;font-weight&#x27;</span>: <span class="string">&#x27;bold&#x27;</span>&#125;)</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Dans cet exemple, nous utilisons l’attribut <code>style</code> pour définir des styles personnalisés tels que la couleur du texte et la taille de la police pour le titre et le paragraphe.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, les layouts et les styles dans Dash sont des éléments essentiels pour la création d’applications web interactives et attrayantes. En comprenant comment structurer et personnaliser vos layouts, vous serez en mesure de concevoir des interfaces utilisateur riches et intuitives pour vos projets.</p>
+<p>En explorant davantage les capacités de Dash en matière de layouts et de styles, vous pourrez créer des applications web sophistiquées qui répondent aux besoins spécifiques de vos utilisateurs. Nous vous encourageons à expérimenter et à perfectionner vos compétences dans ce domaine pour exploiter pleinement le potentiel de Dash dans vos projets futurs.</p>
+<p>N’hésitez pas à consulter la documentation officielle de Dash pour découvrir plus en détail les possibilités offertes par les layouts et les styles : <a target="_blank" rel="noopener" href="https://dash.plotly.com/">Documentation Dash</a></p>
+<hr>
+<p>Merci de votre lecture ! Nous espérons que cet article vous a aidé à mieux comprendre les layouts et les styles dans Dash. Prenez plaisir à créer des applications web interactives et esthétiques grâce à Dash !</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Dash/" rel="tag">python, Dash</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Structure-de-base-d-une-application-Dash"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Structure-de-base-d-une-application-Dash/"
+    >Structure de base d&#39;une application Dash</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Structure-de-base-d-une-application-Dash/" class="article-date">
+  <time datetime="2024-03-01T07:40:04.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Dash/">Dash</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Structure-de-base-d’une-application-Dash"><a href="#Structure-de-base-d’une-application-Dash" class="headerlink" title="Structure de base d’une application Dash"></a>Structure de base d’une application Dash</h1><p>Bienvenue dans cet article pédagogique destiné aux débutants sur la structure de base d’une application Dash. Dash est un framework web écrit en Python qui vous permet de créer des applications web interactives de manière simple et rapide. Comprendre la structure de base d’une application Dash est essentiel pour commencer à créer vos propres projets web.</p>
+<h2 id="Introduction-a-Dash"><a href="#Introduction-a-Dash" class="headerlink" title="Introduction à Dash"></a>Introduction à Dash</h2><p>Dash repose sur des composants principaux pour construire des applications web : les <em>layouts</em>, les <em>callbacks</em> et les <em>composants</em>. Tout d’abord, nous aborderons la structure générale de base d’une application Dash.</p>
+<h2 id="La-structure-de-base-d’une-application-Dash"><a href="#La-structure-de-base-d’une-application-Dash" class="headerlink" title="La structure de base d’une application Dash"></a>La structure de base d’une application Dash</h2><p>Une application Dash se compose généralement des éléments suivants :</p>
 <ol>
-<li><strong>Impact</strong> : Lorsqu’un joueur ressent une forte émotion, comme la surprise ou l’étonnement.</li>
-<li><strong>Fascination</strong> : Quand le joueur est captivé par l’univers du jeu et trouve une profonde immersion.</li>
-<li><strong>Compréhension</strong> : Le joueur tire du plaisir de résoudre des énigmes et des défis.</li>
-<li><strong>Expression</strong> : Quand le joueur trouve une satisfaction créative en influençant le monde du jeu.</li>
+<li><strong>Importations des modules nécessaires</strong> : Pour commencer, importez les modules nécessaires requis par Dash.</li>
 </ol>
-<h2 id="Conclusion-de-la-theorie"><a href="#Conclusion-de-la-theorie" class="headerlink" title="Conclusion de la théorie :"></a>Conclusion de la théorie :</h2><p>La théorie de la Disruption et de l’Engagement met en lumière l’importance de créer des expériences de jeu qui stimulent et captivent les joueurs à travers des émotions variées. En comprenant et en s’appuyant sur ces états émotionnels, les concepteurs de jeux peuvent créer des expériences plus riches et immersives.</p>
-<h2 id="Implications-pour-les-concepteurs-de-RPG-et-d’aventure"><a href="#Implications-pour-les-concepteurs-de-RPG-et-d’aventure" class="headerlink" title="Implications pour les concepteurs de RPG et d’aventure :"></a>Implications pour les concepteurs de RPG et d’aventure :</h2><h3 id="1-Narration-et-Immersion"><a href="#1-Narration-et-Immersion" class="headerlink" title="1. Narration et Immersion:"></a>1. <strong>Narration et Immersion</strong>:</h3><p>Les jeux de rôle (RPG) et les jeux d’aventure peuvent bénéficier en incorporant des éléments narratifs forts pour susciter l’impact émotionnel chez les joueurs. Par exemple, le jeu “The Witcher 3” offre des scénarios surprenants qui créent de l’impact émotionnel chez les joueurs.</p>
-<h3 id="2-Jouabilite-et-Defis"><a href="#2-Jouabilite-et-Defis" class="headerlink" title="2. Jouabilité et Défis:"></a>2. <strong>Jouabilité et Défis</strong>:</h3><p>Les concepteurs de RPG peuvent intégrer des mécaniques de jeu engageantes qui défient les joueurs et leur offrent des moments de compréhension. Par exemple, dans “Dark Souls”, les joueurs doivent résoudre des énigmes complexes pour progresser.</p>
-<h3 id="3-Creativite-et-Personnalisation"><a href="#3-Creativite-et-Personnalisation" class="headerlink" title="3. Créativité et Personnalisation:"></a>3. <strong>Créativité et Personnalisation</strong>:</h3><p>Les jeux d’aventure peuvent favoriser l’expression des joueurs en leur offrant des choix significatifs qui influencent le déroulement de l’histoire. Par exemple, dans “Life is Strange”, les joueurs peuvent prendre des décisions qui modifient le cours du jeu.</p>
-<h2 id="Tableau-recapitulatif"><a href="#Tableau-recapitulatif" class="headerlink" title="Tableau récapitulatif :"></a>Tableau récapitulatif :</h2><table>
-<thead>
-<tr>
-<th>Etat émotionnel</th>
-<th>Exemple de jeu</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Impact</td>
-<td>The Last of Us</td>
-</tr>
-<tr>
-<td>Fascination</td>
-<td>Red Dead Redemption 2</td>
-</tr>
-<tr>
-<td>Compréhension</td>
-<td>The Legend of Zelda: Breath of the Wild</td>
-</tr>
-<tr>
-<td>Expression</td>
-<td>Minecraft</td>
-</tr>
-</tbody></table>
-<p>En conclusion, la théorie de la Disruption et de l’Engagement de Nicole Lazzaro offre une perspective précieuse pour les concepteurs de RPG et d’aventure afin de créer des expériences de jeu plus captivantes et immersives. En mettant en pratique les principes de cette théorie, les jeux peuvent devenir des œuvres d’art émotionnelles qui captivent et enchantent les joueurs.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">import</span> dash_core_components <span class="keyword">as</span> dcc</span><br><span class="line"><span class="keyword">import</span> dash_html_components <span class="keyword">as</span> html</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong>Initialisation de l’application</strong> : Créez une instance de votre application Dash.</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app = dash.Dash(__name__)</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong>Définition de la mise en page</strong> : La mise en page de votre application est définie en utilisant les composants HTML et Core de Dash.</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">app.layout = html.Div([</span><br><span class="line">    html.H1(<span class="string">&quot;Mon application Dash&quot;</span>),</span><br><span class="line">    dcc.Graph(</span><br><span class="line">        <span class="built_in">id</span>=<span class="string">&#x27;example-graph&#x27;</span>,</span><br><span class="line">        figure=&#123;</span><br><span class="line">            <span class="string">&#x27;data&#x27;</span>: [</span><br><span class="line">                &#123;<span class="string">&#x27;x&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">&#x27;y&#x27;</span>: [<span class="number">4</span>, <span class="number">1</span>, <span class="number">2</span>], <span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;bar&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;SF&#x27;</span>&#125;,</span><br><span class="line">                &#123;<span class="string">&#x27;x&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">&#x27;y&#x27;</span>: [<span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>], <span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;bar&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;NYC&#x27;</span>&#125;,</span><br><span class="line">            ],</span><br><span class="line">            <span class="string">&#x27;layout&#x27;</span>: &#123;</span><br><span class="line">                <span class="string">&#x27;title&#x27;</span>: <span class="string">&#x27;Exemple de graphique avec Dash&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    )</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><strong>Exécution de l’application</strong> : Enfin, exécutez votre application.</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En comprenant la structure de base d’une application Dash, vous pourrez commencer à construire des applications web interactives et dynamiques. Avec Dash, les possibilités de création sont infinies, que ce soit pour des tableaux de bord interactifs, des visualisations de données ou des applications web personnalisées.</p>
+<p>Commencez à explorer et à expérimenter avec Dash pour donner vie à vos idées de manière conviviale et intuitive. N’oubliez pas de consulter la documentation officielle de Dash pour approfondir vos connaissances et découvrir d’autres fonctionnalités avancées.</p>
+<p>Vous êtes maintenant prêt à plonger dans le monde passionnant des applications Dash et à développer vos propres projets web !</p>
  
       <!-- reward -->
       
@@ -189,7 +308,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gamedesign-other/" rel="tag">gamedesign, other</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Dash/" rel="tag">python, Dash</a></li></ul>
 
     </footer>
   </div>
@@ -200,7 +319,7 @@
 
     
     <article
-  id="post-State-of-flow"
+  id="post-Configuration-de-l-environnement-de-developpement-Dash"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -211,8 +330,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/02/29/State-of-flow/"
-    >State of flow</a> 
+  <a class="article-title" href="/2024/03/01/Configuration-de-l-environnement-de-developpement-Dash/"
+    >Configuration de l&#39;environnement de développement Dash</a> 
 </h2>
  
 
@@ -220,32 +339,110 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/02/29/State-of-flow/" class="article-date">
-  <time datetime="2024-02-29T16:33:21.000Z" itemprop="datePublished">2024-02-29</time>
+      <a href="/2024/03/01/Configuration-de-l-environnement-de-developpement-Dash/" class="article-date">
+  <time datetime="2024-03-01T07:39:48.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Game-Design/">Game Design</a>
+    <a class="article-category-link" href="/categories/Dash/">Dash</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="La-theorie-State-of-Flow-dans-le-game-design-une-immersion-totale-dans-l’experience-de-jeu"><a href="#La-theorie-State-of-Flow-dans-le-game-design-une-immersion-totale-dans-l’experience-de-jeu" class="headerlink" title="La théorie State of Flow dans le game design : une immersion totale dans l’expérience de jeu"></a><strong>La théorie State of Flow dans le game design : une immersion totale dans l’expérience de jeu</strong></h1><h3 id="Auteur"><a href="#Auteur" class="headerlink" title="Auteur"></a><strong>Auteur</strong></h3><p>Le concept de <strong>State of Flow</strong> appliqué au game design a été initié par le psychologue hongrois <strong>Mihaly Csikszentmihalyi</strong>. Cette théorie propose une approche permettant d’atteindre un niveau élevé d’immersion et de satisfaction lors de l’expérience de jeu.</p>
-<h3 id="Explication"><a href="#Explication" class="headerlink" title="Explication"></a><strong>Explication</strong></h3><p><strong>La théorie du State of Flow</strong>, également connue sous le nom de “flux”, met en avant l’idée que les individus sont pleinement engagés dans une activité lorsque leur niveau de compétence correspond au niveau de défi qui leur est proposé. Dans le contexte du game design, cela signifie que pour atteindre le State of Flow, un jeu doit être conçu de manière à maintenir les joueurs dans un état de concentration intense, où ils perdent la notion du temps et de l’espace.</p>
-<h3 id="Conclusion-de-cette-theorie"><a href="#Conclusion-de-cette-theorie" class="headerlink" title="Conclusion de cette théorie"></a><strong>Conclusion de cette théorie</strong></h3><p>En mettant l’accent sur l’immersion et l’engagement continu des joueurs, la théorie du State of Flow du game design vise à créer des expériences de jeu captivantes et satisfaisantes. Par conséquent, les concepteurs de jeux ont un rôle crucial à jouer pour garantir que les éléments de gameplay et de narration soient harmonieusement intégrés, afin de favoriser cet état optimal de concentration et de plaisir ludique.</p>
-<h3 id="Implications-pour-les-concepteurs-de-RPG-et-d’aventure"><a href="#Implications-pour-les-concepteurs-de-RPG-et-d’aventure" class="headerlink" title="Implications pour les concepteurs de RPG et d’aventure"></a><strong>Implications pour les concepteurs de RPG et d’aventure</strong></h3><h4 id="1-Equilibre-entre-competence-et-defi"><a href="#1-Equilibre-entre-competence-et-defi" class="headerlink" title="1. Équilibre entre compétence et défi"></a><strong>1. Équilibre entre compétence et défi</strong></h4><p>Pour maintenir les joueurs dans un State of Flow, les concepteurs de RPG et d’aventure doivent veiller à ajuster la difficulté du jeu en fonction des compétences acquises par les joueurs. Un défi trop facile peut mener à l’ennui, tandis qu’un défi trop ardu peut générer de la frustration.</p>
-<p><em>Exemple</em> : Dans le jeu “Dark Souls”, la série de jeux d’action-RPG réputée pour sa grande difficulté, les joueurs ressentent un intense sentiment d’accomplissement lorsqu’ils parviennent à surmonter les obstacles les plus redoutables.</p>
-<h4 id="2-Immersion-narrative"><a href="#2-Immersion-narrative" class="headerlink" title="2. Immersion narrative"></a><strong>2. Immersion narrative</strong></h4><p>L’intégration d’une narration immersive et captivante est essentielle pour maintenir les joueurs dans un State of Flow. Les jeux de rôle et d’aventure qui offrent des intrigues complexes et des personnages profonds ont plus de chances de susciter un fort attachement émotionnel chez les joueurs.</p>
-<p><em>Exemple</em> : La série de jeux RPG “The Witcher” est saluée pour son scénario riche et ses choix moraux complexes, qui permettent aux joueurs de s’immerger pleinement dans l’univers du jeu.</p>
-<h4 id="3-Feedback-continu-et-gratifiant"><a href="#3-Feedback-continu-et-gratifiant" class="headerlink" title="3. Feedback continu et gratifiant"></a><strong>3. Feedback continu et gratifiant</strong></h4><p>Les concepteurs de jeux doivent fournir un feedback régulier et gratifiant pour renforcer l’engagement des joueurs et les encourager à persévérer dans leur progression. Les récompenses, les succès débloqués et les retours visuels positifs contribuent à maintenir les joueurs dans un état de motivation élevée.</p>
-<p><em>Exemple</em> : Dans le jeu d’aventure “The Legend of Zelda: Breath of the Wild”, les joueurs sont constamment récompensés par de nouvelles découvertes, des énigmes stimulantes et des défis épiques à relever.</p>
-<h3 id="References-de-jeux"><a href="#References-de-jeux" class="headerlink" title="Références de jeux"></a><strong>Références de jeux</strong></h3><ul>
-<li><em>Dark Souls</em> (FromSoftware)</li>
-<li><em>The Witcher</em> (CD Projekt Red)</li>
-<li><em>The Legend of Zelda: Breath of the Wild</em> (Nintendo)</li>
+  <h1 id="Configuration-de-l’environnement-de-developpement-Dash"><a href="#Configuration-de-l’environnement-de-developpement-Dash" class="headerlink" title="Configuration de l’environnement de développement Dash"></a>Configuration de l’environnement de développement Dash</h1><p>Dans cet article, nous allons explorer la configuration de l’environnement de développement Dash, un framework Python pour la création d’applications web interactives. Suivez ces étapes pour bien mettre en place votre environnement de développement Dash et commencez à créer des applications web fascinantes.</p>
+<h2 id="Installation-de-Dash"><a href="#Installation-de-Dash" class="headerlink" title="Installation de Dash"></a>Installation de Dash</h2><p>Avant de commencer à travailler avec Dash, vous devez d’abord installer le framework. Utilisez <code>pip</code> pour installer Dash et ses dépendances :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install dash</span><br></pre></td></tr></table></figure>
+
+<p>Assurez-vous d’avoir également installé <code>plotly</code> pour pouvoir créer des graphiques interactifs :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
+
+<h2 id="Configuration-de-votre-premier-projet-Dash"><a href="#Configuration-de-votre-premier-projet-Dash" class="headerlink" title="Configuration de votre premier projet Dash"></a>Configuration de votre premier projet Dash</h2><p>Maintenant que Dash est installé, créez un nouveau fichier Python pour votre application Dash. Importez les modules nécessaires et initialisez une nouvelle application Dash :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">import</span> dash_core_components <span class="keyword">as</span> dcc</span><br><span class="line"><span class="keyword">import</span> dash_html_components <span class="keyword">as</span> html</span><br><span class="line"></span><br><span class="line">app = dash.Dash(__name__)</span><br></pre></td></tr></table></figure>
+
+<p>Définissez ensuite la mise en page de votre application en utilisant les composants de base et en les organisant dans une structure HTML :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">app.layout = html.Div([</span><br><span class="line">    html.H1(<span class="string">&#x27;Bienvenue sur mon application Dash!&#x27;</span>),</span><br><span class="line">    dcc.Graph(</span><br><span class="line">        figure=&#123;</span><br><span class="line">            <span class="string">&#x27;data&#x27;</span>: [</span><br><span class="line">                &#123;<span class="string">&#x27;x&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">&#x27;y&#x27;</span>: [<span class="number">4</span>, <span class="number">1</span>, <span class="number">2</span>], <span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;bar&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;Premier tableau de bord&#x27;</span>&#125;,</span><br><span class="line">                &#123;<span class="string">&#x27;x&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">&#x27;y&#x27;</span>: [<span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>], <span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;bar&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">u&#x27;Second tableau de bord&#x27;</span>&#125;,</span><br><span class="line">            ],</span><br><span class="line">            <span class="string">&#x27;layout&#x27;</span>: &#123;</span><br><span class="line">                <span class="string">&#x27;title&#x27;</span>: <span class="string">&#x27;Visualisation de données en Dash&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    )</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+
+<h2 id="Execution-de-votre-application-Dash"><a href="#Execution-de-votre-application-Dash" class="headerlink" title="Exécution de votre application Dash"></a>Exécution de votre application Dash</h2><p>Pour lancer votre application Dash, ajoutez une ligne pour exécuter le serveur dans votre script Python :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Enregistrez votre fichier et lancez-le en exécutant la commande suivante dans votre terminal :</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python nom_de_votre_fichier.py</span><br></pre></td></tr></table></figure>
+
+<p>Votre application Dash devrait maintenant être disponible à l’adresse <code>http://127.0.0.1:8050/</code>. Cliquez sur ce lien pour voir votre application web en action.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Vous avez maintenant configuré votre environnement de développement Dash, créé votre premier projet Dash et lancé une application web interactive. Avec Dash, les possibilités de création d’applications web sont infinies. Explorez davantage les fonctionnalités de Dash et créez des applications web captivantes pour visualiser et interagir avec vos données.</p>
+<p>N’oubliez pas de consulter la <a target="_blank" rel="noopener" href="https://dash.plotly.com/">documentation officielle de Dash</a> pour en savoir plus sur les fonctionnalités avancées et les bonnes pratiques de développement.</p>
+<p>Commencez dès aujourd’hui à construire des applications web dynamiques et engageantes avec Dash !</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Dash/" rel="tag">python, Dash</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Introduction-a-Dash-et-aux-applications-web-de-donnees"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Introduction-a-Dash-et-aux-applications-web-de-donnees/"
+    >Introduction à Dash et aux applications web de données</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Introduction-a-Dash-et-aux-applications-web-de-donnees/" class="article-date">
+  <time datetime="2024-03-01T07:39:35.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Dash/">Dash</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Introduction-a-Dash-et-aux-applications-web-de-donnees"><a href="#Introduction-a-Dash-et-aux-applications-web-de-donnees" class="headerlink" title="Introduction à Dash et aux applications web de données"></a>Introduction à Dash et aux applications web de données</h1><p>Dans cet article, nous allons nous plonger dans le monde de Dash, un framework web interactif utilisant Python. Nous allons découvrir comment créer des applications web de données dynamiques et interactives en utilisant Dash. Si vous êtes un débutant cherchant à explorer le potentiel de la visualisation de données sur le web, alors vous êtes au bon endroit !</p>
+<h2 id="Qu’est-ce-que-Dash"><a href="#Qu’est-ce-que-Dash" class="headerlink" title="Qu’est-ce que Dash ?"></a>Qu’est-ce que Dash ?</h2><p>Dash est un framework open source permettant la création d’applications web interactives à l’aide de Python. Il permet de concevoir des tableaux de bord, des graphiques interactifs et des interfaces utilisateur sans avoir à se plonger dans des langages web tels que HTML, CSS ou JavaScript. Avec Dash, vous pouvez combiner la puissance de la programmation Python avec la flexibilité du web pour créer des visualisations de données impressionnantes.</p>
+<h2 id="Installation-de-Dash"><a href="#Installation-de-Dash" class="headerlink" title="Installation de Dash"></a>Installation de Dash</h2><p>Avant de commencer, assurez-vous d’avoir Dash et les autres bibliothèques nécessaires installées. Vous pouvez le faire en exécutant la commande suivante dans votre terminal :</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install dash</span><br></pre></td></tr></table></figure>
+
+<h2 id="Premiere-application-Dash"><a href="#Premiere-application-Dash" class="headerlink" title="Première application Dash"></a>Première application Dash</h2><p>Créons une application web simple en Dash pour afficher un graphique à barres.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">from</span> dash <span class="keyword">import</span> dcc, html</span><br><span class="line"></span><br><span class="line">app = dash.Dash(__name__)</span><br><span class="line"></span><br><span class="line">app.layout = html.Div(children=[</span><br><span class="line">    html.H1(<span class="string">&#x27;Bienvenue sur mon premier tableau de bord Dash !&#x27;</span>),</span><br><span class="line">    dcc.Graph(</span><br><span class="line">        <span class="built_in">id</span>=<span class="string">&#x27;example-graph&#x27;</span>,</span><br><span class="line">        figure=&#123;</span><br><span class="line">            <span class="string">&#x27;data&#x27;</span>: [</span><br><span class="line">                &#123;<span class="string">&#x27;x&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">&#x27;y&#x27;</span>: [<span class="number">4</span>, <span class="number">1</span>, <span class="number">2</span>], <span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;bar&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;Premier graphique&#x27;</span>&#125;,</span><br><span class="line">            ],</span><br><span class="line">            <span class="string">&#x27;layout&#x27;</span>: &#123;</span><br><span class="line">                <span class="string">&#x27;title&#x27;</span>: <span class="string">&#x27;Graphique à barres simple&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    )</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Explication-du-code"><a href="#Explication-du-code" class="headerlink" title="Explication du code"></a>Explication du code</h2><ul>
+<li>Nous avons importé les bibliothèques nécessaires et initialisé notre application Dash.</li>
+<li>En définissant <code>app.layout</code>, nous avons créé la structure de notre application web avec un titre et un graphique à barres.</li>
+<li>Le graphique à barres est défini à l’aide de la méthode <code>dcc.Graph</code> avec des données et une mise en page spécifiques.</li>
+<li>En exécutant l’application via <code>app.run_server()</code>, notre tableau de bord Dash est lancé localement.</li>
 </ul>
-<p>Dans l’univers du game design, la théorie State of Flow offre un cadre précieux pour concevoir des expériences de jeu immersives et gratifiantes. En prenant en compte les aspects de l’équilibre entre compétences et défis, l’immersion narrative et le feedback continu, les concepteurs de RPG et d’aventure peuvent créer des univers ludiques captivants qui transportent les joueurs dans un état de concentration et de plaisir optimal.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, Dash offre une manière simple et efficace de créer des applications web interactives de données en utilisant Python. En combinant la puissance de la programmation Python avec la souplesse du web, vous pouvez concevoir des visualisations de données dynamiques et intuitives. Explorez les possibilités infinies de Dash pour créer des applications web de données personnalisées qui captiveront votre audience !</p>
+<p>Pour aller plus loin avec Dash et les applications web de données, n’hésitez pas à consulter la documentation officielle de Dash et à expérimenter par vous-même. Bon codage !</p>
+<hr>
+<p>Cet article vous a-t-il été utile ? Laissez votre avis dans les commentaires et partagez vos réalisations avec Dash !</p>
  
       <!-- reward -->
       
@@ -256,7 +453,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gamedesign-other/" rel="tag">gamedesign, other</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Dash/" rel="tag">python, Dash</a></li></ul>
 
     </footer>
   </div>
@@ -267,7 +464,7 @@
 
     
     <article
-  id="post-Magic-Wand"
+  id="post-Projets-pratiques-et-etudes-de-cas"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -278,8 +475,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/02/29/Magic-Wand/"
-    >Magic Wand</a> 
+  <a class="article-title" href="/2024/03/01/Projets-pratiques-et-etudes-de-cas/"
+    >Projets pratiques et études de cas</a> 
 </h2>
  
 
@@ -287,50 +484,33 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/02/29/Magic-Wand/" class="article-date">
-  <time datetime="2024-02-29T16:33:07.000Z" itemprop="datePublished">2024-02-29</time>
+      <a href="/2024/03/01/Projets-pratiques-et-etudes-de-cas/" class="article-date">
+  <time datetime="2024-03-01T07:33:39.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Game-Design/">Game Design</a>
+    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="La-Theorie-Magic-Wand-du-Game-Design-par-Roger-Caillois"><a href="#La-Theorie-Magic-Wand-du-Game-Design-par-Roger-Caillois" class="headerlink" title="La Théorie Magic Wand du Game Design par Roger Caillois"></a><strong>La Théorie Magic Wand du Game Design par Roger Caillois</strong></h1><hr>
-<h2 id="Auteur"><a href="#Auteur" class="headerlink" title="Auteur"></a>Auteur</h2><p>Roger Caillois, penseur français des jeux et du game design, a développé la théorie de la Magic Wand dans son ouvrage “Les jeux et les hommes” publié en 1958.</p>
-<hr>
-<h2 id="Explication-de-la-theorie"><a href="#Explication-de-la-theorie" class="headerlink" title="Explication de la théorie"></a>Explication de la théorie</h2><p>La théorie de la Magic Wand se réfère à l’idée selon laquelle un objet fictif, tel qu’une baguette magique, permet à son détenteur d’influer sur l’environnement du jeu de manière significative. Cela crée un sentiment de pouvoir et de contrôle, renforçant l’immersion du joueur et sa satisfaction.</p>
-<hr>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La Magic Wand est un concept clé dans le game design, car elle permet de stimuler l’interaction du joueur avec le monde virtuel, offrant des possibilités d’exploration, de résolution de problèmes et d’expression de créativité.</p>
-<hr>
-<h2 id="Implications-pour-les-concepteurs-de-RPG-et-d’aventure"><a href="#Implications-pour-les-concepteurs-de-RPG-et-d’aventure" class="headerlink" title="Implications pour les concepteurs de RPG et d’aventure"></a>Implications pour les concepteurs de RPG et d’aventure</h2><h3 id="Liberte-du-joueur"><a href="#Liberte-du-joueur" class="headerlink" title="Liberté du joueur"></a>Liberté du joueur</h3><p>La Magic Wand confère une liberté d’action au joueur, lui permettant d’explorer l’univers du jeu à sa guise. Des jeux comme <em>The Legend of Zelda</em> exploitent cette liberté en offrant au joueur la possibilité d’interagir avec divers éléments du monde.</p>
-<h3 id="Capacite-a-resoudre-des-enigmes"><a href="#Capacite-a-resoudre-des-enigmes" class="headerlink" title="Capacité à résoudre des énigmes"></a>Capacité à résoudre des énigmes</h3><p>Grâce à la Magic Wand, les joueurs peuvent résoudre des énigmes et surmonter des obstacles de manière inventive. <em>Harry Potter: Hogwarts Mystery</em> est un exemple où les joueurs utilisent leur baguette magique pour résoudre des défis.</p>
-<h3 id="Renforcement-du-sentiment-de-puissance"><a href="#Renforcement-du-sentiment-de-puissance" class="headerlink" title="Renforcement du sentiment de puissance"></a>Renforcement du sentiment de puissance</h3><p>La Magic Wand renforce le sentiment de puissance du joueur en lui donnant un outil surpuissant. Dans le jeu <em>Fable</em>, le bâton du héros lui confère des pouvoirs magiques impressionnants.</p>
-<hr>
-<h2 id="Tableau-des-exemples-de-jeux-exploitant-la-Magic-Wand"><a href="#Tableau-des-exemples-de-jeux-exploitant-la-Magic-Wand" class="headerlink" title="Tableau des exemples de jeux exploitant la Magic Wand"></a>Tableau des exemples de jeux exploitant la Magic Wand</h2><table>
-<thead>
-<tr>
-<th>Jeu</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>The Legend of Zelda</td>
-<td>Exploration et utilisation d’objets magiques pour progresser dans l’aventure.</td>
-</tr>
-<tr>
-<td>Harry Potter: Hogwarts Mystery</td>
-<td>Résolution d’énigmes et casting de sorts à l’aide de la baguette magique.</td>
-</tr>
-<tr>
-<td>Fable</td>
-<td>Utilisation d’un bâton magique pour acquérir des pouvoirs et combattre des ennemis.</td>
-</tr>
-</tbody></table>
-<hr>
-<p>En conclusion, la Magic Wand est un élément essentiel du game design pour créer une expérience engageante et immersive pour les joueurs. Les concepteurs de RPG et d’aventure doivent exploiter ce concept pour offrir des expériences de jeu captivantes et satisfaisantes.</p>
+  <h1 id="Projets-pratiques-et-etudes-de-cas-avec-Plotly"><a href="#Projets-pratiques-et-etudes-de-cas-avec-Plotly" class="headerlink" title="Projets pratiques et études de cas avec Plotly"></a>Projets pratiques et études de cas avec Plotly</h1><p>Bienvenue dans cet article où nous explorerons des projets pratiques et des études de cas utilisant Plotly, une bibliothèque graphique en Python permettant de créer des visualisations interactives.</p>
+<h2 id="Introduction-a-Plotly"><a href="#Introduction-a-Plotly" class="headerlink" title="Introduction à Plotly"></a>Introduction à Plotly</h2><p>Plotly est une bibliothèque puissante qui permet de créer des graphiques interactifs en Python. Avec Plotly, vous pouvez générer des graphiques, des tableaux de bord et des visualisations de données de manière dynamique et attractive.</p>
+<p>Pour commencer, installez Plotly en utilisant pip :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
+
+<h2 id="Creation-d’un-graphique-interactif"><a href="#Creation-d’un-graphique-interactif" class="headerlink" title="Création d’un graphique interactif"></a>Création d’un graphique interactif</h2><p>Voici un exemple simple de code Python utilisant Plotly pour créer un graphique à barres interactif :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">data = &#123;<span class="string">&#x27;Pays&#x27;</span>: [<span class="string">&#x27;France&#x27;</span>, <span class="string">&#x27;Allemagne&#x27;</span>, <span class="string">&#x27;Italie&#x27;</span>, <span class="string">&#x27;Espagne&#x27;</span>],</span><br><span class="line">        <span class="string">&#x27;Population&#x27;</span>: [<span class="number">67</span>, <span class="number">83</span>, <span class="number">60</span>, <span class="number">47</span>]&#125;</span><br><span class="line"></span><br><span class="line">df = pd.DataFrame(data)</span><br><span class="line"></span><br><span class="line">fig = px.bar(df, x=<span class="string">&#x27;Pays&#x27;</span>, y=<span class="string">&#x27;Population&#x27;</span>, title=<span class="string">&#x27;Population des pays européens&#x27;</span>)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+
+<p>En exécutant ce code, vous obtiendrez un graphique à barres interactif affichant la population de différents pays européens.</p>
+<h2 id="Construction-d’un-tableau-de-bord"><a href="#Construction-d’un-tableau-de-bord" class="headerlink" title="Construction d’un tableau de bord"></a>Construction d’un tableau de bord</h2><p>Plotly permet également de créer des tableaux de bord interactifs. Voici un exemple de code Python pour construire un simple tableau de bord avec plusieurs graphiques :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line">fig1 = go.Figure()</span><br><span class="line">fig1.add_trace(go.Scatter(x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], y=[<span class="number">4</span>, <span class="number">1</span>, <span class="number">2</span>], mode=<span class="string">&#x27;lines&#x27;</span>, name=<span class="string">&#x27;Ligne 1&#x27;</span>))</span><br><span class="line"></span><br><span class="line">fig2 = go.Figure()</span><br><span class="line">fig2.add_trace(go.Bar(x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], y=[<span class="number">2</span>, <span class="number">5</span>, <span class="number">1</span>], name=<span class="string">&#x27;Barres 1&#x27;</span>))</span><br><span class="line"></span><br><span class="line">fig = go.make_subplots(rows=<span class="number">1</span>, cols=<span class="number">2</span>, subplot_titles=(<span class="string">&#x27;Graphique 1&#x27;</span>, <span class="string">&#x27;Graphique 2&#x27;</span>))</span><br><span class="line">fig.add_trace(fig1.data[<span class="number">0</span>], row=<span class="number">1</span>, col=<span class="number">1</span>)</span><br><span class="line">fig.add_trace(fig2.data[<span class="number">0</span>], row=<span class="number">1</span>, col=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+
+<p>En exécutant ce code, vous afficherez un tableau de bord contenant deux graphiques interactifs.</p>
+<h2 id="Etudes-de-cas"><a href="#Etudes-de-cas" class="headerlink" title="Études de cas"></a>Études de cas</h2><p>Il existe de nombreuses applications pratiques de Plotly, telles que la visualisation de données financières, la cartographie interactive, ou l’analyse de données scientifiques. En combinant les fonctionnalités de Plotly avec d’autres bibliothèques Python comme Pandas et NumPy, vous pouvez créer des projets avancés dans divers domaines.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Dans cet article, nous avons présenté les projets pratiques et les études de cas utilisant Plotly. Grâce à sa facilité d’utilisation et sa flexibilité, Plotly est un outil puissant pour créer des visualisations interactives et dynamiques. En explorant davantage ses fonctionnalités et en expérimentant avec différents types de graphiques, vous pourrez créer des visualisations captivantes pour vos propres projets.</p>
+<p>N’hésitez pas à explorer davantage Plotly et à expérimenter avec vos propres données pour découvrir tout son potentiel !</p>
  
       <!-- reward -->
       
@@ -341,7 +521,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gamedesign-other/" rel="tag">gamedesign, other</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
 
     </footer>
   </div>
@@ -352,7 +532,7 @@
 
     
     <article
-  id="post-Magic-Circle"
+  id="post-Publication-et-partage-des-visualisations-Plotly"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -363,8 +543,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/02/29/Magic-Circle/"
-    >Magic Circle</a> 
+  <a class="article-title" href="/2024/03/01/Publication-et-partage-des-visualisations-Plotly/"
+    >Publication et partage des visualisations Plotly</a> 
 </h2>
  
 
@@ -372,37 +552,33 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/02/29/Magic-Circle/" class="article-date">
-  <time datetime="2024-02-29T16:32:51.000Z" itemprop="datePublished">2024-02-29</time>
+      <a href="/2024/03/01/Publication-et-partage-des-visualisations-Plotly/" class="article-date">
+  <time datetime="2024-03-01T07:33:24.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Game-Design/">Game Design</a>
+    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="La-Theorie-du-Magic-Circle-du-Game-Design-par-Johan-Huizinga"><a href="#La-Theorie-du-Magic-Circle-du-Game-Design-par-Johan-Huizinga" class="headerlink" title="La Théorie du Magic Circle du Game Design par Johan Huizinga"></a>La Théorie du Magic Circle du Game Design par Johan Huizinga</h1><p><strong>Auteur :</strong> Johan Huizinga</p>
-<hr>
-<h2 id="Explication-de-la-theorie"><a href="#Explication-de-la-theorie" class="headerlink" title="Explication de la théorie"></a>Explication de la théorie</h2><p>Selon Johan Huizinga, la théorie du Magic Circle du game design postule que lorsque les joueurs entrent dans l’univers d’un jeu, ils créent un espace imaginaire et consensuel où les règles et les conventions sociales du monde réel ne s’appliquent plus. Ce concept de “cercle magique” permet aux joueurs de s’immerger pleinement dans le jeu et de vivre des expériences uniques et enrichissantes.</p>
-<hr>
-<h2 id="Conclusion-de-cette-theorie"><a href="#Conclusion-de-cette-theorie" class="headerlink" title="Conclusion de cette théorie"></a>Conclusion de cette théorie</h2><p>La notion de Magic Circle souligne l’importance de la suspension de l’incrédulité et de l’engagement émotionnel des joueurs pour une expérience de jeu immersive et captivante. En créant un espace séparé du monde réel, le Magic Circle encourage la créativité, l’exploration et l’expression individuelle.</p>
-<hr>
-<h2 id="Implications-pour-les-concepteurs-de-RPG-et-d’aventure"><a href="#Implications-pour-les-concepteurs-de-RPG-et-d’aventure" class="headerlink" title="Implications pour les concepteurs de RPG et d’aventure"></a>Implications pour les concepteurs de RPG et d’aventure</h2><h3 id="1-Narration-immersive"><a href="#1-Narration-immersive" class="headerlink" title="1. Narration immersive"></a>1. <strong>Narration immersive</strong></h3><p>   Les concepteurs peuvent utiliser le Magic Circle pour créer des mondes fictifs cohérents et captivants, où les joueurs sont incités à explorer et interagir avec leur environnement.</p>
-<p>   <em>Exemple :</em> Le jeu “The Witcher 3: Wild Hunt” de CD Projekt Red offre une expérience de jeu immersive grâce à son monde riche en détails et sa narration complexe.</p>
-<h3 id="2-Systemes-de-jeu-equilibres"><a href="#2-Systemes-de-jeu-equilibres" class="headerlink" title="2. Systèmes de jeu équilibrés"></a>2. <strong>Systèmes de jeu équilibrés</strong></h3><p>   En respectant les règles du Magic Circle, les concepteurs peuvent concevoir des mécaniques de jeu équilibrées qui offrent un défi stimulant tout en maintenant l’immersion des joueurs.</p>
-<p>   <em>Exemple :</em> Dans le jeu de rôle “Divinity: Original Sin 2” de Larian Studios, les choix des joueurs ont un impact significatif sur l’histoire et le gameplay, renforçant ainsi l’engagement des joueurs.</p>
-<h3 id="3-Exploration-de-themes-profonds"><a href="#3-Exploration-de-themes-profonds" class="headerlink" title="3. Exploration de thèmes profonds"></a>3. <strong>Exploration de thèmes profonds</strong></h3><p>   En exploitant le potentiel du Magic Circle, les concepteurs peuvent aborder des thèmes complexes et profonds dans leurs jeux, incitant les joueurs à réfléchir et à remettre en question leurs propres croyances.</p>
-<p>   <em>Exemple :</em> Le jeu d’aventure narratif “The Last of Us Part II” de Naughty Dog explore des sujets tels que la vengeance, la compassion et la moralité, suscitant des discussions et des réflexions chez les joueurs.</p>
-<hr>
-<p>En résumé, la théorie du Magic Circle du game design de Johan Huizinga offre un cadre conceptuel précieux pour les concepteurs de RPG et d’aventure, en les aidant à créer des expériences de jeu immersives, équilibrées et significatives. En embrassant les principes du Magic Circle, les concepteurs peuvent enrichir les interactions des joueurs et offrir des expériences mémorables et enrichissantes.</p>
-<p><em>Sources et références :</em>  </p>
-<ul>
-<li>E. Goffman, “The Presentation of Self in Everyday Life” (1956)</li>
-<li>J. Huizinga, “Homo Ludens: A Study of the Play Element in Culture” (1938)</li>
-<li>M. Juul, “The Magic Circle and the Puzzle Piece” (2008)</li>
-</ul>
+  <h1 id="Publication-et-partage-des-visualisations-Plotly"><a href="#Publication-et-partage-des-visualisations-Plotly" class="headerlink" title="Publication et partage des visualisations Plotly"></a>Publication et partage des visualisations Plotly</h1><p>Bienvenue dans cet article pédagogique dédié à la publication et au partage des visualisations créées avec Plotly. Plotly est une bibliothèque Python puissante qui permet de créer des graphiques interactifs et attrayants. Une fois que vous avez créé vos visualisations, vous pouvez les publier en ligne pour les partager avec un plus large public. Dans cet article, nous allons vous guider à travers les étapes pour publier et partager vos visualisations Plotly.</p>
+<h2 id="Etape-1-Creer-une-visualisation-avec-Plotly"><a href="#Etape-1-Creer-une-visualisation-avec-Plotly" class="headerlink" title="Étape 1: Créer une visualisation avec Plotly"></a>Étape 1: Créer une visualisation avec Plotly</h2><p>Avant de publier une visualisation, vous devez d’abord créer un graphique à l’aide de Plotly. Voici un exemple de code Python pour créer un graphique en barres simple :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line">fig = go.Figure(go.Bar(</span><br><span class="line">    x=[<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>],</span><br><span class="line">    y=[<span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>]</span><br><span class="line">))</span><br><span class="line"></span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+
+<p>Assurez-vous d’avoir vos données prêtes et de personnaliser votre graphique selon vos besoins.</p>
+<h2 id="Etape-2-Exporter-le-graphique"><a href="#Etape-2-Exporter-le-graphique" class="headerlink" title="Étape 2: Exporter le graphique"></a>Étape 2: Exporter le graphique</h2><p>Une fois que vous avez créé votre graphique, vous pouvez l’exporter au format HTML en utilisant la fonction <code>write_html()</code> de Plotly. Voici un exemple de code pour exporter votre graphique :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fig.write_html(<span class="string">&quot;graphique.html&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Cette étape permet de générer un fichier HTML contenant votre graphique interactif.</p>
+<h2 id="Etape-3-Publier-le-graphique-en-ligne"><a href="#Etape-3-Publier-le-graphique-en-ligne" class="headerlink" title="Étape 3: Publier le graphique en ligne"></a>Étape 3: Publier le graphique en ligne</h2><p>Maintenant que vous avez votre fichier HTML contenant le graphique, vous pouvez le publier en ligne pour le partager avec d’autres personnes. Une des façons les plus simples de le faire est d’utiliser un service d’hébergement gratuit comme GitHub Pages.</p>
+<ol>
+<li>Créez un nouveau référentiel sur GitHub et poussez votre fichier HTML.</li>
+<li>Accédez aux paramètres de votre référentiel et activez GitHub Pages.</li>
+<li>Copiez le lien fourni pour accéder à votre visualisation en ligne.</li>
+</ol>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Félicitations ! Vous avez appris comment publier et partager des visualisations Plotly en ligne. En partageant vos graphiques interactifs, vous pouvez communiquer efficacement vos idées et résultats avec un large public. Les possibilités offertes par la publication et le partage de visualisations Plotly sont infinies. Que ce soit pour présenter des données complexes ou pour créer des tableaux de bord interactifs, Plotly vous offre un outil puissant pour communiquer visuellement. Explorez davantage et laissez libre cours à votre créativité !</p>
  
       <!-- reward -->
       
@@ -413,7 +589,205 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gamedesign-other/" rel="tag">gamedesign, other</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Styles-et-themes-avances-pour-personnaliser-les-graphiques"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Styles-et-themes-avances-pour-personnaliser-les-graphiques/"
+    >Styles et thèmes avancés pour personnaliser les graphiques</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Styles-et-themes-avances-pour-personnaliser-les-graphiques/" class="article-date">
+  <time datetime="2024-03-01T07:33:03.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Styles-et-themes-avances-pour-personnaliser-les-graphiques-avec-Plotly"><a href="#Styles-et-themes-avances-pour-personnaliser-les-graphiques-avec-Plotly" class="headerlink" title="Styles et thèmes avancés pour personnaliser les graphiques avec Plotly"></a>Styles et thèmes avancés pour personnaliser les graphiques avec Plotly</h1><p>Bienvenue dans cet article où nous allons explorer les styles et thèmes avancés dans Plotly pour personnaliser vos graphiques. Plotly est une bibliothèque Python puissante et flexible pour créer des visualisations de données interactives. En maîtrisant les styles et thèmes, vous pourrez donner une touche personnelle à vos graphiques et les rendre plus attrayants visuellement.</p>
+<h2 id="Introduction-a-Plotly-Styles-et-Themes"><a href="#Introduction-a-Plotly-Styles-et-Themes" class="headerlink" title="Introduction à Plotly Styles et Thèmes"></a>Introduction à Plotly Styles et Thèmes</h2><p>Avant de plonger dans les détails des styles et thèmes avancés, il est important de comprendre ce que sont ces concepts dans Plotly.</p>
+<p>Les <strong>styles</strong> dans Plotly vous permettent de contrôler les propriétés visuelles de vos graphiques, telles que les couleurs, les polices, les bordures, etc. Les <strong>thèmes</strong>, quant à eux, sont des ensembles prédéfinis de styles qui peuvent être appliqués à vos graphiques pour une apparence cohérente et professionnelle.</p>
+<h2 id="Utilisation-des-Styles-et-Themes-Avances"><a href="#Utilisation-des-Styles-et-Themes-Avances" class="headerlink" title="Utilisation des Styles et Thèmes Avancés"></a>Utilisation des Styles et Thèmes Avancés</h2><h3 id="Personnalisation-des-Styles-de-vos-Graphiques"><a href="#Personnalisation-des-Styles-de-vos-Graphiques" class="headerlink" title="Personnalisation des Styles de vos Graphiques"></a>Personnalisation des Styles de vos Graphiques</h3><p>Voici un exemple de code Python utilisant Plotly pour créer un graphique à barres et personnaliser ses styles :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"></span><br><span class="line">data = &#123;<span class="string">&quot;Langage&quot;</span>: [<span class="string">&quot;Python&quot;</span>, <span class="string">&quot;R&quot;</span>, <span class="string">&quot;JavaScript&quot;</span>, <span class="string">&quot;SQL&quot;</span>],</span><br><span class="line">        <span class="string">&quot;Popularité&quot;</span>: [<span class="number">90</span>, <span class="number">60</span>, <span class="number">80</span>, <span class="number">70</span>]&#125;</span><br><span class="line"></span><br><span class="line">fig = px.bar(data, x=<span class="string">&quot;Langage&quot;</span>, y=<span class="string">&quot;Popularité&quot;</span>, color=<span class="string">&quot;Langage&quot;</span>,</span><br><span class="line">             title=<span class="string">&quot;Popularité des langages de programmation&quot;</span>)</span><br><span class="line">fig.update_traces(marker_color=<span class="string">&#x27;skyblue&#x27;</span>, marker_line_color=<span class="string">&#x27;black&#x27;</span>,</span><br><span class="line">                  marker_line_width=<span class="number">1.5</span>, opacity=<span class="number">0.6</span>)</span><br><span class="line">fig.update_layout(title_text=<span class="string">&quot;Popularité des langages de programmation&quot;</span>,</span><br><span class="line">                  font_family=<span class="string">&quot;Arial&quot;</span>, title_font_size=<span class="number">24</span>,</span><br><span class="line">                  title_font_color=<span class="string">&quot;darkblue&quot;</span>)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+
+<p>Dans cet exemple, nous utilisons <code>update_traces</code> et <code>update_layout</code> pour personnaliser les couleurs, les polices et d’autres styles du graphique à barres.</p>
+<h3 id="Application-des-Themes-Predefinis"><a href="#Application-des-Themes-Predefinis" class="headerlink" title="Application des Thèmes Prédéfinis"></a>Application des Thèmes Prédéfinis</h3><p>Plotly propose également des thèmes prédéfinis que vous pouvez appliquer à vos graphiques. Voici un exemple de code pour utiliser le thème “plotly_dark” :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"></span><br><span class="line">data = &#123;<span class="string">&quot;Jour&quot;</span>: [<span class="string">&quot;Lundi&quot;</span>, <span class="string">&quot;Mardi&quot;</span>, <span class="string">&quot;Mercredi&quot;</span>, <span class="string">&quot;Jeudi&quot;</span>, <span class="string">&quot;Vendredi&quot;</span>],</span><br><span class="line">        <span class="string">&quot;Ventes&quot;</span>: [<span class="number">50</span>, <span class="number">70</span>, <span class="number">60</span>, <span class="number">80</span>, <span class="number">75</span>]&#125;</span><br><span class="line"></span><br><span class="line">fig = px.line(data, x=<span class="string">&quot;Jour&quot;</span>, y=<span class="string">&quot;Ventes&quot;</span>)</span><br><span class="line">fig.update_layout(template=<span class="string">&quot;plotly_dark&quot;</span>)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+
+<p>En appliquant le thème “plotly_dark” avec <code>update_layout</code>, vous donnez à votre graphique un aspect sombre et élégant.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En maîtrisant les styles et thèmes avancés dans Plotly, vous pouvez améliorer significativement l’esthétique et la lisibilité de vos graphiques. Que ce soit pour des présentations, des rapports ou des analyses de données, la personnalisation des styles et l’application de thèmes prédéfinis peuvent rendre vos visualisations plus attractives et mémorables.</p>
+<p>Explorez les diverses options de styles et thèmes offertes par Plotly pour trouver ce qui correspond le mieux à vos besoins et à votre style. Amusez-vous à expérimenter et à créer des graphiques uniques et percutants !</p>
+<p>N’hésitez pas à partager vos propres expériences et créations graphiques en commentaires. Merci de nous avoir accompagnés dans cette exploration des styles et thèmes avancés pour personnaliser les graphiques avec Plotly !</p>
+<p><em>Article rédigé par l’équipe de DataVizLab - Blog éducatif sur la visualisation de données.</em></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Utilisation-des-sous-graphiques-et-des-dispositions-complexes"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Utilisation-des-sous-graphiques-et-des-dispositions-complexes/"
+    >Utilisation des sous-graphiques et des dispositions complexes</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Utilisation-des-sous-graphiques-et-des-dispositions-complexes/" class="article-date">
+  <time datetime="2024-03-01T07:32:47.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Article-Utilisation-des-sous-graphiques-et-des-dispositions-complexes-avec-Plotly"><a href="#Article-Utilisation-des-sous-graphiques-et-des-dispositions-complexes-avec-Plotly" class="headerlink" title="Article : Utilisation des sous-graphiques et des dispositions complexes avec Plotly"></a>Article : Utilisation des sous-graphiques et des dispositions complexes avec Plotly</h1><hr>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Dans ce tutoriel, nous allons explorer comment utiliser les sous-graphiques et les dispositions complexes avec Plotly. Les sous-graphiques permettent de combiner plusieurs tracés sur une même figure, tandis que les dispositions complexes offrent une flexibilité pour organiser ces tracés de manière personnalisée.</p>
+<h2 id="Creation-de-sous-graphiques"><a href="#Creation-de-sous-graphiques" class="headerlink" title="Création de sous-graphiques"></a>Création de sous-graphiques</h2><p>Pour commencer, importez les bibliothèques nécessaires :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"><span class="keyword">from</span> plotly.subplots <span class="keyword">import</span> make_subplots</span><br></pre></td></tr></table></figure>
+
+<p>Créez ensuite des sous-graphiques en utilisant la fonction <code>make_subplots</code> :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fig = make_subplots(rows=<span class="number">2</span>, cols=<span class="number">1</span>)</span><br><span class="line">fig.add_trace(go.Scatter(x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], y=[<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]), row=<span class="number">1</span>, col=<span class="number">1</span>)</span><br><span class="line">fig.add_trace(go.Bar(x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], y=[<span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>]), row=<span class="number">2</span>, col=<span class="number">1</span>)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+
+<p>Ce code crée une figure avec deux sous-graphiques empilés verticalement.</p>
+<h2 id="Dispositions-complexes"><a href="#Dispositions-complexes" class="headerlink" title="Dispositions complexes"></a>Dispositions complexes</h2><p>Vous pouvez personnaliser la disposition des sous-graphiques en spécifiant les paramètres <code>row</code> et <code>col</code>. Par exemple, pour une disposition en grille 2x2 :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fig = make_subplots(rows=<span class="number">2</span>, cols=<span class="number">2</span>)</span><br><span class="line">fig.add_trace(go.Scatter(x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], y=[<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]), row=<span class="number">1</span>, col=<span class="number">1</span>)</span><br><span class="line">fig.add_trace(go.Bar(x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], y=[<span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>]), row=<span class="number">1</span>, col=<span class="number">2</span>)</span><br><span class="line">fig.add_trace(go.Pie(labels=[<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>], values=[<span class="number">40</span>, <span class="number">30</span>, <span class="number">30</span>]), row=<span class="number">2</span>, col=<span class="number">1</span>)</span><br><span class="line">fig.add_trace(go.Box(y=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]), row=<span class="number">2</span>, col=<span class="number">2</span>)</span><br><span class="line">fig.update_layout(height=<span class="number">600</span>, width=<span class="number">800</span>, title_text=<span class="string">&quot;Dispositions complexes&quot;</span>)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En utilisant les sous-graphiques et les dispositions complexes, vous pouvez créer des visualisations complexes et personnalisées avec Plotly. Cette fonctionnalité est particulièrement utile lorsque vous souhaitez comparer plusieurs graphiques ou organiser des visualisations de manière structurée. Expérimentez avec ces concepts pour créer des tableaux de bord interactifs et des rapports visuels percutants.</p>
+<hr>
+<p>N’hésitez pas à explorer davantage les fonctionnalités de Plotly pour exploiter tout son potentiel dans vos projets de visualisation de données. Amusez-vous à créer des visualisations uniques et engageantes !</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Optimisation-des-performances-pour-de-grands-ensembles-de-donnees"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Optimisation-des-performances-pour-de-grands-ensembles-de-donnees/"
+    >Optimisation des performances pour de grands ensembles de données</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Optimisation-des-performances-pour-de-grands-ensembles-de-donnees/" class="article-date">
+  <time datetime="2024-03-01T07:32:33.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Optimisation-des-performances-pour-de-grands-ensembles-de-donnees-avec-Plotly"><a href="#Optimisation-des-performances-pour-de-grands-ensembles-de-donnees-avec-Plotly" class="headerlink" title="Optimisation des performances pour de grands ensembles de données avec Plotly"></a>Optimisation des performances pour de grands ensembles de données avec Plotly</h1><p>Dans cet article, nous allons explorer comment optimiser les performances de vos visualisations avec Plotly lorsque vous travaillez avec de grands ensembles de données. Suivez ces étapes pour améliorer l’efficacité de vos graphiques interactifs.</p>
+<h2 id="1-Utilisation-efficace-des-donnees"><a href="#1-Utilisation-efficace-des-donnees" class="headerlink" title="1. Utilisation efficace des données"></a>1. Utilisation efficace des données</h2><p>Lorsque vous travaillez avec de gros ensembles de données, il est essentiel d’optimiser la quantité d’informations que vous chargez dans votre visualisation. Utilisez les fonctions de manipulation de données de pandas ou numpy pour filtrer et agréger les données avant de les passer à Plotly.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># Charger les données</span></span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;donnees.csv&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Filtrer les données</span></span><br><span class="line">df_filtered = df[df[<span class="string">&#x27;colonne&#x27;</span>] &gt; <span class="number">100</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Passer les données filtrées à Plotly</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-Utilisation-de-la-pagination"><a href="#2-Utilisation-de-la-pagination" class="headerlink" title="2. Utilisation de la pagination"></a>2. Utilisation de la pagination</h2><p>Pour afficher des visualisations interactives sans compromettre les performances, envisagez d’utiliser la pagination pour charger et afficher uniquement une partie des données à la fois. Cela permet de réduire la charge de travail sur le navigateur et d’améliorer la réactivité des graphiques.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"></span><br><span class="line"><span class="comment"># Pagination des données</span></span><br><span class="line">donnees_page_1 = df.iloc[<span class="number">0</span>:<span class="number">100</span>]</span><br><span class="line">donnees_page_2 = df.iloc[<span class="number">100</span>:<span class="number">200</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Créer des graphiques pour chaque page</span></span><br><span class="line">fig_page_1 = px.scatter(donnees_page_1, x=<span class="string">&#x27;colonne1&#x27;</span>, y=<span class="string">&#x27;colonne2&#x27;</span>)</span><br><span class="line">fig_page_2 = px.scatter(donnees_page_2, x=<span class="string">&#x27;colonne1&#x27;</span>, y=<span class="string">&#x27;colonne2&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-Utilisation-de-la-mise-en-cache"><a href="#3-Utilisation-de-la-mise-en-cache" class="headerlink" title="3. Utilisation de la mise en cache"></a>3. Utilisation de la mise en cache</h2><p>Pour optimiser les performances des visualisations réactives, utilisez la mise en cache pour stocker les résultats de calculs coûteux et éviter de les recalculer à chaque interaction de l’utilisateur. Cela permet d’améliorer la vitesse de chargement et la réactivité des graphiques.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> functools</span><br><span class="line"></span><br><span class="line"><span class="meta">@functools.lru_cache</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">calcul_complexe</span>():</span><br><span class="line">    <span class="comment"># Effectuer des calculs complexes</span></span><br><span class="line">    <span class="keyword">return</span> resultats</span><br><span class="line"></span><br><span class="line"><span class="comment"># Utiliser la fonction mise en cache</span></span><br><span class="line">resultats = calcul_complexe()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En optimisant les performances de vos visualisations Plotly pour de grands ensembles de données, vous pouvez obtenir des graphiques interactifs et réactifs sans compromettre l’expérience utilisateur. En utilisant efficacement les données, la pagination et la mise en cache, vous pouvez créer des visualisations puissantes et rapides, permettant une exploration fluide des données volumineuses.</p>
+<p>Explorez ces techniques d’optimisation et adaptez-les à vos propres besoins pour tirer le meilleur parti de vos visualisations avec Plotly.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
 
     </footer>
   </div>
@@ -429,7 +803,7 @@
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/23/">Page précédente</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><span class="page-number current">24</span>
+    <a class="extend prev" rel="prev" href="/page/23/">Page précédente</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><a class="extend next" rel="next" href="/page/25/">Page suivante</a>
   </nav>
   
 </section>
@@ -494,6 +868,22 @@
     </li>
     
     <li class="nav-item">
+      <a class="nav-item-link" href="/categories/bienetre/">Bien être</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/Arduino/">Arduino</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/ESP8266/">ESP8266</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/Electronique">Electronique</a>
+    </li>
+    
+    <li class="nav-item">
       <a class="nav-item-link" href="/categories/Python/">Python</a>
     </li>
     
@@ -523,6 +913,10 @@
     
     <li class="nav-item">
       <a class="nav-item-link" href="/categories/Scipy/">Scipy</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/Tkinter">Tkinter</a>
     </li>
     
     <li class="nav-item">
