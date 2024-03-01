@@ -111,7 +111,7 @@
     
     
     <article
-  id="post-Introduction-a-la-poesie-de-la-dynastie-Tang"
+  id="post-Detection-de-mouvement"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -122,8 +122,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Introduction-a-la-poesie-de-la-dynastie-Tang/"
-    >Introduction à la poésie de la dynastie Tang</a> 
+  <a class="article-title" href="/2024/03/01/Detection-de-mouvement/"
+    >Détection de mouvement</a> 
 </h2>
  
 
@@ -131,24 +131,31 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Introduction-a-la-poesie-de-la-dynastie-Tang/" class="article-date">
-  <time datetime="2024-03-01T11:36:03.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Detection-de-mouvement/" class="article-date">
+  <time datetime="2024-03-01T14:26:39.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Poemes-de-la-dynastie-Tang/">Poemes-de-la-dynastie-Tang</a>
+    <a class="article-category-link" href="/categories/OpenCV/">OpenCV</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Introduction-a-la-poesie-de-la-dynastie-Tang"><a href="#Introduction-a-la-poesie-de-la-dynastie-Tang" class="headerlink" title="Introduction à la poésie de la dynastie Tang"></a>Introduction à la poésie de la dynastie Tang</h1><p>La poésie de la dynastie Tang, également connue sous le nom de Poèmes de la dynastie Tang, est l’une des formes artistiques les plus raffinées et emblématiques de la Chine antique. Cette période florissante de l’histoire chinoise a vu émerger une profusion de chefs-d’œuvre poétiques qui ont perduré à travers les siècles. Dans cet article, nous allons explorer les caractéristiques et les nuances de la poésie de la dynastie Tang, et vous guider pas à pas pour apprécier et comprendre cette forme d’art sublime.</p>
-<h2 id="Les-Origines-de-la-Poesie-de-la-Dynastie-Tang"><a href="#Les-Origines-de-la-Poesie-de-la-Dynastie-Tang" class="headerlink" title="Les Origines de la Poésie de la Dynastie Tang"></a>Les Origines de la Poésie de la Dynastie Tang</h2><p>La poésie de la dynastie Tang s’épanouit entre le 7e et le 10e siècle en Chine, une période marquée par une prospérité culturelle et un échange intellectuel florissant. Les poètes de cette époque ont créé des œuvres qui capturent la beauté de la nature, les émotions humaines et les subtilités de la vie quotidienne.</p>
-<h2 id="Caracteristiques-de-la-Poesie-de-la-Dynastie-Tang"><a href="#Caracteristiques-de-la-Poesie-de-la-Dynastie-Tang" class="headerlink" title="Caractéristiques de la Poésie de la Dynastie Tang"></a>Caractéristiques de la Poésie de la Dynastie Tang</h2><p>La poésie de la dynastie Tang se distingue par sa concision, sa richesse symbolique et son utilisation habile de l’imagerie. Les poèmes étaient souvent écrits en vers réguliers de cinq ou sept caractères, avec une structure rythmique sophistiquée. Les thèmes abordés incluent l’amour, l’amitié, la nature, la mélancolie et la quête spirituelle.</p>
-<h3 id="Exemple-de-Poeme-de-la-Dynastie-Tang"><a href="#Exemple-de-Poeme-de-la-Dynastie-Tang" class="headerlink" title="Exemple de Poème de la Dynastie Tang :"></a>Exemple de Poème de la Dynastie Tang :</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Le printemps est revenu sur la terre,</span><br><span class="line">Fleurs épanouies, papillons dans l&#x27;air.</span><br><span class="line">Dans la rumeur des vagues, j&#x27;entends ta voix,</span><br><span class="line">Écho lointain qui berce mon désespoir.</span><br></pre></td></tr></table></figure>
+  <h1 id="Article-pedagogique-Detection-de-mouvement-avec-OpenCV"><a href="#Article-pedagogique-Detection-de-mouvement-avec-OpenCV" class="headerlink" title="Article pédagogique : Détection de mouvement avec OpenCV"></a>Article pédagogique : Détection de mouvement avec OpenCV</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>La détection de mouvement est une fonctionnalité clé en traitement d’images et de vidéos. OpenCV, une bibliothèque open-source, offre des outils puissants pour détecter les changements dans une séquence d’images. Dans cet article, nous allons explorer les différentes méthodes disponibles pour la détection de mouvement en utilisant OpenCV.</p>
+<h2 id="Prerequis"><a href="#Prerequis" class="headerlink" title="Prérequis"></a>Prérequis</h2><p>Avant de commencer, assurez-vous d’avoir installé OpenCV sur votre système. Si ce n’est pas déjà fait, vous pouvez suivre les instructions d’installation sur le site officiel d’OpenCV.</p>
+<h2 id="Detection-de-mouvement-avec-OpenCV"><a href="#Detection-de-mouvement-avec-OpenCV" class="headerlink" title="Détection de mouvement avec OpenCV"></a>Détection de mouvement avec OpenCV</h2><h3 id="1-Capturer-une-video"><a href="#1-Capturer-une-video" class="headerlink" title="1. Capturer une vidéo"></a>1. Capturer une vidéo</h3><p>La première étape consiste à capturer une vidéo à l’aide d’OpenCV. Vous pouvez utiliser une webcam en direct ou charger une vidéo existante.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">cap = cv2.VideoCapture(<span class="number">0</span>)  <span class="comment"># Capture vidéo à partir de la webcam</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    ret, frame = cap.read()</span><br><span class="line">    cv2.imshow(<span class="string">&#x27;Video&#x27;</span>, frame)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == <span class="built_in">ord</span>(<span class="string">&#x27;q&#x27;</span>):</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">cap.release()</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
 
-<h2 id="Appreciation-de-la-Poesie-de-la-Dynastie-Tang"><a href="#Appreciation-de-la-Poesie-de-la-Dynastie-Tang" class="headerlink" title="Appréciation de la Poésie de la Dynastie Tang"></a>Appréciation de la Poésie de la Dynastie Tang</h2><p>Pour apprécier pleinement la poésie de la dynastie Tang, il est essentiel de comprendre le contexte historique et culturel de l’époque. Explorez les traditions littéraires et artistiques de la Chine ancienne pour enrichir votre compréhension des nuances et des subtiles allusions présentes dans les poèmes.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La poésie de la dynastie Tang offre une fenêtre fascinante sur l’âme et la sensibilité des anciens Chinois. En plongeant dans cet univers poétique, vous découvrirez une profondeur émotionnelle et une esthétique exquise qui résonnent encore aujourd’hui. Que ce soit pour enrichir votre connaissance de la littérature chinoise ou simplement pour savourer la beauté des mots, l’exploration de la poésie de la dynastie Tang est une aventure enrichissante à ne pas manquer.</p>
+<h3 id="2-Conversion-en-niveaux-de-gris"><a href="#2-Conversion-en-niveaux-de-gris" class="headerlink" title="2. Conversion en niveaux de gris"></a>2. Conversion en niveaux de gris</h3><p>Avant de détecter le mouvement, il est souvent utile de convertir l’image en niveaux de gris. Cela simplifie le traitement et réduit le bruit.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-Detection-de-mouvement"><a href="#3-Detection-de-mouvement" class="headerlink" title="3. Détection de mouvement"></a>3. Détection de mouvement</h3><p>Il existe différentes approches pour détecter le mouvement, telles que la soustraction d’arrière-plan, la détection de contours et l’utilisation de l’optical flow. Voici un exemple de détection de mouvement en utilisant la soustraction d’arrière-plan :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">cap = cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line">fgbg = cv2.createBackgroundSubtractorMOG2()</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    ret, frame = cap.read()</span><br><span class="line">    fgmask = fgbg.apply(frame)</span><br><span class="line">    cv2.imshow(<span class="string">&#x27;Foreground&#x27;</span>, fgmask)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == <span class="built_in">ord</span>(<span class="string">&#x27;q&#x27;</span>):</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">cap.release()</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La détection de mouvement avec OpenCV offre de nombreuses applications pratiques, telles que la surveillance vidéo, l’analyse du comportement humain, la navigation autonome des robots, etc. En comprenant les concepts de base et en explorant les différentes techniques de détection de mouvement, vous serez en mesure de développer des solutions innovantes dans divers domaines.</p>
+<p>En somme, la détection de mouvement avec OpenCV ouvre un large champ de possibilités qui ne demandent qu’à être explorées et exploitées.</p>
+<p>N’hésitez pas à continuer à explorer les capacités d’OpenCV pour approfondir vos connaissances et créer des projets fascinants basés sur la détection de mouvement.</p>
  
       <!-- reward -->
       
@@ -159,7 +166,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/litterature/" rel="tag">littérature</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
 
     </footer>
   </div>
@@ -170,7 +177,7 @@
 
     
     <article
-  id="post-Recettes-emblematiques-de-la-cuisine-taiwanaise"
+  id="post-Reconnaissance-de-formes"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -181,8 +188,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Recettes-emblematiques-de-la-cuisine-taiwanaise/"
-    >Recettes emblématiques de la cuisine taïwanaise</a> 
+  <a class="article-title" href="/2024/03/01/Reconnaissance-de-formes/"
+    >Reconnaissance de formes</a> 
 </h2>
  
 
@@ -190,54 +197,26 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Recettes-emblematiques-de-la-cuisine-taiwanaise/" class="article-date">
-  <time datetime="2024-03-01T11:30:54.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Reconnaissance-de-formes/" class="article-date">
+  <time datetime="2024-03-01T14:26:25.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Cuisine-chinoise/">Cuisine-chinoise</a>
+    <a class="article-category-link" href="/categories/OpenCV/">OpenCV</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Recettes-emblematiques-de-la-cuisine-taiwanaise"><a href="#Recettes-emblematiques-de-la-cuisine-taiwanaise" class="headerlink" title="Recettes emblématiques de la cuisine taïwanaise"></a>Recettes emblématiques de la cuisine taïwanaise</h1><p>La cuisine taïwanaise est réputée pour ses saveurs audacieuses, ses techniques de cuisson uniques et ses plats diversifiés. Dans cet article, nous explorerons quelques recettes emblématiques de la cuisine taïwanaise pour vous permettre de découvrir et d’apprécier cette cuisine riche en goût.</p>
-<h2 id="1-Nouilles-aux-crevettes-sautees"><a href="#1-Nouilles-aux-crevettes-sautees" class="headerlink" title="1. Nouilles aux crevettes sautées"></a>1. <strong>Nouilles aux crevettes sautées</strong></h2><p>Les nouilles aux crevettes sautées, ou “Taiwanese shrimp stir-fried noodles”, sont un plat incontournable de la cuisine taïwanaise. Voici la recette traditionnelle :</p>
-<p><strong>Ingrédients :</strong></p>
-<ul>
-<li>Nouilles de blé</li>
-<li>Crevettes fraîches</li>
-<li>Légumes (chou chinois, carottes, oignons verts)</li>
-<li>Sauce soja</li>
-<li>Ail, gingembre et huile de sésame</li>
-</ul>
-<p><strong>Préparation :</strong></p>
-<ol>
-<li>Cuire les nouilles selon les instructions sur l’emballage, les égoutter et réserver.</li>
-<li>Faire sauter les crevettes avec l’ail et le gingembre dans une poêle.</li>
-<li>Ajouter les légumes et faire revenir.</li>
-<li>Incorporer les nouilles cuites et la sauce soja, mélanger le tout.</li>
-<li>Ajouter un filet d’huile de sésame avant de servir.</li>
-</ol>
-<h2 id="2-Boulettes-de-tapioca-sucrees"><a href="#2-Boulettes-de-tapioca-sucrees" class="headerlink" title="2. Boulettes de tapioca sucrées"></a>2. <strong>Boulettes de tapioca sucrées</strong></h2><p>Les boulettes de tapioca sucrées, ou “Sweet Taro Balls”, sont une délicieuse friandise taïwanaise souvent consommée en dessert. Voici comment les préparer :</p>
-<p><strong>Ingrédients :</strong></p>
-<ul>
-<li>Tapioca</li>
-<li>Sucre</li>
-<li>Eau</li>
-<li>Taro</li>
-<li>Haricots rouges cuits</li>
-</ul>
-<p><strong>Préparation :</strong></p>
-<ol>
-<li>Faire bouillir de l’eau et y cuire les boulettes de tapioca jusqu’à ce qu’elles flottent à la surface.</li>
-<li>Dans une casserole, préparer un sirop de sucre.</li>
-<li>Ajouter les boulettes de tapioca cuites dans le sirop et les laisser mijoter.</li>
-<li>Ajouter des morceaux de taro et de haricots rouges cuits pour un goût plus riche.</li>
-<li>Servir les boulettes chaudes ou froides, selon votre préférence.</li>
-</ol>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Les recettes emblématiques de la cuisine taïwanaise offrent une immersion dans la diversité des saveurs et des textures de cette cuisine unique. Que ce soit à travers des plats salés comme les nouilles aux crevettes sautées ou des desserts sucrés comme les boulettes de tapioca, la cuisine taïwanaise saura éveiller vos papilles et vous faire voyager à travers ses traditions culinaires.</p>
-<p>Alors, n’hésitez pas à explorer et à expérimenter ces recettes emblématiques chez vous pour découvrir tout le charme et la délicatesse de la cuisine taïwanaise. Bon appétit !</p>
+  <h1 id="Reconnaissance-de-formes-en-OpenCV-Guide-pour-debutants"><a href="#Reconnaissance-de-formes-en-OpenCV-Guide-pour-debutants" class="headerlink" title="Reconnaissance de formes en OpenCV : Guide pour débutants"></a>Reconnaissance de formes en OpenCV : Guide pour débutants</h1><p>La reconnaissance de formes est une branche essentielle du traitement d’images, permettant d’identifier et de classer des formes, motifs ou objets dans une image en utilisant des algorithmes spécifiques. Dans cet article, nous allons explorer les bases de la reconnaissance de formes en OpenCV, une bibliothèque populaire de vision par ordinateur.</p>
+<h2 id="Introduction-a-la-reconnaissance-de-formes"><a href="#Introduction-a-la-reconnaissance-de-formes" class="headerlink" title="Introduction à la reconnaissance de formes"></a>Introduction à la reconnaissance de formes</h2><p>La reconnaissance de formes est un processus complexe qui repose sur l’analyse des caractéristiques visuelles des objets pour les distinguer les uns des autres. En OpenCV, cela peut être réalisé en utilisant des techniques telles que la détection de contours, l’extraction de descripteurs et la correspondance de modèles.</p>
+<h2 id="Detection-de-contours"><a href="#Detection-de-contours" class="headerlink" title="Détection de contours"></a>Détection de contours</h2><p>La détection de contours est une étape cruciale dans la reconnaissance de formes. Elle permet d’extraire les contours des objets présents dans une image en mettant en évidence les transitions d’intensité. Par exemple, en utilisant l’algorithme de Canny, nous pouvons détecter les bords d’une forme comme un cercle.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;forme.png&#x27;</span>, <span class="number">0</span>)</span><br><span class="line">edges = cv2.Canny(image, <span class="number">100</span>, <span class="number">200</span>)</span><br><span class="line"></span><br><span class="line">cv2.imshow(<span class="string">&#x27;Contours&#x27;</span>, edges)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Extraction-de-descripteurs"><a href="#Extraction-de-descripteurs" class="headerlink" title="Extraction de descripteurs"></a>Extraction de descripteurs</h2><p>Une fois les contours détectés, nous pouvons extraire des descripteurs pour caractériser les formes. Les descripteurs sont des informations numériques qui décrivent les propriétés distinctives d’un objet, facilitant ainsi sa comparaison avec d’autres formes similaires.</p>
+<h2 id="Correspondance-de-modeles"><a href="#Correspondance-de-modeles" class="headerlink" title="Correspondance de modèles"></a>Correspondance de modèles</h2><p>La correspondance de modèles consiste à comparer les descripteurs extraits des formes pour rechercher des similitudes. Par exemple, en utilisant l’algorithme de correspondance de points d’intérêt, nous pouvons identifier une forme spécifique parmi plusieurs formes enregistrées.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, la reconnaissance de formes en OpenCV ouvre la voie à de nombreuses applications passionnantes telles que la détection d’objets, la reconnaissance faciale, la lecture optique de caractères, etc. En maîtrisant les concepts de base et les techniques avancées de la reconnaissance de formes, vous pourrez explorer un large éventail de domaines de la vision par ordinateur.</p>
+<p>N’hésitez pas à expérimenter avec les codes fournis et à explorer davantage les fonctionnalités d’OpenCV pour approfondir vos connaissances en reconnaissance de formes. Amusez-vous à découvrir les innombrables possibilités offertes par ce domaine fascinant !</p>
  
       <!-- reward -->
       
@@ -248,7 +227,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cuisine/" rel="tag">cuisine</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
 
     </footer>
   </div>
@@ -259,7 +238,7 @@
 
     
     <article
-  id="post-Plats-de-rue-populaires-a-Taiwan"
+  id="post-Detection-de-formes"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -270,8 +249,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Plats-de-rue-populaires-a-Taiwan/"
-    >Plats de rue populaires à Taïwan</a> 
+  <a class="article-title" href="/2024/03/01/Detection-de-formes/"
+    >Détection de formes</a> 
 </h2>
  
 
@@ -279,40 +258,34 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Plats-de-rue-populaires-a-Taiwan/" class="article-date">
-  <time datetime="2024-03-01T11:30:41.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Detection-de-formes/" class="article-date">
+  <time datetime="2024-03-01T14:26:06.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Cuisine-chinoise/">Cuisine-chinoise</a>
+    <a class="article-category-link" href="/categories/OpenCV/">OpenCV</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Cuisine-chinoise-Plats-de-rue-populaires-a-Taiwan"><a href="#Cuisine-chinoise-Plats-de-rue-populaires-a-Taiwan" class="headerlink" title="Cuisine-chinoise : Plats de rue populaires à Taïwan"></a>Cuisine-chinoise : Plats de rue populaires à Taïwan</h1><hr>
-<p>Bienvenue dans ce nouvel article dédié à la cuisine chinoise, plus particulièrement aux plats de rue populaires à Taïwan. Si vous êtes curieux de découvrir les saveurs exotiques et authentiques de la rue taïwanaise, vous êtes au bon endroit ! </p>
-<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Taïwan regorge de merveilles culinaires, en particulier sur ses étals de rue. Ces plats simples mais savoureux sont appréciés par les locaux et les touristes pour leur diversité et leur authenticité.</p>
-<h3 id="Les-incontournables-de-la-street-food-taiwanaise"><a href="#Les-incontournables-de-la-street-food-taiwanaise" class="headerlink" title="Les incontournables de la street food taïwanaise"></a>Les incontournables de la street food taïwanaise</h3><h4 id="1-Ba-wan"><a href="#1-Ba-wan" class="headerlink" title="1. Ba-wan"></a>1. <strong>Ba-wan</strong></h4><p>Le Ba-wan est une boulette géante, faite à base de pâte de riz farcie de viande hachée, de champignons et de légumes. Cette spécialité est souvent accompagnée d’une sauce sucrée à la fois savoureuse et légèrement épicée.</p>
-<h4 id="2-Gua-bao"><a href="#2-Gua-bao" class="headerlink" title="2. Gua bao"></a>2. <strong>Gua bao</strong></h4><p>Le Gua bao est un petit sandwich taïwanais, composé d’une tranche de porc braisé, de légumes croquants et d’arachides concassées, le tout enveloppé dans un pain moelleux à la vapeur.</p>
-<h4 id="3-Oyster-omelette"><a href="#3-Oyster-omelette" class="headerlink" title="3. Oyster omelette"></a>3. <strong>Oyster omelette</strong></h4><p>Cette omelette aux huîtres est une véritable institution à Taïwan. Elle est préparée à base d’œufs battus, de fécule de maïs et d’huîtres fraîches, le tout relevé par une sauce spéciale à la saveur unique.</p>
-<h3 id="Comment-preparer-ces-delices-chez-vous"><a href="#Comment-preparer-ces-delices-chez-vous" class="headerlink" title="Comment préparer ces délices chez vous ?"></a>Comment préparer ces délices chez vous ?</h3><h4 id="Recette-du-Ba-wan"><a href="#Recette-du-Ba-wan" class="headerlink" title="Recette du Ba-wan :"></a>Recette du Ba-wan :</h4><p>Ingrédients :</p>
-<ul>
-<li>Pâte de riz</li>
-<li>Viande hachée</li>
-<li>Champignons</li>
-<li>Légumes variés</li>
-<li>Sauce soja</li>
-</ul>
-<p>Instructions :</p>
-<ol>
-<li>Mélanger la viande hachée, les champignons et les légumes.</li>
-<li>Former des boulettes à base de pâte de riz et les farcir avec le mélange précédent.</li>
-<li>Cuire les Ba-wan à la vapeur pendant environ 30 minutes.</li>
-<li>Servir chaud avec de la sauce soja.</li>
-</ol>
-<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>En conclusion, les plats de rue populaires à Taïwan offrent une expérience culinaire unique, mêlant saveurs traditionnelles et ingrédients locaux. Que vous soyez un amateur de cuisine asiatique ou simplement curieux de découvrir de nouvelles saveurs, n’hésitez pas à vous aventurer dans les rues de Taïwan pour goûter à ces délices incontournables.</p>
-<p>N’oubliez pas que la cuisine chinoise ne se limite pas aux plats classiques que nous connaissons ; elle regorge de trésors méconnus à explorer, à savourer et à partager !</p>
+  <h1 id="Introduction-a-la-detection-de-formes-avec-OpenCV"><a href="#Introduction-a-la-detection-de-formes-avec-OpenCV" class="headerlink" title="Introduction à la détection de formes avec OpenCV"></a>Introduction à la détection de formes avec OpenCV</h1><p>Bienvenue dans cet article qui vous initiera à la détection de formes en utilisant OpenCV. La détection de formes est une tâche fondamentale en traitement d’images et peut être appliquée dans de nombreux domaines tels que la vision par ordinateur, la reconnaissance d’objets et la robotique. Dans cet article, nous allons aborder les concepts de base pour détecter des formes géométriques simples telles que les cercles, les rectangles et les triangles. </p>
+<h2 id="Installation-d’OpenCV"><a href="#Installation-d’OpenCV" class="headerlink" title="Installation d’OpenCV"></a>Installation d’OpenCV</h2><p>Avant de commencer, assurez-vous d’avoir OpenCV installé sur votre machine. Vous pouvez l’installer en utilisant pip :</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install opencv-python</span><br></pre></td></tr></table></figure>
+
+<h2 id="Chargement-de-l’image"><a href="#Chargement-de-l’image" class="headerlink" title="Chargement de l’image"></a>Chargement de l’image</h2><p>Tout d’abord, chargez une image sur laquelle vous souhaitez détecter des formes. Voici un exemple de code pour charger une image en utilisant OpenCV :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Detection-de-cercles"><a href="#Detection-de-cercles" class="headerlink" title="Détection de cercles"></a>Détection de cercles</h2><p>La détection de cercles peut être réalisée en utilisant la transformée de Hough circulaire. Voici un exemple de code pour détecter des cercles dans une image :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)</span><br><span class="line">circles = cv2.HoughCircles(image_gray, cv2.HOUGH_GRADIENT, dp=<span class="number">1</span>, minDist=<span class="number">20</span>, param1=<span class="number">50</span>, param2=<span class="number">30</span>, minRadius=<span class="number">0</span>, maxRadius=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> circles <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">    circles = np.uint16(np.around(circles))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> circles[<span class="number">0</span>, :]:</span><br><span class="line">        cv2.circle(image, (i[<span class="number">0</span>], i[<span class="number">1</span>]), i[<span class="number">2</span>], (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Detection-de-rectangles"><a href="#Detection-de-rectangles" class="headerlink" title="Détection de rectangles"></a>Détection de rectangles</h2><p>Pour détecter des rectangles, nous pouvons utiliser des contours et l’approximation de la forme. Voici un exemple de code pour détecter des rectangles dans une image :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">contours, _ = cv2.findContours(image_gray, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> contour <span class="keyword">in</span> contours:</span><br><span class="line">    epsilon = <span class="number">0.04</span> * cv2.arcLength(contour, <span class="literal">True</span>)</span><br><span class="line">    approx = cv2.approxPolyDP(contour, epsilon, <span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(approx) == <span class="number">4</span>:</span><br><span class="line">        cv2.drawContours(image, [approx], <span class="number">0</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Detection-de-triangles"><a href="#Detection-de-triangles" class="headerlink" title="Détection de triangles"></a>Détection de triangles</h2><p>Pour détecter des triangles, nous pouvons appliquer des techniques similaires à celles des rectangles en ajustant les critères de forme. Voici un exemple de code pour détecter des triangles dans une image :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> contour <span class="keyword">in</span> contours:</span><br><span class="line">    epsilon = <span class="number">0.03</span> * cv2.arcLength(contour, <span class="literal">True</span>)</span><br><span class="line">    approx = cv2.approxPolyDP(contour, epsilon, <span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(approx) == <span class="number">3</span>:</span><br><span class="line">        cv2.drawContours(image, [approx], <span class="number">0</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, la détection de formes avec OpenCV est une tâche intéressante qui peut être implémentée en utilisant diverses techniques telles que la transformée de Hough et l’approximation de contours. Les applications de la détection de formes sont nombreuses, allant de la détection d’objets dans des images à la reconnaissance de motifs dans des scènes complexes. En continuant à explorer et à expérimenter avec OpenCV, vous pourrez développer des applications plus avancées de vision par ordinateur. Amusez-vous à détecter des formes !</p>
  
       <!-- reward -->
       
@@ -323,7 +296,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cuisine/" rel="tag">cuisine</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
 
     </footer>
   </div>
@@ -334,7 +307,7 @@
 
     
     <article
-  id="post-Influence-des-cultures-sur-la-cuisine-taiwanaise"
+  id="post-Segmentation-d-images"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -345,8 +318,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Influence-des-cultures-sur-la-cuisine-taiwanaise/"
-    >Influence des cultures sur la cuisine taïwanaise</a> 
+  <a class="article-title" href="/2024/03/01/Segmentation-d-images/"
+    >Segmentation d&#39;images</a> 
 </h2>
  
 
@@ -354,26 +327,28 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Influence-des-cultures-sur-la-cuisine-taiwanaise/" class="article-date">
-  <time datetime="2024-03-01T11:30:20.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Segmentation-d-images/" class="article-date">
+  <time datetime="2024-03-01T14:25:45.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Cuisine-chinoise/">Cuisine-chinoise</a>
+    <a class="article-category-link" href="/categories/OpenCV/">OpenCV</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Article-pedagogique-Influence-des-cultures-sur-la-cuisine-taiwanaise"><a href="#Article-pedagogique-Influence-des-cultures-sur-la-cuisine-taiwanaise" class="headerlink" title="Article pédagogique : Influence des cultures sur la cuisine taïwanaise"></a>Article pédagogique : Influence des cultures sur la cuisine taïwanaise</h1><p>La cuisine taïwanaise est une mosaïque de saveurs résultant de l’influence de diverses cultures à travers les siècles. Cette fusion culinaire unique met en lumière l’histoire riche de Taïwan et témoigne de l’ouverture du pays aux influences étrangères. Dans cet article, nous explorerons l’influence des cultures sur la cuisine taïwanaise, en mettant en lumière les apports de différentes traditions culinaires.</p>
-<h2 id="Les-bases-de-la-cuisine-taiwanaise"><a href="#Les-bases-de-la-cuisine-taiwanaise" class="headerlink" title="Les bases de la cuisine taïwanaise"></a>Les bases de la cuisine taïwanaise</h2><p>La cuisine taïwanaise repose sur des ingrédients locaux tels que le porc, le poulet, les fruits de mer, le riz et les légumes. Cependant, ce qui rend la cuisine taïwanaise si spéciale, ce sont les influences variées qui ont façonné ses plats emblématiques.</p>
-<h3 id="1-L’influence-chinoise"><a href="#1-L’influence-chinoise" class="headerlink" title="1. L’influence chinoise"></a>1. L’influence chinoise</h3><p>La cuisine taïwanaise tire une grande partie de son héritage culinaire de la Chine. Les plats tels que le rouleau de printemps, les nouilles aux crevettes, et le ragoût de bœuf braisé sont des exemples de plats chinois qui ont été adaptés à la cuisine taïwanaise.</p>
-<h3 id="2-L’influence-japonaise"><a href="#2-L’influence-japonaise" class="headerlink" title="2. L’influence japonaise"></a>2. L’influence japonaise</h3><p>L’occupation japonaise de Taïwan de 1895 à 1945 a également laissé sa marque sur la cuisine locale. Les sushis, les tempuras et les plats de nouilles japonais ont été intégrés dans la cuisine taïwanaise, créant des mets uniques tels que les nouilles ramen taïwanaises.</p>
-<h3 id="3-L’influence-aborigene"><a href="#3-L’influence-aborigene" class="headerlink" title="3. L’influence aborigène"></a>3. L’influence aborigène</h3><p>Les peuples autochtones de Taïwan ont apporté leur propre culture culinaire, mettant en avant des ingrédients locaux tels que le taro, le millet et le crabe des mangroves. Ces saveurs authentiques ont enrichi la diversité de la cuisine taïwanaise.</p>
-<h2 id="Contexte-historique-et-evolution"><a href="#Contexte-historique-et-evolution" class="headerlink" title="Contexte historique et évolution"></a>Contexte historique et évolution</h2><p>Les influences culinaires sur la cuisine taïwanaise reflètent l’histoire mouvementée de l’île, marquée par des périodes d’immigration et d’occupation. Chaque nouvelle vague d’arrivants a contribué à enrichir et diversifier la cuisine taïwanaise.</p>
-<h2 id="Applications-possibles"><a href="#Applications-possibles" class="headerlink" title="Applications possibles"></a>Applications possibles</h2><p>Comprendre l’influence des cultures sur la cuisine taïwanaise ouvre la voie à une appréciation plus profonde de la diversité culinaire et culturelle de Taïwan. En explorant ces diverses influences, les passionnés de cuisine peuvent s’inspirer pour créer des plats uniques mélangeant tradition et innovation.</p>
-<p>L’influence des cultures sur la cuisine taïwanaise est un témoignage vivant de la capacité des traditions culinaires à évoluer et à s’enrichir au fil du temps. En explorant ces influences, nous découvrons non seulement des saveurs exquises, mais aussi des histoires fascinantes sur l’île de Taïwan.</p>
-<p><em>Laissez-vous emporter par ces saveurs à la croisée des influences et préparez-vous à un voyage gustatif inoubliable dans la cuisine taïwanaise !</em></p>
+  <h1 id="Article-educatif-Introduction-a-la-Segmentation-d’images-avec-OpenCV"><a href="#Article-educatif-Introduction-a-la-Segmentation-d’images-avec-OpenCV" class="headerlink" title="Article éducatif : Introduction à la Segmentation d’images avec OpenCV"></a>Article éducatif : Introduction à la Segmentation d’images avec OpenCV</h1><p>Bienvenue dans ce guide pédagogique dédié à la segmentation d’images avec OpenCV, un domaine passionnant de la vision par ordinateur. Dans cet article, nous allons explorer ce qu’est la segmentation d’images, pourquoi c’est important et comment vous pouvez commencer à l’implémenter en utilisant la bibliothèque OpenCV.</p>
+<h2 id="Qu’est-ce-que-la-segmentation-d’images"><a href="#Qu’est-ce-que-la-segmentation-d’images" class="headerlink" title="Qu’est-ce que la segmentation d’images ?"></a>Qu’est-ce que la segmentation d’images ?</h2><p>La segmentation d’images est le processus de partitionnement d’une image en plusieurs segments pour en simplifier la représentation ou en faciliter l’analyse. Elle est largement utilisée dans divers domaines tels que la reconnaissance d’objets, la détection de contours et la classification d’images. Plus simplement, la segmentation d’images consiste à diviser une image en différentes régions ou objets de manière automatique ou semi-automatique.</p>
+<h2 id="Prerequis-necessaires"><a href="#Prerequis-necessaires" class="headerlink" title="Prérequis nécessaires"></a>Prérequis nécessaires</h2><p>Avant de commencer à segmenter des images, assurez-vous d’avoir installé OpenCV sur votre système. Si ce n’est pas déjà fait, vous pouvez suivre les instructions d’installation sur le site officiel d’OpenCV.</p>
+<h2 id="Methodes-de-segmentation-d’images"><a href="#Methodes-de-segmentation-d’images" class="headerlink" title="Méthodes de segmentation d’images"></a>Méthodes de segmentation d’images</h2><h3 id="1-Thresholding"><a href="#1-Thresholding" class="headerlink" title="1. Thresholding"></a>1. Thresholding</h3><p>Le seuillage est l’une des méthodes les plus simples de segmentation d’images. Il consiste à définir un seuil et à classifier chaque pixel de l’image comme faisant partie de l’avant-plan ou de l’arrière-plan en fonction de sa valeur de luminosité.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">img = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>, <span class="number">0</span>)</span><br><span class="line">ret, thresholded_img = cv2.threshold(img, <span class="number">127</span>, <span class="number">255</span>, cv2.THRESH_BINARY)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;Thresholded Image&#x27;</span>, thresholded_img)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Contour-detection"><a href="#2-Contour-detection" class="headerlink" title="2. Contour detection"></a>2. Contour detection</h3><p>La détection de contours est une méthode avancée de segmentation qui consiste à détecter les contours des objets présents dans une image en mettant en évidence les changements soudains de luminosité.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">img = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>)</span><br><span class="line">gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)</span><br><span class="line">contours, hierarchy = cv2.findContours(gray_img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)</span><br><span class="line">cv2.drawContours(img, contours, -<span class="number">1</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">3</span>)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;Contour Image&#x27;</span>, img)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La segmentation d’images est une étape fondamentale dans le traitement d’images et la vision par ordinateur. En maîtrisant les différentes techniques de segmentation disponibles dans OpenCV, vous pourrez ouvrir la porte à de nombreuses applications passionnantes telles que la détection d’objets, la reconnaissance de formes et la surveillance vidéo. Explorez, expérimentez et laissez libre cours à votre créativité pour découvrir tout le potentiel de la segmentation d’images !</p>
+<p>N’hésitez pas à consulter la documentation officielle d’OpenCV pour en savoir plus sur les techniques avancées de segmentation d’images et les applications pratiques associées. Amusez-vous bien !</p>
  
       <!-- reward -->
       
@@ -384,7 +359,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cuisine/" rel="tag">cuisine</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
 
     </footer>
   </div>
@@ -395,7 +370,7 @@
 
     
     <article
-  id="post-Les-boissons-populaires-a-Taiwan"
+  id="post-Transformations-d-images"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -406,8 +381,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Les-boissons-populaires-a-Taiwan/"
-    >Les boissons populaires à Taiwan</a> 
+  <a class="article-title" href="/2024/03/01/Transformations-d-images/"
+    >Transformations d&#39;images</a> 
 </h2>
  
 
@@ -415,46 +390,29 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Les-boissons-populaires-a-Taiwan/" class="article-date">
-  <time datetime="2024-03-01T11:30:06.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Transformations-d-images/" class="article-date">
+  <time datetime="2024-03-01T14:25:31.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Cuisine-chinoise/">Cuisine-chinoise</a>
+    <a class="article-category-link" href="/categories/OpenCV/">OpenCV</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Cuisine-chinoise-Les-boissons-populaires-a-Taiwan"><a href="#Cuisine-chinoise-Les-boissons-populaires-a-Taiwan" class="headerlink" title="Cuisine-chinoise : Les boissons populaires à Taiwan"></a>Cuisine-chinoise : Les boissons populaires à Taiwan</h1><hr>
-<p>Bienvenue dans cet article qui vous emmènera à la découverte des boissons populaires à Taiwan, un véritable voyage des papilles au cœur de la culture taïwanaise. Préparez-vous à en apprendre davantage sur ces délicieuses boissons qui font la renommée de Taiwan à travers le monde !</p>
-<h2 id="Les-Incontournables"><a href="#Les-Incontournables" class="headerlink" title="Les Incontournables :"></a>Les Incontournables :</h2><h3 id="1-Bubble-tea-The-aux-perles"><a href="#1-Bubble-tea-The-aux-perles" class="headerlink" title="1. Bubble tea (Thé aux perles) :"></a>1. Bubble tea (Thé aux perles) :</h3><p>Le Bubble tea est sans doute la boisson la plus emblématique de Taiwan. Il se compose d’un thé glacé aromatisé, accompagné de lait ou de crème, et de perles de tapioca au fond du verre. Un exemple célèbre est le “Bubble Milk Tea” qui associe parfaitement thé noir, lait et perles de tapioca pour une explosion de saveurs en bouche.</p>
-<h3 id="2-Jian-Nang-Cha-The-aux-herbes"><a href="#2-Jian-Nang-Cha-The-aux-herbes" class="headerlink" title="2. Jian Nang Cha (Thé aux herbes) :"></a>2. Jian Nang Cha (Thé aux herbes) :</h3><p>Le Jian Nang Cha est un thé traditionnel taïwanais à base d’herbes médicinales. Il est réputé pour ses bienfaits pour la santé et son goût unique. Vous pouvez le déguster chaud ou froid, selon vos préférences. Un exemple classique est le “Five Flower Tea” mélangeant différentes fleurs pour une infusion délicate et parfumée.</p>
-<h3 id="3-Ai-Yu-Bing-Jelly-Ice"><a href="#3-Ai-Yu-Bing-Jelly-Ice" class="headerlink" title="3. Ai Yu Bing (Jelly Ice) :"></a>3. Ai Yu Bing (Jelly Ice) :</h3><p>L’Ai Yu Bing est une boisson rafraîchissante à base de gelée d’Aiyu, une plante originaire de Taiwan. Cette boisson est parfaite pour se désaltérer pendant les chaudes journées d’été. Un exemple populaire est le “Ai Yu Jelly Ice Tea” qui combine la gelée d’Aiyu avec du thé glacé pour une boisson sucrée et revigorante.</p>
-<h2 id="La-Preparation"><a href="#La-Preparation" class="headerlink" title="La Préparation :"></a>La Préparation :</h2><ol>
-<li><p><strong>Ingrédients nécessaires</strong> :</p>
-<ul>
-<li>Thé (noir, vert, oolong)</li>
-<li>Lait ou crème</li>
-<li>Perles de tapioca</li>
-<li>Herbes médicinales</li>
-<li>Gelée d’Aiyu</li>
-</ul>
-</li>
-<li><p><strong>Étapes de préparation</strong> :</p>
-<ul>
-<li>Préparez le thé selon les instructions.</li>
-<li>Faites cuire les perles de tapioca jusqu’à ce qu’elles soient tendres.</li>
-<li>Mélangez le thé avec du lait ou de la crème selon la recette.</li>
-<li>Ajoutez les perles de tapioca ou d’autres ingrédients selon la boisson choisie.</li>
-</ul>
-</li>
-</ol>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion :"></a>Conclusion :</h2><p>En conclusion, les boissons populaires à Taiwan offrent une diversité de saveurs uniques et rafraîchissantes qui séduisent les papilles du monde entier. Que vous soyez amateur de thé, de gelée ou de boissons médicinales, Taiwan saura satisfaire toutes vos envies avec ses délices à boire.</p>
-<p>Découvrez et savourez ces boissons emblématiques pour une véritable immersion gustative taïwanaise, et laissez-vous séduire par la richesse des traditions culinaires de l’île de Formose.</p>
-<p>N’attendez plus pour partir à la découverte des boissons populaires à Taiwan et laissez-vous enivrer par leurs arômes exotiques et leur fraîcheur inégalée !</p>
+  <h1 id="Article-educatif-Decouvrez-les-Transformations-d’images-avec-OpenCV"><a href="#Article-educatif-Decouvrez-les-Transformations-d’images-avec-OpenCV" class="headerlink" title="Article éducatif: Découvrez les Transformations d’images avec OpenCV"></a>Article éducatif: Découvrez les Transformations d’images avec OpenCV</h1><p>Bienvenue dans cet article dédié aux transformations d’images avec OpenCV, un outil puissant pour le traitement d’images. Les transformations d’images permettent de modifier la géométrie et l’apparence des images, ouvrant ainsi un large éventail de possibilités pour améliorer et analyser des images. Dans cet article, nous explorerons les bases des transformations d’images avec OpenCV pour vous aider à démarrer.</p>
+<h2 id="Qu’est-ce-que-les-transformations-d’images"><a href="#Qu’est-ce-que-les-transformations-d’images" class="headerlink" title="Qu’est-ce que les transformations d’images ?"></a>Qu’est-ce que les transformations d’images ?</h2><p>Les transformations d’images consistent à appliquer des modifications géométriques à une image, comme la translation, la rotation, le redimensionnement, ou la distorsion. Ces transformations sont cruciales dans le domaine du traitement d’images pour corriger les distorsions, les perspectives ou encore pour aligner des images.</p>
+<h3 id="Rotation-d’une-image"><a href="#Rotation-d’une-image" class="headerlink" title="Rotation d’une image"></a>Rotation d’une image</h3><p>L’une des transformations les plus courantes est la rotation d’une image. Avec OpenCV, vous pouvez facilement effectuer une rotation en spécifiant l’angle de rotation souhaité. Voici un exemple en Python:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>)</span><br><span class="line">h, w = image.shape[:<span class="number">2</span>]</span><br><span class="line">center = (w // <span class="number">2</span>, h // <span class="number">2</span>)</span><br><span class="line">angle = <span class="number">45</span></span><br><span class="line">rotation_matrix = cv2.getRotationMatrix2D(center, angle, <span class="number">1</span>)</span><br><span class="line">rotated_image = cv2.warpAffine(image, rotation_matrix, (w, h))</span><br><span class="line"></span><br><span class="line">cv2.imshow(<span class="string">&#x27;Rotated Image&#x27;</span>, rotated_image)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<h3 id="Redimensionnement-d’une-image"><a href="#Redimensionnement-d’une-image" class="headerlink" title="Redimensionnement d’une image"></a>Redimensionnement d’une image</h3><p>Une autre opération de transformation utile est le redimensionnement d’une image. Cela peut être utile pour ajuster la taille de l’image pour une visualisation ou pour la prétraiter avant d’autres opérations. Voici comment redimensionner une image en utilisant OpenCV:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">resized_image = cv2.resize(image, (new_width, new_height), interpolation=cv2.INTER_LINEAR)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Applications-des-transformations-d’images"><a href="#Applications-des-transformations-d’images" class="headerlink" title="Applications des transformations d’images"></a>Applications des transformations d’images</h2><p>Les transformations d’images sont largement utilisées dans de nombreux domaines tels que la vision par ordinateur, la réalité augmentée, la reconnaissance d’objets, la cartographie, etc. En maîtrisant les transformations d’images avec OpenCV, vous pourrez améliorer la qualité des images, effectuer des analyses plus précises et concevoir des applications innovantes.</p>
+<p>En conclusion, les transformations d’images avec OpenCV sont essentielles pour le traitement d’images et offrent un potentiel infini pour explorer et manipuler des images. Nous espérons que cet article vous a donné un aperçu des concepts de base des transformations d’images et vous a inspiré à explorer davantage ce domaine fascinant. Amusez-vous à expérimenter avec les transformations d’images et découvrez les possibilités infinies qui s’offrent à vous !</p>
 <hr>
-<p>À bientôt pour de nouvelles découvertes culinaires et gastronomiques ! 🍹🍵🥤</p>
+<p>N’hésitez pas à explorer davantage les transformations d’images avec OpenCV et à partager vos découvertes avec la communauté !</p>
  
       <!-- reward -->
       
@@ -465,7 +423,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cuisine/" rel="tag">cuisine</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
 
     </footer>
   </div>
@@ -476,7 +434,7 @@
 
     
     <article
-  id="post-Les-desserts-traditionnels-taiwanais"
+  id="post-Analyse-des-couleurs"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -487,8 +445,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Les-desserts-traditionnels-taiwanais/"
-    >Les desserts traditionnels taiwanais</a> 
+  <a class="article-title" href="/2024/03/01/Analyse-des-couleurs/"
+    >Analyse des couleurs</a> 
 </h2>
  
 
@@ -496,27 +454,31 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Les-desserts-traditionnels-taiwanais/" class="article-date">
-  <time datetime="2024-03-01T11:29:54.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Analyse-des-couleurs/" class="article-date">
+  <time datetime="2024-03-01T14:25:14.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Cuisine-chinoise/">Cuisine-chinoise</a>
+    <a class="article-category-link" href="/categories/OpenCV/">OpenCV</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Les-desserts-traditionnels-taiwanais"><a href="#Les-desserts-traditionnels-taiwanais" class="headerlink" title="Les desserts traditionnels taiwanais"></a>Les desserts traditionnels taiwanais</h1><p>La cuisine taïwanaise est réputée pour sa diversité et sa richesse en saveurs, et cela se retrouve également dans ses desserts traditionnels. Dans cet article, nous allons explorer quelques-uns des desserts taïwanais les plus emblématiques et délicieux.</p>
-<h2 id="Bao-bing-glace-a-raser"><a href="#Bao-bing-glace-a-raser" class="headerlink" title="Bao bing (glace à raser)"></a>Bao bing (glace à raser)</h2><p>Le <strong>bao bing</strong> est une spécialité taïwanaise rafraîchissante qui consiste en des flocons de glace fins et légers, agrémentés de divers accompagnements sucrés comme des fruits frais, des haricots rouges sucrés, des perles de tapioca et du taro. Pour déguster un bao bing authentique, il est essentiel d’avoir une glace parfaitement rasée et des ingrédients de qualité pour une explosion de saveurs en bouche.</p>
-<p>Voici un exemple de recette de bao bing simple à réaliser chez soi :</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Ingrédients :</span><br><span class="line"><span class="bullet">-</span> Glace pilée</span><br><span class="line"><span class="bullet">-</span> Fruits frais (mangue, fraise, kiwi...)</span><br><span class="line"><span class="bullet">-</span> Haricots rouges sucrés</span><br><span class="line"><span class="bullet">-</span> Perles de tapioca cuites</span><br><span class="line"><span class="bullet">-</span> Taro coupé en dés</span><br><span class="line"></span><br><span class="line">Instructions :</span><br><span class="line"><span class="bullet">1.</span> Remplissez un bol de glace pilée jusqu&#x27;à la moitié.</span><br><span class="line"><span class="bullet">2.</span> Disposez les fruits frais, les haricots rouges, les perles de tapioca et le taro sur la glace.</span><br><span class="line"><span class="bullet">3.</span> Arrosez le tout de sirop sucré ou de lait concentré sucré.</span><br><span class="line"><span class="bullet">4.</span> Dégustez en mélangeant tous les ingrédients pour découvrir une explosion de saveurs.</span><br><span class="line"></span><br><span class="line">Servez le bao bing bien frais pour une expérience gustative inoubliable !</span><br></pre></td></tr></table></figure>
+  <h1 id="Introduction-a-l’analyse-des-couleurs-avec-OpenCV"><a href="#Introduction-a-l’analyse-des-couleurs-avec-OpenCV" class="headerlink" title="Introduction à l’analyse des couleurs avec OpenCV"></a>Introduction à l’analyse des couleurs avec OpenCV</h1><p>L’analyse des couleurs est l’une des fonctionnalités les plus intéressantes et populaires de la bibliothèque OpenCV. Que vous soyez un développeur débutant ou expérimenté, comprendre comment traiter les couleurs à l’aide d’OpenCV est essentiel pour de nombreux projets de vision par ordinateur. Dans cet article, nous allons explorer les bases de l’analyse des couleurs avec OpenCV, en couvrant différents concepts et techniques pour vous aider à maîtriser cette compétence fondamentale.</p>
+<h2 id="1-Introduction-a-la-manipulation-des-couleurs"><a href="#1-Introduction-a-la-manipulation-des-couleurs" class="headerlink" title="1. Introduction à la manipulation des couleurs"></a>1. Introduction à la manipulation des couleurs</h2><p>Avant de plonger dans les détails techniques, il est important de comprendre comment les couleurs sont représentées dans OpenCV. En général, les couleurs sont souvent représentées en utilisant le modèle RGB (Rouge, Vert, Bleu), où chaque pixel est composé de trois canaux de couleur.</p>
+<p>Pour charger une image et afficher ses canaux de couleur en utilisant OpenCV, vous pouvez utiliser le code suivant :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;example.jpg&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))</span><br><span class="line">plt.axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<h2 id="Taro-balls-boules-de-taro"><a href="#Taro-balls-boules-de-taro" class="headerlink" title="Taro balls (boules de taro)"></a>Taro balls (boules de taro)</h2><p>Les <strong>taro balls</strong> sont de petites boules moelleuses et sucrées à base de taro, une racine violette naturellement sucrée très appréciée en cuisine asiatique. Ces boules sont souvent cuites puis servies dans une soupe sucrée chaude, accompagnées de perles de tapioca pour ajouter une texture intéressante.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La découverte des desserts traditionnels taïwanais est une véritable invitation au voyage gustatif. Que vous soyez un amateur de sucreries ou tout simplement curieux de goûter de nouvelles saveurs, les desserts taïwanais sauront éveiller vos papilles et vous transporter dans un univers de délices exotiques. N’hésitez pas à explorer davantage la cuisine taïwanaise et à intégrer ces desserts traditionnels dans votre répertoire culinaire pour une expérience gustative unique.</p>
-<p><em>Bonne dégustation !</em></p>
-<hr>
-<p>Avec cette structure, vous disposez d’un contenu informatif et attrayant sur les desserts traditionnels taïwanais, présenté de manière claire grâce au langage Markdown.</p>
+<h2 id="2-Extraction-des-couleurs-dominantes"><a href="#2-Extraction-des-couleurs-dominantes" class="headerlink" title="2. Extraction des couleurs dominantes"></a>2. Extraction des couleurs dominantes</h2><p>L’extraction des couleurs dominantes dans une image est une tâche courante en traitement d’images. OpenCV offre des fonctions puissantes pour extraire les couleurs les plus représentatives d’une image. Voici un exemple de code pour extraire les couleurs dominantes d’une image :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;example.jpg&#x27;</span>)</span><br><span class="line">image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)</span><br><span class="line"></span><br><span class="line">pixels = np.float32(image.reshape(-<span class="number">1</span>, <span class="number">3</span>))</span><br><span class="line"></span><br><span class="line">n_colors = <span class="number">5</span></span><br><span class="line">criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, <span class="number">200</span>, <span class="number">.1</span>)</span><br><span class="line">flags = cv2.KMEANS_RANDOM_CENTERS</span><br><span class="line"></span><br><span class="line">_, labels, palette = cv2.kmeans(pixels, n_colors, <span class="literal">None</span>, criteria, <span class="number">10</span>, flags)</span><br><span class="line"></span><br><span class="line">quantized = palette[labels.flatten()]</span><br><span class="line">quantized = quantized.reshape(image.shape)</span><br><span class="line"></span><br><span class="line">plt.imshow(quantized)</span><br><span class="line">plt.axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-Detection-des-couleurs-specifiques"><a href="#3-Detection-des-couleurs-specifiques" class="headerlink" title="3. Détection des couleurs spécifiques"></a>3. Détection des couleurs spécifiques</h2><p>La détection des couleurs spécifiques dans une image peut être réalisée en seuillant les canaux de couleur appropriés. Par exemple, supposons que vous vouliez détecter les objets rouges dans une image, vous pouvez utiliser la méthode suivante :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;example.jpg&#x27;</span>)</span><br><span class="line">hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)</span><br><span class="line"></span><br><span class="line">lower_red = np.array([<span class="number">0</span>,<span class="number">50</span>,<span class="number">50</span>])</span><br><span class="line">upper_red = np.array([<span class="number">10</span>,<span class="number">255</span>,<span class="number">255</span>])</span><br><span class="line"></span><br><span class="line">mask = cv2.inRange(hsv, lower_red, upper_red)</span><br><span class="line">result = cv2.bitwise_and(image, image, mask=mask)</span><br><span class="line"></span><br><span class="line">plt.imshow(result)</span><br><span class="line">plt.axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En résumé, l’analyse des couleurs avec OpenCV est une compétence précieuse pour tout développeur travaillant avec des images et des vidéos. En comprenant comment manipuler les couleurs, extraire les couleurs dominantes et détecter des couleurs spécifiques, vous serez en mesure de créer des applications de traitement d’images plus avancées.</p>
+<p>Que ce soit pour la reconnaissance d’objets, la segmentation d’images ou la détection de mouvements, la maîtrise de l’analyse des couleurs avec OpenCV ouvre la voie à de nombreuses applications fascinantes dans le domaine de la vision par ordinateur.</p>
+<p>N’hésitez pas à explorer davantage cette fonctionnalité puissante d’OpenCV et à expérimenter avec vos propres projets pour approfondir vos connaissances et compétences en matière d’analyse des couleurs.</p>
  
       <!-- reward -->
       
@@ -527,7 +489,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cuisine/" rel="tag">cuisine</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
 
     </footer>
   </div>
@@ -538,7 +500,7 @@
 
     
     <article
-  id="post-Guotie"
+  id="post-Detection-de-contours"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -549,8 +511,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Guotie/"
-    >Guotie</a> 
+  <a class="article-title" href="/2024/03/01/Detection-de-contours/"
+    >Détection de contours</a> 
 </h2>
  
 
@@ -558,50 +520,41 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Guotie/" class="article-date">
-  <time datetime="2024-03-01T11:19:44.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Detection-de-contours/" class="article-date">
+  <time datetime="2024-03-01T14:24:56.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Cuisine-chinoise/">Cuisine-chinoise</a>
+    <a class="article-category-link" href="/categories/OpenCV/">OpenCV</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Cuisine-chinoise-Guotie"><a href="#Cuisine-chinoise-Guotie" class="headerlink" title="Cuisine chinoise : Guotie"></a>Cuisine chinoise : Guotie</h1><p>Le <strong>Guotie</strong> (en chinois : 鍋貼) est une spécialité de la cuisine chinoise qui se traduit littéralement par “gâteau de poêle”. Aussi connu sous le nom de <strong>jiaozi</strong> ou <strong>dim sum</strong>, le Guotie est un délicieux plat à la fois croustillant à l’extérieur et tendre à l’intérieur, souvent garni de viande hachée et de légumes.</p>
-<h2 id="Ingredients-necessaires"><a href="#Ingredients-necessaires" class="headerlink" title="Ingrédients nécessaires"></a>Ingrédients nécessaires</h2><ul>
-<li>250 g de viande de porc hachée</li>
-<li>1 cuillère à soupe de sauce soja</li>
-<li>1 cuillère à café d’huile de sésame</li>
-<li>1&#x2F;2 tasse d’eau</li>
-<li>1 cuillère à café de gingembre râpé</li>
-<li>1 cuillère à café d’ail haché</li>
-<li>1 tasse de chou chinois émincé</li>
-<li>24 feuilles de pâte à jiaozi </li>
-<li>Huile végétale pour la cuisson</li>
+  <h1 id="Article-educatif-sur-la-Detection-de-contours-avec-OpenCV"><a href="#Article-educatif-sur-la-Detection-de-contours-avec-OpenCV" class="headerlink" title="Article éducatif sur la Détection de contours avec OpenCV"></a>Article éducatif sur la Détection de contours avec OpenCV</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Bienvenue dans ce guide dédié à la détection de contours avec OpenCV, une bibliothèque populaire pour le traitement d’images en vision par ordinateur. La détection de contours est une technique fondamentale en vision par ordinateur, utilisée pour extraire des informations importantes des images. Dans cet article, nous allons explorer les concepts de base de la détection de contours, comment les implémenter en utilisant OpenCV, et leurs applications potentielles.</p>
+<h2 id="Qu’est-ce-que-la-Detection-de-contours"><a href="#Qu’est-ce-que-la-Detection-de-contours" class="headerlink" title="Qu’est-ce que la Détection de contours ?"></a>Qu’est-ce que la Détection de contours ?</h2><p>La détection de contours consiste à identifier les frontières des objets présents dans une image. Ces contours sont des transitions brusques d’intensité, représentant les limites des objets. </p>
+<h2 id="Methodes-de-detection-de-contours"><a href="#Methodes-de-detection-de-contours" class="headerlink" title="Méthodes de détection de contours"></a>Méthodes de détection de contours</h2><p>OpenCV propose plusieurs algorithmes de détection de contours. Les plus couramment utilisés sont :</p>
+<ul>
+<li>Canny</li>
+<li>Sobel</li>
+<li>Laplacian</li>
 </ul>
-<h2 id="Preparation"><a href="#Preparation" class="headerlink" title="Préparation"></a>Préparation</h2><ol>
-<li><p>Dans un grand bol, mélanger la viande de porc hachée, la sauce soja, l’huile de sésame, le gingembre et l’ail.</p>
-</li>
-<li><p>Ajouter le chou chinois émincé et bien mélanger le tout.</p>
-</li>
-<li><p>Déposer une cuillère à café de farce au centre de chaque feuille de pâte à jiaozi.</p>
-</li>
-<li><p>Replier la pâte en deux pour former un demi-cercle et appuyer sur les bords pour bien sceller le Guotie.</p>
-</li>
-<li><p>Dans une poêle chaude, ajouter un peu d’huile végétale et déposer les Guotie.</p>
-</li>
-<li><p>Laisser cuire jusqu’à ce que la base des Guotie soit dorée.</p>
-</li>
-<li><p>Ajouter de l’eau dans la poêle et couvrir pour laisser cuire à la vapeur pendant quelques minutes.</p>
-</li>
-<li><p>Retirer le couvercle et laisser l’eau s’évaporer pour rendre le fond croustillant.</p>
-</li>
-</ol>
-<h2 id="Degustation"><a href="#Degustation" class="headerlink" title="Dégustation"></a>Dégustation</h2><p>Les Guotie sont généralement servis avec une sauce à base de vinaigre de riz, de sauce soja et de piment. Vous pouvez également les accompagner de riz ou d’une soupe chinoise pour un repas complet et savoureux.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Le Guotie est une spécialité incontournable de la cuisine chinoise, appréciée pour sa texture croustillante et sa garniture savoureuse. En maîtrisant cet art de la cuisine, vous pourrez surprendre vos convives avec des saveurs authentiques venues tout droit de la Chine. N’hésitez pas à expérimenter avec différentes garnitures pour personnaliser vos Guotie selon vos préférences.</p>
-<p><em>A vos fourneaux pour découvrir ou redécouvrir cette délicieuse spécialité chinoise !</em></p>
+<h2 id="Exemple-avec-l’algorithme-Canny"><a href="#Exemple-avec-l’algorithme-Canny" class="headerlink" title="Exemple avec l’algorithme Canny"></a>Exemple avec l’algorithme Canny</h2><p>Voici un exemple simple d’implémentation de la détection de contours en utilisant l’algorithme de Canny avec OpenCV en Python :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="comment"># Charger une image en niveaux de gris</span></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Appliquer l&#x27;algorithme de Canny pour détecter les contours</span></span><br><span class="line">edges = cv2.Canny(image, <span class="number">100</span>, <span class="number">200</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Afficher l&#x27;image des contours détectés</span></span><br><span class="line">cv2.imshow(<span class="string">&#x27;Contours&#x27;</span>, edges)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<p>Dans cet exemple, l’algorithme de Canny est utilisé pour détecter les contours de l’image et les afficher. Les paramètres 100 et 200 représentent les seuils minimaux et maximaux pour la détection des contours.</p>
+<h2 id="Applications-de-la-Detection-de-contours"><a href="#Applications-de-la-Detection-de-contours" class="headerlink" title="Applications de la Détection de contours"></a>Applications de la Détection de contours</h2><p>La détection de contours est largement utilisée dans de nombreuses applications, telles que :</p>
+<ul>
+<li>Détection d’objets</li>
+<li>Reconnaissance de formes</li>
+<li>Segmentation d’images</li>
+<li>Analyse de mouvement</li>
+</ul>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La détection de contours est une technique essentielle en traitement d’images et en vision par ordinateur. Avec les algorithmes disponibles dans OpenCV, il est possible d’extraire des informations précieuses des images pour diverses applications. En maîtrisant les concepts de base de la détection de contours, vous serez en mesure d’explorer de nouvelles possibilités dans le domaine de la vision par ordinateur.</p>
+<p>N’hésitez pas à expérimenter avec les différents algorithmes de détection de contours disponibles dans OpenCV et à explorer les multiples applications de cette technique puissante.</p>
+<p><em>Article rédigé par [Votre Nom]</em></p>
+<hr>
+<p>Cet article éducatif a couvert les fondamentaux de la détection de contours avec OpenCV, en explorant les concepts clés, en présentant des exemples pratiques, et en mettant en avant les applications potentielles. J’espère que vous avez trouvé ces informations utiles et inspirantes pour explorer davantage ce passionnant domaine.</p>
  
       <!-- reward -->
       
@@ -612,7 +565,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cuisine/" rel="tag">cuisine</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
 
     </footer>
   </div>
@@ -623,7 +576,7 @@
 
     
     <article
-  id="post-Zhajiangmian"
+  id="post-Filtrage-d-images"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -634,8 +587,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Zhajiangmian/"
-    >Zhajiangmian</a> 
+  <a class="article-title" href="/2024/03/01/Filtrage-d-images/"
+    >Filtrage d&#39;images</a> 
 </h2>
  
 
@@ -643,51 +596,39 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Zhajiangmian/" class="article-date">
-  <time datetime="2024-03-01T11:17:07.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Filtrage-d-images/" class="article-date">
+  <time datetime="2024-03-01T14:24:39.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Cuisine-chinoise/">Cuisine-chinoise</a>
+    <a class="article-category-link" href="/categories/OpenCV/">OpenCV</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Cuisine-chinoise-Zhajiangmian"><a href="#Cuisine-chinoise-Zhajiangmian" class="headerlink" title="Cuisine chinoise : Zhajiangmian"></a>Cuisine chinoise : Zhajiangmian</h1><p>La cuisine chinoise regorge de plats délicieux et variés, dont le Zhajiangmian, un plat traditionnel très populaire en Chine. Dans cet article, nous allons explorer en détail ce mets délicieux et vous apprendre comment le préparer chez vous.</p>
-<h2 id="Qu’est-ce-que-le-Zhajiangmian"><a href="#Qu’est-ce-que-le-Zhajiangmian" class="headerlink" title="Qu’est-ce que le Zhajiangmian ?"></a>Qu’est-ce que le Zhajiangmian ?</h2><p>Le Zhajiangmian est un plat chinois composé de nouilles garnies d’une sauce Zhajiang, à base de viande hachée, de légumes et de sauces aromatiques. Ce plat est apprécié pour son mélange de saveurs riches et équilibrées.</p>
-<h3 id="Ingredients-necessaires"><a href="#Ingredients-necessaires" class="headerlink" title="Ingrédients nécessaires :"></a>Ingrédients nécessaires :</h3><ul>
-<li>Nouilles chinoises fraîches</li>
-<li>Viande hachée</li>
-<li>Oignon</li>
-<li>Ail</li>
-<li>Sauce soja</li>
-<li>Sauce hoisin</li>
-<li>Sauce aux haricots noirs</li>
-</ul>
-<h2 id="Preparation-du-Zhajiangmian"><a href="#Preparation-du-Zhajiangmian" class="headerlink" title="Préparation du Zhajiangmian"></a>Préparation du Zhajiangmian</h2><ol>
-<li><p><strong>Préparation de la sauce Zhajiang</strong> :</p>
-<ul>
-<li>Faire revenir la viande hachée avec l’oignon et l’ail dans une poêle jusqu’à ce qu’elle soit bien dorée.</li>
-<li>Ajouter la sauce soja, la sauce hoisin et la sauce aux haricots noirs. Laisser mijoter doucement pour que les saveurs se mélangent harmonieusement.</li>
-</ul>
-</li>
-<li><p><strong>Cuisson des nouilles</strong> :</p>
-<ul>
-<li>Faire cuire les nouilles chinoises selon les indications sur l’emballage. Les égoutter une fois cuites.</li>
-</ul>
-</li>
-<li><p><strong>Assemblage du plat</strong> :</p>
-<ul>
-<li>Disposer les nouilles cuites dans une assiette, puis verser généreusement la sauce Zhajiang par-dessus.</li>
-<li>Mélanger délicatement pour que les nouilles soient bien enrobées de sauce.</li>
-</ul>
-</li>
-</ol>
-<h2 id="Conseils-de-degustation"><a href="#Conseils-de-degustation" class="headerlink" title="Conseils de dégustation"></a>Conseils de dégustation</h2><p>Pour accompagner votre Zhajiangmian, vous pouvez ajouter des garnitures comme des concombres frais coupés en julienne, des œufs durs en tranches fines ou des graines de sésame grillées pour encore plus de saveurs et de textures.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Le Zhajiangmian est un plat traditionnel chinois délicieux et simple à préparer chez soi. En suivant attentivement les étapes de la recette, vous pourrez profiter de ce mets savoureux et exotique sans avoir à quitter votre cuisine. Alors n’hésitez pas à vous lancer et à découvrir les délices de la cuisine chinoise à travers ce plat emblématique.</p>
+  <h1 id="Article-educatif-Introduction-au-Filtrage-d’images-avec-OpenCV"><a href="#Article-educatif-Introduction-au-Filtrage-d’images-avec-OpenCV" class="headerlink" title="Article éducatif : Introduction au Filtrage d’images avec OpenCV"></a>Article éducatif : Introduction au Filtrage d’images avec OpenCV</h1><hr>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Le filtrage d’images est une technique essentielle en traitement d’images permettant d’améliorer la qualité des images, de réduire le bruit ou d’extraire des informations spécifiques. Dans cet article, nous allons explorer les bases du filtrage d’images en utilisant la bibliothèque OpenCV, très populaire dans le domaine de la vision par ordinateur.</p>
 <hr>
-<p><em>En espérant que cet article vous aide à apprécier le Zhajiangmian et la cuisine chinoise en général !</em></p>
+<h2 id="Qu’est-ce-que-le-filtrage-d’images"><a href="#Qu’est-ce-que-le-filtrage-d’images" class="headerlink" title="Qu’est-ce que le filtrage d’images?"></a>Qu’est-ce que le filtrage d’images?</h2><p>Le filtrage d’images consiste à appliquer une transformation à une image en passant par un masque ou un noyau. Ce masque agit comme un filtre qui modifie les pixels de l’image en fonction de leur voisinage. Il existe différents types de filtrage, mais les plus communs sont le filtrage linéaire et le filtrage non linéaire.</p>
+<h3 id="Exemple"><a href="#Exemple" class="headerlink" title="Exemple:"></a>Exemple:</h3><p>Considérons une image en niveaux de gris où chaque pixel est représenté par une valeur de luminosité. En appliquant un filtre de lissage, les pixels de l’image seront modifiés en prenant en compte les valeurs de leurs voisins, créant ainsi une image plus douce et moins bruitée.</p>
+<hr>
+<h2 id="Filtrage-lineaire"><a href="#Filtrage-lineaire" class="headerlink" title="Filtrage linéaire"></a>Filtrage linéaire</h2><p>Le filtrage linéaire est une opération mathématique qui consiste à calculer la nouvelle valeur d’un pixel en fonction des valeurs de ses voisins pondérées par un noyau prédéfini. Les filtres linéaires les plus courants sont le filtre de convolution et le filtre de moyenne.</p>
+<h3 id="Exemple-1"><a href="#Exemple-1" class="headerlink" title="Exemple:"></a>Exemple:</h3><p>Voici un exemple de code en Python utilisant OpenCV pour appliquer un filtre de moyenne à une image:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>)</span><br><span class="line">kernel = np.ones((<span class="number">5</span>,<span class="number">5</span>),np.float32)/<span class="number">25</span></span><br><span class="line">filtered_image = cv2.filter2D(image, -<span class="number">1</span>, kernel)</span><br><span class="line"></span><br><span class="line">cv2.imshow(<span class="string">&#x27;Filtered Image&#x27;</span>, filtered_image)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<p>Dans cet exemple, nous avons créé un kernel 5x5 pour effectuer une moyenne locale sur l’image.</p>
+<hr>
+<h2 id="Filtrage-non-lineaire"><a href="#Filtrage-non-lineaire" class="headerlink" title="Filtrage non linéaire"></a>Filtrage non linéaire</h2><p>Contrairement au filtrage linéaire, le filtrage non linéaire n’implique pas seulement une combinaison linéaire des pixels. Il comprend des opérations telles que la médiane, le maximum, le minimum et bien d’autres.</p>
+<h3 id="Exemple-2"><a href="#Exemple-2" class="headerlink" title="Exemple:"></a>Exemple:</h3><p>Voici un exemple de filtrage médian en utilisant OpenCV:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>)</span><br><span class="line">filtered_image = cv2.medianBlur(image, <span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">cv2.imshow(<span class="string">&#x27;Median Filtered Image&#x27;</span>, filtered_image)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<p>Dans cet exemple, la fonction <code>medianBlur</code> remplace chaque pixel par la médiane des pixels voisins, ce qui est efficace pour réduire le bruit de type impulsionnel.</p>
+<hr>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Le filtrage d’images est une technique puissante pour améliorer la qualité des images en réduisant le bruit, en renforçant les contours ou en extrayant des caractéristiques spécifiques. En explorant les techniques de filtrage linéaire et non linéaire avec OpenCV, vous serez en mesure de manipuler et d’améliorer vos images de manière significative.</p>
+<p>Le filtrage d’images est largement utilisé dans de nombreux domaines tels que la reconnaissance de formes, la vision par ordinateur, la surveillance vidéo et la réalité augmentée, offrant ainsi un large champ d’applications pratiques.</p>
+<hr>
+<p>En suivant ce guide, vous avez maintenant acquis les connaissances de base sur le filtrage d’images avec OpenCV. Explorez davantage les différents types de filtres et expérimentez-les pour découvrir l’impact qu’ils peuvent avoir sur vos images. N’ayez pas peur d’expérimenter et de laisser libre cours à votre créativité !</p>
  
       <!-- reward -->
       
@@ -698,7 +639,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cuisine/" rel="tag">cuisine</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
 
     </footer>
   </div>
@@ -709,7 +650,7 @@
 
     
     <article
-  id="post-Poulet-au-gingembre"
+  id="post-Operations-arithmetiques-et-logiques"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -720,8 +661,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Poulet-au-gingembre/"
-    >Poulet au gingembre</a> 
+  <a class="article-title" href="/2024/03/01/Operations-arithmetiques-et-logiques/"
+    >Opérations arithmétiques et logiques</a> 
 </h2>
  
 
@@ -729,55 +670,31 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Poulet-au-gingembre/" class="article-date">
-  <time datetime="2024-03-01T11:15:04.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Operations-arithmetiques-et-logiques/" class="article-date">
+  <time datetime="2024-03-01T14:24:21.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Cuisine-chinoise/">Cuisine-chinoise</a>
+    <a class="article-category-link" href="/categories/OpenCV/">OpenCV</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Tout-savoir-sur-le-Poulet-au-gingembre"><a href="#Tout-savoir-sur-le-Poulet-au-gingembre" class="headerlink" title="Tout savoir sur le Poulet au gingembre"></a>Tout savoir sur le Poulet au gingembre</h1><p>Le Poulet au gingembre est un plat délicieux et équilibré qui mêle saveurs douces et épicées. Dans cet article, nous allons explorer les étapes pour préparer ce plat savoureux. Voici ce que nous allons aborder :</p>
-<ol>
-<li><strong>Ingrédients nécessaires</strong></li>
-<li><strong>Préparation</strong></li>
-<li><strong>Cuisson</strong></li>
-<li><strong>Service</strong></li>
-<li><strong>Conclusion</strong></li>
-</ol>
+  <h1 id="Article-educatif-Les-Operations-arithmetiques-et-logiques-en-OpenCV"><a href="#Article-educatif-Les-Operations-arithmetiques-et-logiques-en-OpenCV" class="headerlink" title="Article éducatif : Les Opérations arithmétiques et logiques en OpenCV"></a>Article éducatif : Les Opérations arithmétiques et logiques en OpenCV</h1><p>Bonjour chers lecteurs ! Aujourd’hui, nous allons plonger dans le monde fascinant des opérations arithmétiques et logiques en OpenCV. Ces opérations sont essentielles pour manipuler et traiter efficacement des images. Dans cet article, nous allons découvrir ce que sont ces opérations, comment les utiliser, et quelles applications pratiques elles peuvent avoir. </p>
+<h2 id="Introduction-aux-Operations-arithmetiques-et-logiques"><a href="#Introduction-aux-Operations-arithmetiques-et-logiques" class="headerlink" title="Introduction aux Opérations arithmétiques et logiques"></a>Introduction aux Opérations arithmétiques et logiques</h2><p>Les opérations arithmétiques et logiques en OpenCV permettent de réaliser des calculs simples ou complexes sur des images. Ces opérations permettent de modifier la luminosité, le contraste, fusionner des images, ou encore effectuer des opérations booléennes. Elles sont indispensables dans le traitement d’images pour effectuer des transformations et des filtrages.</p>
+<h2 id="Operations-arithmetiques"><a href="#Operations-arithmetiques" class="headerlink" title="Opérations arithmétiques"></a>Opérations arithmétiques</h2><p>Les opérations arithmétiques de base sont l’addition et la soustraction d’images. Voici un exemple simple en OpenCV :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="comment"># Charger deux images</span></span><br><span class="line">image1 = cv2.imread(<span class="string">&#x27;image1.jpg&#x27;</span>)</span><br><span class="line">image2 = cv2.imread(<span class="string">&#x27;image2.jpg&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Addition des deux images</span></span><br><span class="line">result = cv2.add(image1, image2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Afficher le résultat</span></span><br><span class="line">cv2.imshow(<span class="string">&#x27;Résultat&#x27;</span>, result)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<p>Cette opération va ajouter les valeurs des pixels de chaque image pour produire une nouvelle image résultante.</p>
+<h2 id="Operations-logiques"><a href="#Operations-logiques" class="headerlink" title="Opérations logiques"></a>Opérations logiques</h2><p>Les opérations logiques les plus courantes sont l’ET logique, l’OU logique et le NON logique. Elles sont souvent utilisées pour combiner différentes masques binaires. Voici un exemple pour illustrer l’opération logique ET :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="comment"># Charger une image</span></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Convertir l&#x27;image en niveaux de gris</span></span><br><span class="line">gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Appliquer un seuillage</span></span><br><span class="line">_, threshold = cv2.threshold(gray_image, <span class="number">127</span>, <span class="number">255</span>, cv2.THRESH_BINARY)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Opération logique ET avec un masque</span></span><br><span class="line">result = cv2.bitwise_and(image, image, mask=threshold)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Afficher le résultat</span></span><br><span class="line">cv2.imshow(<span class="string">&#x27;Résultat&#x27;</span>, result)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<p>Cette opération va appliquer le masque binaire sur l’image d’origine, ne conservant que les pixels où le masque est blanc.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, les opérations arithmétiques et logiques en OpenCV sont des outils puissants pour manipuler des images de manière précise et efficace. Que ce soit pour corriger des défauts, améliorer la qualité des images, ou segmenter des éléments spécifiques, ces opérations offrent de nombreuses possibilités d’application. En les maîtrisant, vous serez en mesure de réaliser des traitements avancés sur vos images en toute simplicité.</p>
+<p>N’hésitez pas à explorer davantage ces opérations et à les intégrer dans vos projets pour des résultats impressionnants !</p>
 <hr>
-<h2 id="1-Ingredients-necessaires"><a href="#1-Ingredients-necessaires" class="headerlink" title="1. Ingrédients nécessaires"></a>1. Ingrédients nécessaires</h2><ul>
-<li>500g de blancs de poulet</li>
-<li>1 morceau de gingembre frais</li>
-<li>2 gousses d’ail</li>
-<li>Sauce soja</li>
-<li>Huile de sésame</li>
-<li>Sel et poivre</li>
-<li>Légumes au choix (poivrons, brocolis, carottes)</li>
-</ul>
-<hr>
-<h2 id="2-Preparation"><a href="#2-Preparation" class="headerlink" title="2. Préparation"></a>2. Préparation</h2><ol>
-<li>Coupez le poulet en morceaux et assaisonnez-les avec du sel, du poivre, de la sauce soja et de l’huile de sésame.</li>
-<li>Râpez le gingembre et écrasez l’ail.</li>
-<li>Faites chauffer un peu d’huile dans une poêle ou un wok.</li>
-<li>Ajoutez le gingembre râpé et l’ail écrasé pour parfumer l’huile.</li>
-<li>Faites revenir le poulet pour le saisir.</li>
-</ol>
-<hr>
-<h2 id="3-Cuisson"><a href="#3-Cuisson" class="headerlink" title="3. Cuisson"></a>3. Cuisson</h2><ol>
-<li>Ajoutez les légumes coupés en morceaux dans la poêle.</li>
-<li>Versez un peu d’eau et laissez mijoter à feu doux pendant 10-15 minutes jusqu’à ce que le poulet soit cuit.</li>
-<li>Rectifiez l’assaisonnement si nécessaire en ajoutant un peu de sauce soja.</li>
-</ol>
-<hr>
-<h2 id="4-Service"><a href="#4-Service" class="headerlink" title="4. Service"></a>4. Service</h2><p>Servez le Poulet au gingembre chaud, accompagné de riz basmati ou de nouilles sautées. Vous pouvez parsemer de graines de sésame ou de ciboulette ciselée pour la touche finale.</p>
-<hr>
-<h2 id="5-Conclusion"><a href="#5-Conclusion" class="headerlink" title="5. Conclusion"></a>5. Conclusion</h2><p>Le Poulet au gingembre est un plat polyvalent et savoureux qui se marie parfaitement avec différentes garnitures. Vous pouvez personnaliser la recette en y ajoutant vos légumes préférés ou en ajustant les épices selon vos goûts. Essayez différentes combinaisons pour explorer de nouveaux horizons culinaires !</p>
-<hr>
-<p>En suivant ces étapes simples, vous pourrez préparer un délicieux Poulet au gingembre pour vous et vos proches. Bon appétit !</p>
+<p>J’espère que cet article vous a permis de mieux appréhender les opérations arithmétiques et logiques en OpenCV. N’hésitez pas à partager vos retours et à poser vos questions dans les commentaires. Merci de votre lecture et à bientôt pour de nouvelles explorations dans le monde passionnant de la vision par ordinateur !</p>
  
       <!-- reward -->
       
@@ -788,7 +705,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cuisine-chinoise/" rel="tag">Cuisine chinoise</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
 
     </footer>
   </div>
@@ -799,7 +716,7 @@
 
     
     <article
-  id="post-Poulet-au-coca-cola"
+  id="post-Traitement-d-images"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -810,8 +727,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Poulet-au-coca-cola/"
-    >Poulet au coca-cola</a> 
+  <a class="article-title" href="/2024/03/01/Traitement-d-images/"
+    >Traitement d&#39;images</a> 
 </h2>
  
 
@@ -819,56 +736,32 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Poulet-au-coca-cola/" class="article-date">
-  <time datetime="2024-03-01T11:12:07.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Traitement-d-images/" class="article-date">
+  <time datetime="2024-03-01T14:24:06.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/cuisine/">cuisine</a>
+    <a class="article-category-link" href="/categories/OpenCV/">OpenCV</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Le-Poulet-au-Coca-Cola-Un-Plat-Surprenant-et-Delicieux"><a href="#Le-Poulet-au-Coca-Cola-Un-Plat-Surprenant-et-Delicieux" class="headerlink" title="Le Poulet au Coca-Cola : Un Plat Surprenant et Délicieux"></a>Le Poulet au Coca-Cola : Un Plat Surprenant et Délicieux</h1><p>Le Poulet au Coca-Cola est une recette étonnante qui marie subtilement le sucré et le salé pour un résultat savoureux et tendre. Dans cet article, nous allons vous guider pas à pas pour réaliser ce plat délicieux qui surprendra vos convives.</p>
-<h2 id="Ingredients-necessaires"><a href="#Ingredients-necessaires" class="headerlink" title="Ingrédients nécessaires :"></a>Ingrédients nécessaires :</h2><ul>
-<li>4 filets de poulet</li>
-<li>1 bouteille de Coca-Cola</li>
-<li>1 oignon</li>
-<li>2 gousses d’ail</li>
-<li>Sauce soja</li>
-<li>Ketchup</li>
-<li>Huile d’olive</li>
-<li>Sel et poivre</li>
-</ul>
-<h2 id="Etapes-de-preparation"><a href="#Etapes-de-preparation" class="headerlink" title="Étapes de préparation :"></a>Étapes de préparation :</h2><ol>
-<li><p><strong>Préparation de la marinade</strong> :</p>
-<ul>
-<li>Dans un bol, mélangez 1 tasse de Coca-Cola, 2 cuillères à soupe de sauce soja, 2 cuillères à soupe de ketchup, de l’ail émincé, du sel et du poivre.</li>
-<li>Plongez les filets de poulet dans cette marinade et laissez reposer au réfrigérateur pendant au moins 2 heures.</li>
-</ul>
-</li>
-<li><p><strong>Cuisson du poulet</strong> :</p>
-<ul>
-<li>Dans une poêle, faites chauffer un peu d’huile d’olive.</li>
-<li>Émincez l’oignon et ajoutez-le dans la poêle.</li>
-<li>Ajoutez les filets de poulet avec leur marinade et laissez cuire à feu moyen pendant environ 20 minutes en retournant les filets régulièrement.</li>
-</ul>
-</li>
-<li><p><strong>Réduction de la sauce</strong> :</p>
-<ul>
-<li>Une fois le poulet cuit, retirez-le de la poêle et réservez-le au chaud.</li>
-<li>Faites réduire la sauce à feu vif en remuant régulièrement jusqu’à ce qu’elle épaississe.</li>
-</ul>
-</li>
-<li><p><strong>Service</strong> :</p>
-<ul>
-<li>Nappez les filets de poulet de la sauce réduite et servez chaud avec du riz ou des légumes de votre choix.</li>
-</ul>
-</li>
-</ol>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion :"></a>Conclusion :</h2><p>Le Poulet au Coca-Cola est une recette surprenante mais délicieuse à essayer pour surprendre vos proches lors de vos repas. Son mélange unique de saveurs sucrées et salées en fait un plat original et savoureux. N’hésitez pas à personnaliser la recette en ajoutant des épices ou des herbes aromatiques pour un résultat encore plus riche en saveurs.</p>
-<p>Amusez-vous en cuisine et régalez-vous avec ce Poulet au Coca-Cola !</p>
+  <h1 id="Article-educatif-OpenCV-Traitement-d’images"><a href="#Article-educatif-OpenCV-Traitement-d’images" class="headerlink" title="Article éducatif : OpenCV - Traitement d’images"></a>Article éducatif : OpenCV - Traitement d’images</h1><p>Bienvenue dans ce guide dédié aux débutants en OpenCV ! Aujourd’hui, nous allons plonger dans le fascinant monde du traitement d’images en utilisant OpenCV. Que vous soyez un étudiant curieux ou un développeur en herbe, ce tutoriel vous fournira les bases nécessaires pour comprendre et maîtriser le traitement d’images.</p>
+<h2 id="Introduction-au-traitement-d’images"><a href="#Introduction-au-traitement-d’images" class="headerlink" title="Introduction au traitement d’images"></a>Introduction au traitement d’images</h2><p>Le traitement d’images est un domaine de l’informatique qui consiste à effectuer des opérations sur des images numériques afin de les améliorer, les analyser ou en extraire des informations. Avec OpenCV, une puissante bibliothèque open-source dédiée à la vision par ordinateur, vous pouvez réaliser toutes sortes de transformations sur des images.</p>
+<h2 id="Les-concepts-de-base"><a href="#Les-concepts-de-base" class="headerlink" title="Les concepts de base"></a>Les concepts de base</h2><h3 id="Chargement-d’une-image"><a href="#Chargement-d’une-image" class="headerlink" title="Chargement d’une image"></a>Chargement d’une image</h3><p>Pour commencer, chargeons une image à partir d’un fichier et affichons-la à l’écran :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;Image&#x27;</span>, image)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<h3 id="Conversion-en-niveaux-de-gris"><a href="#Conversion-en-niveaux-de-gris" class="headerlink" title="Conversion en niveaux de gris"></a>Conversion en niveaux de gris</h3><p>Il est souvent utile de convertir une image en niveaux de gris pour simplifier le traitement. Voici comment le faire avec OpenCV :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;Gray Image&#x27;</span>, gray_image)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<h3 id="Application-de-filtres"><a href="#Application-de-filtres" class="headerlink" title="Application de filtres"></a>Application de filtres</h3><p>Les filtres permettent d’effectuer des transformations sur une image, comme le lissage ou la détection de contours. Voici un exemple de l’application d’un filtre de flou :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">blurred_image = cv2.GaussianBlur(image, (<span class="number">5</span>, <span class="number">5</span>), <span class="number">0</span>)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;Blurred Image&#x27;</span>, blurred_image)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, le traitement d’images avec OpenCV offre un potentiel immense dans de nombreux domaines tels que la reconnaissance faciale, la détection d’objets, la réalité augmentée, etc. En comprenant les bases du traitement d’images, vous pourrez explorer ces applications passionnantes et développer des projets innovants.</p>
+<p>N’oubliez pas de pratiquer régulièrement et d’explorer davantage les fonctionnalités d’OpenCV pour approfondir vos connaissances en traitement d’images. Bonne découverte !</p>
+<hr>
+<p>Pour plus d’informations sur OpenCV, consultez la <a target="_blank" rel="noopener" href="https://docs.opencv.org/">documentation officielle</a>.</p>
  
       <!-- reward -->
       
@@ -879,7 +772,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cuisine-chinoise/" rel="tag">Cuisine-chinoise</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
 
     </footer>
   </div>
@@ -895,7 +788,7 @@
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">Page précédente</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/3/">Page suivante</a>
+    <a class="extend prev" rel="prev" href="/">Page précédente</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/3/">Page suivante</a>
   </nav>
   
 </section>
@@ -961,6 +854,10 @@
     
     <li class="nav-item">
       <a class="nav-item-link" href="/categories/Python/">Python</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/OpenCV/">OpenCV</a>
     </li>
     
     <li class="nav-item">

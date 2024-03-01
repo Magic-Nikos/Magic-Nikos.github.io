@@ -111,7 +111,7 @@
     
     
     <article
-  id="post-Developpement-de-plugins-et-extensions-pour-SciPy"
+  id="post-Caracteristiques-de-la-poesie-Tang"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -122,8 +122,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Developpement-de-plugins-et-extensions-pour-SciPy/"
-    >Développement de plugins et extensions pour SciPy</a> 
+  <a class="article-title" href="/2024/03/01/Caracteristiques-de-la-poesie-Tang/"
+    >Caractéristiques de la poésie Tang</a> 
 </h2>
  
 
@@ -131,31 +131,33 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Developpement-de-plugins-et-extensions-pour-SciPy/" class="article-date">
-  <time datetime="2024-03-01T08:09:14.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Caracteristiques-de-la-poesie-Tang/" class="article-date">
+  <time datetime="2024-03-01T11:36:46.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
+    <a class="article-category-link" href="/categories/Poemes-de-la-dynastie-Tang/">Poemes-de-la-dynastie-Tang</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Developpement-de-plugins-et-extensions-pour-SciPy"><a href="#Developpement-de-plugins-et-extensions-pour-SciPy" class="headerlink" title="Développement de plugins et extensions pour SciPy"></a>Développement de plugins et extensions pour SciPy</h1><p>Dans cet article, nous allons explorer comment développer des plugins et des extensions pour SciPy, une bibliothèque open-source très utilisée pour les calculs scientifiques en Python. Les plugins et extensions permettent d’étendre les fonctionnalités de SciPy et de contribuer à la communauté scientifique.</p>
-<h2 id="Introduction-a-SciPy"><a href="#Introduction-a-SciPy" class="headerlink" title="Introduction à SciPy"></a>Introduction à SciPy</h2><p>Avant de plonger dans le développement de plugins et extensions, familiarisons-nous brièvement avec SciPy. SciPy est une bibliothèque Python qui offre des modules spécialisés pour l’optimisation, l’algèbre linéaire, l’intégration, l’interpolation, la transformation de Fourier, le traitement du signal et bien plus encore. Elle est basée sur NumPy, une autre bibliothèque Python essentielle pour le calcul scientifique.</p>
-<h2 id="Creation-d’un-plugin-simple"><a href="#Creation-d’un-plugin-simple" class="headerlink" title="Création d’un plugin simple"></a>Création d’un plugin simple</h2><p>Commençons par créer un plugin simple pour SciPy. Imaginons que nous souhaitions ajouter une fonction personnalisée d’interpolation. Voici un exemple de code pour créer un plugin d’interpolation linéaire :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.interpolate <span class="keyword">import</span> interp1d</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">custom_linear_interpolation</span>(<span class="params">x, y</span>):</span><br><span class="line">    <span class="keyword">return</span> interp1d(x, y, kind=<span class="string">&#x27;linear&#x27;</span>)</span><br></pre></td></tr></table></figure>
+  <h1 id="Les-Caracteristiques-de-la-Poesie-de-la-Dynastie-Tang"><a href="#Les-Caracteristiques-de-la-Poesie-de-la-Dynastie-Tang" class="headerlink" title="Les Caractéristiques de la Poésie de la Dynastie Tang"></a>Les Caractéristiques de la Poésie de la Dynastie Tang</h1><p>La poésie de la dynastie Tang est considérée comme l’un des âges d’or de la poésie chinoise, marquant une période de créativité et d’épanouissement artistique. Les caractéristiques qui définissent la poésie Tang sont essentielles pour mieux comprendre et apprécier ce genre littéraire. Dans cet article, nous explorerons ces caractéristiques en détail pour les débutants.</p>
+<h2 id="1-Forme-et-Structure"><a href="#1-Forme-et-Structure" class="headerlink" title="1. Forme et Structure"></a>1. Forme et Structure</h2><p>La poésie Tang se caractérise par son utilisation de la forme régulière du quatrain chinois, connu sous le nom de “jueju” en chinois. Chaque quatrain se compose de quatre lignes de cinq ou sept caractères, reflétant un équilibre et une harmonie dans la structure du poème.</p>
+<p>Exemple de jueju :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">白日依山尽，黄河入海流。</span><br><span class="line">欲穷千里目，更上一层楼。</span><br></pre></td></tr></table></figure>
 
-<p>Dans cet exemple, nous avons créé une fonction <code>custom_linear_interpolation</code> qui utilise la fonction <code>interp1d</code> de SciPy pour réaliser une interpolation linéaire.</p>
-<h2 id="Developpement-d’une-extension-avec-Cython"><a href="#Developpement-d’une-extension-avec-Cython" class="headerlink" title="Développement d’une extension avec Cython"></a>Développement d’une extension avec Cython</h2><p>Pour étendre les fonctionnalités de SciPy en utilisant du code plus performant, vous pouvez utiliser Cython. Cython est un langage qui permet d’écrire du code C optimisé pour Python. Voici un exemple de code Cython pour une extension de calcul d’intégrale :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># extension_cython.pyx</span></span><br><span class="line">cdef extern <span class="keyword">from</span> <span class="string">&quot;math.h&quot;</span>:</span><br><span class="line">    double exp(double)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">custom_exp_integral</span>(<span class="params">double x</span>):</span><br><span class="line">    <span class="keyword">return</span> exp(x)</span><br></pre></td></tr></table></figure>
+<h2 id="2-Themes-et-Sujets"><a href="#2-Themes-et-Sujets" class="headerlink" title="2. Thèmes et Sujets"></a>2. Thèmes et Sujets</h2><p>Les poèmes de la dynastie Tang abordent souvent des thèmes tels que l’amour, la nature, la mélancolie et la vie quotidienne. Les poètes Tang exprimaient leurs émotions de manière subtile et élégante, créant une atmosphère poétique profonde et émouvante.</p>
+<p>Exemple de thème de la nature :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">春江花朝秋月夜，</span><br><span class="line">往事足今安不在。</span><br></pre></td></tr></table></figure>
 
-<p>Ensuite, vous pouvez compiler ce fichier Cython en utilisant un script de compilation approprié pour l’intégrer à votre projet SciPy.</p>
-<h2 id="Packaging-et-distribution-de-l’extension"><a href="#Packaging-et-distribution-de-l’extension" class="headerlink" title="Packaging et distribution de l’extension"></a>Packaging et distribution de l’extension</h2><p>Une fois que vous avez créé votre plugin ou extension, vous pouvez le distribuer en l’empaquetant correctement. Utilisez des outils comme setuptools pour définir les dépendances et les métadonnées de votre extension. Voici un exemple de fichier <code>setup.py</code> pour un plugin fictif :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> setup</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    name=<span class="string">&#x27;mon_extension&#x27;</span>,</span><br><span class="line">    version=<span class="string">&#x27;0.1&#x27;</span>,</span><br><span class="line">    py_modules=[<span class="string">&#x27;mon_extension&#x27;</span>],</span><br><span class="line">    install_requires=[<span class="string">&#x27;scipy&#x27;</span>],</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h2 id="3-Symbolisme-et-Imagerie"><a href="#3-Symbolisme-et-Imagerie" class="headerlink" title="3. Symbolisme et Imagerie"></a>3. Symbolisme et Imagerie</h2><p>La poésie Tang est riche en symbolisme et en imagerie poétique, utilisant des métaphores et des descriptions sensorielles pour créer des images vivantes et suggestives. Les poètes Tang étaient habiles à capturer la beauté et la complexité du monde qui les entourait.</p>
+<p>Exemple d’imagerie poétique :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">明月出天山，苍茫云海间。</span><br><span class="line">长风几万里，吹度玉门关。</span><br></pre></td></tr></table></figure>
 
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, le développement de plugins et d’extensions pour SciPy offre une opportunité unique de contribuer à la communauté scientifique en étendant les fonctionnalités de cette bibliothèque puissante. En explorant les capacités de SciPy et en partageant vos extensions, vous pouvez ouvrir la voie à de nouvelles applications et découvertes passionnantes dans le domaine des calculs scientifiques. Alors n’hésitez pas à développer vos propres plugins et extensions pour enrichir l’écosystème de SciPy !</p>
+<h2 id="4-Elegance-et-Raffinement"><a href="#4-Elegance-et-Raffinement" class="headerlink" title="4. Elégance et Raffinement"></a>4. Elégance et Raffinement</h2><p>L’élégance et le raffinement sont des traits distinctifs de la poésie Tang, où chaque mot est soigneusement choisi pour sa signification et sa sonorité. Les poètes Tang maîtrisaient l’art de la concision et de la suggestion, créant des poèmes d’une grande beauté esthétique.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Comprendre les caractéristiques de la poésie de la dynastie Tang permet d’apprécier pleinement la richesse et la finesse de ce genre littéraire. En explorant la forme, les thèmes, l’imagerie et l’élégance des poèmes Tang, on peut développer une sensibilité artistique et une appréciation de la culture chinoise traditionnelle. Les applications de ces caractéristiques dans la création poétique contemporaine offrent une opportunité de dialogue entre le passé et le présent, enrichissant ainsi notre compréhension de la poésie dans son ensemble.</p>
+<p><em>Nous espérons que cet article vous a donné un aperçu éclairant des caractéristiques de la poésie Tang. N’hésitez pas à explorer davantage ce riche héritage littéraire pour découvrir toute sa beauté et sa profondeur.</em></p>
  
       <!-- reward -->
       
@@ -166,7 +168,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/litterature/" rel="tag">littérature</a></li></ul>
 
     </footer>
   </div>
@@ -177,7 +179,7 @@
 
     
     <article
-  id="post-SciPy-avec-d-autres-bibliotheques-Python"
+  id="post-Les-grands-poetes-de-la-dynastie-Tang"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -188,8 +190,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/SciPy-avec-d-autres-bibliotheques-Python/"
-    >SciPy avec d&#39;autres bibliothèques Python</a> 
+  <a class="article-title" href="/2024/03/01/Les-grands-poetes-de-la-dynastie-Tang/"
+    >Les grands poètes de la dynastie Tang</a> 
 </h2>
  
 
@@ -197,163 +199,30 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/SciPy-avec-d-autres-bibliotheques-Python/" class="article-date">
-  <time datetime="2024-03-01T08:08:54.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Les-grands-poetes-de-la-dynastie-Tang/" class="article-date">
+  <time datetime="2024-03-01T11:36:30.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
+    <a class="article-category-link" href="/categories/Poemes-de-la-dynastie-Tang/">Poemes-de-la-dynastie-Tang</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Utilisation-de-SciPy-avec-d’autres-bibliotheques-Python"><a href="#Utilisation-de-SciPy-avec-d’autres-bibliotheques-Python" class="headerlink" title="Utilisation de SciPy avec d’autres bibliothèques Python"></a>Utilisation de SciPy avec d’autres bibliothèques Python</h1><p>Dans le domaine de la programmation scientifique en Python, SciPy est une bibliothèque incontournable qui fournit un grand nombre de fonctionnalités pour l’analyse de données, l’optimisation, l’algèbre linéaire, l’intégration, et bien plus encore. Dans cet article, nous allons explorer comment utiliser SciPy en combinaison avec d’autres bibliothèques Python pour des tâches plus avancées.</p>
-<h2 id="Integration-de-SciPy-avec-NumPy"><a href="#Integration-de-SciPy-avec-NumPy" class="headerlink" title="Intégration de SciPy avec NumPy"></a>Intégration de SciPy avec NumPy</h2><p>NumPy est une bibliothèque de base en Python pour la manipulation de tableaux multidimensionnels et le calcul numérique. SciPy construit sur NumPy et étend ses fonctionnalités en proposant des outils plus avancés. Voici un exemple simple montrant l’utilisation conjointe de NumPy et de SciPy pour calculer l’intégrale d’une fonction :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy.integrate <span class="keyword">import</span> quad</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">integrand</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> x**<span class="number">2</span></span><br><span class="line"></span><br><span class="line">result, error = quad(integrand, <span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Résultat de l&#x27;intégration:&quot;</span>, result)</span><br></pre></td></tr></table></figure>
+  <h1 id="Les-grands-poetes-de-la-dynastie-Tang"><a href="#Les-grands-poetes-de-la-dynastie-Tang" class="headerlink" title="Les grands poètes de la dynastie Tang"></a>Les grands poètes de la dynastie Tang</h1><p>La dynastie Tang, qui a régné sur la Chine entre le 7ème et le 10ème siècle, est souvent considérée comme l’âge d’or de la poésie chinoise. De nombreux poètes talentueux ont émergé pendant cette période, contribuant à enrichir la culture littéraire chinoise. Dans cet article, nous explorerons quelques-uns des grands poètes de la dynastie Tang et leur héritage durable dans le monde de la poésie chinoise.</p>
+<h2 id="1-Li-Bai"><a href="#1-Li-Bai" class="headerlink" title="1. Li Bai"></a>1. Li Bai</h2><p>Li Bai, également connu sous le nom de Li Po, est l’un des poètes les plus célèbres de la dynastie Tang. Sa poésie est caractérisée par sa nature romantique et lyrique, inspirée par la beauté de la nature et les émotions humaines profondes. Un de ses poèmes les plus célèbres est “En pensant à un ami lointain la nuit” :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">La lune brille</span><br><span class="line">Les fleurs tombent</span><br><span class="line">Les oies sauvages s&#x27;envolent</span><br><span class="line">Et le voyageur solitaire s&#x27;en va</span><br></pre></td></tr></table></figure>
 
-<p>Dans cet exemple, nous définissons une fonction <code>integrand</code> qui sera intégrée sur l’intervalle [0, 1] en utilisant la fonction <code>quad</code> de SciPy. Cette intégration est rendue possible grâce à la combinaison de NumPy pour les calculs et de SciPy pour les méthodes numériques.</p>
-<h2 id="Traitement-de-signal-avec-SciPy-et-Matplotlib"><a href="#Traitement-de-signal-avec-SciPy-et-Matplotlib" class="headerlink" title="Traitement de signal avec SciPy et Matplotlib"></a>Traitement de signal avec SciPy et Matplotlib</h2><p>Matplotlib est une bibliothèque graphique en Python largement utilisée pour la visualisation de données. En combinaison avec SciPy, on peut effectuer des analyses avancées de signaux et les afficher graphiquement. Voici un exemple de filtrage d’un signal avec un filtre passe-bas et l’affichage du signal original et filtré :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> signal</span><br><span class="line"></span><br><span class="line">t = np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">1000</span>, endpoint=<span class="literal">False</span>)</span><br><span class="line">x = np.sin(<span class="number">2</span> * np.pi * <span class="number">5</span> * t) + np.random.normal(<span class="number">0</span>, <span class="number">0.5</span>, t.size)</span><br><span class="line"></span><br><span class="line">b, a = signal.butter(<span class="number">4</span>, <span class="number">0.1</span>)</span><br><span class="line">filtered_signal = signal.filtfilt(b, a, x)</span><br><span class="line"></span><br><span class="line">plt.plot(t, x, label=<span class="string">&#x27;Signal original&#x27;</span>)</span><br><span class="line">plt.plot(t, filtered_signal, label=<span class="string">&#x27;Signal filtré&#x27;</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<h2 id="2-Du-Fu"><a href="#2-Du-Fu" class="headerlink" title="2. Du Fu"></a>2. Du Fu</h2><p>Du Fu est un autre grand poète de la dynastie Tang, reconnu pour sa profondeur philosophique et son engagement social. Ses poèmes expriment souvent les luttes et les souffrances du peuple, ainsi que ses espoirs pour un avenir meilleur. Un exemple inspirant de son travail est extrait du poème “Printemps sur la rivière Lu” :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">La brume flotte sur la rivière</span><br><span class="line">Les saules verdissent au vent printanier</span><br><span class="line">La lumière du soleil éclaire la montagne</span><br><span class="line">Et les fleurs s&#x27;épanouissent dans toute leur splendeur</span><br></pre></td></tr></table></figure>
 
-<p>Dans ce code, nous générons un signal sinusoïdal avec du bruit, puis nous appliquons un filtre passe-bas Butterworth avec SciPy pour supprimer le bruit. Matplotlib est utilisé pour afficher à la fois le signal original et le signal filtré.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En combinant SciPy avec d’autres bibliothèques Python telles que NumPy, Matplotlib, Pandas, ou Scikit-learn, les possibilités d’analyse et de traitement des données sont pratiquement illimitées. Que ce soit pour l’optimisation, le traitement du signal, la modélisation statistique ou l’apprentissage automatique, SciPy s’avère être un outil essentiel dans l’arsenal du data scientist Python.</p>
-<p>N’hésitez pas à explorer davantage les combinaisons entre SciPy et d’autres bibliothèques pour repousser les limites de vos projets d’analyse de données !</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
+<h2 id="3-Wang-Wei"><a href="#3-Wang-Wei" class="headerlink" title="3. Wang Wei"></a>3. Wang Wei</h2><p>Wang Wei était un poète et peintre renommé de la dynastie Tang, connu pour sa capacité à fusionner la poésie et l’art visuel dans ses œuvres. Ses poèmes sont empreints de simplicité et de sérénité, reflétant sa profonde connexion avec la nature. Voici un extrait de son poème “Vue sur un étang de montagne en hiver” :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Sous la lune, une montagne solitaire</span><br><span class="line">L&#x27;eau glisse doucement, reflétant le ciel clair</span><br><span class="line">Les bambous se balancent dans le vent</span><br><span class="line">Et l&#x27;âme trouve la paix dans ce moment</span><br></pre></td></tr></table></figure>
 
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Parallelisation-et-calcul-haute-performance"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Parallelisation-et-calcul-haute-performance/"
-    >Parallélisation et calcul haute performance</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Parallelisation-et-calcul-haute-performance/" class="article-date">
-  <time datetime="2024-03-01T08:08:38.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Parallelisation-et-Calcul-Haute-Performance-avec-Scipy"><a href="#Parallelisation-et-Calcul-Haute-Performance-avec-Scipy" class="headerlink" title="Parallélisation et Calcul Haute Performance avec Scipy"></a>Parallélisation et Calcul Haute Performance avec Scipy</h1><p>Dans ce guide, nous allons explorer comment utiliser la bibliothèque Scipy pour la parallélisation et le calcul haute performance en Python. Grâce à ses nombreuses fonctionnalités, Scipy peut permettre d’accélérer les calculs complexes en exploitant la puissance de calcul des processeurs multi-cœurs.</p>
-<h2 id="Introduction-a-la-parallelisation-avec-Scipy"><a href="#Introduction-a-la-parallelisation-avec-Scipy" class="headerlink" title="Introduction à la parallélisation avec Scipy"></a>Introduction à la parallélisation avec Scipy</h2><p>La parallélisation est une technique qui consiste à exécuter simultanément plusieurs tâches en divisant un problème en sous-problèmes indépendants. Scipy offre des outils qui facilitent cette pratique, comme le module <code>scipy.parallel</code>.</p>
-<p>Voici un exemple simple illustrant comment utiliser la parallélisation avec Scipy :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> parallel</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">square_number</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> x ** <span class="number">2</span></span><br><span class="line"></span><br><span class="line">numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line">results = parallel.starmap(square_number, <span class="built_in">zip</span>(numbers))</span><br><span class="line"><span class="built_in">print</span>(results)</span><br></pre></td></tr></table></figure>
-
-<p>Dans cet exemple, la fonction <code>square_number</code> est appliquée de manière parallèle à chacun des éléments de la liste <code>numbers</code>. La fonction <code>parallel.starmap</code> divise automatiquement le calcul entre les différents cœurs du processeur.</p>
-<h2 id="Calcul-haute-performance-avec-Scipy"><a href="#Calcul-haute-performance-avec-Scipy" class="headerlink" title="Calcul haute performance avec Scipy"></a>Calcul haute performance avec Scipy</h2><p>Scipy propose également des fonctionnalités pour effectuer des calculs haute performance, notamment en utilisant des routines optimisées pour les calculs numériques. Par exemple, la fonction <code>scipy.linalg.solve</code> peut être utilisée pour résoudre efficacement des systèmes linéaires.</p>
-<p>Voici un exemple d’utilisation de <code>scipy.linalg.solve</code> pour résoudre un système d’équations linéaires :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy.linalg <span class="keyword">import</span> solve</span><br><span class="line"></span><br><span class="line">A = np.array([[<span class="number">2</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">1</span>]])</span><br><span class="line">b = np.array([<span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line"></span><br><span class="line">x = solve(A, b)</span><br><span class="line"><span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
-
-<p>Dans cet exemple, la fonction <code>solve</code> utilise des algorithmes optimisés pour calculer la solution du système linéaire défini par la matrice <code>A</code> et le vecteur <code>b</code>.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La parallélisation et le calcul haute performance avec Scipy offrent des possibilités d’accélérer significativement les calculs scientifiques et numériques en Python. En utilisant les fonctionnalités de parallélisation et les routines optimisées de Scipy, il est possible d’améliorer les performances des applications nécessitant des calculs intensifs.</p>
-<p>N’hésitez pas à explorer davantage les fonctionnalités offertes par Scipy pour tirer le meilleur parti de la parallélisation et du calcul haute performance dans vos projets Python.</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Gestion-de-grands-ensembles-de-donnees"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Gestion-de-grands-ensembles-de-donnees/"
-    >Gestion de grands ensembles de données</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Gestion-de-grands-ensembles-de-donnees/" class="article-date">
-  <time datetime="2024-03-01T08:08:23.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Gestion-de-grands-ensembles-de-donnees-avec-Scipy"><a href="#Gestion-de-grands-ensembles-de-donnees-avec-Scipy" class="headerlink" title="Gestion de grands ensembles de données avec Scipy"></a>Gestion de grands ensembles de données avec Scipy</h1><p>Dans ce guide, nous allons explorer comment utiliser la bibliothèque Scipy pour manipuler et analyser de grands ensembles de données en Python. Scipy offre de puissants outils pour gérer efficacement des données et effectuer diverses opérations de calcul.</p>
-<h2 id="Introduction-a-Scipy"><a href="#Introduction-a-Scipy" class="headerlink" title="Introduction à Scipy"></a>Introduction à Scipy</h2><p>Scipy est une bibliothèque open-source conçue pour le calcul scientifique en Python. Elle offre des fonctionnalités étendues pour l’optimisation, l’algèbre linéaire, le traitement du signal, l’intégration numérique, et bien plus encore. Pour gérer de grands ensembles de données, Scipy propose des sous-modules tels que <code>scipy.stats</code> pour la statistique et <code>scipy.linalg</code> pour l’algèbre linéaire.</p>
-<h2 id="Installation-de-Scipy"><a href="#Installation-de-Scipy" class="headerlink" title="Installation de Scipy"></a>Installation de Scipy</h2><p>Assurez-vous d’avoir Scipy installé en exécutant la commande suivante :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install scipy</span><br></pre></td></tr></table></figure>
-
-<h2 id="Chargement-des-donnees"><a href="#Chargement-des-donnees" class="headerlink" title="Chargement des données"></a>Chargement des données</h2><p>Avant de commencer à manipuler de grands ensembles de données, il est essentiel de les charger. Scipy offre plusieurs options pour charger des données à partir de fichiers CSV, Excel, ou d’autres formats. Voici un exemple de chargement de données à partir d’un fichier CSV :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scipy.io <span class="keyword">as</span> sio</span><br><span class="line"></span><br><span class="line">data = sio.loadmat(<span class="string">&#x27;data.mat&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Traitement-des-donnees"><a href="#Traitement-des-donnees" class="headerlink" title="Traitement des données"></a>Traitement des données</h2><p>Une fois les données chargées, vous pouvez effectuer des opérations de traitement, telles que le calcul de statistiques descriptives, l’application de filtres, ou la normalisation des données. Voici un exemple de calcul de la moyenne et de l’écart-type à partir d’un jeu de données :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">mean = np.mean(data)</span><br><span class="line">std = np.std(data)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Analyse-des-donnees"><a href="#Analyse-des-donnees" class="headerlink" title="Analyse des données"></a>Analyse des données</h2><p>Scipy offre des outils pour effectuer des analyses avancées sur les données, telles que la régression, l’analyse de variance, ou le clustering. Voici un exemple d’utilisation de la fonction <code>linregress</code> pour effectuer une régression linéaire :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.stats <span class="keyword">import</span> linregress</span><br><span class="line"></span><br><span class="line">slope, intercept, r_value, p_value, std_err = linregress(x, y)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, la gestion de grands ensembles de données avec Scipy permet d’effectuer efficacement diverses opérations d’analyse et de traitement. Que ce soit pour l’exploration de données, la modélisation statistique ou la visualisation, Scipy offre une gamme complète d’outils pour répondre aux besoins des scientifiques et des ingénieurs travaillant avec des données volumineuses.</p>
-<p>Pour aller plus loin, explorez les applications avancées de Scipy dans le domaine de l’apprentissage automatique, de la biologie computationnelle ou de la modélisation physique.</p>
+<p>À travers ces exemples et bien d’autres, les grands poètes de la dynastie Tang ont laissé un héritage poétique intemporel qui continue d’inspirer les amoureux de la poésie chinoise à ce jour.</p>
 <hr>
-<p><em>Ce guide pédagogique a été conçu pour vous aider à maîtriser la gestion de grands ensembles de données avec Scipy. Nous espérons qu’il vous a été utile pour explorer les possibilités offertes par cette bibliothèque essentielle en Python.</em></p>
+<p>Trouver l’inspiration dans les poèmes de la dynastie Tang peut être une expérience enrichissante pour les amateurs de poésie et les chercheurs de sens. Que ce soit pour nourrir votre propre créativité ou pour approfondir votre compréhension de la culture chinoise, explorer les poèmes des grands poètes de la dynastie Tang peut ouvrir de nouvelles perspectives et vous guider sur le chemin d’une appréciation plus profonde de l’art poétique.</p>
  
       <!-- reward -->
       
@@ -364,7 +233,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/litterature/" rel="tag">littérature</a></li></ul>
 
     </footer>
   </div>
@@ -375,7 +244,7 @@
 
     
     <article
-  id="post-Visualisation-de-donnees-scientifiques"
+  id="post-Contexte-historique-et-culturel-de-la-dynastie-Tang"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -386,8 +255,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Visualisation-de-donnees-scientifiques/"
-    >Visualisation de données scientifiques</a> 
+  <a class="article-title" href="/2024/03/01/Contexte-historique-et-culturel-de-la-dynastie-Tang/"
+    >Contexte historique et culturel de la dynastie Tang</a> 
 </h2>
  
 
@@ -395,35 +264,26 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Visualisation-de-donnees-scientifiques/" class="article-date">
-  <time datetime="2024-03-01T08:08:07.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Contexte-historique-et-culturel-de-la-dynastie-Tang/" class="article-date">
+  <time datetime="2024-03-01T11:36:16.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
+    <a class="article-category-link" href="/categories/Poemes-de-la-dynastie-Tang/">Poemes-de-la-dynastie-Tang</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Article-educatif-Introduction-a-la-visualisation-de-donnees-scientifiques-avec-Scipy"><a href="#Article-educatif-Introduction-a-la-visualisation-de-donnees-scientifiques-avec-Scipy" class="headerlink" title="Article éducatif : Introduction à la visualisation de données scientifiques avec Scipy"></a>Article éducatif : Introduction à la visualisation de données scientifiques avec Scipy</h1><p>Bienvenue dans cet article où nous allons explorer l’utilisation de la librairie Scipy pour la visualisation de données scientifiques. La visualisation des données est essentielle pour comprendre et communiquer efficacement les résultats de nos analyses. Scipy, en combinaison avec d’autres bibliothèques comme Matplotlib, offre de puissants outils pour créer des graphiques et des représentations visuelles informatives. Dans cet article, nous allons découvrir les bases de la visualisation de données scientifiques avec Scipy.</p>
-<h2 id="Installation-de-Scipy"><a href="#Installation-de-Scipy" class="headerlink" title="Installation de Scipy"></a>Installation de Scipy</h2><p>Avant de commencer, assurez-vous d’avoir Scipy installé sur votre système. Si ce n’est pas le cas, vous pouvez l’installer en utilisant pip :</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install scipy</span><br></pre></td></tr></table></figure>
-
-<h2 id="Charger-des-donnees"><a href="#Charger-des-donnees" class="headerlink" title="Charger des données"></a>Charger des données</h2><p>Pour commencer, nous devons charger les données que nous allons visualiser. Scipy offre diverses façons de charger des données, par exemple à partir de fichiers CSV, de tableaux NumPy, ou directement à partir de fonctions.</p>
-<p>Voici un exemple simple où nous utilisons NumPy pour générer des données aléatoires :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># Générer des données aléatoires</span></span><br><span class="line">data = np.random.rand(<span class="number">100</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Creer-un-graphique"><a href="#Creer-un-graphique" class="headerlink" title="Créer un graphique"></a>Créer un graphique</h2><p>Maintenant que nous avons nos données, créons un graphique pour les visualiser. Nous utiliserons Matplotlib, une librairie populaire pour la visualisation de données en Python.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Créer un graphique à barres</span></span><br><span class="line">plt.bar(<span class="built_in">range</span>(<span class="built_in">len</span>(data)), data)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Index&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Valeurs aléatoires&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Exemple de visualisation de données&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<h2 id="Personnaliser-le-graphique"><a href="#Personnaliser-le-graphique" class="headerlink" title="Personnaliser le graphique"></a>Personnaliser le graphique</h2><p>Il est possible de personnaliser davantage le graphique en ajoutant des titres, des légendes, en modifiant la couleur, etc. Voici un exemple où nous personnalisons le graphique précédent :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">plt.bar(<span class="built_in">range</span>(<span class="built_in">len</span>(data)), data, color=<span class="string">&#x27;skyblue&#x27;</span>, label=<span class="string">&#x27;Données aléatoires&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Index&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Valeurs&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Mon graphique personnalisé&#x27;</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La visualisation de données scientifiques avec Scipy et Matplotlib est un outil puissant pour explorer, analyser et communiquer des résultats de recherche. En combinant ces outils avec d’autres librairies Python, vous pouvez créer des visualisations interactives et informatives pour présenter vos découvertes de manière claire et convaincante.</p>
-<p>N’oubliez pas d’explorer les différents types de graphiques, de personnaliser vos visualisations pour les rendre attrayantes, et de vous familiariser avec les fonctionnalités avancées de Scipy pour une visualisation encore plus sophistiquée.</p>
-<p>Faites de votre mieux pour explorer de nouveaux horizons et voir comment la visualisation de données scientifiques peut enrichir votre travail de recherche et vos projets. Amusez-vous à visualiser vos données de manière créative et productive !</p>
-<p>Cet article a pour but de vous donner un aperçu de l’utilisation de Scipy pour la visualisation de données scientifiques. Profitez de cette ressource pour approfondir vos connaissances et explorer d’autres possibilités offertes par cette librairie.</p>
+  <h1 id="Article-pedagogique-Contexte-historique-et-culturel-de-la-dynastie-Tang"><a href="#Article-pedagogique-Contexte-historique-et-culturel-de-la-dynastie-Tang" class="headerlink" title="Article pédagogique : Contexte historique et culturel de la dynastie Tang"></a>Article pédagogique : Contexte historique et culturel de la dynastie Tang</h1><p>La dynastie Tang, qui a régné sur la Chine de 618 à 907, a été une période d’âge d’or dans l’histoire chinoise, caractérisée par des avancées culturelles et politiques remarquables. Comprendre le contexte historique et culturel de cette dynastie est essentiel pour apprécier pleinement les célèbres poèmes de cette époque. Dans cet article, nous allons explorer les principaux éléments du contexte historique et culturel de la dynastie Tang.</p>
+<h2 id="1-Contexte-historique-de-la-dynastie-Tang"><a href="#1-Contexte-historique-de-la-dynastie-Tang" class="headerlink" title="1. Contexte historique de la dynastie Tang"></a>1. <strong>Contexte historique de la dynastie Tang</strong></h2><p>La dynastie Tang a été fondée par Li Yuan en 618 après avoir renversé la dynastie Sui. Sous le règne des Tang, la Chine a connu une période de stabilité et de prospérité. L’empire s’étendait sur une grande partie de l’Asie de l’Est et était renommé pour son commerce le long de la Route de la Soie. Les Tang ont également été à l’avant-garde de l’innovation technologique, introduisant des avancées telles que l’imprimerie en blocs de bois.</p>
+<p><em>Exemple : Le Grand Canal, construit pendant la dynastie des Sui et étendu sous les Tang, a permis de faciliter le transport des marchandises et le développement économique dans toute la Chine.</em></p>
+<h2 id="2-Contexte-culturel-de-la-dynastie-Tang"><a href="#2-Contexte-culturel-de-la-dynastie-Tang" class="headerlink" title="2. Contexte culturel de la dynastie Tang"></a>2. <strong>Contexte culturel de la dynastie Tang</strong></h2><p>La dynastie Tang a vu l’épanouissement de la culture chinoise. C’était une époque de grande effervescence artistique et littéraire, avec des avancées significatives dans les domaines de la poésie, de la peinture, de la calligraphie et de la musique. Les Tang ont favorisé l’éclosion d’universités et de centres culturels, attirant des esprits créatifs de tout l’empire.</p>
+<p><em>Exemple : Le célèbre poète Li Bai, également connu sous le nom de Li Po, était un des plus grands poètes de la dynastie Tang, connu pour ses vers lyriques et sa célébration de la nature.</em></p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Comprendre le contexte historique et culturel de la dynastie Tang est essentiel pour apprécier pleinement la richesse et la beauté de ses poèmes. En se plongeant dans l’histoire et la culture de cette époque florissante, les lecteurs peuvent véritablement saisir l’essence des poèmes de la dynastie Tang et en ressentir toute la profondeur.</p>
+<p>L’étude du contexte historique et culturel de la dynastie Tang peut également offrir des perspectives sur les thèmes universels abordés dans ces poèmes, tels que l’amour, la nature et la spiritualité, qui résonnent toujours aujourd’hui.</p>
+<p>Ainsi, en explorant les fondements de la dynastie Tang, on peut non seulement enrichir sa connaissance de l’histoire chinoise, mais aussi trouver des inspirations et des leçons intemporelles à appliquer dans notre propre vie.</p>
+<p>N’hésitez pas à plonger dans l’univers fascinant des poèmes de la dynastie Tang en tenant compte de leur contexte historique et culturel riches et diversifiés.</p>
  
       <!-- reward -->
       
@@ -434,7 +294,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/litterature/" rel="tag">littérature</a></li></ul>
 
     </footer>
   </div>
@@ -445,7 +305,7 @@
 
     
     <article
-  id="post-Application-de-SciPy-en-biologie-et-chimie"
+  id="post-Introduction-a-la-poesie-de-la-dynastie-Tang"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -456,8 +316,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Application-de-SciPy-en-biologie-et-chimie/"
-    >Application de SciPy en biologie et chimie</a> 
+  <a class="article-title" href="/2024/03/01/Introduction-a-la-poesie-de-la-dynastie-Tang/"
+    >Introduction à la poésie de la dynastie Tang</a> 
 </h2>
  
 
@@ -465,35 +325,24 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Application-de-SciPy-en-biologie-et-chimie/" class="article-date">
-  <time datetime="2024-03-01T08:07:47.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Introduction-a-la-poesie-de-la-dynastie-Tang/" class="article-date">
+  <time datetime="2024-03-01T11:36:03.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
+    <a class="article-category-link" href="/categories/Poemes-de-la-dynastie-Tang/">Poemes-de-la-dynastie-Tang</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Application-de-SciPy-en-biologie-et-chimie"><a href="#Application-de-SciPy-en-biologie-et-chimie" class="headerlink" title="Application de SciPy en biologie et chimie"></a>Application de SciPy en biologie et chimie</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>SciPy est une bibliothèque open-source basée sur Python conçue pour être utilisée dans divers domaines scientifiques et techniques. Dans cet article, nous explorerons comment SciPy peut être appliqué en biologie et chimie pour résoudre des problèmes complexes, analyser des données et effectuer des simulations.</p>
-<h2 id="Installation-de-SciPy"><a href="#Installation-de-SciPy" class="headerlink" title="Installation de SciPy"></a>Installation de SciPy</h2><p>Avant de commencer, assurez-vous d’avoir SciPy installé. Vous pouvez l’installer en utilisant pip:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install scipy</span><br></pre></td></tr></table></figure>
+  <h1 id="Introduction-a-la-poesie-de-la-dynastie-Tang"><a href="#Introduction-a-la-poesie-de-la-dynastie-Tang" class="headerlink" title="Introduction à la poésie de la dynastie Tang"></a>Introduction à la poésie de la dynastie Tang</h1><p>La poésie de la dynastie Tang, également connue sous le nom de Poèmes de la dynastie Tang, est l’une des formes artistiques les plus raffinées et emblématiques de la Chine antique. Cette période florissante de l’histoire chinoise a vu émerger une profusion de chefs-d’œuvre poétiques qui ont perduré à travers les siècles. Dans cet article, nous allons explorer les caractéristiques et les nuances de la poésie de la dynastie Tang, et vous guider pas à pas pour apprécier et comprendre cette forme d’art sublime.</p>
+<h2 id="Les-Origines-de-la-Poesie-de-la-Dynastie-Tang"><a href="#Les-Origines-de-la-Poesie-de-la-Dynastie-Tang" class="headerlink" title="Les Origines de la Poésie de la Dynastie Tang"></a>Les Origines de la Poésie de la Dynastie Tang</h2><p>La poésie de la dynastie Tang s’épanouit entre le 7e et le 10e siècle en Chine, une période marquée par une prospérité culturelle et un échange intellectuel florissant. Les poètes de cette époque ont créé des œuvres qui capturent la beauté de la nature, les émotions humaines et les subtilités de la vie quotidienne.</p>
+<h2 id="Caracteristiques-de-la-Poesie-de-la-Dynastie-Tang"><a href="#Caracteristiques-de-la-Poesie-de-la-Dynastie-Tang" class="headerlink" title="Caractéristiques de la Poésie de la Dynastie Tang"></a>Caractéristiques de la Poésie de la Dynastie Tang</h2><p>La poésie de la dynastie Tang se distingue par sa concision, sa richesse symbolique et son utilisation habile de l’imagerie. Les poèmes étaient souvent écrits en vers réguliers de cinq ou sept caractères, avec une structure rythmique sophistiquée. Les thèmes abordés incluent l’amour, l’amitié, la nature, la mélancolie et la quête spirituelle.</p>
+<h3 id="Exemple-de-Poeme-de-la-Dynastie-Tang"><a href="#Exemple-de-Poeme-de-la-Dynastie-Tang" class="headerlink" title="Exemple de Poème de la Dynastie Tang :"></a>Exemple de Poème de la Dynastie Tang :</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Le printemps est revenu sur la terre,</span><br><span class="line">Fleurs épanouies, papillons dans l&#x27;air.</span><br><span class="line">Dans la rumeur des vagues, j&#x27;entends ta voix,</span><br><span class="line">Écho lointain qui berce mon désespoir.</span><br></pre></td></tr></table></figure>
 
-<h2 id="Utilisation-de-SciPy-en-biologie"><a href="#Utilisation-de-SciPy-en-biologie" class="headerlink" title="Utilisation de SciPy en biologie"></a>Utilisation de SciPy en biologie</h2><h3 id="Analyse-de-donnees-genetiques"><a href="#Analyse-de-donnees-genetiques" class="headerlink" title="Analyse de données génétiques"></a>Analyse de données génétiques</h3><p>SciPy offre des outils puissants pour l’analyse de données génétiques. Par exemple, vous pouvez utiliser la fonction <code>pearsonr</code> pour calculer le coefficient de corrélation de Pearson entre deux séries de données génétiques:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.stats <span class="keyword">import</span> pearsonr</span><br><span class="line"></span><br><span class="line">data1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">data2 = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line"></span><br><span class="line">corr, _ = pearsonr(data1, data2)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Coefficient de corrélation de Pearson : <span class="subst">&#123;corr&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="Modelisation-de-dynamiques-de-population"><a href="#Modelisation-de-dynamiques-de-population" class="headerlink" title="Modélisation de dynamiques de population"></a>Modélisation de dynamiques de population</h3><p>En biologie, la modélisation des dynamiques de population est essentielle. SciPy offre des outils de résolution d’équations différentielles pour ce type de modélisation. Voici un exemple simple qui modélise la croissance d’une population de lapins:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.integrate <span class="keyword">import</span> solve_ivp</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">rabbit_population</span>(<span class="params">t, y</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0.1</span>*y</span><br><span class="line"></span><br><span class="line">sol = solve_ivp(rabbit_population, [<span class="number">0</span>, <span class="number">10</span>], [<span class="number">10</span>])</span><br><span class="line">plt.plot(sol.t, sol.y[<span class="number">0</span>])</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Temps&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Population de lapins&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<h2 id="Utilisation-de-SciPy-en-chimie"><a href="#Utilisation-de-SciPy-en-chimie" class="headerlink" title="Utilisation de SciPy en chimie"></a>Utilisation de SciPy en chimie</h2><h3 id="Calculs-de-thermodynamique"><a href="#Calculs-de-thermodynamique" class="headerlink" title="Calculs de thermodynamique"></a>Calculs de thermodynamique</h3><p>En chimie, SciPy peut être utilisé pour effectuer des calculs de thermodynamique. Par exemple, vous pouvez utiliser la fonction <code>deltaH</code> pour calculer l’enthalpie de réaction à partir des enthalpies de formation des réactifs et des produits:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.constants <span class="keyword">import</span> deltaH</span><br><span class="line"></span><br><span class="line">deltaH_reactifs = -<span class="number">500</span></span><br><span class="line">deltaH_produits = -<span class="number">300</span></span><br><span class="line">enthalpie_reaction = deltaH_reactifs - deltaH_produits</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Entalpie de la réaction : <span class="subst">&#123;enthalpie_reaction&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="Analyse-de-spectres"><a href="#Analyse-de-spectres" class="headerlink" title="Analyse de spectres"></a>Analyse de spectres</h3><p>SciPy offre également des outils pour l’analyse de spectres en chimie. Vous pouvez utiliser la transformée de Fourier pour analyser un spectre infrarouge et identifier des groupes fonctionnels dans une molécule:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy.fft <span class="keyword">import</span> fft</span><br><span class="line"></span><br><span class="line"><span class="comment"># Exemple de spectre infrarouge</span></span><br><span class="line">spectre = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])</span><br><span class="line">spectre_fft = fft(spectre)</span><br><span class="line"><span class="built_in">print</span>(spectre_fft)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, SciPy offre une multitude d’applications intéressantes en biologie et chimie. Que ce soit pour l’analyse de données génétiques, la modélisation des dynamiques de population, les calculs de thermodynamique ou l’analyse de spectres, SciPy s’avère être un outil extrêmement polyvalent et puissant pour les scientifiques dans ces domaines. En exploitant ces fonctionnalités, le domaine de la biologie et de la chimie peut bénéficier de nouvelles perspectives et de nouvelles découvertes.</p>
-<p>N’hésitez pas à explorer davantage les capacités de SciPy et à l’appliquer dans vos propres projets en biologie et chimie pour repousser les limites de la recherche scientifique.</p>
+<h2 id="Appreciation-de-la-Poesie-de-la-Dynastie-Tang"><a href="#Appreciation-de-la-Poesie-de-la-Dynastie-Tang" class="headerlink" title="Appréciation de la Poésie de la Dynastie Tang"></a>Appréciation de la Poésie de la Dynastie Tang</h2><p>Pour apprécier pleinement la poésie de la dynastie Tang, il est essentiel de comprendre le contexte historique et culturel de l’époque. Explorez les traditions littéraires et artistiques de la Chine ancienne pour enrichir votre compréhension des nuances et des subtiles allusions présentes dans les poèmes.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La poésie de la dynastie Tang offre une fenêtre fascinante sur l’âme et la sensibilité des anciens Chinois. En plongeant dans cet univers poétique, vous découvrirez une profondeur émotionnelle et une esthétique exquise qui résonnent encore aujourd’hui. Que ce soit pour enrichir votre connaissance de la littérature chinoise ou simplement pour savourer la beauté des mots, l’exploration de la poésie de la dynastie Tang est une aventure enrichissante à ne pas manquer.</p>
  
       <!-- reward -->
       
@@ -504,7 +353,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/litterature/" rel="tag">littérature</a></li></ul>
 
     </footer>
   </div>
@@ -515,7 +364,7 @@
 
     
     <article
-  id="post-Utilisation-de-SciPy-en-physique-et-ingenierie"
+  id="post-Recettes-emblematiques-de-la-cuisine-taiwanaise"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -526,8 +375,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Utilisation-de-SciPy-en-physique-et-ingenierie/"
-    >Utilisation de SciPy en physique et ingénierie</a> 
+  <a class="article-title" href="/2024/03/01/Recettes-emblematiques-de-la-cuisine-taiwanaise/"
+    >Recettes emblématiques de la cuisine taïwanaise</a> 
 </h2>
  
 
@@ -535,34 +384,54 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Utilisation-de-SciPy-en-physique-et-ingenierie/" class="article-date">
-  <time datetime="2024-03-01T08:07:33.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Recettes-emblematiques-de-la-cuisine-taiwanaise/" class="article-date">
+  <time datetime="2024-03-01T11:30:54.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
+    <a class="article-category-link" href="/categories/Cuisine-chinoise/">Cuisine-chinoise</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Utilisation-de-SciPy-en-physique-et-ingenierie"><a href="#Utilisation-de-SciPy-en-physique-et-ingenierie" class="headerlink" title="Utilisation de SciPy en physique et ingénierie"></a>Utilisation de SciPy en physique et ingénierie</h1><p>La librairie SciPy est un outil essentiel pour les physiciens et ingénieurs qui souhaitent effectuer des calculs scientifiques et résoudre des problèmes complexes. Dans cet article, nous allons explorer comment utiliser SciPy pour des applications en physique et ingénierie.</p>
-<h2 id="Installation-de-SciPy"><a href="#Installation-de-SciPy" class="headerlink" title="Installation de SciPy"></a>Installation de SciPy</h2><p>Avant de commencer, assurez-vous d’avoir SciPy installé sur votre système. Vous pouvez l’installer en utilisant <code>pip</code> :</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install scipy</span><br></pre></td></tr></table></figure>
-
-<h2 id="Calculs-numeriques-avec-SciPy"><a href="#Calculs-numeriques-avec-SciPy" class="headerlink" title="Calculs numériques avec SciPy"></a>Calculs numériques avec SciPy</h2><p>SciPy offre de nombreuses fonctionnalités pour effectuer des calculs numériques avancés. Par exemple, pour résoudre des équations différentielles ordinaires (EDO), vous pouvez utiliser la fonction <code>odeint</code>.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy.integrate <span class="keyword">import</span> odeint</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">model</span>(<span class="params">y, t</span>):</span><br><span class="line">    dydt = -y</span><br><span class="line">    <span class="keyword">return</span> dydt</span><br><span class="line"></span><br><span class="line">y0 = <span class="number">1.0</span></span><br><span class="line">t = np.linspace(<span class="number">0</span>, <span class="number">5</span>, <span class="number">101</span>)</span><br><span class="line">y = odeint(model, y0, t)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(y)</span><br></pre></td></tr></table></figure>
-
-<p>Dans cet exemple, nous résolvons l’EDO dy&#x2F;dt &#x3D; -y avec la condition initiale y(0) &#x3D; 1.0 sur une plage de temps de 0 à 5.</p>
-<h2 id="Interpolation-avec-SciPy"><a href="#Interpolation-avec-SciPy" class="headerlink" title="Interpolation avec SciPy"></a>Interpolation avec SciPy</h2><p>En physique et ingénierie, il est souvent nécessaire d’interpoler des données. SciPy propose plusieurs méthodes d’interpolation, telles que l’interpolation linéaire et spline.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.interpolate <span class="keyword">import</span> interp1d</span><br><span class="line"></span><br><span class="line">x = np.array([<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line">y = np.array([<span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>])</span><br><span class="line"></span><br><span class="line">f = interp1d(x, y, kind=<span class="string">&#x27;cubic&#x27;</span>)</span><br><span class="line">x_new = np.linspace(<span class="number">0</span>, <span class="number">4</span>, <span class="number">50</span>)</span><br><span class="line">y_new = f(x_new)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(y_new)</span><br></pre></td></tr></table></figure>
-
-<p>Dans cet exemple, nous effectuons une interpolation cubique des données fournies pour obtenir des valeurs interpolées sur une nouvelle plage de valeurs.</p>
-<h2 id="Optimisation-avec-SciPy"><a href="#Optimisation-avec-SciPy" class="headerlink" title="Optimisation avec SciPy"></a>Optimisation avec SciPy</h2><p>L’optimisation est un domaine clé en physique et ingénierie. Avec SciPy, vous pouvez résoudre des problèmes d’optimisation non linéaire en utilisant la fonction <code>minimize</code>.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> minimize</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">rosenbrock</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="number">100</span>*(x[<span class="number">1</span>] - x[<span class="number">0</span>]**<span class="number">2</span>)**<span class="number">2</span> + (<span class="number">1</span> - x[<span class="number">0</span>])**<span class="number">2</span></span><br><span class="line"></span><br><span class="line">x0 = np.array([<span class="number">0</span>, <span class="number">0</span>])</span><br><span class="line">res = minimize(rosenbrock, x0)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(res.x)</span><br></pre></td></tr></table></figure>
-
-<p>Ici, nous minimisons la fonction de Rosenbrock à l’aide de l’algorithme BFGS.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, l’utilisation de SciPy en physique et en ingénierie offre une multitude de possibilités pour résoudre des problèmes numériques et analytiques complexes. Que ce soit pour résoudre des équations différentielles, interpoler des données ou optimiser des fonctions, SciPy est un outil puissant qui peut améliorer considérablement l’efficacité de vos calculs scientifiques. Explorez davantage les fonctionnalités de SciPy pour découvrir toutes les applications passionnantes qu’il offre dans le domaine de la physique et de l’ingénierie.</p>
+  <h1 id="Recettes-emblematiques-de-la-cuisine-taiwanaise"><a href="#Recettes-emblematiques-de-la-cuisine-taiwanaise" class="headerlink" title="Recettes emblématiques de la cuisine taïwanaise"></a>Recettes emblématiques de la cuisine taïwanaise</h1><p>La cuisine taïwanaise est réputée pour ses saveurs audacieuses, ses techniques de cuisson uniques et ses plats diversifiés. Dans cet article, nous explorerons quelques recettes emblématiques de la cuisine taïwanaise pour vous permettre de découvrir et d’apprécier cette cuisine riche en goût.</p>
+<h2 id="1-Nouilles-aux-crevettes-sautees"><a href="#1-Nouilles-aux-crevettes-sautees" class="headerlink" title="1. Nouilles aux crevettes sautées"></a>1. <strong>Nouilles aux crevettes sautées</strong></h2><p>Les nouilles aux crevettes sautées, ou “Taiwanese shrimp stir-fried noodles”, sont un plat incontournable de la cuisine taïwanaise. Voici la recette traditionnelle :</p>
+<p><strong>Ingrédients :</strong></p>
+<ul>
+<li>Nouilles de blé</li>
+<li>Crevettes fraîches</li>
+<li>Légumes (chou chinois, carottes, oignons verts)</li>
+<li>Sauce soja</li>
+<li>Ail, gingembre et huile de sésame</li>
+</ul>
+<p><strong>Préparation :</strong></p>
+<ol>
+<li>Cuire les nouilles selon les instructions sur l’emballage, les égoutter et réserver.</li>
+<li>Faire sauter les crevettes avec l’ail et le gingembre dans une poêle.</li>
+<li>Ajouter les légumes et faire revenir.</li>
+<li>Incorporer les nouilles cuites et la sauce soja, mélanger le tout.</li>
+<li>Ajouter un filet d’huile de sésame avant de servir.</li>
+</ol>
+<h2 id="2-Boulettes-de-tapioca-sucrees"><a href="#2-Boulettes-de-tapioca-sucrees" class="headerlink" title="2. Boulettes de tapioca sucrées"></a>2. <strong>Boulettes de tapioca sucrées</strong></h2><p>Les boulettes de tapioca sucrées, ou “Sweet Taro Balls”, sont une délicieuse friandise taïwanaise souvent consommée en dessert. Voici comment les préparer :</p>
+<p><strong>Ingrédients :</strong></p>
+<ul>
+<li>Tapioca</li>
+<li>Sucre</li>
+<li>Eau</li>
+<li>Taro</li>
+<li>Haricots rouges cuits</li>
+</ul>
+<p><strong>Préparation :</strong></p>
+<ol>
+<li>Faire bouillir de l’eau et y cuire les boulettes de tapioca jusqu’à ce qu’elles flottent à la surface.</li>
+<li>Dans une casserole, préparer un sirop de sucre.</li>
+<li>Ajouter les boulettes de tapioca cuites dans le sirop et les laisser mijoter.</li>
+<li>Ajouter des morceaux de taro et de haricots rouges cuits pour un goût plus riche.</li>
+<li>Servir les boulettes chaudes ou froides, selon votre préférence.</li>
+</ol>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Les recettes emblématiques de la cuisine taïwanaise offrent une immersion dans la diversité des saveurs et des textures de cette cuisine unique. Que ce soit à travers des plats salés comme les nouilles aux crevettes sautées ou des desserts sucrés comme les boulettes de tapioca, la cuisine taïwanaise saura éveiller vos papilles et vous faire voyager à travers ses traditions culinaires.</p>
+<p>Alors, n’hésitez pas à explorer et à expérimenter ces recettes emblématiques chez vous pour découvrir tout le charme et la délicatesse de la cuisine taïwanaise. Bon appétit !</p>
  
       <!-- reward -->
       
@@ -573,7 +442,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cuisine/" rel="tag">cuisine</a></li></ul>
 
     </footer>
   </div>
@@ -584,7 +453,7 @@
 
     
     <article
-  id="post-SciPy-dans-les-applications-de-machine-learning"
+  id="post-Plats-de-rue-populaires-a-Taiwan"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -595,8 +464,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/SciPy-dans-les-applications-de-machine-learning/"
-    >SciPy dans les applications de machine learning</a> 
+  <a class="article-title" href="/2024/03/01/Plats-de-rue-populaires-a-Taiwan/"
+    >Plats de rue populaires à Taïwan</a> 
 </h2>
  
 
@@ -604,32 +473,40 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/SciPy-dans-les-applications-de-machine-learning/" class="article-date">
-  <time datetime="2024-03-01T08:07:14.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Plats-de-rue-populaires-a-Taiwan/" class="article-date">
+  <time datetime="2024-03-01T11:30:41.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
+    <a class="article-category-link" href="/categories/Cuisine-chinoise/">Cuisine-chinoise</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Utilisation-de-SciPy-dans-les-applications-de-machine-learning"><a href="#Utilisation-de-SciPy-dans-les-applications-de-machine-learning" class="headerlink" title="Utilisation de SciPy dans les applications de machine learning"></a>Utilisation de SciPy dans les applications de machine learning</h1><p><strong>Introduction</strong><br>SciPy est une bibliothèque open-source pour Python, qui offre un éventail d’outils mathématiques et scientifiques. Dans le domaine du machine learning, SciPy est largement utilisé pour plusieurs tâches essentielles telles que l’optimisation, l’algèbre linéaire, et le traitement du signal. Dans cet article, nous allons explorer comment SciPy peut être utilisé efficacement dans les applications de machine learning.</p>
-<p><strong>Installation de SciPy</strong><br>Avant de commencer, assurez-vous d’avoir installé SciPy en exécutant la commande suivante dans votre terminal:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install scipy</span><br></pre></td></tr></table></figure>
-
-<p><strong>Optimisation avec SciPy</strong><br>L’optimisation est une étape cruciale dans de nombreux modèles de machine learning. SciPy propose des outils puissants pour l’optimisation numérique. Voici un exemple simple d’optimisation de fonction en utilisant la fonction <code>minimize</code> de SciPy:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> minimize</span><br><span class="line"></span><br><span class="line"><span class="comment"># Définir une fonction à minimiser</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fonction_a_minimiser</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> (x[<span class="number">0</span>] - <span class="number">2</span>) ** <span class="number">2</span> + (x[<span class="number">1</span>] - <span class="number">3</span>) ** <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Minimiser la fonction</span></span><br><span class="line">resultat = minimize(fonction_a_minimiser, [<span class="number">0</span>, <span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(resultat.x)</span><br></pre></td></tr></table></figure>
-
-<p><strong>Algèbre linéaire avec SciPy</strong><br>L’algèbre linéaire est au cœur de nombreux algorithmes de machine learning. SciPy offre des fonctionnalités avancées pour travailler avec des structures de données linéaires. Voici un exemple d’utilisation de la fonction <code>solve</code> pour résoudre un système d’équations linéaires:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy.linalg <span class="keyword">import</span> solve</span><br><span class="line"></span><br><span class="line"><span class="comment"># Définir un système d&#x27;équations linéaires</span></span><br><span class="line">A = np.array([[<span class="number">2</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">1</span>]])</span><br><span class="line">b = np.array([<span class="number">3</span>, <span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Résoudre le système d&#x27;équations</span></span><br><span class="line">x = solve(A, b)</span><br><span class="line"><span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
-
-<p><strong>Traitement du signal avec SciPy</strong><br>Le traitement du signal est également crucial dans de nombreuses applications de machine learning, telles que le traitement d’images et de sons. SciPy propose des fonctionnalités pour le filtrage, la convolution, et bien plus encore. Voici un exemple de création d’un signal sinusoïdal et d’application d’un filtre:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> signal</span><br><span class="line"></span><br><span class="line"><span class="comment"># Créer un signal sinusoïdal</span></span><br><span class="line">t = np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">1000</span>)</span><br><span class="line">signal = np.sin(<span class="number">2</span> * np.pi * <span class="number">5</span> * t)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Appliquer un filtre passe-bas</span></span><br><span class="line">b, a = signal.butter(<span class="number">4</span>, <span class="number">0.1</span>, <span class="string">&#x27;low&#x27;</span>)</span><br><span class="line">signal_filtre = signal.filtfilt(b, a, signal)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Afficher les signaux</span></span><br><span class="line">plt.plot(t, signal, label=<span class="string">&#x27;Signal original&#x27;</span>)</span><br><span class="line">plt.plot(t, signal_filtre, label=<span class="string">&#x27;Signal filtré&#x27;</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p><strong>Conclusion</strong><br>En conclusion, SciPy est une bibliothèque extrêmement précieuse pour les applications de machine learning. Grâce à ses fonctionnalités avancées en optimisation, algèbre linéaire, et traitement du signal, SciPy peut être un allié de choix pour les data scientists et les chercheurs en machine learning. En explorant davantage les capacités de SciPy, vous pourriez découvrir de nouvelles façons d’améliorer vos modèles et de repousser les limites de l’apprentissage automatique.</p>
-<p>N’hésitez pas à explorer davantage les fonctionnalités de SciPy pour appliquer ces techniques à vos propres projets de machine learning.</p>
+  <h1 id="Cuisine-chinoise-Plats-de-rue-populaires-a-Taiwan"><a href="#Cuisine-chinoise-Plats-de-rue-populaires-a-Taiwan" class="headerlink" title="Cuisine-chinoise : Plats de rue populaires à Taïwan"></a>Cuisine-chinoise : Plats de rue populaires à Taïwan</h1><hr>
+<p>Bienvenue dans ce nouvel article dédié à la cuisine chinoise, plus particulièrement aux plats de rue populaires à Taïwan. Si vous êtes curieux de découvrir les saveurs exotiques et authentiques de la rue taïwanaise, vous êtes au bon endroit ! </p>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Taïwan regorge de merveilles culinaires, en particulier sur ses étals de rue. Ces plats simples mais savoureux sont appréciés par les locaux et les touristes pour leur diversité et leur authenticité.</p>
+<h3 id="Les-incontournables-de-la-street-food-taiwanaise"><a href="#Les-incontournables-de-la-street-food-taiwanaise" class="headerlink" title="Les incontournables de la street food taïwanaise"></a>Les incontournables de la street food taïwanaise</h3><h4 id="1-Ba-wan"><a href="#1-Ba-wan" class="headerlink" title="1. Ba-wan"></a>1. <strong>Ba-wan</strong></h4><p>Le Ba-wan est une boulette géante, faite à base de pâte de riz farcie de viande hachée, de champignons et de légumes. Cette spécialité est souvent accompagnée d’une sauce sucrée à la fois savoureuse et légèrement épicée.</p>
+<h4 id="2-Gua-bao"><a href="#2-Gua-bao" class="headerlink" title="2. Gua bao"></a>2. <strong>Gua bao</strong></h4><p>Le Gua bao est un petit sandwich taïwanais, composé d’une tranche de porc braisé, de légumes croquants et d’arachides concassées, le tout enveloppé dans un pain moelleux à la vapeur.</p>
+<h4 id="3-Oyster-omelette"><a href="#3-Oyster-omelette" class="headerlink" title="3. Oyster omelette"></a>3. <strong>Oyster omelette</strong></h4><p>Cette omelette aux huîtres est une véritable institution à Taïwan. Elle est préparée à base d’œufs battus, de fécule de maïs et d’huîtres fraîches, le tout relevé par une sauce spéciale à la saveur unique.</p>
+<h3 id="Comment-preparer-ces-delices-chez-vous"><a href="#Comment-preparer-ces-delices-chez-vous" class="headerlink" title="Comment préparer ces délices chez vous ?"></a>Comment préparer ces délices chez vous ?</h3><h4 id="Recette-du-Ba-wan"><a href="#Recette-du-Ba-wan" class="headerlink" title="Recette du Ba-wan :"></a>Recette du Ba-wan :</h4><p>Ingrédients :</p>
+<ul>
+<li>Pâte de riz</li>
+<li>Viande hachée</li>
+<li>Champignons</li>
+<li>Légumes variés</li>
+<li>Sauce soja</li>
+</ul>
+<p>Instructions :</p>
+<ol>
+<li>Mélanger la viande hachée, les champignons et les légumes.</li>
+<li>Former des boulettes à base de pâte de riz et les farcir avec le mélange précédent.</li>
+<li>Cuire les Ba-wan à la vapeur pendant environ 30 minutes.</li>
+<li>Servir chaud avec de la sauce soja.</li>
+</ol>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>En conclusion, les plats de rue populaires à Taïwan offrent une expérience culinaire unique, mêlant saveurs traditionnelles et ingrédients locaux. Que vous soyez un amateur de cuisine asiatique ou simplement curieux de découvrir de nouvelles saveurs, n’hésitez pas à vous aventurer dans les rues de Taïwan pour goûter à ces délices incontournables.</p>
+<p>N’oubliez pas que la cuisine chinoise ne se limite pas aux plats classiques que nous connaissons ; elle regorge de trésors méconnus à explorer, à savourer et à partager !</p>
  
       <!-- reward -->
       
@@ -640,7 +517,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cuisine/" rel="tag">cuisine</a></li></ul>
 
     </footer>
   </div>
@@ -651,7 +528,7 @@
 
     
     <article
-  id="post-Modeles-de-regression-et-prediction"
+  id="post-Influence-des-cultures-sur-la-cuisine-taiwanaise"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -662,8 +539,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Modeles-de-regression-et-prediction/"
-    >Modèles de régression et prédiction</a> 
+  <a class="article-title" href="/2024/03/01/Influence-des-cultures-sur-la-cuisine-taiwanaise/"
+    >Influence des cultures sur la cuisine taïwanaise</a> 
 </h2>
  
 
@@ -671,36 +548,107 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Modeles-de-regression-et-prediction/" class="article-date">
-  <time datetime="2024-03-01T08:06:58.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Influence-des-cultures-sur-la-cuisine-taiwanaise/" class="article-date">
+  <time datetime="2024-03-01T11:30:20.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
+    <a class="article-category-link" href="/categories/Cuisine-chinoise/">Cuisine-chinoise</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Article-pedagogique-Modeles-de-regression-et-prediction-avec-Scipy"><a href="#Article-pedagogique-Modeles-de-regression-et-prediction-avec-Scipy" class="headerlink" title="Article pédagogique : Modèles de régression et prédiction avec Scipy"></a>Article pédagogique : Modèles de régression et prédiction avec Scipy</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Dans le domaine de l’apprentissage automatique, les modèles de régression sont des outils puissants pour prédire des valeurs continues en se basant sur des données d’entraînement. Scipy, une bibliothèque open-source pour les mathématiques, la science et l’ingénierie, offre des fonctionnalités avancées pour la création et l’analyse de modèles de régression. Dans cet article, nous allons explorer les fondamentaux des modèles de régression et de prédiction en utilisant Scipy.</p>
-<h2 id="1-Importer-les-bibliotheques-necessaires"><a href="#1-Importer-les-bibliotheques-necessaires" class="headerlink" title="1. Importer les bibliothèques nécessaires"></a>1. Importer les bibliothèques nécessaires</h2><p>Avant de commencer, assurez-vous d’importer les bibliothèques nécessaires :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> stats</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+  <h1 id="Article-pedagogique-Influence-des-cultures-sur-la-cuisine-taiwanaise"><a href="#Article-pedagogique-Influence-des-cultures-sur-la-cuisine-taiwanaise" class="headerlink" title="Article pédagogique : Influence des cultures sur la cuisine taïwanaise"></a>Article pédagogique : Influence des cultures sur la cuisine taïwanaise</h1><p>La cuisine taïwanaise est une mosaïque de saveurs résultant de l’influence de diverses cultures à travers les siècles. Cette fusion culinaire unique met en lumière l’histoire riche de Taïwan et témoigne de l’ouverture du pays aux influences étrangères. Dans cet article, nous explorerons l’influence des cultures sur la cuisine taïwanaise, en mettant en lumière les apports de différentes traditions culinaires.</p>
+<h2 id="Les-bases-de-la-cuisine-taiwanaise"><a href="#Les-bases-de-la-cuisine-taiwanaise" class="headerlink" title="Les bases de la cuisine taïwanaise"></a>Les bases de la cuisine taïwanaise</h2><p>La cuisine taïwanaise repose sur des ingrédients locaux tels que le porc, le poulet, les fruits de mer, le riz et les légumes. Cependant, ce qui rend la cuisine taïwanaise si spéciale, ce sont les influences variées qui ont façonné ses plats emblématiques.</p>
+<h3 id="1-L’influence-chinoise"><a href="#1-L’influence-chinoise" class="headerlink" title="1. L’influence chinoise"></a>1. L’influence chinoise</h3><p>La cuisine taïwanaise tire une grande partie de son héritage culinaire de la Chine. Les plats tels que le rouleau de printemps, les nouilles aux crevettes, et le ragoût de bœuf braisé sont des exemples de plats chinois qui ont été adaptés à la cuisine taïwanaise.</p>
+<h3 id="2-L’influence-japonaise"><a href="#2-L’influence-japonaise" class="headerlink" title="2. L’influence japonaise"></a>2. L’influence japonaise</h3><p>L’occupation japonaise de Taïwan de 1895 à 1945 a également laissé sa marque sur la cuisine locale. Les sushis, les tempuras et les plats de nouilles japonais ont été intégrés dans la cuisine taïwanaise, créant des mets uniques tels que les nouilles ramen taïwanaises.</p>
+<h3 id="3-L’influence-aborigene"><a href="#3-L’influence-aborigene" class="headerlink" title="3. L’influence aborigène"></a>3. L’influence aborigène</h3><p>Les peuples autochtones de Taïwan ont apporté leur propre culture culinaire, mettant en avant des ingrédients locaux tels que le taro, le millet et le crabe des mangroves. Ces saveurs authentiques ont enrichi la diversité de la cuisine taïwanaise.</p>
+<h2 id="Contexte-historique-et-evolution"><a href="#Contexte-historique-et-evolution" class="headerlink" title="Contexte historique et évolution"></a>Contexte historique et évolution</h2><p>Les influences culinaires sur la cuisine taïwanaise reflètent l’histoire mouvementée de l’île, marquée par des périodes d’immigration et d’occupation. Chaque nouvelle vague d’arrivants a contribué à enrichir et diversifier la cuisine taïwanaise.</p>
+<h2 id="Applications-possibles"><a href="#Applications-possibles" class="headerlink" title="Applications possibles"></a>Applications possibles</h2><p>Comprendre l’influence des cultures sur la cuisine taïwanaise ouvre la voie à une appréciation plus profonde de la diversité culinaire et culturelle de Taïwan. En explorant ces diverses influences, les passionnés de cuisine peuvent s’inspirer pour créer des plats uniques mélangeant tradition et innovation.</p>
+<p>L’influence des cultures sur la cuisine taïwanaise est un témoignage vivant de la capacité des traditions culinaires à évoluer et à s’enrichir au fil du temps. En explorant ces influences, nous découvrons non seulement des saveurs exquises, mais aussi des histoires fascinantes sur l’île de Taïwan.</p>
+<p><em>Laissez-vous emporter par ces saveurs à la croisée des influences et préparez-vous à un voyage gustatif inoubliable dans la cuisine taïwanaise !</em></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
 
-<h2 id="2-Creation-d’un-jeu-de-donnees"><a href="#2-Creation-d’un-jeu-de-donnees" class="headerlink" title="2. Création d’un jeu de données"></a>2. Création d’un jeu de données</h2><p>Pour illustrer les modèles de régression, commençons par créer un jeu de données fictif. Supposons que nous ayons des données de taille de maison et de prix de vente correspondant :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Taille de la maison (m²)</span></span><br><span class="line">X = np.array([<span class="number">50</span>, <span class="number">100</span>, <span class="number">150</span>, <span class="number">200</span>, <span class="number">250</span>, <span class="number">300</span>, <span class="number">350</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Prix de vente (en milliers d&#x27;euros)</span></span><br><span class="line">Y = np.array([<span class="number">100</span>, <span class="number">220</span>, <span class="number">300</span>, <span class="number">380</span>, <span class="number">450</span>, <span class="number">500</span>, <span class="number">550</span>])</span><br></pre></td></tr></table></figure>
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cuisine/" rel="tag">cuisine</a></li></ul>
 
-<h2 id="3-Visualisation-des-donnees"><a href="#3-Visualisation-des-donnees" class="headerlink" title="3. Visualisation des données"></a>3. Visualisation des données</h2><p>Avant de construire un modèle de régression, visualisons les données à l’aide d’un graphique de dispersion :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">plt.scatter(X, Y)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Taille de la maison (m²)&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Prix de vente (en milliers d\&#x27;euros)&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Relation entre la taille de la maison et le prix de vente&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+    </footer>
+  </div>
 
-<h2 id="4-Construction-du-modele-de-regression-lineaire"><a href="#4-Construction-du-modele-de-regression-lineaire" class="headerlink" title="4. Construction du modèle de régression linéaire"></a>4. Construction du modèle de régression linéaire</h2><p>Nous allons maintenant ajuster un modèle de régression linéaire aux données en utilisant la fonction <code>linregress</code> de Scipy :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slope, intercept, r_value, p_value, std_err = stats.linregress(X, Y)</span><br></pre></td></tr></table></figure>
+   
+    
+</article>
 
-<h2 id="5-Prediction-de-nouvelles-valeurs"><a href="#5-Prediction-de-nouvelles-valeurs" class="headerlink" title="5. Prédiction de nouvelles valeurs"></a>5. Prédiction de nouvelles valeurs</h2><p>Une fois le modèle ajusté, nous pouvons l’utiliser pour prédire le prix de vente d’une maison de taille donnée. Par exemple, pour prédire le prix d’une maison de 120 m² :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">predicted_price = slope * <span class="number">120</span> + intercept</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;Le prix estimé pour une maison de 120 m² est de <span class="subst">&#123;predicted_price&#125;</span> milliers d\&#x27;euros.&#x27;</span>)</span><br></pre></td></tr></table></figure>
+    
+    <article
+  id="post-Les-boissons-populaires-a-Taiwan"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Les-boissons-populaires-a-Taiwan/"
+    >Les boissons populaires à Taiwan</a> 
+</h2>
+ 
 
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, les modèles de régression et de prédiction avec Scipy offrent une approche puissante pour analyser et prédire des relations entre des variables. En exploitant les fonctionnalités de Scipy, il est possible de créer des modèles précis pour des applications diverses telles que la prédiction des ventes, des tendances économiques, etc.</p>
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Les-boissons-populaires-a-Taiwan/" class="article-date">
+  <time datetime="2024-03-01T11:30:06.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Cuisine-chinoise/">Cuisine-chinoise</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Cuisine-chinoise-Les-boissons-populaires-a-Taiwan"><a href="#Cuisine-chinoise-Les-boissons-populaires-a-Taiwan" class="headerlink" title="Cuisine-chinoise : Les boissons populaires à Taiwan"></a>Cuisine-chinoise : Les boissons populaires à Taiwan</h1><hr>
+<p>Bienvenue dans cet article qui vous emmènera à la découverte des boissons populaires à Taiwan, un véritable voyage des papilles au cœur de la culture taïwanaise. Préparez-vous à en apprendre davantage sur ces délicieuses boissons qui font la renommée de Taiwan à travers le monde !</p>
+<h2 id="Les-Incontournables"><a href="#Les-Incontournables" class="headerlink" title="Les Incontournables :"></a>Les Incontournables :</h2><h3 id="1-Bubble-tea-The-aux-perles"><a href="#1-Bubble-tea-The-aux-perles" class="headerlink" title="1. Bubble tea (Thé aux perles) :"></a>1. Bubble tea (Thé aux perles) :</h3><p>Le Bubble tea est sans doute la boisson la plus emblématique de Taiwan. Il se compose d’un thé glacé aromatisé, accompagné de lait ou de crème, et de perles de tapioca au fond du verre. Un exemple célèbre est le “Bubble Milk Tea” qui associe parfaitement thé noir, lait et perles de tapioca pour une explosion de saveurs en bouche.</p>
+<h3 id="2-Jian-Nang-Cha-The-aux-herbes"><a href="#2-Jian-Nang-Cha-The-aux-herbes" class="headerlink" title="2. Jian Nang Cha (Thé aux herbes) :"></a>2. Jian Nang Cha (Thé aux herbes) :</h3><p>Le Jian Nang Cha est un thé traditionnel taïwanais à base d’herbes médicinales. Il est réputé pour ses bienfaits pour la santé et son goût unique. Vous pouvez le déguster chaud ou froid, selon vos préférences. Un exemple classique est le “Five Flower Tea” mélangeant différentes fleurs pour une infusion délicate et parfumée.</p>
+<h3 id="3-Ai-Yu-Bing-Jelly-Ice"><a href="#3-Ai-Yu-Bing-Jelly-Ice" class="headerlink" title="3. Ai Yu Bing (Jelly Ice) :"></a>3. Ai Yu Bing (Jelly Ice) :</h3><p>L’Ai Yu Bing est une boisson rafraîchissante à base de gelée d’Aiyu, une plante originaire de Taiwan. Cette boisson est parfaite pour se désaltérer pendant les chaudes journées d’été. Un exemple populaire est le “Ai Yu Jelly Ice Tea” qui combine la gelée d’Aiyu avec du thé glacé pour une boisson sucrée et revigorante.</p>
+<h2 id="La-Preparation"><a href="#La-Preparation" class="headerlink" title="La Préparation :"></a>La Préparation :</h2><ol>
+<li><p><strong>Ingrédients nécessaires</strong> :</p>
+<ul>
+<li>Thé (noir, vert, oolong)</li>
+<li>Lait ou crème</li>
+<li>Perles de tapioca</li>
+<li>Herbes médicinales</li>
+<li>Gelée d’Aiyu</li>
+</ul>
+</li>
+<li><p><strong>Étapes de préparation</strong> :</p>
+<ul>
+<li>Préparez le thé selon les instructions.</li>
+<li>Faites cuire les perles de tapioca jusqu’à ce qu’elles soient tendres.</li>
+<li>Mélangez le thé avec du lait ou de la crème selon la recette.</li>
+<li>Ajoutez les perles de tapioca ou d’autres ingrédients selon la boisson choisie.</li>
+</ul>
+</li>
+</ol>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion :"></a>Conclusion :</h2><p>En conclusion, les boissons populaires à Taiwan offrent une diversité de saveurs uniques et rafraîchissantes qui séduisent les papilles du monde entier. Que vous soyez amateur de thé, de gelée ou de boissons médicinales, Taiwan saura satisfaire toutes vos envies avec ses délices à boire.</p>
+<p>Découvrez et savourez ces boissons emblématiques pour une véritable immersion gustative taïwanaise, et laissez-vous séduire par la richesse des traditions culinaires de l’île de Formose.</p>
+<p>N’attendez plus pour partir à la découverte des boissons populaires à Taiwan et laissez-vous enivrer par leurs arômes exotiques et leur fraîcheur inégalée !</p>
 <hr>
-<p>Avec cet article, vous avez maintenant une base solide pour comprendre et appliquer les modèles de régression et de prédiction en utilisant Scipy. N’hésitez pas à explorer davantage les fonctionnalités de Scipy pour approfondir vos connaissances dans ce domaine passionnant !</p>
+<p>À bientôt pour de nouvelles découvertes culinaires et gastronomiques ! 🍹🍵🥤</p>
  
       <!-- reward -->
       
@@ -711,7 +659,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cuisine/" rel="tag">cuisine</a></li></ul>
 
     </footer>
   </div>
@@ -722,7 +670,7 @@
 
     
     <article
-  id="post-Series-temporelles-et-analyse-de-donnees"
+  id="post-Les-desserts-traditionnels-taiwanais"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -733,8 +681,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Series-temporelles-et-analyse-de-donnees/"
-    >Séries temporelles et analyse de données</a> 
+  <a class="article-title" href="/2024/03/01/Les-desserts-traditionnels-taiwanais/"
+    >Les desserts traditionnels taiwanais</a> 
 </h2>
  
 
@@ -742,33 +690,27 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Series-temporelles-et-analyse-de-donnees/" class="article-date">
-  <time datetime="2024-03-01T08:06:39.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Les-desserts-traditionnels-taiwanais/" class="article-date">
+  <time datetime="2024-03-01T11:29:54.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Scipy/">Scipy</a>
+    <a class="article-category-link" href="/categories/Cuisine-chinoise/">Cuisine-chinoise</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Series-temporelles-et-analyse-de-donnees-avec-Scipy"><a href="#Series-temporelles-et-analyse-de-donnees-avec-Scipy" class="headerlink" title="Séries temporelles et analyse de données avec Scipy"></a>Séries temporelles et analyse de données avec Scipy</h1><p>Les séries temporelles font référence à une série de données ordonnées dans le temps. Elles sont ubiquitaires et utilisées dans de nombreux domaines tels que l’économie, la finance, les sciences sociales et bien d’autres. L’analyse de ces séries temporelles peut fournir des informations précieuses permettant de prendre des décisions informées. Dans cet article, nous allons explorer comment utiliser Scipy, une bibliothèque Python populaire pour les applications scientifiques, pour effectuer une analyse de séries temporelles.</p>
-<h2 id="Introduction-a-Scipy"><a href="#Introduction-a-Scipy" class="headerlink" title="Introduction à Scipy"></a>Introduction à Scipy</h2><p>Scipy est une bibliothèque open-source qui offre un large éventail de fonctions pour le calcul scientifique en Python. Elle inclut des modules dédiés à l’optimisation, l’algèbre linéaire, les statistiques, le traitement du signal et bien plus encore. Pour commencer à travailler avec les séries temporelles en utilisant Scipy, nous allons nous concentrer sur les modules <code>scipy.stats</code> et <code>scipy.signal</code>.</p>
-<h2 id="Importation-des-bibliotheques-necessaires"><a href="#Importation-des-bibliotheques-necessaires" class="headerlink" title="Importation des bibliothèques nécessaires"></a>Importation des bibliothèques nécessaires</h2><p>Tout d’abord, importons les bibliothèques nécessaires :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> scipy.stats</span><br><span class="line"><span class="keyword">import</span> scipy.signal</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+  <h1 id="Les-desserts-traditionnels-taiwanais"><a href="#Les-desserts-traditionnels-taiwanais" class="headerlink" title="Les desserts traditionnels taiwanais"></a>Les desserts traditionnels taiwanais</h1><p>La cuisine taïwanaise est réputée pour sa diversité et sa richesse en saveurs, et cela se retrouve également dans ses desserts traditionnels. Dans cet article, nous allons explorer quelques-uns des desserts taïwanais les plus emblématiques et délicieux.</p>
+<h2 id="Bao-bing-glace-a-raser"><a href="#Bao-bing-glace-a-raser" class="headerlink" title="Bao bing (glace à raser)"></a>Bao bing (glace à raser)</h2><p>Le <strong>bao bing</strong> est une spécialité taïwanaise rafraîchissante qui consiste en des flocons de glace fins et légers, agrémentés de divers accompagnements sucrés comme des fruits frais, des haricots rouges sucrés, des perles de tapioca et du taro. Pour déguster un bao bing authentique, il est essentiel d’avoir une glace parfaitement rasée et des ingrédients de qualité pour une explosion de saveurs en bouche.</p>
+<p>Voici un exemple de recette de bao bing simple à réaliser chez soi :</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Ingrédients :</span><br><span class="line"><span class="bullet">-</span> Glace pilée</span><br><span class="line"><span class="bullet">-</span> Fruits frais (mangue, fraise, kiwi...)</span><br><span class="line"><span class="bullet">-</span> Haricots rouges sucrés</span><br><span class="line"><span class="bullet">-</span> Perles de tapioca cuites</span><br><span class="line"><span class="bullet">-</span> Taro coupé en dés</span><br><span class="line"></span><br><span class="line">Instructions :</span><br><span class="line"><span class="bullet">1.</span> Remplissez un bol de glace pilée jusqu&#x27;à la moitié.</span><br><span class="line"><span class="bullet">2.</span> Disposez les fruits frais, les haricots rouges, les perles de tapioca et le taro sur la glace.</span><br><span class="line"><span class="bullet">3.</span> Arrosez le tout de sirop sucré ou de lait concentré sucré.</span><br><span class="line"><span class="bullet">4.</span> Dégustez en mélangeant tous les ingrédients pour découvrir une explosion de saveurs.</span><br><span class="line"></span><br><span class="line">Servez le bao bing bien frais pour une expérience gustative inoubliable !</span><br></pre></td></tr></table></figure>
 
-<h2 id="Generation-de-donnees-de-series-temporelles"><a href="#Generation-de-donnees-de-series-temporelles" class="headerlink" title="Génération de données de séries temporelles"></a>Génération de données de séries temporelles</h2><p>Commençons par générer des données de séries temporelles pour illustrer nos concepts. Supposons que nous avons une série temporelle représentant les ventes mensuelles d’un produit au cours de l’année :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">0</span>)</span><br><span class="line">sales_data = np.random.normal(<span class="number">100</span>, <span class="number">20</span>, <span class="number">12</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Analyse-des-donnees-de-series-temporelles"><a href="#Analyse-des-donnees-de-series-temporelles" class="headerlink" title="Analyse des données de séries temporelles"></a>Analyse des données de séries temporelles</h2><h3 id="Moyenne-et-ecart-type"><a href="#Moyenne-et-ecart-type" class="headerlink" title="Moyenne et écart-type"></a>Moyenne et écart-type</h3><p>Calculons la moyenne et l’écart-type des ventes mensuelles :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mean_sales = np.mean(sales_data)</span><br><span class="line">std_sales = np.std(sales_data)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Moyenne des ventes mensuelles : <span class="subst">&#123;mean_sales&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Ecart-type des ventes mensuelles : <span class="subst">&#123;std_sales&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="Visualisation-des-donnees"><a href="#Visualisation-des-donnees" class="headerlink" title="Visualisation des données"></a>Visualisation des données</h3><p>Visualisons les ventes mensuelles en utilisant un graphique :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">plt.plot(np.arange(<span class="number">1</span>, <span class="number">13</span>), sales_data, marker=<span class="string">&#x27;o&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Mois&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Ventes&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Ventes mensuelles d un produit&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>L’analyse des séries temporelles avec Scipy peut fournir des informations précieuses sur les tendances, les saisons et les modèles cachés dans les données. Ces informations peuvent être utilisées pour la prévision, la détection d’anomalies, et bien d’autres applications. En combinant les fonctionnalités de Scipy avec d’autres bibliothèques populaires comme Pandas et Matplotlib, vous pouvez aller encore plus loin dans l’analyse des données temporelles et ouvrir de nombreuses perspectives d’applications.</p>
-<p>N’hésitez pas à explorer davantage les fonctionnalités de Scipy et à pratiquer sur différents ensembles de données pour approfondir votre compréhension des séries temporelles et de l’analyse de données.</p>
+<h2 id="Taro-balls-boules-de-taro"><a href="#Taro-balls-boules-de-taro" class="headerlink" title="Taro balls (boules de taro)"></a>Taro balls (boules de taro)</h2><p>Les <strong>taro balls</strong> sont de petites boules moelleuses et sucrées à base de taro, une racine violette naturellement sucrée très appréciée en cuisine asiatique. Ces boules sont souvent cuites puis servies dans une soupe sucrée chaude, accompagnées de perles de tapioca pour ajouter une texture intéressante.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La découverte des desserts traditionnels taïwanais est une véritable invitation au voyage gustatif. Que vous soyez un amateur de sucreries ou tout simplement curieux de goûter de nouvelles saveurs, les desserts taïwanais sauront éveiller vos papilles et vous transporter dans un univers de délices exotiques. N’hésitez pas à explorer davantage la cuisine taïwanaise et à intégrer ces desserts traditionnels dans votre répertoire culinaire pour une expérience gustative unique.</p>
+<p><em>Bonne dégustation !</em></p>
+<hr>
+<p>Avec cette structure, vous disposez d’un contenu informatif et attrayant sur les desserts traditionnels taïwanais, présenté de manière claire grâce au langage Markdown.</p>
  
       <!-- reward -->
       
@@ -779,7 +721,92 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Scipy/" rel="tag">python, Scipy</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cuisine/" rel="tag">cuisine</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Guotie"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Guotie/"
+    >Guotie</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Guotie/" class="article-date">
+  <time datetime="2024-03-01T11:19:44.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Cuisine-chinoise/">Cuisine-chinoise</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Cuisine-chinoise-Guotie"><a href="#Cuisine-chinoise-Guotie" class="headerlink" title="Cuisine chinoise : Guotie"></a>Cuisine chinoise : Guotie</h1><p>Le <strong>Guotie</strong> (en chinois : 鍋貼) est une spécialité de la cuisine chinoise qui se traduit littéralement par “gâteau de poêle”. Aussi connu sous le nom de <strong>jiaozi</strong> ou <strong>dim sum</strong>, le Guotie est un délicieux plat à la fois croustillant à l’extérieur et tendre à l’intérieur, souvent garni de viande hachée et de légumes.</p>
+<h2 id="Ingredients-necessaires"><a href="#Ingredients-necessaires" class="headerlink" title="Ingrédients nécessaires"></a>Ingrédients nécessaires</h2><ul>
+<li>250 g de viande de porc hachée</li>
+<li>1 cuillère à soupe de sauce soja</li>
+<li>1 cuillère à café d’huile de sésame</li>
+<li>1&#x2F;2 tasse d’eau</li>
+<li>1 cuillère à café de gingembre râpé</li>
+<li>1 cuillère à café d’ail haché</li>
+<li>1 tasse de chou chinois émincé</li>
+<li>24 feuilles de pâte à jiaozi </li>
+<li>Huile végétale pour la cuisson</li>
+</ul>
+<h2 id="Preparation"><a href="#Preparation" class="headerlink" title="Préparation"></a>Préparation</h2><ol>
+<li><p>Dans un grand bol, mélanger la viande de porc hachée, la sauce soja, l’huile de sésame, le gingembre et l’ail.</p>
+</li>
+<li><p>Ajouter le chou chinois émincé et bien mélanger le tout.</p>
+</li>
+<li><p>Déposer une cuillère à café de farce au centre de chaque feuille de pâte à jiaozi.</p>
+</li>
+<li><p>Replier la pâte en deux pour former un demi-cercle et appuyer sur les bords pour bien sceller le Guotie.</p>
+</li>
+<li><p>Dans une poêle chaude, ajouter un peu d’huile végétale et déposer les Guotie.</p>
+</li>
+<li><p>Laisser cuire jusqu’à ce que la base des Guotie soit dorée.</p>
+</li>
+<li><p>Ajouter de l’eau dans la poêle et couvrir pour laisser cuire à la vapeur pendant quelques minutes.</p>
+</li>
+<li><p>Retirer le couvercle et laisser l’eau s’évaporer pour rendre le fond croustillant.</p>
+</li>
+</ol>
+<h2 id="Degustation"><a href="#Degustation" class="headerlink" title="Dégustation"></a>Dégustation</h2><p>Les Guotie sont généralement servis avec une sauce à base de vinaigre de riz, de sauce soja et de piment. Vous pouvez également les accompagner de riz ou d’une soupe chinoise pour un repas complet et savoureux.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Le Guotie est une spécialité incontournable de la cuisine chinoise, appréciée pour sa texture croustillante et sa garniture savoureuse. En maîtrisant cet art de la cuisine, vous pourrez surprendre vos convives avec des saveurs authentiques venues tout droit de la Chine. N’hésitez pas à expérimenter avec différentes garnitures pour personnaliser vos Guotie selon vos préférences.</p>
+<p><em>A vos fourneaux pour découvrir ou redécouvrir cette délicieuse spécialité chinoise !</em></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cuisine/" rel="tag">cuisine</a></li></ul>
 
     </footer>
   </div>
@@ -795,7 +822,7 @@
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/3/">Page précédente</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/5/">Page suivante</a>
+    <a class="extend prev" rel="prev" href="/page/3/">Page précédente</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/5/">Page suivante</a>
   </nav>
   
 </section>
@@ -861,6 +888,10 @@
     
     <li class="nav-item">
       <a class="nav-item-link" href="/categories/Python/">Python</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/OpenCV/">OpenCV</a>
     </li>
     
     <li class="nav-item">

@@ -111,7 +111,7 @@
     
     
     <article
-  id="post-Graphiques-en-secteurs-et-en-anneau"
+  id="post-Interactions-entre-les-composants"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -122,8 +122,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Graphiques-en-secteurs-et-en-anneau/"
-    >Graphiques en secteurs et en anneau</a> 
+  <a class="article-title" href="/2024/03/01/Interactions-entre-les-composants/"
+    >Interactions entre les composants</a> 
 </h2>
  
 
@@ -131,33 +131,30 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Graphiques-en-secteurs-et-en-anneau/" class="article-date">
-  <time datetime="2024-03-01T07:30:21.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Interactions-entre-les-composants/" class="article-date">
+  <time datetime="2024-03-01T07:41:49.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+    <a class="article-category-link" href="/categories/Dash/">Dash</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Article-Pedagogique-Graphiques-en-secteurs-et-en-anneau-avec-Plotly"><a href="#Article-Pedagogique-Graphiques-en-secteurs-et-en-anneau-avec-Plotly" class="headerlink" title="Article Pédagogique: Graphiques en secteurs et en anneau avec Plotly"></a>Article Pédagogique: Graphiques en secteurs et en anneau avec Plotly</h1><p>Bienvenue dans cet article où nous allons explorer l’utilisation de Plotly pour créer des graphiques en secteurs et en anneau. Les graphiques en secteurs et en anneau sont des moyens efficaces de visualiser des données sous forme de parts proportionnelles d’un tout. Avec Plotly, nous pouvons créer ces graphiques de manière simple et efficace en utilisant Python. Dans cet article, nous allons apprendre comment le faire.</p>
-<h2 id="Introduction-a-Plotly"><a href="#Introduction-a-Plotly" class="headerlink" title="Introduction à Plotly"></a>Introduction à Plotly</h2><p>Plotly est une bibliothèque de visualisation interactive basée sur Python qui permet de créer une grande variété de graphiques, y compris des graphiques en secteurs et en anneau. Pour commencer, vous devez installer Plotly en utilisant la commande suivante:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
+  <h1 id="Article-pedagogique-Interactions-entre-les-composants-avec-Dash"><a href="#Article-pedagogique-Interactions-entre-les-composants-avec-Dash" class="headerlink" title="Article pédagogique : Interactions entre les composants avec Dash"></a>Article pédagogique : Interactions entre les composants avec Dash</h1><p>Dans ce tutoriel, nous allons explorer les interactions entre les composants dans Dash, un framework web Python pour la création d’applications d’analyse de données interactives. Les interactions entre les composants permettent d’ajouter des fonctionnalités dynamiques à vos applications, en permettant à un composant de réagir aux actions effectuées sur un autre composant.</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Les interactions entre les composants sont un aspect puissant de Dash qui permet de créer des applications web interactives sans nécessiter de connaissances approfondies en HTML, CSS ou JavaScript. Les composants peuvent interagir les uns avec les autres grâce à des callbacks, qui sont des fonctions Python déclenchées par des événements spécifiques.</p>
+<h2 id="Configuration-de-l’environnement"><a href="#Configuration-de-l’environnement" class="headerlink" title="Configuration de l’environnement"></a>Configuration de l’environnement</h2><p>Avant de commencer, assurez-vous d’avoir installé les bibliothèques nécessaires :</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install dash</span><br></pre></td></tr></table></figure>
 
-<p>Assurez-vous d’avoir Plotly installé avant de continuer.</p>
-<h2 id="Creation-d’un-Graphique-en-Secteurs"><a href="#Creation-d’un-Graphique-en-Secteurs" class="headerlink" title="Création d’un Graphique en Secteurs"></a>Création d’un Graphique en Secteurs</h2><p>Commençons par créer un graphique en secteurs simple en utilisant Plotly. Voici un exemple de code qui crée un graphique en secteurs basé sur des données de vente fictives :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"></span><br><span class="line">data = &#123;<span class="string">&#x27;Catégorie&#x27;</span>: [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>],</span><br><span class="line">        <span class="string">&#x27;Ventes&#x27;</span>: [<span class="number">350</span>, <span class="number">240</span>, <span class="number">400</span>, <span class="number">220</span>]&#125;</span><br><span class="line"></span><br><span class="line">fig = px.pie(data, values=<span class="string">&#x27;Ventes&#x27;</span>, names=<span class="string">&#x27;Catégorie&#x27;</span>, title=<span class="string">&#x27;Répartition des Ventes par Catégorie&#x27;</span>)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+<h2 id="Creation-des-composants"><a href="#Creation-des-composants" class="headerlink" title="Création des composants"></a>Création des composants</h2><p>Pour illustrer les interactions entre les composants, nous allons créer une application Dash simple avec deux composants : un champ de saisie de texte et une zone de texte pour afficher le texte saisi. Voici le code Python :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">import</span> dash_core_components <span class="keyword">as</span> dcc</span><br><span class="line"><span class="keyword">import</span> dash_html_components <span class="keyword">as</span> html</span><br><span class="line"><span class="keyword">from</span> dash.dependencies <span class="keyword">import</span> Input, Output</span><br><span class="line"></span><br><span class="line">app = dash.Dash(__name__)</span><br><span class="line"></span><br><span class="line">app.layout = html.Div([</span><br><span class="line">    dcc.Input(<span class="built_in">id</span>=<span class="string">&#x27;input&#x27;</span>, <span class="built_in">type</span>=<span class="string">&#x27;text&#x27;</span>, value=<span class="string">&#x27;&#x27;</span>),</span><br><span class="line">    html.Div(<span class="built_in">id</span>=<span class="string">&#x27;output&#x27;</span>)</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.callback(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="meta">    Output(<span class="params"><span class="string">&#x27;output&#x27;</span>, <span class="string">&#x27;children&#x27;</span></span>),</span></span></span><br><span class="line"><span class="params"><span class="meta">    [Input(<span class="params"><span class="string">&#x27;input&#x27;</span>, <span class="string">&#x27;value&#x27;</span></span>)]</span></span></span><br><span class="line"><span class="params"><span class="meta"></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">update_output</span>(<span class="params">value</span>):</span><br><span class="line">    <span class="keyword">return</span> value</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 
-<p>Exécutez ce code dans votre environnement Python pour visualiser le graphique en secteurs généré.</p>
-<h2 id="Creation-d’un-Graphique-en-Anneau"><a href="#Creation-d’un-Graphique-en-Anneau" class="headerlink" title="Création d’un Graphique en Anneau"></a>Création d’un Graphique en Anneau</h2><p>Maintenant, explorons la création d’un graphique en anneau avec Plotly. Voici un exemple de code qui crée un graphique en anneau basé sur les mêmes données que précédemment :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fig = px.pie(data, values=<span class="string">&#x27;Ventes&#x27;</span>, names=<span class="string">&#x27;Catégorie&#x27;</span>, title=<span class="string">&#x27;Répartition des Ventes par Catégorie&#x27;</span>, hole=<span class="number">0.5</span>)</span><br><span class="line">fig.update_traces(textinfo=<span class="string">&#x27;percent+label&#x27;</span>)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<p>En exécutant ce code, vous verrez le graphique en anneau qui affiche les mêmes données sous une forme différente.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Les graphiques en secteurs et en anneau sont des outils puissants pour visualiser des données sous forme de parts proportionnelles. Avec Plotly, il est facile de créer ces graphiques de manière interactive et esthétique en utilisant Python. En explorant ces types de graphiques, vous pouvez mieux comprendre la répartition des données et identifier les tendances clés. N’hésitez pas à expérimenter avec différentes données et personnalisations pour créer des graphiques uniques et informatifs.</p>
-<p>À travers cet article, vous avez appris les bases de la création de graphiques en secteurs et en anneau avec Plotly. Maintenant, à vous de jouer et d’explorer les nombreuses applications de ces graphiques dans divers domaines tels que les affaires, les finances, la recherche, etc.</p>
-<p>N’oubliez pas que la pratique est la clé pour devenir plus compétent dans la création de graphiques avec Plotly. Amusez-vous à explorer et à visualiser vos propres données de manière créative !</p>
+<h2 id="Interactions-entre-les-composants"><a href="#Interactions-entre-les-composants" class="headerlink" title="Interactions entre les composants"></a>Interactions entre les composants</h2><p>Dans cet exemple, le champ de saisie de texte (<code>dcc.Input</code>) est lié à la zone de texte de sortie (<code>html.Div</code>) via un callback. Chaque fois que l’utilisateur saisit du texte dans le champ d’entrée, le texte est affiché en direct dans la zone de sortie.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Les interactions entre les composants offrent un moyen puissant de rendre vos applications Dash plus dynamiques et interactives. En les utilisant judicieusement, vous pouvez créer des applications web riches en fonctionnalités et offrir une meilleure expérience utilisateur. Explorez davantage les possibilités offertes par les interactions entre les composants pour améliorer vos projets d’analyse et de visualisation de données.</p>
+<p>Pour en savoir plus sur les interactions entre les composants dans Dash, consultez la <a target="_blank" rel="noopener" href="https://dash.plotly.com/">documentation officielle</a>.</p>
+<hr>
+<p>Avec ce tutoriel, vous avez maintenant les bases pour commencer à explorer les interactions entre les composants dans vos propres applications Dash. Amusez-vous à créer des applications web interactives et n’hésitez pas à expérimenter pour découvrir tout le potentiel de Dash.</p>
  
       <!-- reward -->
       
@@ -168,7 +165,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Dash/" rel="tag">python, Dash</a></li></ul>
 
     </footer>
   </div>
@@ -179,7 +176,7 @@
 
     
     <article
-  id="post-Tracer-des-lignes-et-des-graphiques-de-zone"
+  id="post-Callbacks-avances-et-modeles-de-mise-a-jour"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -190,8 +187,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Tracer-des-lignes-et-des-graphiques-de-zone/"
-    >Tracer des lignes et des graphiques de zone</a> 
+  <a class="article-title" href="/2024/03/01/Callbacks-avances-et-modeles-de-mise-a-jour/"
+    >Callbacks avancés et modèles de mise à jour</a> 
 </h2>
  
 
@@ -199,34 +196,36 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Tracer-des-lignes-et-des-graphiques-de-zone/" class="article-date">
-  <time datetime="2024-03-01T07:30:08.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Callbacks-avances-et-modeles-de-mise-a-jour/" class="article-date">
+  <time datetime="2024-03-01T07:41:36.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+    <a class="article-category-link" href="/categories/Dash/">Dash</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Tracer-des-lignes-et-des-graphiques-de-zone-avec-Plotly"><a href="#Tracer-des-lignes-et-des-graphiques-de-zone-avec-Plotly" class="headerlink" title="Tracer des lignes et des graphiques de zone avec Plotly"></a>Tracer des lignes et des graphiques de zone avec Plotly</h1><p>Plotly est une bibliothèque Python puissante et flexible qui permet de créer des graphiques interactifs de grande qualité. Dans cet article, nous allons explorer comment tracer des lignes et des graphiques de zone en utilisant Plotly. Ces types de graphiques sont utiles pour visualiser les tendances, les variations et les comparaisons entre différentes séries de données.</p>
-<h2 id="Introduction-a-Plotly"><a href="#Introduction-a-Plotly" class="headerlink" title="Introduction à Plotly"></a>Introduction à Plotly</h2><p>Avant de commencer à tracer des lignes et des graphiques de zone, assurez-vous d’installer Plotly en utilisant la commande suivante :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!pip install plotly</span><br></pre></td></tr></table></figure>
+  <h1 id="Article-educatif-Callbacks-avances-et-modeles-de-mise-a-jour-avec-Dash"><a href="#Article-educatif-Callbacks-avances-et-modeles-de-mise-a-jour-avec-Dash" class="headerlink" title="Article éducatif : Callbacks avancés et modèles de mise à jour avec Dash"></a>Article éducatif : Callbacks avancés et modèles de mise à jour avec Dash</h1><p>Dans cet article, nous allons explorer les concepts avancés des callbacks en Dash, ainsi que les modèles de mise à jour, pour vous aider à maîtriser ces fonctionnalités essentielles pour le développement d’applications web interactives en Python.</p>
+<hr>
+<h2 id="Introduction-aux-Callbacks-Avances"><a href="#Introduction-aux-Callbacks-Avances" class="headerlink" title="Introduction aux Callbacks Avancés"></a>Introduction aux Callbacks Avancés</h2><p>Les callbacks en Dash sont des fonctions Python qui sont automatiquement appelées lorsque les éléments interactifs de votre application changent. Les callbacks avancés permettent de créer des interactions et des mises à jour plus complexes au sein de votre application. </p>
+<p>Pour illustrer cela, voici un exemple de callback avancé qui met à jour le contenu d’une balise de texte en fonction de la valeur d’un curseur :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">from</span> dash <span class="keyword">import</span> dcc, html, Input, Output</span><br><span class="line"><span class="keyword">from</span> dash.dependencies <span class="keyword">import</span> Input, Output</span><br><span class="line"></span><br><span class="line">app = dash.Dash(__name__)</span><br><span class="line"></span><br><span class="line">app.layout = html.Div([</span><br><span class="line">    dcc.Slider(<span class="built_in">id</span>=<span class="string">&#x27;slider&#x27;</span>, <span class="built_in">min</span>=<span class="number">0</span>, <span class="built_in">max</span>=<span class="number">10</span>, step=<span class="number">1</span>, value=<span class="number">5</span>),</span><br><span class="line">    html.Div(<span class="built_in">id</span>=<span class="string">&#x27;slider-output&#x27;</span>)</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.callback(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="meta">    Output(<span class="params"><span class="string">&#x27;slider-output&#x27;</span>, <span class="string">&#x27;children&#x27;</span></span>),</span></span></span><br><span class="line"><span class="params"><span class="meta">    Input(<span class="params"><span class="string">&#x27;slider&#x27;</span>, <span class="string">&#x27;value&#x27;</span></span>)</span></span></span><br><span class="line"><span class="params"><span class="meta"></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">update_output</span>(<span class="params">value</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="string">f&#x27;La valeur du curseur est <span class="subst">&#123;value&#125;</span>&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 
-<p>Ensuite, importez les modules nécessaires :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br></pre></td></tr></table></figure>
+<p>Dans cet exemple, chaque fois que la valeur du curseur change, le texte de la balise de la division est mis à jour pour afficher la nouvelle valeur du curseur.</p>
+<hr>
+<h2 id="Modeles-de-Mise-a-Jour"><a href="#Modeles-de-Mise-a-Jour" class="headerlink" title="Modèles de Mise à Jour"></a>Modèles de Mise à Jour</h2><p>Les modèles de mise à jour en Dash vous permettent d’organiser et de structurer vos callbacks de manière efficace. Ils offrent la possibilité de séparer la logique de mise à jour de vos éléments graphiques, ce qui rend le code plus lisible et maintenable.</p>
+<p>Voici un exemple utilisant un modèle de mise à jour pour mettre à jour plusieurs éléments à la fois :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.callback(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="meta">    [Output(<span class="params"><span class="string">&#x27;element1&#x27;</span>, <span class="string">&#x27;children&#x27;</span></span>),</span></span></span><br><span class="line"><span class="params"><span class="meta">     Output(<span class="params"><span class="string">&#x27;element2&#x27;</span>, <span class="string">&#x27;children&#x27;</span></span>)],</span></span></span><br><span class="line"><span class="params"><span class="meta">    Input(<span class="params"><span class="string">&#x27;input&#x27;</span>, <span class="string">&#x27;value&#x27;</span></span>)</span></span></span><br><span class="line"><span class="params"><span class="meta"></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">update_elements</span>(<span class="params">value</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="string">f&#x27;Élément 1 mis à jour avec <span class="subst">&#123;value&#125;</span>&#x27;</span>, <span class="string">f&#x27;Élément 2 mis à jour avec <span class="subst">&#123;value&#125;</span>&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="Tracer-des-lignes"><a href="#Tracer-des-lignes" class="headerlink" title="Tracer des lignes"></a>Tracer des lignes</h2><p>Pour tracer une simple ligne avec Plotly, vous pouvez utiliser la classe <code>Scatter</code> :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">y = [<span class="number">10</span>, <span class="number">15</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">20</span>]</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=go.Scatter(x=x, y=y))</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<p>Ce code créera un graphique avec une ligne reliant les points définis par les listes <code>x</code> et <code>y</code>.</p>
-<h2 id="Tracer-des-graphiques-de-zone"><a href="#Tracer-des-graphiques-de-zone" class="headerlink" title="Tracer des graphiques de zone"></a>Tracer des graphiques de zone</h2><p>Les graphiques de zone sont utiles pour mettre en évidence des zones spécifiques sous une courbe. Voici un exemple simple :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">y1 = [<span class="number">10</span>, <span class="number">15</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">20</span>]</span><br><span class="line">y2 = [<span class="number">8</span>, <span class="number">11</span>, <span class="number">9</span>, <span class="number">14</span>, <span class="number">16</span>]</span><br><span class="line"></span><br><span class="line">fig = go.Figure()</span><br><span class="line">fig.add_trace(go.Scatter(x=x, y=y1, fill=<span class="string">&#x27;tozeroy&#x27;</span>, mode=<span class="string">&#x27;none&#x27;</span>, name=<span class="string">&#x27;Zone 1&#x27;</span>))</span><br><span class="line">fig.add_trace(go.Scatter(x=x, y=y2, fill=<span class="string">&#x27;tonexty&#x27;</span>, mode=<span class="string">&#x27;none&#x27;</span>, name=<span class="string">&#x27;Zone 2&#x27;</span>))</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<p>Dans cet exemple, deux graphiques de zone sont tracés pour mettre en évidence les différentes zones situées sous les courbes <code>y1</code> et <code>y2</code>.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, tracer des lignes et des graphiques de zone avec Plotly offre une manière dynamique et interactive de visualiser les données. Ces types de graphiques peuvent être utilisés pour analyser les tendances, les variations et les comparaisons dans divers domaines tels que la finance, la météo, ou la science des données.</p>
-<p>Explorez les fonctionnalités avancées de Plotly pour personnaliser davantage vos graphiques et créer des visualisations accrocheuses pour vos projets. Amusez-vous à explorer et à expérimenter avec Plotly !</p>
+<p>Dans cet exemple, lorsque la valeur de l’élément d’entrée change, les deux éléments ‘element1’ et ‘element2’ sont mis à jour avec la nouvelle valeur.</p>
+<hr>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Les callbacks avancés et les modèles de mise à jour en Dash offrent une multitude d’applications pour la création d’applications web interactives et dynamiques. En comprenant ces concepts et en les maîtrisant, vous serez en mesure de développer des applications plus complexes et plus personnalisées.</p>
+<p>En explorant davantage ces fonctionnalités et en les combinant avec d’autres aspects de Dash, vous pourrez concevoir des applications web puissantes et adaptées à vos besoins spécifiques.</p>
+<p>N’oubliez pas de pratiquer ces concepts et d’expérimenter avec différents scénarios pour renforcer votre compréhension et votre compétence en développement d’applications web avec Dash.</p>
+<hr>
+<p>N’hésitez pas à explorer davantage les possibilités des callbacks avancés et des modèles de mise à jour en Dash pour créer des applications web innovantes et interactives. Bonne coding ! 🚀</p>
  
       <!-- reward -->
       
@@ -237,7 +236,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Dash/" rel="tag">python, Dash</a></li></ul>
 
     </footer>
   </div>
@@ -248,7 +247,7 @@
 
     
     <article
-  id="post-Graphiques-a-barres-et-histogrammes"
+  id="post-Gestion-des-etats-avec-les-callbacks"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -259,8 +258,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Graphiques-a-barres-et-histogrammes/"
-    >Graphiques à barres et histogrammes</a> 
+  <a class="article-title" href="/2024/03/01/Gestion-des-etats-avec-les-callbacks/"
+    >Gestion des états avec les callbacks</a> 
 </h2>
  
 
@@ -268,39 +267,32 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Graphiques-a-barres-et-histogrammes/" class="article-date">
-  <time datetime="2024-03-01T07:29:50.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Gestion-des-etats-avec-les-callbacks/" class="article-date">
+  <time datetime="2024-03-01T07:41:20.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+    <a class="article-category-link" href="/categories/Dash/">Dash</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Article-pedagogique-Graphiques-a-barres-et-histogrammes-avec-Plotly"><a href="#Article-pedagogique-Graphiques-a-barres-et-histogrammes-avec-Plotly" class="headerlink" title="Article pédagogique : Graphiques à barres et histogrammes avec Plotly"></a>Article pédagogique : Graphiques à barres et histogrammes avec Plotly</h1><p>Dans ce tutoriel, nous allons explorer les concepts des graphiques à barres et des histogrammes en utilisant la bibliothèque Plotly en Python. Les graphiques à barres et les histogrammes sont des outils essentiels pour visualiser les données de manière claire et efficace.</p>
+  <h1 id="Article-pedagogique-Gestion-des-etats-avec-les-callbacks-en-Dash"><a href="#Article-pedagogique-Gestion-des-etats-avec-les-callbacks-en-Dash" class="headerlink" title="Article pédagogique : Gestion des états avec les callbacks en Dash"></a>Article pédagogique : Gestion des états avec les callbacks en Dash</h1><hr>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Dans cet article, nous allons découvrir comment gérer les états de nos applications web avec les callbacks en utilisant Dash. Les callbacks sont des fonctions Python qui sont automatiquement appelées lorsqu’un élément de l’interface utilisateur change. Comprendre comment gérer les états avec les callbacks est essentiel pour créer des applications interactives et réactives. </p>
 <hr>
-<h2 id="Introduction-a-Plotly"><a href="#Introduction-a-Plotly" class="headerlink" title="Introduction à Plotly"></a>Introduction à Plotly</h2><p>Plotly est une bibliothèque Python qui permet de créer des visualisations interactives de données. Elle offre de nombreuses possibilités pour personnaliser et explorer graphiquement vos données de façon dynamique.</p>
-<p>Pour commencer, assurez-vous d’installer Plotly en exécutant la commande suivante :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
+<h2 id="Qu’est-ce-que-Dash"><a href="#Qu’est-ce-que-Dash" class="headerlink" title="Qu’est-ce que Dash ?"></a>Qu’est-ce que Dash ?</h2><p>Dash est un framework Python open-source conçu pour construire des applications web analytiques interactives sans avoir à se plonger dans le code JavaScript. Il repose sur Flask, Plotly.js et React, offrant ainsi une solution complète pour le développement d’applications web complexes. La gestion des états avec les callbacks est l’un des concepts clés de Dash qui permet de créer des applications réactives.</p>
+<hr>
+<h2 id="Les-callbacks-en-Dash"><a href="#Les-callbacks-en-Dash" class="headerlink" title="Les callbacks en Dash"></a>Les callbacks en Dash</h2><p>Les callbacks en Dash sont des fonctions Python décorées qui lient les composants de l’interface utilisateur aux sorties de l’application. Ils sont déclenchés par des événements, tels que le clic sur un bouton ou la modification d’une valeur dans un champ de saisie. Les callbacks permettent de mettre à jour dynamiquement les éléments de l’interface en fonction des interactions de l’utilisateur.</p>
+<p>Voici un exemple de code illustrant un simple callback en Dash :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">from</span> dash.dependencies <span class="keyword">import</span> Input, Output</span><br><span class="line"><span class="keyword">import</span> dash_core_components <span class="keyword">as</span> dcc</span><br><span class="line"><span class="keyword">import</span> dash_html_components <span class="keyword">as</span> html</span><br><span class="line"></span><br><span class="line">app = dash.Dash(__name__)</span><br><span class="line"></span><br><span class="line">app.layout = html.Div([</span><br><span class="line">    dcc.Input(<span class="built_in">id</span>=<span class="string">&#x27;input&#x27;</span>, <span class="built_in">type</span>=<span class="string">&#x27;text&#x27;</span>, value=<span class="string">&#x27;&#x27;</span>),</span><br><span class="line">    html.Div(<span class="built_in">id</span>=<span class="string">&#x27;output&#x27;</span>)</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.callback(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="meta">    Output(<span class="params"><span class="string">&#x27;output&#x27;</span>, <span class="string">&#x27;children&#x27;</span></span>),</span></span></span><br><span class="line"><span class="params"><span class="meta">    [Input(<span class="params"><span class="string">&#x27;input&#x27;</span>, <span class="string">&#x27;value&#x27;</span></span>)]</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">update_output</span>(<span class="params">value</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="string">f&#x27;Vous avez saisi : <span class="subst">&#123;value&#125;</span>&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 
+<p>Dans cet exemple, le contenu de la sortie est mis à jour en temps réel en fonction de ce qui est saisi dans le champ de texte. Cela illustre comment les callbacks permettent de gérer les états de l’application de manière réactive.</p>
 <hr>
-<h2 id="Graphiques-a-barres"><a href="#Graphiques-a-barres" class="headerlink" title="Graphiques à barres"></a>Graphiques à barres</h2><p>Les graphiques à barres sont utiles pour comparer des catégories de données distinctes. Ils affichent les valeurs numériques associées à chaque catégorie sous forme de barres de longueurs différentes. Voici un exemple de code pour créer un graphique à barres simple :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line">categories = [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>]</span><br><span class="line">values = [<span class="number">20</span>, <span class="number">35</span>, <span class="number">25</span>, <span class="number">40</span>]</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=[go.Bar(x=categories, y=values)])</span><br><span class="line"></span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<p>Ce code crée un graphique à barres basique avec les catégories ‘A’, ‘B’, ‘C’, ‘D’ et les valeurs correspondantes. Vous pouvez personnaliser les couleurs, les titres et d’autres aspects du graphique selon vos besoins.</p>
+<h2 id="Applications-de-la-gestion-des-etats-avec-les-callbacks"><a href="#Applications-de-la-gestion-des-etats-avec-les-callbacks" class="headerlink" title="Applications de la gestion des états avec les callbacks"></a>Applications de la gestion des états avec les callbacks</h2><p>La gestion des états avec les callbacks en Dash ouvre la voie à de nombreuses possibilités pour créer des applications web interactives. Vous pouvez utiliser les callbacks pour mettre en œuvre des fonctionnalités telles que la mise à jour des graphiques en direct, le filtrage des données en fonction des sélections de l’utilisateur, ou même pour intégrer des API tierces.</p>
+<p>En conclusion, la maîtrise de la gestion des états avec les callbacks en Dash est un atout majeur pour développer des applications web modernes et réactives. En combinant fonctionnalités avancées et simplicité d’utilisation, Dash offre une solution complète pour répondre à vos besoins en matière d’analyse de données interactives.</p>
 <hr>
-<h2 id="Histogrammes"><a href="#Histogrammes" class="headerlink" title="Histogrammes"></a>Histogrammes</h2><p>Les histogrammes sont utilisés pour visualiser la répartition d’une variable continue en regroupant les données en intervalles. Voici un exemple de code pour créer un histogramme simple à partir d’un jeu de données aléatoires :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.figure_factory <span class="keyword">as</span> ff</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">np.random.seed(<span class="number">42</span>)</span><br><span class="line">data = np.random.randn(<span class="number">1000</span>)</span><br><span class="line"></span><br><span class="line">fig = ff.create_distplot([data], [<span class="string">&#x27;Distribution&#x27;</span>])</span><br><span class="line"></span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<p>Ce code génère un histogramme basique de la distribution des données aléatoires. Vous pouvez ajuster le nombre d’intervalles et d’autres paramètres pour mieux visualiser vos données.</p>
-<hr>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, les graphiques à barres et les histogrammes sont des outils essentiels de visualisation de données. Avec Plotly, vous pouvez créer des graphiques interactifs et personnalisables pour explorer et communiquer efficacement vos résultats.</p>
-<p>Les applications possibles des graphiques à barres et des histogrammes sont nombreuses, que ce soit pour analyser des ventes, étudier des tendances, ou visualiser des données statistiques. N’hésitez pas à expérimenter avec Plotly pour découvrir tout le potentiel de ces types de graphiques !</p>
-<p>N’oubliez pas de consulter la documentation officielle de Plotly pour en apprendre davantage sur les possibilités de visualisation offertes par cette bibliothèque : <a target="_blank" rel="noopener" href="https://plot.ly/python/">Site officiel de Plotly</a></p>
-<hr>
-<p>En espérant que ce tutoriel vous ait été utile pour comprendre les graphiques à barres et les histogrammes avec Plotly en Python !</p>
+<p>Avec cet article, vous avez maintenant acquis une compréhension de base de la gestion des états avec les callbacks en Dash. N’hésitez pas à explorer davantage ce sujet pour découvrir toutes les possibilités offertes par ce framework puissant et flexible.</p>
  
       <!-- reward -->
       
@@ -311,7 +303,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Dash/" rel="tag">python, Dash</a></li></ul>
 
     </footer>
   </div>
@@ -322,7 +314,7 @@
 
     
     <article
-  id="post-Personnalisation-des-graphiques"
+  id="post-Creation-de-callbacks-simples"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -333,8 +325,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Personnalisation-des-graphiques/"
-    >Personnalisation des graphiques</a> 
+  <a class="article-title" href="/2024/03/01/Creation-de-callbacks-simples/"
+    >Création de callbacks simples</a> 
 </h2>
  
 
@@ -342,42 +334,35 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Personnalisation-des-graphiques/" class="article-date">
-  <time datetime="2024-03-01T07:29:29.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Creation-de-callbacks-simples/" class="article-date">
+  <time datetime="2024-03-01T07:41:08.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+    <a class="article-category-link" href="/categories/Dash/">Dash</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Article-pedagogique-Personnalisation-des-graphiques-avec-Plotly"><a href="#Article-pedagogique-Personnalisation-des-graphiques-avec-Plotly" class="headerlink" title="Article pédagogique : Personnalisation des graphiques avec Plotly"></a>Article pédagogique : Personnalisation des graphiques avec Plotly</h1><hr>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Dans le domaine de la visualisation de données, la personnalisation des graphiques est essentielle pour rendre les données plus compréhensibles et attrayantes. Plotly, une bibliothèque de visualisation de données en Python, offre de nombreuses options de personnalisation pour créer des graphiques uniques et informatifs. Dans cet article, nous allons explorer quelques-unes de ces possibilités pour maîtriser l’art de la personnalisation des graphiques avec Plotly.</p>
+  <h1 id="Creation-de-callbacks-simples-avec-Dash"><a href="#Creation-de-callbacks-simples-avec-Dash" class="headerlink" title="Création de callbacks simples avec Dash"></a>Création de callbacks simples avec Dash</h1><p>Bienvenue dans cet article pédagogique qui vous initiera à la création de callbacks simples avec Dash, un framework Python pour la construction d’applications web interactives.</p>
 <hr>
-<h2 id="Installation-de-Plotly"><a href="#Installation-de-Plotly" class="headerlink" title="Installation de Plotly"></a>Installation de Plotly</h2><p>Avant de commencer, assurez-vous d’installer Plotly en exécutant la commande suivante dans votre environnement Python :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Les callbacks sont des fonctions qui sont exécutées en réponse à des événements spécifiques sur une application Dash. Dans cet article, nous allons aborder la création de callbacks simples, qui sont essentiels pour dynamiser vos applications web.</p>
+<h2 id="Prerequis"><a href="#Prerequis" class="headerlink" title="Prérequis"></a>Prérequis</h2><p>Avant de commencer, assurez-vous d’avoir installé Dash en exécutant la commande suivante :</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install dash</span><br></pre></td></tr></table></figure>
 
-<hr>
-<h2 id="Personnalisation-des-titres-et-des-axes"><a href="#Personnalisation-des-titres-et-des-axes" class="headerlink" title="Personnalisation des titres et des axes"></a>Personnalisation des titres et des axes</h2><p>Une première étape importante dans la personnalisation des graphiques est la mise en forme des titres et des axes. Voici un exemple de code pour créer un graphique simple avec des titres personnalisés :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=go.Scatter(x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], y=[<span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>]))</span><br><span class="line">fig.update_layout(</span><br><span class="line">    title=<span class="string">&quot;Exemple de graphique personnalisé&quot;</span>,</span><br><span class="line">    xaxis_title=<span class="string">&quot;Axe des abscisses&quot;</span>,</span><br><span class="line">    yaxis_title=<span class="string">&quot;Axe des ordonnées&quot;</span></span><br><span class="line">)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+<p>De plus, vous devez avoir des connaissances de base en Python pour suivre efficacement les exemples de code.</p>
+<h2 id="Creation-d’une-application-Dash-simple"><a href="#Creation-d’une-application-Dash-simple" class="headerlink" title="Création d’une application Dash simple"></a>Création d’une application Dash simple</h2><p>Commençons par créer une application Dash de base pour illustrer l’utilisation de callbacks simples. Voici un exemple de code Python pour une application qui affiche un champ de texte et un bouton, et met à jour une zone de texte avec le contenu du champ de texte lorsqu’on clique sur le bouton :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">from</span> dash <span class="keyword">import</span> html, dcc, Input, Output</span><br><span class="line"></span><br><span class="line">app = dash.Dash(__name__)</span><br><span class="line"></span><br><span class="line">app.layout = html.Div([</span><br><span class="line">    dcc.Input(<span class="built_in">id</span>=<span class="string">&#x27;input&#x27;</span>, <span class="built_in">type</span>=<span class="string">&#x27;text&#x27;</span>, value=<span class="string">&#x27;&#x27;</span>),</span><br><span class="line">    html.Button(<span class="string">&#x27;Submit&#x27;</span>, <span class="built_in">id</span>=<span class="string">&#x27;button&#x27;</span>),</span><br><span class="line">    html.Div(<span class="built_in">id</span>=<span class="string">&#x27;output&#x27;</span>)</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.callback(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="meta">    Output(<span class="params"><span class="string">&#x27;output&#x27;</span>, <span class="string">&#x27;children&#x27;</span></span>),</span></span></span><br><span class="line"><span class="params"><span class="meta">    [Input(<span class="params"><span class="string">&#x27;button&#x27;</span>, <span class="string">&#x27;n_clicks&#x27;</span></span>)],</span></span></span><br><span class="line"><span class="params"><span class="meta">    [Input(<span class="params"><span class="string">&#x27;input&#x27;</span>, <span class="string">&#x27;value&#x27;</span></span>)]</span></span></span><br><span class="line"><span class="params"><span class="meta"></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">update_output</span>(<span class="params">n_clicks, input_value</span>):</span><br><span class="line">    <span class="keyword">if</span> n_clicks:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&#x27;You entered: <span class="subst">&#123;input_value&#125;</span>&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 
-<p>Dans cet exemple, nous avons utilisé les fonctions <code>update_layout()</code> et les paramètres <code>title</code>, <code>xaxis_title</code> et <code>yaxis_title</code> pour personnaliser les titres du graphique et des axes.</p>
+<h2 id="Explication-du-code"><a href="#Explication-du-code" class="headerlink" title="Explication du code"></a>Explication du code</h2><ul>
+<li>Nous avons créé une application Dash simple avec un champ de texte (<code>input</code>), un bouton (<code>button</code>) et une zone de texte (<code>output</code>).</li>
+<li>Le callback <code>update_output</code> est déclenché lorsqu’on clique sur le bouton. Il récupère la valeur du champ de texte et met à jour la zone de texte en conséquence.</li>
+</ul>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Les callbacks simples dans Dash vous permettent de réagir de manière dynamique aux événements sur votre application web. En maîtrisant la création de callbacks simples, vous pourrez rendre vos applications plus interactives et plus engageantes pour les utilisateurs.</p>
+<p>Explorez les multiples possibilités offertes par les callbacks dans Dash pour créer des applications web puissantes et intuitives !</p>
 <hr>
-<h2 id="Personnalisation-des-couleurs-et-des-styles"><a href="#Personnalisation-des-couleurs-et-des-styles" class="headerlink" title="Personnalisation des couleurs et des styles"></a>Personnalisation des couleurs et des styles</h2><p>Pour rendre vos graphiques plus attrayants, vous pouvez également personnaliser les couleurs et les styles. Voici un exemple de code pour changer la couleur du tracé :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fig = go.Figure(data=go.Scatter(x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], y=[<span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>], mode=<span class="string">&#x27;markers&#x27;</span>, marker=<span class="built_in">dict</span>(color=<span class="string">&#x27;rgb(255, 0, 0)&#x27;</span>)))</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<p>Dans cet exemple, nous avons utilisé le paramètre <code>marker</code> avec la clé <code>color</code> pour définir la couleur du tracé. Vous pouvez expérimenter avec différentes valeurs de couleurs pour obtenir le style souhaité.</p>
-<hr>
-<h2 id="Personnalisation-avancee-avec-les-mises-en-page"><a href="#Personnalisation-avancee-avec-les-mises-en-page" class="headerlink" title="Personnalisation avancée avec les mises en page"></a>Personnalisation avancée avec les mises en page</h2><p>Enfin, pour une personnalisation avancée, Plotly offre la possibilité de modifier la mise en page du graphique en utilisant les fonctions de mise en page. Voici un exemple de code pour ajuster la taille du graphique et la légende :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">fig = go.Figure(data=go.Scatter(x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], y=[<span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>]))</span><br><span class="line">fig.update_layout(</span><br><span class="line">    width=<span class="number">800</span>,</span><br><span class="line">    height=<span class="number">400</span>,</span><br><span class="line">    legend=<span class="built_in">dict</span>(</span><br><span class="line">        x=<span class="number">0</span>,</span><br><span class="line">        y=<span class="number">1</span>,</span><br><span class="line">        traceorder=<span class="string">&#x27;normal&#x27;</span></span><br><span class="line">    )</span><br><span class="line">)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<p>Dans cet exemple, nous avons utilisé les paramètres <code>width</code>, <code>height</code> et <code>legend</code> pour personnaliser la taille du graphique et l’emplacement de la légende. Ces ajustements permettent de contrôler l’apparence globale du graphique.</p>
-<hr>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>La personnalisation des graphiques avec Plotly offre une grande flexibilité pour créer des visualisations uniques et informatives. En maîtrisant les différentes options de personnalisation, vous pouvez produire des graphiques qui mettent en valeur vos données de manière efficace. Que ce soit pour des présentations professionnelles, des rapports d’analyse ou des projets académiques, la personnalisation des graphiques avec Plotly est un outil puissant pour communiquer visuellement des informations complexes de manière claire et concise.</p>
-<hr>
-<p>N’oubliez pas d’explorer davantage les possibilités de personnalisation offertes par Plotly pour enrichir vos graphiques et captiver votre public !</p>
+<p>Avec ces connaissances de base sur la création de callbacks simples dans Dash, vous êtes maintenant prêts à découvrir et exploiter toute la puissance de ce framework pour développer des applications web interactives et personnalisées. Amusez-vous à créer des fonctionnalités dynamiques et innovantes pour vos projets !</p>
  
       <!-- reward -->
       
@@ -388,7 +373,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Dash/" rel="tag">python, Dash</a></li></ul>
 
     </footer>
   </div>
@@ -399,7 +384,7 @@
 
     
     <article
-  id="post-Creation-de-graphiques-de-base-avec-Plotly-Express"
+  id="post-Integration-des-composants-Dash-HTML"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -410,8 +395,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Creation-de-graphiques-de-base-avec-Plotly-Express/"
-    >Création de graphiques de base avec Plotly Express</a> 
+  <a class="article-title" href="/2024/03/01/Integration-des-composants-Dash-HTML/"
+    >Intégration des composants Dash HTML</a> 
 </h2>
  
 
@@ -419,35 +404,31 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Creation-de-graphiques-de-base-avec-Plotly-Express/" class="article-date">
-  <time datetime="2024-03-01T07:29:12.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Integration-des-composants-Dash-HTML/" class="article-date">
+  <time datetime="2024-03-01T07:40:45.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+    <a class="article-category-link" href="/categories/Dash/">Dash</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Article-Pedagogique-Creation-de-graphiques-de-base-avec-Plotly-Express"><a href="#Article-Pedagogique-Creation-de-graphiques-de-base-avec-Plotly-Express" class="headerlink" title="Article Pédagogique : Création de graphiques de base avec Plotly Express"></a>Article Pédagogique : Création de graphiques de base avec Plotly Express</h1><hr>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Dans cet article, nous allons explorer la création de graphiques de base en utilisant Plotly Express, un outil puissant et convivial pour visualiser des données en Python. Nous allons couvrir les concepts essentiels pour que vous puissiez commencer à créer vos propres graphiques de manière efficace et intuitive.</p>
-<h2 id="Presentation-de-Plotly-Express"><a href="#Presentation-de-Plotly-Express" class="headerlink" title="Présentation de Plotly Express"></a>Présentation de Plotly Express</h2><p>Plotly Express est une bibliothèque de visualisation de données basée sur Plotly, conçue pour simplifier la création de graphiques interactifs. Elle offre une interface simple et expressive pour générer une grande variété de visualisations, allant des graphiques simples aux graphiques complexes.</p>
-<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>Avant de commencer, assurez-vous d’avoir installé Plotly Express en utilisant pip :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
+  <h1 id="Article-educatif-sur-l’integration-des-composants-Dash-HTML"><a href="#Article-educatif-sur-l’integration-des-composants-Dash-HTML" class="headerlink" title="Article éducatif sur l’intégration des composants Dash HTML"></a>Article éducatif sur l’intégration des composants Dash HTML</h1><p>Bienvenue dans cet article pédagogique dédié à l’intégration des composants Dash HTML. Dans ce guide, nous allons explorer comment utiliser les différents composants HTML dans votre application Dash. </p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Dash est un framework web interactif open source qui permet de créer des tableaux de bord web avec des composants réactifs en Python. L’utilisation des composants Dash HTML permet de personnaliser et de structurer l’interface graphique de vos applications de manière plus avancée.</p>
+<h2 id="Les-bases-des-composants-Dash-HTML"><a href="#Les-bases-des-composants-Dash-HTML" class="headerlink" title="Les bases des composants Dash HTML"></a>Les bases des composants Dash HTML</h2><p>Les composants Dash HTML sont des éléments interactifs ou statiques d’une interface utilisateur. On les intègre dans les mises en page de votre application Dash en utilisant des balises HTML. Voici un exemple simple d’utilisation d’un composant HTML de type titre (<code>&lt;h1&gt;</code>).</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">import</span> dash_html_components <span class="keyword">as</span> html</span><br><span class="line"></span><br><span class="line">app = dash.Dash(__name__)</span><br><span class="line"></span><br><span class="line">app.layout = html.Div([</span><br><span class="line">    html.H1(<span class="string">&#x27;Bonjour, Dash !&#x27;</span>)</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 
-<h2 id="Creation-d’un-graphique-lineaire"><a href="#Creation-d’un-graphique-lineaire" class="headerlink" title="Création d’un graphique linéaire"></a>Création d’un graphique linéaire</h2><p>Pour commencer, créons un graphique linéaire basique à l’aide de Plotly Express. Dans cet exemple, nous allons tracer une série de points en fonction de leur position sur l’axe des x.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.DataFrame(&#123;<span class="string">&#x27;x&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>], <span class="string">&#x27;y&#x27;</span>: [<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>]&#125;)</span><br><span class="line"></span><br><span class="line">fig = px.line(df, x=<span class="string">&#x27;x&#x27;</span>, y=<span class="string">&#x27;y&#x27;</span>, title=<span class="string">&#x27;Graphique linéaire de base&#x27;</span>)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+<p>Dans cet exemple, nous importons la bibliothèque <code>dash_html_components</code> sous le nom <code>html</code>, puis nous utilisons la balise <code>html.H1</code> pour afficher un titre de niveau 1 dans notre application Dash.</p>
+<h2 id="Utilisation-avancee-des-composants-Dash-HTML"><a href="#Utilisation-avancee-des-composants-Dash-HTML" class="headerlink" title="Utilisation avancée des composants Dash HTML"></a>Utilisation avancée des composants Dash HTML</h2><p>En plus des titres, Dash propose une gamme de composants HTML prédéfinis tels que des divisions (<code>&lt;div&gt;</code>), des paragraphes (<code>&lt;p&gt;</code>), des listes (<code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>), des images (<code>&lt;img&gt;</code>), des tableaux (<code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>), etc. Ces composants peuvent être combinés pour créer des mises en page complexes et riches en fonctionnalités.</p>
+<p>Voici un exemple illustrant une mise en page simple avec plusieurs composants HTML :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">import</span> dash_html_components <span class="keyword">as</span> html</span><br><span class="line"></span><br><span class="line">app = dash.Dash(__name__)</span><br><span class="line"></span><br><span class="line">app.layout = html.Div([</span><br><span class="line">    html.H1(<span class="string">&#x27;Bienvenue sur mon tableau de bord&#x27;</span>),</span><br><span class="line">    html.P(<span class="string">&#x27;Voici un paragraphe de texte.&#x27;</span>),</span><br><span class="line">    html.Img(src=<span class="string">&#x27;https://example.com/image.jpg&#x27;</span>),</span><br><span class="line">    html.Table([</span><br><span class="line">        html.Tr([html.Th(<span class="string">&#x27;Entête de colonne 1&#x27;</span>), html.Th(<span class="string">&#x27;Entête de colonne 2&#x27;</span>)]),</span><br><span class="line">        html.Tr([html.Td(<span class="string">&#x27;Donnée 1&#x27;</span>), html.Td(<span class="string">&#x27;Donnée 2&#x27;</span>)])</span><br><span class="line">    ])</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 
-<p>Dans cet exemple, nous avons créé un DataFrame simple contenant des coordonnées x et y, puis utilisé Plotly Express pour tracer un graphique linéaire en spécifiant les données et les axes.</p>
-<h2 id="Creation-d’un-diagramme-en-barres"><a href="#Creation-d’un-diagramme-en-barres" class="headerlink" title="Création d’un diagramme en barres"></a>Création d’un diagramme en barres</h2><p>En plus des graphiques linéaires, Plotly Express permet de créer facilement des diagrammes en barres. Voici un exemple pour illustrer cette fonctionnalité :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">df = pd.DataFrame(&#123;<span class="string">&#x27;categorie&#x27;</span>: [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>], <span class="string">&#x27;valeurs&#x27;</span>: [<span class="number">10</span>, <span class="number">20</span>, <span class="number">15</span>, <span class="number">25</span>]&#125;)</span><br><span class="line"></span><br><span class="line">fig = px.bar(df, x=<span class="string">&#x27;categorie&#x27;</span>, y=<span class="string">&#x27;valeurs&#x27;</span>, title=<span class="string">&#x27;Diagramme en barres simple&#x27;</span>)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<p>En utilisant la fonction <code>px.bar</code>, nous pouvons rapidement visualiser les valeurs différentes des catégories données sous forme de diagramme en barres.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, ce guide vous a introduit aux bases de la création de graphiques avec Plotly Express en Python. Grâce à sa simplicité d’utilisation et ses fonctionnalités puissantes, Plotly Express vous permet de créer des visualisations attrayantes et informatives pour explorer et présenter vos données. Que ce soit pour créer des graphiques linéaires, des diagrammes en barres ou d’autres types de visualisations, Plotly Express offre un large éventail d’options pour répondre à vos besoins en matière de visualisation de données.</p>
-<p>Continuez d’explorer les différentes fonctionnalités de Plotly Express et entraînez-vous à créer vos propres graphiques pour donner vie à vos données de manière captivante et interactive. Amusez-vous à créer des visualisations uniques et originales pour communiquer efficacement vos résultats et enrichir vos analyses de données.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En intégrant les composants Dash HTML dans vos applications, vous pouvez créer des interfaces utilisateur personnalisées et interactives. Expérimentez avec les différents composants disponibles pour construire des tableaux de bord web à la fois esthétiques et fonctionnels.</p>
+<p>N’hésitez pas à explorer davantage les possibilités offertes par les composants Dash HTML pour concevoir des applications web sur mesure qui répondent à vos besoins spécifiques.</p>
 <hr>
-<p>Cet article devrait vous aider à démarrer avec la création de graphiques de base en utilisant Plotly Express. N’hésitez pas à explorer davantage les fonctionnalités de cette bibliothèque pour des visualisations plus avancées et interactives.</p>
+<p>Nous espérons que cet article vous a aidé à comprendre comment intégrer les composants Dash HTML dans vos applications. N’hésitez pas à explorer davantage et à expérimenter pour créer des expériences utilisateur uniques et engageantes.</p>
  
       <!-- reward -->
       
@@ -458,7 +439,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Dash/" rel="tag">python, Dash</a></li></ul>
 
     </footer>
   </div>
@@ -469,7 +450,7 @@
 
     
     <article
-  id="post-Principes-de-base-de-la-visualisation"
+  id="post-Utilisation-des-composants-Dash-Core"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -480,8 +461,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Principes-de-base-de-la-visualisation/"
-    >Principes de base de la visualisation</a> 
+  <a class="article-title" href="/2024/03/01/Utilisation-des-composants-Dash-Core/"
+    >Utilisation des composants Dash Core</a> 
 </h2>
  
 
@@ -489,35 +470,26 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Principes-de-base-de-la-visualisation/" class="article-date">
-  <time datetime="2024-03-01T07:28:58.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Utilisation-des-composants-Dash-Core/" class="article-date">
+  <time datetime="2024-03-01T07:40:33.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+    <a class="article-category-link" href="/categories/Dash/">Dash</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Principes-de-base-de-la-visualisation-avec-Plotly"><a href="#Principes-de-base-de-la-visualisation-avec-Plotly" class="headerlink" title="Principes de base de la visualisation avec Plotly"></a>Principes de base de la visualisation avec Plotly</h1><p>La visualisation des données est un élément essentiel de l’analyse des données. Elle permet de représenter graphiquement les informations de manière à les rendre compréhensibles et facilement interprétables. Plotly est un outil puissant en Python qui permet de créer des visualisations interactives de haute qualité. Dans cet article, nous allons explorer les principes de base de la visualisation en utilisant Plotly.</p>
-<h2 id="Introduction-a-Plotly"><a href="#Introduction-a-Plotly" class="headerlink" title="Introduction à Plotly"></a>Introduction à Plotly</h2><p>Plotly est une bibliothèque Python qui offre une variété de graphiques et de diagrammes interactifs. Pour commencer à utiliser Plotly, vous devez d’abord l’installer. Voici comment vous pouvez le faire en utilisant pip :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
+  <h1 id="Utilisation-des-composants-Dash-Core"><a href="#Utilisation-des-composants-Dash-Core" class="headerlink" title="Utilisation des composants Dash Core"></a>Utilisation des composants Dash Core</h1><p>Dans cet article, nous allons explorer l’utilisation des composants Dash Core, qui sont au cœur du framework Dash pour la création d’applications web interactives en Python. Les composants Dash Core offrent une grande variété de fonctionnalités pour construire des interfaces utilisateur dynamiques et réactives. </p>
+<h2 id="Introduction-a-Dash-Core"><a href="#Introduction-a-Dash-Core" class="headerlink" title="Introduction à Dash Core"></a>Introduction à Dash Core</h2><p>Dash Core comprend une série de composants prêts à l’emploi qui permettent de créer des interfaces graphiques personnalisées. Ces composants peuvent être utilisés pour afficher des données, collecter des informations de l’utilisateur et gérer les interactions dans une application Dash.</p>
+<h2 id="Creation-d’une-application-simple"><a href="#Creation-d’une-application-simple" class="headerlink" title="Création d’une application simple"></a>Création d’une application simple</h2><p>Pour illustrer l’utilisation des composants Dash Core, commençons par créer une application simple affichant un graphique de lignes. Voici un exemple de code Python utilisant les composants <code>dcc.Graph</code> et <code>dash.Dash</code> :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">import</span> dash_core_components <span class="keyword">as</span> dcc</span><br><span class="line"><span class="keyword">import</span> dash_html_components <span class="keyword">as</span> html</span><br><span class="line"></span><br><span class="line">app = dash.Dash(__name__)</span><br><span class="line"></span><br><span class="line">app.layout = html.Div([</span><br><span class="line">    html.H1(<span class="string">&#x27;Exemple de graphique avec Dash&#x27;</span>),</span><br><span class="line">    dcc.Graph(</span><br><span class="line">        <span class="built_in">id</span>=<span class="string">&#x27;example-graph&#x27;</span>,</span><br><span class="line">        figure=&#123;</span><br><span class="line">            <span class="string">&#x27;data&#x27;</span>: [</span><br><span class="line">                &#123;<span class="string">&#x27;x&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">&#x27;y&#x27;</span>: [<span class="number">4</span>, <span class="number">1</span>, <span class="number">2</span>], <span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;line&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;Trace 1&#x27;</span>&#125;,</span><br><span class="line">                &#123;<span class="string">&#x27;x&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">&#x27;y&#x27;</span>: [<span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>], <span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;line&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;Trace 2&#x27;</span>&#125;,</span><br><span class="line">            ],</span><br><span class="line">            <span class="string">&#x27;layout&#x27;</span>: &#123;</span><br><span class="line">                <span class="string">&#x27;title&#x27;</span>: <span class="string">&#x27;Graphique de lignes simple&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    )</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 
-<p>Une fois installé, vous pouvez importer Plotly dans votre script Python en utilisant :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br></pre></td></tr></table></figure>
-
-<h2 id="Creation-d’un-graphique-de-base"><a href="#Creation-d’un-graphique-de-base" class="headerlink" title="Création d’un graphique de base"></a>Création d’un graphique de base</h2><p>Pour commencer, créons un simple graphique en nuage de points pour illustrer les principes de base de la visualisation. Voici un exemple de code qui crée un graphique de dispersion avec des données aléatoires :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">x = np.random.rand(<span class="number">100</span>)</span><br><span class="line">y = np.random.rand(<span class="number">100</span>)</span><br><span class="line"></span><br><span class="line">fig = px.scatter(x=x, y=y)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<p>L’exemple de code ci-dessus crée un nuage de points en utilisant des données aléatoires pour les valeurs x et y. Vous pouvez personnaliser ce graphique en ajoutant des titres, des légendes, et en modifiant les couleurs.</p>
-<h2 id="Personnalisation-des-graphiques"><a href="#Personnalisation-des-graphiques" class="headerlink" title="Personnalisation des graphiques"></a>Personnalisation des graphiques</h2><p>L’un des avantages de Plotly est sa facilité de personnalisation des graphiques. Vous pouvez modifier divers aspects du graphique tels que les couleurs, les tailles, les labels et les titres. Voici un exemple de code qui personnalise le graphique précédent en ajoutant des titres :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fig.update_layout(</span><br><span class="line">    title=<span class="string">&quot;Nuage de points aléatoires&quot;</span>,</span><br><span class="line">    xaxis_title=<span class="string">&quot;Valeurs de x&quot;</span>,</span><br><span class="line">    yaxis_title=<span class="string">&quot;Valeurs de y&quot;</span></span><br><span class="line">)</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<p>En utilisant la fonction <code>update_layout</code>, vous pouvez ajouter des titres aux axes et au graphique lui-même pour améliorer la lisibilité du graphique.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, les principes de base de la visualisation avec Plotly sont essentiels pour créer des graphiques efficaces et informatifs. En comprenant comment créer et personnaliser différents types de graphiques, vous serez en mesure de communiquer visuellement les résultats de vos analyses de données de manière claire et percutante.</p>
-<p>Les compétences acquises en matière de visualisation avec Plotly peuvent être appliquées à divers domaines tels que l’analyse des ventes, la visualisation des données météorologiques, ou encore la présentation de rapports professionnels. En continuant à explorer les fonctionnalités avancées de Plotly, vous pourrez créer des visualisations interactives et dynamiques qui captiveront votre audience.</p>
-<p>N’oubliez pas que la pratique est la clé pour maîtriser l’art de la visualisation des données. Alors, lancez-vous, explorez Plotly et laissez libre cours à votre créativité pour créer des visualisations époustouflantes !</p>
+<p>Dans cet exemple, nous utilisons <code>dcc.Graph</code> pour afficher un graphique de lignes avec deux traces différentes. Le graphique est intégré dans une interface utilisateur HTML générée par <code>html.Div</code>.</p>
+<h2 id="Interaction-avec-les-composants"><a href="#Interaction-avec-les-composants" class="headerlink" title="Interaction avec les composants"></a>Interaction avec les composants</h2><p>Les composants Dash Core permettent également de créer des interactions entre les différents éléments d’une application. Par exemple, vous pouvez utiliser le composant <code>dcc.Input</code> pour saisir des données et les afficher dynamiquement dans un graphique.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En résumé, les composants Dash Core offrent une façon efficace de construire des applications web interactives en Python. En combinant ces composants avec du code Python, il est possible de créer des interfaces utilisateur riches et personnalisées. Explorez les nombreuses possibilités offertes par Dash Core pour développer vos propres applications web puissantes et intuitives.</p>
+<p>Pour en savoir plus sur les composants Dash Core et découvrir d’autres fonctionnalités, consultez la documentation officielle de Dash : <a target="_blank" rel="noopener" href="https://dash.plotly.com/">Dash Documentation</a>.</p>
  
       <!-- reward -->
       
@@ -528,7 +500,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Dash/" rel="tag">python, Dash</a></li></ul>
 
     </footer>
   </div>
@@ -539,7 +511,7 @@
 
     
     <article
-  id="post-Installation-et-premiers-pas"
+  id="post-Layouts-et-styles-dans-Dash"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -550,8 +522,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Installation-et-premiers-pas/"
-    >Installation et premiers pas</a> 
+  <a class="article-title" href="/2024/03/01/Layouts-et-styles-dans-Dash/"
+    >Layouts et styles dans Dash</a> 
 </h2>
  
 
@@ -559,30 +531,34 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Installation-et-premiers-pas/" class="article-date">
-  <time datetime="2024-03-01T07:28:47.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Layouts-et-styles-dans-Dash/" class="article-date">
+  <time datetime="2024-03-01T07:40:17.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Plotly/">Plotly</a>
+    <a class="article-category-link" href="/categories/Dash/">Dash</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Plotly-Installation-et-premiers-pas"><a href="#Plotly-Installation-et-premiers-pas" class="headerlink" title="Plotly : Installation et premiers pas"></a>Plotly : Installation et premiers pas</h1><p>Bienvenue dans ce guide pour démarrer avec Plotly ! Plotly est une bibliothèque graphique puissante en Python qui permet de créer des visualisations interactives. Dans cet article, nous allons parcourir les étapes d’installation de Plotly et explorer quelques bases pour commencer à créer des graphiques. </p>
-<h2 id="Installation-de-Plotly"><a href="#Installation-de-Plotly" class="headerlink" title="Installation de Plotly"></a>Installation de Plotly</h2><p>Avant de commencer à utiliser Plotly, il est essentiel de l’installer. Pour cela, nous allons utiliser <code>pip</code>, le gestionnaire de paquets Python :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
+  <h1 id="Layouts-et-Styles-dans-Dash"><a href="#Layouts-et-Styles-dans-Dash" class="headerlink" title="Layouts et Styles dans Dash"></a>Layouts et Styles dans Dash</h1><p>Bienvenue dans cet article pédagogique conçu pour vous initier aux layouts et styles dans Dash. Dans cet article, vous apprendrez les bases essentielles pour structurer et styliser vos applications web avec Dash, une librairie Python célèbre pour la création d’interfaces utilisateur interactives.</p>
+<h2 id="Introduction-a-Dash"><a href="#Introduction-a-Dash" class="headerlink" title="Introduction à Dash"></a>Introduction à Dash</h2><p>Dash est un framework web open-source développé par Plotly qui permet de créer des applications web analytiques de manière simple et efficace en utilisant uniquement du code Python. L’un des aspects fondamentaux de la création d’applications web est la gestion des layouts et des styles pour une présentation visuelle attrayante et fonctionnelle.</p>
+<h2 id="Les-Layouts-dans-Dash"><a href="#Les-Layouts-dans-Dash" class="headerlink" title="Les Layouts dans Dash"></a>Les Layouts dans Dash</h2><p>Les layouts dans Dash définissent la structure et l’organisation des différents éléments graphiques au sein de votre application. Vous pouvez créer des layouts en utilisant les composants de Dash tels que <code>html.Div</code> et <code>dcc.Graph</code>.</p>
+<p>Voici un exemple de code Python illustrant un layout simple avec Dash :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">import</span> dash_html_components <span class="keyword">as</span> html</span><br><span class="line"></span><br><span class="line">app = dash.Dash(__name__)</span><br><span class="line"></span><br><span class="line">app.layout = html.Div([</span><br><span class="line">    html.H1(<span class="string">&#x27;Bienvenue sur mon application Dash !&#x27;</span>),</span><br><span class="line">    html.P(<span class="string">&#x27;Ceci est un exemple de paragraphe.&#x27;</span>)</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 
-<p>Assurez-vous d’avoir une connexion Internet active, cela permettra à <code>pip</code> de télécharger et d’installer la bibliothèque Plotly sur votre machine.</p>
-<h2 id="Premiers-pas-avec-Plotly"><a href="#Premiers-pas-avec-Plotly" class="headerlink" title="Premiers pas avec Plotly"></a>Premiers pas avec Plotly</h2><p>Maintenant que Plotly est installé, voyons comment créer notre premier graphique. Nous allons commencer par un graphique linéaire simple. Voici un exemple de code Python pour générer un tel graphique :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="comment"># Données</span></span><br><span class="line">x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">y = [<span class="number">10</span>, <span class="number">15</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">18</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Création du graphique</span></span><br><span class="line">fig = go.Figure()</span><br><span class="line">fig.add_trace(go.Scatter(x=x, y=y, mode=<span class="string">&#x27;lines&#x27;</span>, name=<span class="string">&#x27;Ligne&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Affichage du graphique</span></span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+<p>Dans cet exemple, nous utilisons <code>html.Div</code> pour organiser un titre (<code>html.H1</code>) et un paragraphe (<code>html.P</code>) dans une structure de type conteneur.</p>
+<h2 id="Les-Styles-dans-Dash"><a href="#Les-Styles-dans-Dash" class="headerlink" title="Les Styles dans Dash"></a>Les Styles dans Dash</h2><p>Les styles dans Dash permettent de personnaliser l’apparence des différents composants graphiques tels que les couleurs, les polices, les marges, etc. Vous pouvez appliquer des styles en utilisant les attributs CSS des composants de Dash ou en intégrant des feuilles de style externes.</p>
+<p>Voici un exemple de code Python illustrant l’application de styles à un composant avec Dash :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">import</span> dash_html_components <span class="keyword">as</span> html</span><br><span class="line"></span><br><span class="line">app = dash.Dash(__name__)</span><br><span class="line"></span><br><span class="line">app.layout = html.Div([</span><br><span class="line">    html.H1(<span class="string">&#x27;Bienvenue sur mon application Dash !&#x27;</span>, style=&#123;<span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;blue&#x27;</span>, <span class="string">&#x27;font-size&#x27;</span>: <span class="string">&#x27;24px&#x27;</span>&#125;),</span><br><span class="line">    html.P(<span class="string">&#x27;Ceci est un exemple de paragraphe.&#x27;</span>, style=&#123;<span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;green&#x27;</span>, <span class="string">&#x27;font-weight&#x27;</span>: <span class="string">&#x27;bold&#x27;</span>&#125;)</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 
-<p>En exécutant ce code, vous devriez voir apparaître un graphique linéaire simple avec une ligne reliant les points.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Ce guide d’installation et de premiers pas avec Plotly vous a permis de mettre en place la bibliothèque sur votre machine et de créer votre premier graphique interactif. Avec Plotly, les possibilités de visualisation de données sont infinies, que ce soit pour explorer des données complexes, créer des tableaux de bord interactifs ou générer des visualisations personnalisées. </p>
-<p>N’hésitez pas à explorer davantage Plotly en consultant la documentation officielle et en expérimentant avec différents types de graphiques. Amusez-vous à découvrir tout le potentiel de cette bibliothèque graphique ! </p>
+<p>Dans cet exemple, nous utilisons l’attribut <code>style</code> pour définir des styles personnalisés tels que la couleur du texte et la taille de la police pour le titre et le paragraphe.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, les layouts et les styles dans Dash sont des éléments essentiels pour la création d’applications web interactives et attrayantes. En comprenant comment structurer et personnaliser vos layouts, vous serez en mesure de concevoir des interfaces utilisateur riches et intuitives pour vos projets.</p>
+<p>En explorant davantage les capacités de Dash en matière de layouts et de styles, vous pourrez créer des applications web sophistiquées qui répondent aux besoins spécifiques de vos utilisateurs. Nous vous encourageons à expérimenter et à perfectionner vos compétences dans ce domaine pour exploiter pleinement le potentiel de Dash dans vos projets futurs.</p>
+<p>N’hésitez pas à consulter la documentation officielle de Dash pour découvrir plus en détail les possibilités offertes par les layouts et les styles : <a target="_blank" rel="noopener" href="https://dash.plotly.com/">Documentation Dash</a></p>
 <hr>
-<p>Avec ces informations, vous devriez maintenant être prêt à démarrer avec l’installation et les premiers pas avec Plotly. N’hésitez pas à continuer à explorer et à pratiquer pour maîtriser pleinement cette bibliothèque de visualisation de données. Happy plotting !</p>
+<p>Merci de votre lecture ! Nous espérons que cet article vous a aidé à mieux comprendre les layouts et les styles dans Dash. Prenez plaisir à créer des applications web interactives et esthétiques grâce à Dash !</p>
  
       <!-- reward -->
       
@@ -593,7 +569,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Plotly/" rel="tag">python, Plotly</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Dash/" rel="tag">python, Dash</a></li></ul>
 
     </footer>
   </div>
@@ -604,7 +580,7 @@
 
     
     <article
-  id="post-Projets-pratiques-avec-Matplotlib"
+  id="post-Structure-de-base-d-une-application-Dash"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -615,8 +591,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Projets-pratiques-avec-Matplotlib/"
-    >Projets pratiques avec Matplotlib</a> 
+  <a class="article-title" href="/2024/03/01/Structure-de-base-d-une-application-Dash/"
+    >Structure de base d&#39;une application Dash</a> 
 </h2>
  
 
@@ -624,138 +600,43 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Projets-pratiques-avec-Matplotlib/" class="article-date">
-  <time datetime="2024-03-01T07:23:18.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Structure-de-base-d-une-application-Dash/" class="article-date">
+  <time datetime="2024-03-01T07:40:04.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Matplotlib/">Matplotlib</a>
+    <a class="article-category-link" href="/categories/Dash/">Dash</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Matplotlib-Projets-pratiques-avec-Matplotlib"><a href="#Matplotlib-Projets-pratiques-avec-Matplotlib" class="headerlink" title="Matplotlib: Projets pratiques avec Matplotlib"></a>Matplotlib: Projets pratiques avec Matplotlib</h1><hr>
-<p>Matplotlib est une bibliothèque de visualisation de données en Python largement utilisée dans le domaine de l’analyse de données, de la science des données et de la visualisation scientifique. Dans cet article, nous explorerons quelques projets pratiques passionnants que vous pouvez réaliser en utilisant Matplotlib.</p>
-<hr>
-<h2 id="Introduction-a-Matplotlib"><a href="#Introduction-a-Matplotlib" class="headerlink" title="Introduction à Matplotlib"></a>Introduction à Matplotlib</h2><p>Matplotlib est une bibliothèque Python puissante et flexible pour la création de graphiques et de visualisations. Son interface similaire à celle de MATLAB en fait un excellent outil pour les débutants et les utilisateurs expérimentés.</p>
-<p>Pour commencer avec Matplotlib, vous devez l’installer en utilisant pip :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install matplotlib</span><br></pre></td></tr></table></figure>
-
-<p>Ensuite, vous pouvez commencer à créer des graphiques en important Matplotlib :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="Projet-1-Tracer-un-graphique-simple"><a href="#Projet-1-Tracer-un-graphique-simple" class="headerlink" title="Projet 1: Tracer un graphique simple"></a>Projet 1: Tracer un graphique simple</h2><p>Pour commencer, créons un graphique simple en utilisant Matplotlib. Voici un exemple de code qui trace un graphique linéaire :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">y = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>]</span><br><span class="line"></span><br><span class="line">plt.plot(x, y)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;X-Axe&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Y-Axe&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Graphique linéaire simple&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p>Ce code crée un graphique linéaire simple en utilisant des listes de valeurs pour les axes x et y. Vous pouvez personnaliser le graphique en ajoutant des titres, des étiquettes d’axes, des légendes, etc.</p>
-<hr>
-<h2 id="Projet-2-Creer-un-diagramme-a-barres"><a href="#Projet-2-Creer-un-diagramme-a-barres" class="headerlink" title="Projet 2: Créer un diagramme à barres"></a>Projet 2: Créer un diagramme à barres</h2><p>Une autre visualisation courante est le diagramme à barres. Voici un exemple de code qui crée un diagramme à barres à partir de données de vente mensuelles :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">months = [<span class="string">&#x27;Janvier&#x27;</span>, <span class="string">&#x27;Février&#x27;</span>, <span class="string">&#x27;Mars&#x27;</span>, <span class="string">&#x27;Avril&#x27;</span>, <span class="string">&#x27;Mai&#x27;</span>]</span><br><span class="line">sales = [<span class="number">10000</span>, <span class="number">12000</span>, <span class="number">8000</span>, <span class="number">15000</span>, <span class="number">11000</span>]</span><br><span class="line"></span><br><span class="line">plt.bar(months, sales)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Mois&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Ventes&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Ventes mensuelles&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p>Ce code utilise la fonction <code>plt.bar()</code> pour créer un diagramme à barres à partir de données de vente mensuelles. Vous pouvez expérimenter avec différentes options de style pour personnaliser le graphique à votre guise.</p>
-<hr>
-<h2 id="Projet-3-Creer-un-nuage-de-points"><a href="#Projet-3-Creer-un-nuage-de-points" class="headerlink" title="Projet 3: Créer un nuage de points"></a>Projet 3: Créer un nuage de points</h2><p>Un autre type de visualisation utile est le nuage de points, qui permet d’explorer la relation entre deux variables. Voici un exemple de code qui crée un nuage de points à partir de données aléatoires :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">x = np.random.rand(<span class="number">50</span>)</span><br><span class="line">y = np.random.rand(<span class="number">50</span>)</span><br><span class="line"></span><br><span class="line">plt.scatter(x, y)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;X-Axe&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Y-Axe&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Nuage de points aléatoire&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p>Ce code utilise la fonction <code>plt.scatter()</code> pour créer un nuage de points à partir de données aléatoires. Vous pouvez personnaliser les couleurs, les tailles et d’autres attributs des points pour visualiser vos données de manière plus expressive.</p>
-<hr>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En concluant, ces projets pratiques avec Matplotlib ne sont que le début de ce que vous pouvez accomplir avec cette puissante bibliothèque de visualisation en Python. En explorant davantage ses fonctionnalités et en combinant différents types de graphiques, vous pourriez créer des visualisations complexes et informatives pour vos projets d’analyse de données.</p>
-<p>N’hésitez pas à explorer d’autres ressources, tutoriels et documentations pour améliorer vos compétences en visualisation de données avec Matplotlib. Amusez-vous à créer vos propres projets et à découvrir de nouvelles façons de représenter visuellement vos données!</p>
-<hr>
-<p>En suivant ces projets pratiques, vous devriez acquérir une bonne compréhension de la manière dont vous pouvez utiliser Matplotlib pour créer des visualisations de données puissantes et informatives en Python.</p>
-<hr>
-<p>Ce tutoriel a été rédigé pour vous aider à démarrer avec Matplotlib et à explorer divers projets pratiques. Nous espérons qu’il vous sera utile dans votre parcours d’apprentissage de la visualisation de données avec Python.</p>
-<p>Pour explorer davantage les possibilités de Matplotlib, n’hésitez pas à consulter la <a target="_blank" rel="noopener" href="https://matplotlib.org/stable/index.html">documentation officielle de Matplotlib</a>. Profitez pleinement de cette bibliothèque et laissez libre cours à votre créativité dans vos projets de visualisation de données! </p>
-<hr>
-<p><strong>Happy plotting with Matplotlib!</strong> </p>
-<hr>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-matplotlib/" rel="tag">python, matplotlib</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Trucs-et-astuces-avances-pour-des-graphiques-professionnels"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Trucs-et-astuces-avances-pour-des-graphiques-professionnels/"
-    >Trucs et astuces avancés pour des graphiques professionnels</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/01/Trucs-et-astuces-avances-pour-des-graphiques-professionnels/" class="article-date">
-  <time datetime="2024-03-01T07:01:02.000Z" itemprop="datePublished">2024-03-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Matplotlib/">Matplotlib</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Matplotlib-Trucs-et-astuces-avances-pour-des-graphiques-professionnels"><a href="#Matplotlib-Trucs-et-astuces-avances-pour-des-graphiques-professionnels" class="headerlink" title="Matplotlib : Trucs et astuces avancés pour des graphiques professionnels"></a>Matplotlib : Trucs et astuces avancés pour des graphiques professionnels</h1><p>Bienvenue dans ce guide pédagogique dédié à l’utilisation avancée de Matplotlib pour créer des graphiques professionnels. Dans cet article, nous allons explorer différents trucs et astuces qui vous aideront à améliorer la qualité de vos visualisations. Que vous soyez déjà familier avec Matplotlib ou que vous souhaitiez approfondir vos compétences, ces conseils avancés vous permettront de créer des graphiques impressionnants.</p>
-<h2 id="Table-des-matieres"><a href="#Table-des-matieres" class="headerlink" title="Table des matières"></a>Table des matières</h2><ol>
-<li>Personnalisation avancée des graphiques</li>
-<li>Utilisation de sous-graphiques</li>
-<li>Optimisation des couleurs et des styles</li>
-<li>Annotations et légendes personnalisées</li>
-<li>Amélioration de la lisibilité et de l’esthétique</li>
-<li>Conclusion</li>
+  <h1 id="Structure-de-base-d’une-application-Dash"><a href="#Structure-de-base-d’une-application-Dash" class="headerlink" title="Structure de base d’une application Dash"></a>Structure de base d’une application Dash</h1><p>Bienvenue dans cet article pédagogique destiné aux débutants sur la structure de base d’une application Dash. Dash est un framework web écrit en Python qui vous permet de créer des applications web interactives de manière simple et rapide. Comprendre la structure de base d’une application Dash est essentiel pour commencer à créer vos propres projets web.</p>
+<h2 id="Introduction-a-Dash"><a href="#Introduction-a-Dash" class="headerlink" title="Introduction à Dash"></a>Introduction à Dash</h2><p>Dash repose sur des composants principaux pour construire des applications web : les <em>layouts</em>, les <em>callbacks</em> et les <em>composants</em>. Tout d’abord, nous aborderons la structure générale de base d’une application Dash.</p>
+<h2 id="La-structure-de-base-d’une-application-Dash"><a href="#La-structure-de-base-d’une-application-Dash" class="headerlink" title="La structure de base d’une application Dash"></a>La structure de base d’une application Dash</h2><p>Une application Dash se compose généralement des éléments suivants :</p>
+<ol>
+<li><strong>Importations des modules nécessaires</strong> : Pour commencer, importez les modules nécessaires requis par Dash.</li>
 </ol>
-<h2 id="1-Personnalisation-avancee-des-graphiques"><a href="#1-Personnalisation-avancee-des-graphiques" class="headerlink" title="1. Personnalisation avancée des graphiques"></a>1. Personnalisation avancée des graphiques</h2><p>Pour commencer, personnalisons davantage nos graphiques en utilisant des styles avancés. Par exemple, ajustons l’épaisseur des lignes, la taille des marqueurs et les couleurs. Voici un exemple de code :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">10</span>, <span class="number">100</span>)</span><br><span class="line">y = np.sin(x)</span><br><span class="line"></span><br><span class="line">plt.plot(x, y, color=<span class="string">&#x27;blue&#x27;</span>, linewidth=<span class="number">2</span>, marker=<span class="string">&#x27;o&#x27;</span>, markersize=<span class="number">5</span>, label=<span class="string">&#x27;sin(x)&#x27;</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">import</span> dash_core_components <span class="keyword">as</span> dcc</span><br><span class="line"><span class="keyword">import</span> dash_html_components <span class="keyword">as</span> html</span><br></pre></td></tr></table></figure>
 
-<p>En expérimentant avec ces paramètres, vous pouvez créer des graphiques plus attrayants et informatifs.</p>
-<h2 id="2-Utilisation-de-sous-graphiques"><a href="#2-Utilisation-de-sous-graphiques" class="headerlink" title="2. Utilisation de sous-graphiques"></a>2. Utilisation de sous-graphiques</h2><p>Pour afficher plusieurs graphiques en même temps, utilisez les sous-graphiques. Cela vous permet de comparer différentes données de manière efficace. Voici un exemple :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fig, axs = plt.subplots(<span class="number">2</span>)</span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">10</span>, <span class="number">100</span>)</span><br><span class="line">y1 = np.sin(x)</span><br><span class="line">y2 = np.cos(x)</span><br><span class="line"></span><br><span class="line">axs[<span class="number">0</span>].plot(x, y1, label=<span class="string">&#x27;sin(x)&#x27;</span>)</span><br><span class="line">axs[<span class="number">1</span>].plot(x, y2, label=<span class="string">&#x27;cos(x)&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><strong>Initialisation de l’application</strong> : Créez une instance de votre application Dash.</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app = dash.Dash(__name__)</span><br></pre></td></tr></table></figure>
 
-<p>En utilisant cette approche, vous pouvez organiser vos visualisations de manière plus structurée.</p>
-<h2 id="3-Optimisation-des-couleurs-et-des-styles"><a href="#3-Optimisation-des-couleurs-et-des-styles" class="headerlink" title="3. Optimisation des couleurs et des styles"></a>3. Optimisation des couleurs et des styles</h2><p>Choisir les bonnes couleurs et styles est crucial pour la lisibilité de vos graphiques. Utilisez des palettes de couleurs harmonieuses et évitez les combinaisons qui peuvent être difficiles à distinguer. Voici un exemple :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">10</span>, <span class="number">100</span>)</span><br><span class="line">y = np.sin(x)</span><br><span class="line">plt.plot(x, y, color=<span class="string">&#x27;green&#x27;</span>, linestyle=<span class="string">&#x27;--&#x27;</span>, label=<span class="string">&#x27;sin(x)&#x27;</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><strong>Définition de la mise en page</strong> : La mise en page de votre application est définie en utilisant les composants HTML et Core de Dash.</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">app.layout = html.Div([</span><br><span class="line">    html.H1(<span class="string">&quot;Mon application Dash&quot;</span>),</span><br><span class="line">    dcc.Graph(</span><br><span class="line">        <span class="built_in">id</span>=<span class="string">&#x27;example-graph&#x27;</span>,</span><br><span class="line">        figure=&#123;</span><br><span class="line">            <span class="string">&#x27;data&#x27;</span>: [</span><br><span class="line">                &#123;<span class="string">&#x27;x&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">&#x27;y&#x27;</span>: [<span class="number">4</span>, <span class="number">1</span>, <span class="number">2</span>], <span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;bar&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;SF&#x27;</span>&#125;,</span><br><span class="line">                &#123;<span class="string">&#x27;x&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">&#x27;y&#x27;</span>: [<span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>], <span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;bar&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;NYC&#x27;</span>&#125;,</span><br><span class="line">            ],</span><br><span class="line">            <span class="string">&#x27;layout&#x27;</span>: &#123;</span><br><span class="line">                <span class="string">&#x27;title&#x27;</span>: <span class="string">&#x27;Exemple de graphique avec Dash&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    )</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
 
-<p>Expérimentez avec différentes palettes de couleurs et styles pour trouver ce qui convient le mieux à vos données.</p>
-<h2 id="4-Annotations-et-legendes-personnalisees"><a href="#4-Annotations-et-legendes-personnalisees" class="headerlink" title="4. Annotations et légendes personnalisées"></a>4. Annotations et légendes personnalisées</h2><p>Pour ajouter des annotations et des légendes personnalisées à vos graphiques, utilisez les fonctions d’annotation de Matplotlib. Par exemple, ajoutez une annotation à un point spécifique :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">10</span>, <span class="number">100</span>)</span><br><span class="line">y = np.sin(x)</span><br><span class="line">plt.plot(x, y, label=<span class="string">&#x27;sin(x)&#x27;</span>)</span><br><span class="line">plt.annotate(<span class="string">&#x27;Point important&#x27;</span>, xy=(<span class="number">3</span>, <span class="number">0</span>), xytext=(<span class="number">4</span>, <span class="number">0.5</span>), arrowprops=<span class="built_in">dict</span>(facecolor=<span class="string">&#x27;black&#x27;</span>, shrink=<span class="number">0.05</span>))</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><strong>Exécution de l’application</strong> : Enfin, exécutez votre application.</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 
-<p>Les annotations et légendes personnalisées peuvent aider à mettre en évidence des points clés dans vos visualisations.</p>
-<h2 id="5-Amelioration-de-la-lisibilite-et-de-l’esthetique"><a href="#5-Amelioration-de-la-lisibilite-et-de-l’esthetique" class="headerlink" title="5. Amélioration de la lisibilité et de l’esthétique"></a>5. Amélioration de la lisibilité et de l’esthétique</h2><p>Enfin, veillez à améliorer la lisibilité et l’esthétique de vos graphiques. Ajoutez des titres informatifs, des étiquettes aux axes et des grilles si nécessaire. Voici un exemple :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">10</span>, <span class="number">100</span>)</span><br><span class="line">y = np.sin(x)</span><br><span class="line">plt.plot(x, y)</span><br><span class="line">plt.title(<span class="string">&#x27;Fonction sin(x)&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;x&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;sin(x)&#x27;</span>)</span><br><span class="line">plt.grid(<span class="literal">True</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p>Des graphiques bien formatés rendront vos visualisations plus professionnelles et faciles à interpréter.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En appliquant ces trucs et astuces avancés avec Matplotlib, vous serez en mesure de créer des graphiques professionnels et percutants. Que ce soit pour des présentations, des rapports ou des publications, la maîtrise de ces techniques vous aidera à communiquer efficacement vos données de manière visuelle. Expérimentez avec ces concepts et explorez d’autres fonctionnalités de Matplotlib pour aller encore plus loin dans la création de graphiques de qualité.</p>
-<p>N’oubliez pas que la pratique est la clé pour perfectionner vos compétences en visualisation de données. Amusez-vous à explorer les possibilités infinies offertes par Matplotlib et laissez libre cours à votre créativité pour produire des graphiques qui captivent votre public.</p>
-<p>Alors, prêt à élever vos visualisations à un niveau supérieur avec Matplotlib ? Commencez dès maintenant et voyez l’impact positif que des graphiques bien conçus peuvent avoir dans la communication de vos données.</p>
-<p>N’hésitez pas à partager vos propres trucs et astuces pour des graphiques professionnels en commentant ci-dessous. Bonne visualisation ! 📊✨</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En comprenant la structure de base d’une application Dash, vous pourrez commencer à construire des applications web interactives et dynamiques. Avec Dash, les possibilités de création sont infinies, que ce soit pour des tableaux de bord interactifs, des visualisations de données ou des applications web personnalisées.</p>
+<p>Commencez à explorer et à expérimenter avec Dash pour donner vie à vos idées de manière conviviale et intuitive. N’oubliez pas de consulter la documentation officielle de Dash pour approfondir vos connaissances et découvrir d’autres fonctionnalités avancées.</p>
+<p>Vous êtes maintenant prêt à plonger dans le monde passionnant des applications Dash et à développer vos propres projets web !</p>
  
       <!-- reward -->
       
@@ -766,7 +647,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-matplotlib/" rel="tag">python, matplotlib</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Dash/" rel="tag">python, Dash</a></li></ul>
 
     </footer>
   </div>
@@ -777,7 +658,7 @@
 
     
     <article
-  id="post-Integration-de-Matplotlib-avec-pandas"
+  id="post-Configuration-de-l-environnement-de-developpement-Dash"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -788,8 +669,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/03/01/Integration-de-Matplotlib-avec-pandas/"
-    >Intégration de Matplotlib avec pandas</a> 
+  <a class="article-title" href="/2024/03/01/Configuration-de-l-environnement-de-developpement-Dash/"
+    >Configuration de l&#39;environnement de développement Dash</a> 
 </h2>
  
 
@@ -797,36 +678,40 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/01/Integration-de-Matplotlib-avec-pandas/" class="article-date">
-  <time datetime="2024-03-01T06:56:48.000Z" itemprop="datePublished">2024-03-01</time>
+      <a href="/2024/03/01/Configuration-de-l-environnement-de-developpement-Dash/" class="article-date">
+  <time datetime="2024-03-01T07:39:48.000Z" itemprop="datePublished">2024-03-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Matplotlib/">Matplotlib</a>
+    <a class="article-category-link" href="/categories/Dash/">Dash</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Integration-de-Matplotlib-avec-pandas"><a href="#Integration-de-Matplotlib-avec-pandas" class="headerlink" title="Intégration de Matplotlib avec pandas"></a>Intégration de Matplotlib avec pandas</h1><p>Dans ce tutoriel, nous allons explorer comment intégrer Matplotlib, une bibliothèque de visualisation en Python, avec pandas, une bibliothèque de manipulation de données. Cette intégration nous permettra de créer des graphiques informatifs à partir de données structurées dans des DataFrames pandas.</p>
-<h2 id="Prerequis"><a href="#Prerequis" class="headerlink" title="Prérequis"></a>Prérequis</h2><p>Avant de commencer, assurez-vous d’avoir Matplotlib et pandas installés sur votre environnement Python.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install matplotlib pandas</span><br></pre></td></tr></table></figure>
+  <h1 id="Configuration-de-l’environnement-de-developpement-Dash"><a href="#Configuration-de-l’environnement-de-developpement-Dash" class="headerlink" title="Configuration de l’environnement de développement Dash"></a>Configuration de l’environnement de développement Dash</h1><p>Dans cet article, nous allons explorer la configuration de l’environnement de développement Dash, un framework Python pour la création d’applications web interactives. Suivez ces étapes pour bien mettre en place votre environnement de développement Dash et commencez à créer des applications web fascinantes.</p>
+<h2 id="Installation-de-Dash"><a href="#Installation-de-Dash" class="headerlink" title="Installation de Dash"></a>Installation de Dash</h2><p>Avant de commencer à travailler avec Dash, vous devez d’abord installer le framework. Utilisez <code>pip</code> pour installer Dash et ses dépendances :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install dash</span><br></pre></td></tr></table></figure>
 
-<h2 id="Import-des-bibliotheques"><a href="#Import-des-bibliotheques" class="headerlink" title="Import des bibliothèques"></a>Import des bibliothèques</h2><p>Commençons par importer les bibliothèques nécessaires.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+<p>Assurez-vous d’avoir également installé <code>plotly</code> pour pouvoir créer des graphiques interactifs :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install plotly</span><br></pre></td></tr></table></figure>
 
-<h2 id="Charger-les-donnees"><a href="#Charger-les-donnees" class="headerlink" title="Charger les données"></a>Charger les données</h2><p>Pour illustrer l’intégration de Matplotlib avec pandas, chargeons un ensemble de données à partir d’un fichier CSV.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data = pd.read_csv(<span class="string">&#x27;data.csv&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="Configuration-de-votre-premier-projet-Dash"><a href="#Configuration-de-votre-premier-projet-Dash" class="headerlink" title="Configuration de votre premier projet Dash"></a>Configuration de votre premier projet Dash</h2><p>Maintenant que Dash est installé, créez un nouveau fichier Python pour votre application Dash. Importez les modules nécessaires et initialisez une nouvelle application Dash :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">import</span> dash_core_components <span class="keyword">as</span> dcc</span><br><span class="line"><span class="keyword">import</span> dash_html_components <span class="keyword">as</span> html</span><br><span class="line"></span><br><span class="line">app = dash.Dash(__name__)</span><br></pre></td></tr></table></figure>
 
-<h2 id="Tracer-un-graphique-simple"><a href="#Tracer-un-graphique-simple" class="headerlink" title="Tracer un graphique simple"></a>Tracer un graphique simple</h2><p>Créons un graphique à barres basé sur les données de notre DataFrame pandas.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">plt.bar(data[<span class="string">&#x27;x&#x27;</span>], data[<span class="string">&#x27;y&#x27;</span>])</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Axe X&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Axe Y&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Graphique à barres&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>Définissez ensuite la mise en page de votre application en utilisant les composants de base et en les organisant dans une structure HTML :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">app.layout = html.Div([</span><br><span class="line">    html.H1(<span class="string">&#x27;Bienvenue sur mon application Dash!&#x27;</span>),</span><br><span class="line">    dcc.Graph(</span><br><span class="line">        figure=&#123;</span><br><span class="line">            <span class="string">&#x27;data&#x27;</span>: [</span><br><span class="line">                &#123;<span class="string">&#x27;x&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">&#x27;y&#x27;</span>: [<span class="number">4</span>, <span class="number">1</span>, <span class="number">2</span>], <span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;bar&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;Premier tableau de bord&#x27;</span>&#125;,</span><br><span class="line">                &#123;<span class="string">&#x27;x&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">&#x27;y&#x27;</span>: [<span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>], <span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;bar&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">u&#x27;Second tableau de bord&#x27;</span>&#125;,</span><br><span class="line">            ],</span><br><span class="line">            <span class="string">&#x27;layout&#x27;</span>: &#123;</span><br><span class="line">                <span class="string">&#x27;title&#x27;</span>: <span class="string">&#x27;Visualisation de données en Dash&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    )</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
 
-<h2 id="Personnalisation-des-graphiques"><a href="#Personnalisation-des-graphiques" class="headerlink" title="Personnalisation des graphiques"></a>Personnalisation des graphiques</h2><p>Ajoutons de la personnalisation à notre graphique en modifiant les couleurs, les labels et en ajoutant une légende.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">plt.scatter(data[<span class="string">&#x27;x&#x27;</span>], data[<span class="string">&#x27;y&#x27;</span>], color=<span class="string">&#x27;red&#x27;</span>, label=<span class="string">&#x27;Données&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Axe X&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Axe Y&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Nuage de points&#x27;</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<h2 id="Execution-de-votre-application-Dash"><a href="#Execution-de-votre-application-Dash" class="headerlink" title="Exécution de votre application Dash"></a>Exécution de votre application Dash</h2><p>Pour lancer votre application Dash, ajoutez une ligne pour exécuter le serveur dans votre script Python :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>L’intégration de Matplotlib avec pandas offre une puissante combinaison pour explorer et visualiser des données. En utilisant les fonctionnalités de pandas pour manipuler les données et celles de Matplotlib pour créer des graphiques, il est possible de communiquer efficacement des insights à partir de vos jeux de données. Explorez davantage cette intégration pour créer des graphiques personnalisés et informatifs.</p>
-<p>À travers ce guide, vous avez appris les bases de l’intégration de Matplotlib avec pandas. Continuez à pratiquer et à explorer les différentes possibilités offertes par ces deux bibliothèques pour aller encore plus loin dans l’analyse et la visualisation de données.</p>
-<p><em>Ce tutoriel a été conçu pour vous aider à démarrer avec l’intégration de Matplotlib avec pandas. Nous espérons qu’il vous sera utile dans vos projets de visualisation de données.</em></p>
+<p>Enregistrez votre fichier et lancez-le en exécutant la commande suivante dans votre terminal :</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python nom_de_votre_fichier.py</span><br></pre></td></tr></table></figure>
+
+<p>Votre application Dash devrait maintenant être disponible à l’adresse <code>http://127.0.0.1:8050/</code>. Cliquez sur ce lien pour voir votre application web en action.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Vous avez maintenant configuré votre environnement de développement Dash, créé votre premier projet Dash et lancé une application web interactive. Avec Dash, les possibilités de création d’applications web sont infinies. Explorez davantage les fonctionnalités de Dash et créez des applications web captivantes pour visualiser et interagir avec vos données.</p>
+<p>N’oubliez pas de consulter la <a target="_blank" rel="noopener" href="https://dash.plotly.com/">documentation officielle de Dash</a> pour en savoir plus sur les fonctionnalités avancées et les bonnes pratiques de développement.</p>
+<p>Commencez dès aujourd’hui à construire des applications web dynamiques et engageantes avec Dash !</p>
  
       <!-- reward -->
       
@@ -837,7 +722,77 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-matplotlib/" rel="tag">python, matplotlib</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Dash/" rel="tag">python, Dash</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Introduction-a-Dash-et-aux-applications-web-de-donnees"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/Introduction-a-Dash-et-aux-applications-web-de-donnees/"
+    >Introduction à Dash et aux applications web de données</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/Introduction-a-Dash-et-aux-applications-web-de-donnees/" class="article-date">
+  <time datetime="2024-03-01T07:39:35.000Z" itemprop="datePublished">2024-03-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Dash/">Dash</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Introduction-a-Dash-et-aux-applications-web-de-donnees"><a href="#Introduction-a-Dash-et-aux-applications-web-de-donnees" class="headerlink" title="Introduction à Dash et aux applications web de données"></a>Introduction à Dash et aux applications web de données</h1><p>Dans cet article, nous allons nous plonger dans le monde de Dash, un framework web interactif utilisant Python. Nous allons découvrir comment créer des applications web de données dynamiques et interactives en utilisant Dash. Si vous êtes un débutant cherchant à explorer le potentiel de la visualisation de données sur le web, alors vous êtes au bon endroit !</p>
+<h2 id="Qu’est-ce-que-Dash"><a href="#Qu’est-ce-que-Dash" class="headerlink" title="Qu’est-ce que Dash ?"></a>Qu’est-ce que Dash ?</h2><p>Dash est un framework open source permettant la création d’applications web interactives à l’aide de Python. Il permet de concevoir des tableaux de bord, des graphiques interactifs et des interfaces utilisateur sans avoir à se plonger dans des langages web tels que HTML, CSS ou JavaScript. Avec Dash, vous pouvez combiner la puissance de la programmation Python avec la flexibilité du web pour créer des visualisations de données impressionnantes.</p>
+<h2 id="Installation-de-Dash"><a href="#Installation-de-Dash" class="headerlink" title="Installation de Dash"></a>Installation de Dash</h2><p>Avant de commencer, assurez-vous d’avoir Dash et les autres bibliothèques nécessaires installées. Vous pouvez le faire en exécutant la commande suivante dans votre terminal :</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install dash</span><br></pre></td></tr></table></figure>
+
+<h2 id="Premiere-application-Dash"><a href="#Premiere-application-Dash" class="headerlink" title="Première application Dash"></a>Première application Dash</h2><p>Créons une application web simple en Dash pour afficher un graphique à barres.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">from</span> dash <span class="keyword">import</span> dcc, html</span><br><span class="line"></span><br><span class="line">app = dash.Dash(__name__)</span><br><span class="line"></span><br><span class="line">app.layout = html.Div(children=[</span><br><span class="line">    html.H1(<span class="string">&#x27;Bienvenue sur mon premier tableau de bord Dash !&#x27;</span>),</span><br><span class="line">    dcc.Graph(</span><br><span class="line">        <span class="built_in">id</span>=<span class="string">&#x27;example-graph&#x27;</span>,</span><br><span class="line">        figure=&#123;</span><br><span class="line">            <span class="string">&#x27;data&#x27;</span>: [</span><br><span class="line">                &#123;<span class="string">&#x27;x&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">&#x27;y&#x27;</span>: [<span class="number">4</span>, <span class="number">1</span>, <span class="number">2</span>], <span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;bar&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;Premier graphique&#x27;</span>&#125;,</span><br><span class="line">            ],</span><br><span class="line">            <span class="string">&#x27;layout&#x27;</span>: &#123;</span><br><span class="line">                <span class="string">&#x27;title&#x27;</span>: <span class="string">&#x27;Graphique à barres simple&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    )</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Explication-du-code"><a href="#Explication-du-code" class="headerlink" title="Explication du code"></a>Explication du code</h2><ul>
+<li>Nous avons importé les bibliothèques nécessaires et initialisé notre application Dash.</li>
+<li>En définissant <code>app.layout</code>, nous avons créé la structure de notre application web avec un titre et un graphique à barres.</li>
+<li>Le graphique à barres est défini à l’aide de la méthode <code>dcc.Graph</code> avec des données et une mise en page spécifiques.</li>
+<li>En exécutant l’application via <code>app.run_server()</code>, notre tableau de bord Dash est lancé localement.</li>
+</ul>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>En conclusion, Dash offre une manière simple et efficace de créer des applications web interactives de données en utilisant Python. En combinant la puissance de la programmation Python avec la souplesse du web, vous pouvez concevoir des visualisations de données dynamiques et intuitives. Explorez les possibilités infinies de Dash pour créer des applications web de données personnalisées qui captiveront votre audience !</p>
+<p>Pour aller plus loin avec Dash et les applications web de données, n’hésitez pas à consulter la documentation officielle de Dash et à expérimenter par vous-même. Bon codage !</p>
+<hr>
+<p>Cet article vous a-t-il été utile ? Laissez votre avis dans les commentaires et partagez vos réalisations avec Dash !</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Dash/" rel="tag">python, Dash</a></li></ul>
 
     </footer>
   </div>
@@ -853,7 +808,7 @@
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/10/">Page précédente</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/12/">Page suivante</a>
+    <a class="extend prev" rel="prev" href="/page/10/">Page précédente</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/12/">Page suivante</a>
   </nav>
   
 </section>
@@ -919,6 +874,10 @@
     
     <li class="nav-item">
       <a class="nav-item-link" href="/categories/Python/">Python</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/OpenCV/">OpenCV</a>
     </li>
     
     <li class="nav-item">
